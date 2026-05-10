@@ -263,8 +263,6 @@ http://192.168.100.1:10801/4gtv-live138/index.m3u8?token=joker
 http://192.168.100.1:10801/fast-live022/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="原住民族電視台" tvg-name="原住民族電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live014_mobile.webp" group-title="台湾",原住民族電視台
 http://192.168.100.1:10801/4gtv-4gtv080/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="靖洋卡通Nice Bingo" tvg-name="靖洋卡通Nice Bingo" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv057_mobile.png" group-title="兒童與青少年",靖洋卡通Nice Bingo
-http://192.168.100.1:10801/4gtv-4gtv057/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="民視台灣台" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png" group-title="台湾",民視台灣台
 http://192.168.100.1:10801/4gtv-live401/index.m3u8?token=joker
 http://192.168.100.1:10801/fast-live402/index.m3u8?token=joker
