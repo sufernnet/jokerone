@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://content.stream-link.org/epg/d4ffa67d-453e-4b91-a65d-3b72e24afadf/guide.xml"
+#EXTM3U url-tvg="https://gitee.com/mytv-android/myepg/raw/master/output/epg.gz"
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
 http://124.90.44.40:6060/010/2/00000001000000060000000000000469?virtualDomain=010.live_hls.zte.com
 
