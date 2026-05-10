@@ -448,7 +448,8 @@ def main():
     print("正在加载MV频道...")
     mv = load_mv()
 
-    out = "#EXTM3U\n\n"
+    # 添加 EPG 信息头
+    out = '#EXTM3U x-tvg-url="https://gitee.com/taksssss/tv/raw/main/epg/51zmt.xml.gz"\n\n'
 
     try:
         with open(BB_FILE, encoding="utf-8") as f:
