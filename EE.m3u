@@ -241,17 +241,17 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000787?virtualDomain=01
 #EXTINF:-1 tvg-name="CHC动作电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png" group-title="MV",CHC动作电影
 http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 #EXTINF:-1 tvg-name="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
-http://pplee.vicp.net:4022/udp/233.18.204.173:5140
+https://shcm-stream-cf1.stream.264788.xyz/cms001/ch00000090990000001570/index.m3u8?streamid=136f530a61d26dc0f670f39f05291586&streamkey=0gNYRWDeQgJcsQzJtwy5YfNuNXxp8JTqLQoubxJdaerqPImB5Zqld0YLrCikCEEBNzsaCMzgiZxPacL6jVLMJd0KpMDkxYV4BhGlwYU0ju7r1WxWgQER2jIf9CgZaG3mq&token=1775754529-ed2502f4a1a9b5b0-0-ab6ce23e1854b42f8e2b31cb58021423
 #EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
-http://pplee.vicp.net:4022/udp/233.18.204.175:5140
+https://shcm-stream-cf1.stream.264788.xyz/cms001/ch00000090990000001581/index.m3u8?streamid=af62547c4c8be0ef4a658f4b4853388f&streamkey=0AGMO6LiBIxyH55HrvMarEqxYYHHBsBI1AS8pWYcug6hIz6JcOuFRUYGPeeB6DUdYBhCZW4VbAvlr77F1jurxYfAy8mix71ZcG7gxzAeeVpjSNe4Slu1Xui5R21MiDUL&token=1775754555-63098edc022aecb0-0-61ebd04bf297352038785125878e0b8f
 #EXTINF:-1 tvg-name="ROCK Action" tvg-logo="https://live.fanmingming.com/tv/ROCK Action.png" group-title="MV",ROCK Action
 http://116.241.240.176:5050/4gtv-live138/index.m3u8
 #EXTINF:-1 tvg-name="ROCK Entertainment" tvg-logo="https://live.fanmingming.com/tv/ROCK Entertainment.png" group-title="MV",ROCK Entertainment
 http://116.241.240.176:5050/4gtv-live080/index.m3u8
-#EXTINF:-1 tvg-name="HBO精选" tvg-logo="https://live.fanmingming.com/tv/HBO精选.png" group-title="MV",HBO精选
-http://23.237.104.106:8080/USA_HBO2/tracks-v1a1/mono.m3u8
-#EXTINF:-1 tvg-name="Cinemax经典" tvg-logo="https://live.fanmingming.com/tv/Cinemax经典.png" group-title="MV",Cinemax经典
-http://23.237.104.106:8080/USA_5STARMAX/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="HBO" tvg-logo="https://live.fanmingming.com/tv/HBO.png" group-title="MV",HBO
+http://23.237.104.106:8080/USA_HBO/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="Cinemax精选" tvg-logo="https://live.fanmingming.com/tv/Cinemax精选.png" group-title="MV",Cinemax精选
+http://23.237.104.106:8080/USA_MOREMAX/mono.m3u8
 #EXTINF:-1 tvg-name="Cinemax精选" tvg-logo="https://live.fanmingming.com/tv/Cinemax精选.png" group-title="MV",Cinemax精选
 http://23.237.104.106:8080/USA_MOREMAX/mono.m3u8
 #EXTINF:-1 tvg-name="北京IPTV淘电影" tvg-logo="https://live.fanmingming.com/tv/北京IPTV淘电影.png" group-title="MV",北京IPTV淘电影
