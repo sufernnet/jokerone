@@ -238,6 +238,10 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000490?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000001000000060000000000000787?virtualDomain=010.live_hls.zte.com
 
 # MV
+#EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
+https://o11.163189.xyz/stream/live/typd/
+#EXTINF:-1 tvg-name="爱奇艺" tvg-logo="https://live.fanmingming.com/tv/爱奇艺.png" group-title="MV",爱奇艺
+https://o11.163189.xyz/stream/live/iqiyi/
 #EXTINF:-1 tvg-name="TVB星河" tvg-logo="https://live.fanmingming.com/tv/TVB星河.png" group-title="MV",TVB星河
 https://o11.163189.xyz/stream/live/tvbxh/
 
@@ -274,8 +278,6 @@ http://cdn6.163189.xyz/163189/8tv
 http://o11.163189.xyz/stream/live/tvbxh/
 #EXTINF:-1 group-title="HK" tvg-name="TVBPLUS" tvg-logo="https://epg.112114.xyz/logo/TVBPLUS.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVBPLUS
 http://o11.163189.xyz/stream/tvb/tvbp/
-#EXTINF:-1 group-title="HK" tvg-name="TVBJ1" tvg-logo="https://epg.112114.xyz/logo/TVBJ1.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVBJ1
-http://iptv.4666888.xyz/iptv2A.php?id=26
 #EXTINF:-1 group-title="HK" tvg-name="TVB娱乐新闻" tvg-logo="https://epg.112114.xyz/logo/TVB娱乐新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB娱乐新闻
 http://iptv.4666888.xyz/iptv2A.php?id=36
 #EXTINF:-1 group-title="HK" tvg-name="TVB黄金华剧" tvg-logo="https://epg.112114.xyz/logo/TVB黄金华剧.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB黄金华剧
@@ -294,10 +296,6 @@ http://iptv.4666888.xyz/iptv2A.php?id=35
 http://iptv.4666888.xyz/iptv2A.php?id=23
 #EXTINF:-1 group-title="HK" tvg-name="RTHK32" tvg-logo="https://epg.112114.xyz/logo/RTHK32.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",RTHK32
 http://cdn.163189.xyz/163189/rthk32
-#EXTINF:-1 group-title="HK" tvg-name="ROCK_Action" tvg-logo="https://epg.112114.xyz/logo/ROCK_Action.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",ROCK_Action
-http://iptv.4666888.xyz/iptv2A.php?id=50
-#EXTINF:-1 group-title="HK" tvg-name="MYTV黄金翡翠" tvg-logo="https://epg.112114.xyz/logo/MYTV黄金翡翠.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",MYTV黄金翡翠
-http://iptv.4666888.xyz/iptv2A.php?id=32
 #EXTINF:-1 group-title="HK" tvg-name="iQIYI" tvg-logo="https://epg.112114.xyz/logo/iQIYI.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",iQIYI
 https://o11.163189.xyz/stream/live/iqiyi/
 #EXTINF:-1 group-title="HK" tvg-name="Astro AEC" tvg-logo="https://epg.112114.xyz/logo/Astro AEC.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",Astro AEC
