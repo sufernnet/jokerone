@@ -311,9 +311,9 @@ https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 
 
 #EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://epg.iill.top/logo/ESPN.png" group-title="体育",ESPN
-https://iptv.852851.xyz/ch/75a9574332955be8bb9be27b4660836d/master.m3u8
+http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
 #EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="体育",ESPN2
-https://iptv.852851.xyz/ch/6b0c81641d32db9353070cb781f3998d/master.m3u8
+http://89.187.179.148:826/anto.j/c9yJDcXyPe/119666
 #EXTINF:-1 tvg-name="Now Sports 1" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW1.png" group-title="体育",Now Sports 1
 https://iptv.852851.xyz/ch/cb54507de44f69262ecc8913ed958294/master.m3u8
 #EXTINF:-1 tvg-name="Now Sports 2" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW2.jpg" group-title="体育",Now Sports 2
