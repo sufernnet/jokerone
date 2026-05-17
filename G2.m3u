@@ -66,6 +66,8 @@ https://cdn6.163189.xyz/163189/fhzx
 https://cdn6.163189.xyz/163189/fhhk
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://epg.iill.top/logo/HOY.png" group-title="香港",HOY TV
 https://cdn6.163189.xyz/163189/hoy
+#EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://epg.iill.top/logo/Now新聞台.png" group-title="香港",Now新聞台
+https://cdn.163189.xyz/163189/now
 #EXTINF:-1 tvg-id="HOY76" tvg-name="HOY76" tvg-logo="https://static.wikia.nocookie.net/logos/images/0/0a/HOY_76.png/revision/latest?cb=20240605025122&path-prefix=vi" group-title="香港",HOY76
 https://cdn11.163189.xyz/163189/2c86601a7180416e
 #EXTINF:-1 tvg-id="HOY77" tvg-name="HOY77" tvg-logo="https://static.wikia.nocookie.net/logos/images/8/87/HOY_77.png/revision/latest?cb=20240605025138&path-prefix=vi" group-title="香港",HOY77
@@ -75,9 +77,8 @@ https://cdn.163189.xyz/163189/hoy78
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://epg.iill.top/logo/ViuTV.png" group-title="香港",ViuTV
 http://67.220.71.167:2347/livehttpplay?channel_id=30032
 https://cdn.163189.xyz/163189/viu/
-
 #EXTINF:-1 tvg-id="ViuTV6" tvg-name="ViuTVsix" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/viutv6.png" group-title="香港",ViuTVsix
-https://cdn10.163189.xyz/stream/163189/viu6/
+https://cdn10.163189.xyz/163189/dcd63a47-61e9-4bae-8af3-fca15f2d002b/
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="香港", 翡翠台 4K
 https://o11.163189.xyz/stream/tvb/fct4k/
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="香港", 翡翠台
@@ -88,8 +89,6 @@ https://o11.163189.xyz/stream/tvb/mzt/
 https://o11.163189.xyz/stream/tvb/tvbp/
 #EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://epg.iill.top/logo/無綫新聞台.png" group-title="香港",無綫新聞台
 https://cdn6.163189.xyz/163189/wxxw
-#EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://epg.iill.top/logo/Now新聞台.png" group-title="香港",Now新聞台
-https://cdn.163189.xyz/163189/now
 #EXTINF:-1 tvg-id="娛樂新聞台" tvg-name="娛樂新聞台" tvg-logo="https://epg.iill.top/logo/娛樂新聞.png" group-title="香港",娛樂新聞台
 https://cdn6.163189.xyz/163189/ylxw
 #EXTINF:-1 tvg-id="千禧經典台" tvg-name="千禧經典台" tvg-logo="https://epg.iill.top/logo/千禧經典台.png" group-title="香港",千禧經典台
@@ -127,6 +126,10 @@ http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv009&sd=1080&proxy=false&token
 http://192.168.100.1:10801/4gtv-live413/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="ROCK Entertainment" tvg-name="ROCK Entertainment" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live080_mobile.png" group-title="台湾",ROCK Entertainment
 http://192.168.100.1:10801/4gtv-live080/index.m3u8?token=joker
+#EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="台湾",寰宇新聞台
+http://192.168.100.1:10801/4gtv-live408/index.m3u8?token=joker
+#EXTINF:-1 tvg-id="華視新聞" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="台湾",華視新聞
+http://192.168.100.1:10801/4gtv-4gtv052/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="fun探索娛樂台" tvg-name="fun探索娛樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live011_mobile.png" group-title="台湾",fun探索娛樂台
 http://192.168.100.1:10801/4gtv-live011/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="TVBS" tvg-name="TVBS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_media-live073_mobile.png" group-title="台湾",TVBS
@@ -155,8 +158,6 @@ http://192.168.100.1:10801/4gtv-4gtv043/index.m3u8?token=joker
 http://192.168.100.1:10801/4gtv-4gtv101/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="TV5MONDE STYLE HD 生活時尚" tvg-name="TV5MONDE STYLE HD 生活時尚" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live122_mobile.png" group-title="台湾",TV5MONDE STYLE HD 生活時尚
 http://192.168.100.1:10801/4gtv-live122/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="台湾",寰宇新聞台
-http://192.168.100.1:10801/4gtv-live408/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="amc電影台" tvg-name="amc電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv017new_mobile.png" group-title="台湾",amc電影台
 http://192.168.100.1:10801/4gtv-4gtv017/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="華視新聞" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="台湾",華視新聞
@@ -266,8 +267,6 @@ http://192.168.100.1:10801/4gtv-4gtv080/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="民視台灣台" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png" group-title="台湾",民視台灣台
 http://192.168.100.1:10801/4gtv-live401/index.m3u8?token=joker
 http://192.168.100.1:10801/fast-live402/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="華視新聞" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="台湾",華視新聞
-http://192.168.100.1:10801/4gtv-4gtv052/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="三立新聞iNEWS" tvg-name="三立新聞iNEWS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live089_mobile.png" group-title="台湾",三立新聞iNEWS
 http://192.168.100.1:10801/4gtv-live089/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="台湾",寰宇新聞台
