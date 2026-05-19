@@ -449,7 +449,7 @@ def main():
     mv = load_mv()
 
     # 添加 EPG 信息头
-    out = '#EXTM3U x-tvg-url="http://epg.51zmt.top:8000/e.xml.gz"\n\n'
+    out = '#EXTM3U x-tvg-url="https://epg.cdn.loc.cc/xml"\n\n'
 
     try:
         with open(BB_FILE, encoding="utf-8") as f:
