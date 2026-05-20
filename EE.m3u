@@ -240,8 +240,8 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000787?virtualDomain=01
 # MV
 #EXTINF:-1 tvg-name="CHC动作电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png" group-title="MV",CHC动作电影
 http://218.79.9.143:4022/rtp/233.18.204.174:5140
-#EXTINF:-1 tvg-name="家庭影院" tvg-logo="https://live.fanmingming.com/tv/家庭影院.png" group-title="MV",家庭影院
-http://1.203.110.181:8852/rtp/225.1.8.253:4120
+#EXTINF:-1 tvg-name="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
+http://218.79.9.143:4022/rtp/233.18.204.173:5140
 #EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://218.79.9.143:4022/rtp/233.18.204.175:5140
 
