@@ -244,6 +244,8 @@ http://218.79.9.143:4022/rtp/233.18.204.174:5140
 http://218.79.9.143:4022/rtp/233.18.204.173:5140
 #EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://218.79.9.143:4022/rtp/233.18.204.175:5140
+#EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
+https://o11.163189.xyz/stream/live/typd/
 
 # HK
 #EXTINF:-1 group-title="HK" tvg-name="凤凰中文" tvg-logo="https://epg.112114.xyz/logo/凤凰中文.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",凤凰中文
