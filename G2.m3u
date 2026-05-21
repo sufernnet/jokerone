@@ -313,25 +313,26 @@ https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
 #EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="体育",ESPN2
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119666
-#EXTINF:-1 tvg-name="Now Sports 1" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW1.png" group-title="体育",Now Sports 1
+
+#EXTINF:-1 tvg-name="Now Sports 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch631_170_122" group-title="体育",Now Sports 1
 https://iptv.852851.xyz/ch/cb54507de44f69262ecc8913ed958294/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 2" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW2.jpg" group-title="体育",Now Sports 2
+#EXTINF:-1 tvg-name="Now Sports 2" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch632_170_122" group-title="体育",Now Sports 2
 https://iptv.852851.xyz/ch/f62fe735f8cb6871fe11b6da65ef1704/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 3" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW3.jpg" group-title="体育",Now Sports 3
+#EXTINF:-1 tvg-name="Now Sports 3" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch633_170_122" group-title="体育",Now Sports 3
 https://iptv.852851.xyz/ch/7d47f9714dbb7aa678b76b7d0b83e447/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 4" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW4.jpg" group-title="体育",Now Sports 4
+#EXTINF:-1 tvg-name="Now Sports 4" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch634_170_122" group-title="体育",Now Sports 4
 https://iptv.852851.xyz/ch/0d49608b8cf594236940c258638e6839/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 5" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW5.jpg" group-title="体育",Now Sports 5
+#EXTINF:-1 tvg-name="Now Sports 5" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch635_170_122" group-title="体育",Now Sports 5
 https://iptv.852851.xyz/ch/e164c9692d4064f1ddedc3d0c122b392/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 6" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW6.jpg" group-title="体育",Now Sports 6
+#EXTINF:-1 tvg-name="Now Sports 6" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch636_170_122" group-title="体育",Now Sports 6
 https://iptv.852851.xyz/ch/e7d67f8f528630b00389ce5d4a65a9ab/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 7" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW7.jpg" group-title="体育",Now Sports 7
+#EXTINF:-1 tvg-name="Now Sports 7" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch637_170_122" group-title="体育",Now Sports 7
 https://iptv.852851.xyz/ch/951ec11f555e9289166e1e06d1c53ffc/master.m3u8
 #EXTINF:-1 tvg-id="329" tvg-name="Now Sports 641" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch641_170_122" group-title="体育",Now Sports 641
 https://iptv.852851.xyz/ch/da539034d579bba63d6502d4c996683b/master.m3u8
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch630_170_122" group-title="体育",Now Sports 精选
 https://iptv.852851.xyz/ch/7fb12e9f9ce6696478dadea629117325/master.m3u8
-#EXTINF:-1 tvg-name="Now Sports 4K 1" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/NOW体育4K 1.png" group-title="体育",NOW体育4K 1
+#EXTINF:-1 tvg-name="Now Sports 4K 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch611_170_122" group-title="体育",NOW体育4K 1
 https://iptv.852851.xyz/ch/66ad11c44eca88e44105038a9e199147/master.m3u8
 
 
