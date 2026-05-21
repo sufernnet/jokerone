@@ -1,5 +1,5 @@
 
-#EXTM3U url-tvg="https://iptv.852851.xyz/api/epg/xmltv.xml" x-tvg-url="https://iptv.852851.xyz/api/epg/xmltv.xml"
+
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
 http://124.90.44.40:6060/010/2/00000001000000060000000000000469?virtualDomain=010.live_hls.zte.com
 #EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV2" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV2.png" group-title="央视",CCTV2
