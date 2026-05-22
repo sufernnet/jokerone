@@ -38,6 +38,9 @@ http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=01
 http://39.164.138.145:8899/hls/17/index.m3u8
 
 
+
+
+
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
 http://198.204.228.26/live/cctv4k.m3u8
 #EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HN4K.png" group-title="4K",湖南卫视
@@ -202,6 +205,25 @@ https://iptv.852851.xyz/ch/db7da14340301f72a63c6ebd60906abc/master.m3u8
 https://iptv.852851.xyz/ch/53d26cc49d311819ec22de7e8b572c97/master.m3u8
 #EXTINF:-1 tvg-id="龍華電影台" tvg-name="龍華電影台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV1.png" group-title="TW",龍華電影台
 https://iptv.852851.xyz/ch/d8c5ad2e2692bdb5b1714937fbd0f7ee/master.m3u8
+
+
+#EXTINF:-1 tvg-name="Love Nature 4K" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENARURE4K.png" group-title="Doc",Love Nature 4K
+https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+#EXTINF:-1 tvg-name="LOVE NATURE " tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="Doc",LOVE NATURE 愛自然頻道
+http://116.241.240.176:5050/4gtv-live208/index.m3u8
+#EXTINF:-1 tvg-name="Love Nature" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="Doc",Love Nature
+https://d2wh06mmk97552.cloudfront.net/playlist/bamusaAAA-bamus-lovenature-lg/playlist.m3u8
+#EXTINF:-1 tvg-name="Discovery" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Discovery.png" group-title="Doc",Discovery
+http://23.237.104.106:8080/USA_DISCOVERY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="動物星球頻道" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/animalplanet.png" group-title="Doc",動物星球頻道
+http://23.237.104.106:8080/USA_ANIMAL_PLANET/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="BBC Earth" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/BBC2.png" group-title="Doc",BBC Earth
+https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
+#EXTINF:-1 tvg-id="Red Bull TV" tvg-name="Red Bull TV" tvg-logo="https://epg.yang-1989.eu.org/logo/RedBull.png" group-title="Doc",Red Bull TV
+http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
+#EXTINF:-1 tvg-id="BBC Lifestyle" tvg-name="BBC Lifestyle" tvg-logo="https://epg.yang-1989.eu.org/logo/BBC-Lifestyle.png" group-title="Doc",BBC Lifestyle
+https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
+
 
 
 #EXTINF:-1 tvg-id="nowSports1.hk" tvg-name="Now Sports 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch631_170_122" group-title="Sports",Now Sports 1
