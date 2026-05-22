@@ -258,3 +258,60 @@ http://211.23.95.147:18881/live/73_h265.ts
 #EXTINF:-1 group-title="TaiWan",DAZN體育2台
 http://211.23.95.147:18881/live/74_h265.ts
 
+#EXTINF:-1 tvg-name="Love Nature 4K" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENARURE4K.png" group-title="group-title="Doc",",Love Nature 4K
+https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
+#EXTINF:-1 tvg-name="LOVE NATURE " tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="group-title="Doc",",LOVE NATURE 愛自然頻道
+http://116.241.240.176:5050/4gtv-live208/index.m3u8
+#EXTINF:-1 tvg-name="Love Nature" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="group-title="Doc",",Love Nature
+https://d2wh06mmk97552.cloudfront.net/playlist/bamusaAAA-bamus-lovenature-lg/playlist.m3u8
+#EXTINF:-1 tvg-name="Discovery" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Discovery.png" group-title="group-title="Doc",",Discovery
+http://23.237.104.106:8080/USA_DISCOVERY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="動物星球頻道" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/animalplanet.png" group-title="group-title="Doc",",動物星球頻道
+http://23.237.104.106:8080/USA_ANIMAL_PLANET/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="BBC Earth" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/BBC2.png" group-title="group-title="Doc",",BBC Earth
+https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist.m3u8
+#EXTINF:-1 tvg-id="Red Bull TV" tvg-name="Red Bull TV" tvg-logo="https://epg.yang-1989.eu.org/logo/RedBull.png" group-title="group-title="Doc",",Red Bull TV
+http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
+#EXTINF:-1 tvg-id="BBC Lifestyle" tvg-name="BBC Lifestyle" tvg-logo="https://epg.yang-1989.eu.org/logo/BBC-Lifestyle.png" group-title="group-title="Doc",",BBC Lifestyle
+https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
+
+
+#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ESPN.png" group-title="Sports",,ESPN
+http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
+#EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="Sports",,ESPN2
+http://89.187.179.148:826/anto.j/c9yJDcXyPe/119666
+
+#EXTINF:-1 tvg-name="Now Sports 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch631_170_122" group-title="Sports",,Now Sports 1
+https://iptv.852851.xyz/ch/cb54507de44f69262ecc8913ed958294/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 2" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch632_170_122" group-title="Sports",,Now Sports 2
+https://iptv.852851.xyz/ch/f62fe735f8cb6871fe11b6da65ef1704/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 3" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch633_170_122" group-title="Sports",,Now Sports 3
+https://iptv.852851.xyz/ch/7d47f9714dbb7aa678b76b7d0b83e447/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 4" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch634_170_122" group-title="Sports",,Now Sports 4
+https://iptv.852851.xyz/ch/0d49608b8cf594236940c258638e6839/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 5" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch635_170_122" group-title="Sports",,Now Sports 5
+https://iptv.852851.xyz/ch/e164c9692d4064f1ddedc3d0c122b392/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 6" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch636_170_122" group-title="Sports",,Now Sports 6
+https://iptv.852851.xyz/ch/e7d67f8f528630b00389ce5d4a65a9ab/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 7" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch637_170_122" group-title="Sports",,Now Sports 7
+https://iptv.852851.xyz/ch/951ec11f555e9289166e1e06d1c53ffc/master.m3u8
+#EXTINF:-1 tvg-id="329" tvg-name="Now Sports 641" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch641_170_122" group-title="Sports",,Now Sports 641
+https://iptv.852851.xyz/ch/da539034d579bba63d6502d4c996683b/master.m3u8
+#EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch630_170_122" group-title="Sports",,Now Sports 精选
+https://iptv.852851.xyz/ch/7fb12e9f9ce6696478dadea629117325/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 4K 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch611_170_122" group-title="Sports",,NOW体育4K 1
+https://iptv.852851.xyz/ch/66ad11c44eca88e44105038a9e199147/master.m3u8
+
+
+#EXTINF:-1 tvg-name="Now Sports 英超1台" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch621_170_122" group-title="Sports",,NOW英超1
+https://iptv.852851.xyz/ch/7dc276234091f4819657c1514084bf42/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 英超2台" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch622_170_122" group-title="Sports",,NOW英超2
+https://iptv.852851.xyz/ch/9addc6bbb8551c5dc40e1654b9871405/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 英超3台" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch623_170_122" group-title="Sports",,NOW英超3
+https://iptv.852851.xyz/ch/a011adc494e53e1bb0456dd82857fd76/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 英超4台" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch624_170_122" group-title="Sports",,NOW英超4
+https://iptv.852851.xyz/ch/138e150e94b4e08cdcda4cb1a9272b00/master.m3u8
+#EXTINF:-1 tvg-name="Now Sports 英超5台" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch625_170_122" group-title="Sports",,NOW英超5
+https://iptv.852851.xyz/ch/4465baf175c32e7078606b90f4229869/master.m3u8
+
+
