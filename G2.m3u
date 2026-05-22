@@ -83,21 +83,21 @@ https://cdn10.163189.xyz/163189/dcd63a47-61e9-4bae-8af3-fca15f2d002b/
 https://o11.163189.xyz/stream/tvb/fct4k/
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="香港", 翡翠台
 https://o11.163189.xyz/stream/tvb/fct/
-#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.iill.top/logo/明珠台.png" group-title="香港", 明珠台
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/明珠.png" group-title="香港", 明珠台
 https://o11.163189.xyz/stream/tvb/mzt/
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/TVBPLUS.png" group-title="香港",TVB Plus
 https://o11.163189.xyz/stream/tvb/tvbp/
-#EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://epg.iill.top/logo/無綫新聞台.png" group-title="香港",無綫新聞台
+#EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/无线新闻.png" group-title="香港",無綫新聞台
 https://cdn6.163189.xyz/163189/wxxw
-#EXTINF:-1 tvg-id="娛樂新聞台" tvg-name="娛樂新聞台" tvg-logo="https://epg.iill.top/logo/娛樂新聞.png" group-title="香港",娛樂新聞台
+#EXTINF:-1 tvg-id="娛樂新聞台" tvg-name="娛樂新聞台" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/娱乐新闻.png" group-title="香港",娛樂新聞台
 https://cdn6.163189.xyz/163189/ylxw
-#EXTINF:-1 tvg-id="千禧經典台" tvg-name="千禧經典台" tvg-logo="https://epg.iill.top/logo/千禧經典台.png" group-title="香港",千禧經典台
+#EXTINF:-1 tvg-id="千禧經典台" tvg-name="千禧經典台" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/千禧经典.png" group-title="香港",千禧經典台
 https://o11.163189.xyz/stream/live/tvbc/
-#EXTINF:-1 tvg-id="天映頻道" tvg-name="天映頻道" tvg-logo="https://epg.iill.top/logo/天映频道.png" group-title="香港",天映频道
+#EXTINF:-1 tvg-id="天映頻道" tvg-name="天映頻道" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/天映.png" group-title="香港",天映频道
 https://o11.163189.xyz/stream/live/typd/
-#EXTINF:-1 tvg-id="RTHK31" tvg-name="RTHK31" tvg-logo="https://epg.iill.top/logo/RTHK31.png" group-title="香港",RTHK31
+#EXTINF:-1 tvg-id="RTHK31" tvg-name="RTHK31" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/RTHK31.png" group-title="香港",RTHK31
 https://cdn.163189.xyz/163189/rthk31
-#EXTINF:-1 tvg-id="RTHK32" tvg-name="RTHK32" tvg-logo="https://epg.iill.top/logo/RTHK32.png" group-title="香港",RTHK32
+#EXTINF:-1 tvg-id="RTHK32" tvg-name="RTHK32" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/RTHK32.png" group-title="香港",RTHK32
 https://cdn.163189.xyz/163189/rthk32
 #EXTINF:-1 tvg-id="AOD" tvg-name="AOD" tvg-logo="https://epg.iill.top/logo/AOD.png" group-title="香港",Astro AOD
 https://o11.163189.xyz/stream/live/aod/
@@ -291,11 +291,11 @@ http://192.168.100.1:10801/4gtv-live069/index.m3u8?token=joker
 http://192.168.100.1:10801/4gtv-live031/index.m3u8?token=joker
 
 
-#EXTINF:-1 tvg-name="Love Nature 4K" tvg-logo="https://epg.iill.top/logo/LoveNature4K.png" group-title="探索&记录",Love Nature 4K
+#EXTINF:-1 tvg-name="Love Nature 4K" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE4K.png" group-title="探索&记录",Love Nature 4K
 https://pb-ehs1glsha1juy.akamaized.net/Love_Nature_4K.m3u8
-#EXTINF:-1 tvg-name="LOVE NATURE " tvg-logo="https://epg.iill.top/logo/LoveNature.png" group-title="探索&记录",LOVE NATURE 愛自然頻道
+#EXTINF:-1 tvg-name="LOVE NATURE " tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="探索&记录",LOVE NATURE 愛自然頻道
 http://116.241.240.176:5050/4gtv-live208/index.m3u8
-#EXTINF:-1 tvg-name="Love Nature" tvg-logo="https://epg.iill.top/logo/LoveNature.png" group-title="探索&记录",Love Nature
+#EXTINF:-1 tvg-name="Love Nature" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/LOVENATURE.png" group-title="探索&记录",Love Nature
 https://d2wh06mmk97552.cloudfront.net/playlist/bamusaAAA-bamus-lovenature-lg/playlist.m3u8
 #EXTINF:-1 tvg-name="Discovery" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Discovery.png" group-title="探索&记录",Discovery
 http://23.237.104.106:8080/USA_DISCOVERY/tracks-v1a1/mono.m3u8
