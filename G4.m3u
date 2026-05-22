@@ -119,10 +119,36 @@ http://cdn6.163189.xyz/163189/ch8
 http://cdn6.163189.xyz/163189/ch
 
 #EXTM3U
-#EXTINF:-1 group-title="TaiWan",中視
-http://211.23.95.147:18881/live/dtv1_h265.ts
 #EXTINF:-1 group-title="TaiWan",中視新聞台
 http://211.23.95.147:18881/live/dtv2_h265.ts
+#EXTINF:-1 group-title="TaiWan",壹新聞
+http://211.23.95.147:18881/live/49_h265.ts
+#EXTINF:-1 group-title="TaiWan",民視新聞台
+http://211.23.95.147:18881/live/dtv9_h265.ts
+#EXTINF:-1 group-title="TaiWan",年代新聞台
+http://211.23.95.147:18881/live/50_h265.ts
+#EXTINF:-1 group-title="TaiWan",東森新聞台
+http://211.23.95.147:18881/live/51_h265.ts
+#EXTINF:-1 group-title="TaiWan",華視新聞資訊台
+http://211.23.95.147:18881/live/dtv20_h265.ts
+#EXTINF:-1 group-title="TaiWan",三立新聞台
+http://211.23.95.147:18881/live/54_h265.ts
+#EXTINF:-1 group-title="TaiWan",TVBS新聞台
+http://211.23.95.147:18881/live/55_h265.ts
+#EXTINF:-1 group-title="TaiWan",東森財經新聞台
+http://211.23.95.147:18881/live/57_h265.ts
+#EXTINF:-1 group-title="TaiWan",非凡新聞台
+http://211.23.95.147:18881/live/58_h265.ts
+#EXTINF:-1 group-title="TaiWan",鏡新聞
+http://211.23.95.147:18881/live/86_h265.ts
+#EXTINF:-1 group-title="TaiWan",民視
+http://211.23.95.147:18881/live/dtv7_h265.ts
+#EXTINF:-1 group-title="TaiWan",民視第一台
+http://211.23.95.147:18881/live/dtv8_h265.ts
+#EXTINF:-1 group-title="TaiWan",民視台灣台
+http://211.23.95.147:18881/live/dtv10_h265.ts
+#EXTINF:-1 group-title="TaiWan",中視
+http://211.23.95.147:18881/live/dtv1_h265.ts
 #EXTINF:-1 group-title="TaiWan",中視經典
 http://211.23.95.147:18881/live/dtv3_h265.ts
 #EXTINF:-1 group-title="TaiWan",中視菁采
@@ -131,16 +157,6 @@ http://211.23.95.147:18881/live/dtv4_h265.ts
 http://211.23.95.147:18881/live/dtv5_h265.ts
 #EXTINF:-1 group-title="TaiWan",公視台語台
 http://211.23.95.147:18881/live/dtv6_h265.ts
-#EXTINF:-1 group-title="TaiWan",民視
-http://211.23.95.147:18881/live/dtv7_h265.ts
-#EXTINF:-1 group-title="TaiWan",民視第一台
-http://211.23.95.147:18881/live/dtv8_h265.ts
-#EXTINF:-1 group-title="TaiWan",民視新聞台
-http://211.23.95.147:18881/live/dtv9_h265.ts
-#EXTINF:-1 group-title="TaiWan",民視台灣台
-http://211.23.95.147:18881/live/dtv10_h265.ts
-#EXTINF:-1 group-title="TaiWan",公視兒少台
-http://211.23.95.147:18881/live/dtv11_h265.ts
 #EXTINF:-1 group-title="TaiWan",客家電視台
 http://211.23.95.147:18881/live/dtv12_h265.ts
 #EXTINF:-1 group-title="TaiWan",原住民電視台
@@ -157,8 +173,6 @@ http://211.23.95.147:18881/live/dtv17_h265.ts
 http://211.23.95.147:18881/live/dtv18_h265.ts
 #EXTINF:-1 group-title="TaiWan",華視教育體育文化台
 http://211.23.95.147:18881/live/dtv19_h265.ts
-#EXTINF:-1 group-title="TaiWan",華視新聞資訊台
-http://211.23.95.147:18881/live/dtv20_h265.ts
 #EXTINF:-1 group-title="TaiWan",台灣Plus
 http://211.23.95.147:18881/live/dtv21_h265.ts
 #EXTINF:-1 group-title="TaiWan",Discovery
@@ -191,8 +205,6 @@ http://211.23.95.147:18881/live/25_h265.ts
 http://211.23.95.147:18881/live/36_h265.ts
 #EXTINF:-1 group-title="TaiWan",中天娛樂台
 http://211.23.95.147:18881/live/39_h265.ts
-#EXTINF:-1 group-title="TaiWan",中天娛樂台
-http://61.221.215.25:8800/hls/47/index.m3u8
 #EXTINF:-1 group-title="TaiWan",緯來綜合台
 http://211.23.95.147:18881/live/26_h265.ts
 #EXTINF:-1 group-title="TaiWan",緯來戲劇台
@@ -235,22 +247,6 @@ http://211.23.95.147:18881/live/71_h265.ts
 http://211.23.95.147:18881/live/68_h265.ts
 #EXTINF:-1 group-title="TaiWan",AMC電影台
 http://211.23.95.147:18881/live/69_h265.ts
-#EXTINF:-1 group-title="TaiWan",壹新聞
-http://211.23.95.147:18881/live/49_h265.ts
-#EXTINF:-1 group-title="TaiWan",年代新聞台
-http://211.23.95.147:18881/live/50_h265.ts
-#EXTINF:-1 group-title="TaiWan",東森新聞台
-http://211.23.95.147:18881/live/51_h265.ts
-#EXTINF:-1 group-title="TaiWan",三立新聞台
-http://211.23.95.147:18881/live/54_h265.ts
-#EXTINF:-1 group-title="TaiWan",TVBS新聞台
-http://211.23.95.147:18881/live/55_h265.ts
-#EXTINF:-1 group-title="TaiWan",東森財經新聞台
-http://211.23.95.147:18881/live/57_h265.ts
-#EXTINF:-1 group-title="TaiWan",非凡新聞台
-http://211.23.95.147:18881/live/58_h265.ts
-#EXTINF:-1 group-title="TaiWan",鏡新聞
-http://211.23.95.147:18881/live/86_h265.ts
 #EXTINF:-1 group-title="TaiWan",非凡商業台
 http://211.23.95.147:18881/live/89_h265.ts
 #EXTINF:-1 group-title="TaiWan",DAZN體育1台
