@@ -58,15 +58,15 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=01
 http://124.90.44.40:6060/010/2/01000010000000060000000000002865?virtualDomain=010.live_hls.zte.com
 
 
-#EXTINF:-1 tvg-id="鳳凰衛視中文台" tvg-name="鳳凰衛視中文台" tvg-logo="https://epg.iill.top/logo/凤凰中文.png" group-title="香港",鳳凰衛視·中文
+#EXTINF:-1 tvg-id="鳳凰衛視中文台" tvg-name="鳳凰衛視中文台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰卫视中文.png" group-title="香港",鳳凰衛視·中文
 https://cdn6.163189.xyz/163189/fhzw   
-#EXTINF:-1 tvg-id="鳳凰衛視資訊台" tvg-name="鳳凰衛視資訊台" tvg-logo="https://epg.iill.top/logo/凤凰资讯.png" group-title="香港",鳳凰衛視·資訊
+#EXTINF:-1 tvg-id="鳳凰衛視資訊台" tvg-name="鳳凰衛視資訊台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰卫视资讯.png" group-title="香港",鳳凰衛視·資訊
 https://cdn6.163189.xyz/163189/fhzx
-#EXTINF:-1 tvg-id="鳳凰衛視香港台" tvg-name="鳳凰衛視香港台" tvg-logo="https://epg.iill.top/logo/凤凰香港.png" group-title="香港",鳳凰衛視·香港
+#EXTINF:-1 tvg-id="鳳凰衛視香港台" tvg-name="鳳凰衛視香港台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/凤凰卫视香港.png" group-title="香港",鳳凰衛視·香港
 https://cdn6.163189.xyz/163189/fhhk
-#EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://epg.iill.top/logo/HOY.png" group-title="香港",HOY TV
+#EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/HOYTV.png" group-title="香港",HOY TV
 https://cdn6.163189.xyz/163189/hoy
-#EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://epg.iill.top/logo/Now新聞台.png" group-title="香港",Now新聞台
+#EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://news.now.com/revamp2014/images/logo.png" group-title="香港",Now新聞台
 https://cdn.163189.xyz/163189/now
 #EXTINF:-1 tvg-id="HOY76" tvg-name="HOY76" tvg-logo="https://static.wikia.nocookie.net/logos/images/0/0a/HOY_76.png/revision/latest?cb=20240605025122&path-prefix=vi" group-title="香港",HOY76
 https://cdn11.163189.xyz/163189/2c86601a7180416e
@@ -74,14 +74,14 @@ https://cdn11.163189.xyz/163189/2c86601a7180416e
 https://cdn6.163189.xyz/163189/hoy
 #EXTINF:-1 tvg-id="HOY78" tvg-name="HOY78" tvg-logo="https://static.wikia.nocookie.net/logos/images/7/72/HOY_78.png/revision/latest?cb=20240605025155&path-prefix=vi" group-title="香港",HOY78
 https://cdn.163189.xyz/163189/hoy78
-#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://epg.iill.top/logo/ViuTV.png" group-title="香港",ViuTV
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/viutv.png" group-title="香港",ViuTV
 http://67.220.71.167:2347/livehttpplay?channel_id=30032
 https://cdn.163189.xyz/163189/viu/
 #EXTINF:-1 tvg-id="ViuTV6" tvg-name="ViuTVsix" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/viutv6.png" group-title="香港",ViuTVsix
 https://cdn10.163189.xyz/163189/dcd63a47-61e9-4bae-8af3-fca15f2d002b/
-#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="香港", 翡翠台 4K
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="香港", 翡翠台 4K
 https://o11.163189.xyz/stream/tvb/fct4k/
-#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="香港", 翡翠台
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="香港", 翡翠台
 https://o11.163189.xyz/stream/tvb/fct/
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.iill.top/logo/明珠台.png" group-title="香港", 明珠台
 https://o11.163189.xyz/stream/tvb/mzt/
