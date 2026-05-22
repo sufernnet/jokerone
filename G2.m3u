@@ -309,7 +309,7 @@ http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
 https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 
 
-#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/sufernnet/jokerone/main/icon/ESPN.png" group-title="体育",ESPN
+#EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ESPN.png" group-title="体育",ESPN
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
 #EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="体育",ESPN2
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119666
