@@ -124,8 +124,6 @@ http://cdn6.163189.xyz/163189/ch
 http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv009&sd=1080&proxy=false&token=sufern
 #EXTINF:-1 tvg-id="民視新聞台" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="台湾",民視新聞台
 http://192.168.100.1:10801/4gtv-live413/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="ROCK Entertainment" tvg-name="ROCK Entertainment" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live080_mobile.png" group-title="台湾",ROCK Entertainment
-http://192.168.100.1:10801/4gtv-live080/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="台湾",寰宇新聞台
 http://192.168.100.1:10801/4gtv-live408/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="華視新聞" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="台湾",華視新聞
@@ -198,6 +196,8 @@ http://192.168.100.1:10801/4gtv-live029/index.m3u8?token=joker
 http://192.168.100.1:10801/4gtv-4gtv001/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="影迷數位電影台" tvg-name="影迷數位電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv011_mobile-1.png" group-title="台湾",影迷數位電影台
 http://192.168.100.1:10801/4gtv-4gtv011/index.m3u8?token=joker
+#EXTINF:-1 tvg-id="ROCK Entertainment" tvg-name="ROCK Entertainment" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live080_mobile.png" group-title="台湾",ROCK Entertainment
+http://192.168.100.1:10801/4gtv-live080/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="TRACE Urban" tvg-name="TRACE Urban" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv082_mobile.png" group-title="台湾",TRACE Urban
 http://192.168.100.1:10801/4gtv-4gtv082/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="CI 罪案偵查頻道" tvg-name="CI 罪案偵查頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live027_mobile.png" group-title="台湾",CI 罪案偵查頻道
