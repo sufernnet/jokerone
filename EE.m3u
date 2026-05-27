@@ -248,8 +248,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 http://116.241.240.176:5050/4gtv-live138/index.m3u8
 #EXTINF:-1 tvg-name="ROCK Entertainment" tvg-logo="https://live.fanmingming.com/tv/ROCK Entertainment.png" group-title="MV",ROCK Entertainment
 http://116.241.240.176:5050/4gtv-live080/index.m3u8
-#EXTINF:-1 tvg-name="HBO2" tvg-logo="https://live.fanmingming.com/tv/HBO2.png" group-title="MV",HBO2
-http://23.237.104.106:8080/USA_HBO2/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="HBO" tvg-logo="https://live.fanmingming.com/tv/HBO.png" group-title="MV",HBO
+http://23.237.104.106:8080/USA_HBO/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
 https://o11.163189.xyz/stream/live/typd/
 
@@ -283,31 +283,17 @@ http://o11.163189.xyz/stream/live/tvbc/
 #EXTINF:-1 group-title="HK" tvg-name="八度空间" tvg-logo="https://epg.112114.xyz/logo/八度空间.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",八度空间
 http://cdn6.163189.xyz/163189/8tv
 #EXTINF:-1 group-title="HK" tvg-name="TVB星河" tvg-logo="https://epg.112114.xyz/logo/TVB星河.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB星河
-http://o11.163189.xyz/stream/live/tvbxh/
+http://cdn6.163189.xyz/163189/tvbxh
 #EXTINF:-1 group-title="HK" tvg-name="TVBPLUS" tvg-logo="https://epg.112114.xyz/logo/TVBPLUS.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVBPLUS
 http://o11.163189.xyz/stream/tvb/tvbp/
-#EXTINF:-1 group-title="HK" tvg-name="TVBJ1" tvg-logo="https://epg.112114.xyz/logo/TVBJ1.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVBJ1
-http://iptv.4666888.xyz/iptv2A.php?id=26
-#EXTINF:-1 group-title="HK" tvg-name="TVB娱乐新闻" tvg-logo="https://epg.112114.xyz/logo/TVB娱乐新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB娱乐新闻
-http://iptv.4666888.xyz/iptv2A.php?id=36
-#EXTINF:-1 group-title="HK" tvg-name="TVB黄金华剧" tvg-logo="https://epg.112114.xyz/logo/TVB黄金华剧.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB黄金华剧
-http://iptv.4666888.xyz/iptv2A.php?id=34
 #EXTINF:-1 group-title="HK" tvg-name="TVB功夫台" tvg-logo="https://epg.112114.xyz/logo/TVB功夫台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB功夫台
 http://cdn6.163189.xyz/163189/yzwx
-#EXTINF:-1 group-title="HK" tvg-name="TVB1" tvg-logo="https://epg.112114.xyz/logo/TVB1.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB1
-http://iptv.4666888.xyz/iptv2A.php?id=25
 #EXTINF:-1 group-title="HK" tvg-name="HOY资讯" tvg-logo="https://epg.112114.xyz/logo/HOY资讯.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",HOY资讯
 http://cdn.163189.xyz/163189/hoy78
 #EXTINF:-1 group-title="HK" tvg-name="HOYTV" tvg-logo="https://epg.112114.xyz/logo/HOYTV.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",HOYTV
 http://cdn6.163189.xyz/163189/hoy
-#EXTINF:-1 group-title="HK" tvg-name="HOY77" tvg-logo="https://epg.112114.xyz/logo/HOY77.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",HOY77
-http://iptv.4666888.xyz/iptv2A.php?id=35
-#EXTINF:-1 group-title="HK" tvg-name="RTHK31" tvg-logo="https://epg.112114.xyz/logo/RTHK31.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",RTHK31
-http://iptv.4666888.xyz/iptv2A.php?id=23
 #EXTINF:-1 group-title="HK" tvg-name="RTHK32" tvg-logo="https://epg.112114.xyz/logo/RTHK32.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",RTHK32
 http://cdn.163189.xyz/163189/rthk32
-#EXTINF:-1 group-title="HK" tvg-name="MYTV黄金翡翠" tvg-logo="https://epg.112114.xyz/logo/MYTV黄金翡翠.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",MYTV黄金翡翠
-http://iptv.4666888.xyz/iptv2A.php?id=32
 #EXTINF:-1 group-title="HK" tvg-name="iQIYI" tvg-logo="https://epg.112114.xyz/logo/iQIYI.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",iQIYI
 https://o11.163189.xyz/stream/live/iqiyi/
 #EXTINF:-1 group-title="HK" tvg-name="Astro AEC" tvg-logo="https://epg.112114.xyz/logo/Astro AEC.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",Astro AEC
@@ -337,7 +323,7 @@ https://cdn.19891230.eu.org/4gtv/4gtv-4gtv041/index.m3u8
 #EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://epg.yang-1989.eu.org/logo/寰宇新聞台.png" http-user-agent="okhttp/1.9.89" group-title="TW",寰宇新聞
 https://cdn.19891230.eu.org/4gtv/litv-longturn14/index.m3u8
 #EXTINF:-1 tvg-id="寰宇財經台" tvg-name="寰宇財經台" tvg-logo="https://epg.yang-1989.eu.org/logo/寰宇財經台.png" http-user-agent="okhttp/1.9.89" group-title="TW",寰宇財經
-https://iptv.yang-1989.eu.org/ofiii/4gtv-4gtv158
+https://cdn.yang-1989.eu.org/ofiii/4gtv-4gtv158
 #EXTINF:-1 tvg-id="三立綜合台" tvg-name="三立綜合台" tvg-logo="https://epg.yang-1989.eu.org/logo/三立綜合台.png" http-user-agent="okhttp/1.9.89" group-title="TW",三立綜合
 https://cdn.19891230.eu.org/4gtv/4gtv-live207/index.m3u8
 #EXTINF:-1 tvg-id="靖天綜合台" tvg-name="靖天綜合台" tvg-logo="https://epg.yang-1989.eu.org/logo/靖天綜合台.png" http-user-agent="okhttp/1.9.89" group-title="TW",靖天綜合
@@ -409,4 +395,4 @@ https://cdn.19891230.eu.org/4gtv/4gtv-live021/index.m3u8
 #EXTINF:-1 tvg-id="三立新聞iNEWS" tvg-name="三立新聞iNEWS" tvg-logo="https://epg.yang-1989.eu.org/logo/三立新聞iNEWS.png" http-user-agent="okhttp/1.9.89" group-title="TW",三立新聞iNEWS
 https://cdn.19891230.eu.org/4gtv/4gtv-live089/index.m3u8
 #EXTINF:-1 tvg-id="DayStar" tvg-name="DayStar" tvg-logo="https://epg.yang-1989.eu.org/logo/DayStar.png" http-user-agent="okhttp/1.9.89" group-title="TW" ,DayStar
-https://iptv.yang-1989.eu.org/ofiii/daystar
+https://cdn.yang-1989.eu.org/ofiii/daystar
