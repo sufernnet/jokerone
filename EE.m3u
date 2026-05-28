@@ -248,8 +248,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 http://116.241.240.176:5050/4gtv-live138/index.m3u8
 #EXTINF:-1 tvg-name="ROCK Entertainment" tvg-logo="https://live.fanmingming.com/tv/ROCK Entertainment.png" group-title="MV",ROCK Entertainment
 http://116.241.240.176:5050/4gtv-live080/index.m3u8
-#EXTINF:-1 tvg-name="HBO Comedy" tvg-logo="https://live.fanmingming.com/tv/HBO Comedy.png" group-title="MV",HBO Comedy
-http://23.237.104.106:8080/USA_HBO_COMEDY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="HBO Zone" tvg-logo="https://live.fanmingming.com/tv/HBO Zone.png" group-title="MV",HBO Zone
+http://23.237.104.106:8080/USA_HBO_ZONE/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
 https://o11.163189.xyz/stream/live/typd/
 
@@ -263,7 +263,7 @@ http://cdn6.163189.xyz/163189/fhhk
 #EXTINF:-1 group-title="HK" tvg-name="NOW新闻" tvg-logo="https://epg.112114.xyz/logo/NOW新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",NOW新闻
 http://cdn.163189.xyz/163189/now
 #EXTINF:-1 group-title="HK" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠台
-http://cdn6.163189.xyz/163189/fct
+https://cdn6.163189.xyz/163189/fct4k
 #EXTINF:-1 group-title="HK" tvg-name="翡翠一台(TVB1)" tvg-logo="https://epg.112114.xyz/logo/翡翠一台(TVB1).png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠一台(TVB1)
 http://cdn6.163189.xyz/163189/tvb1
 #EXTINF:-1 group-title="HK" tvg-name="TVB翡翠剧集台(TVBDRAMA)" tvg-logo="https://epg.112114.xyz/logo/TVB翡翠剧集台(TVBDRAMA).png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB翡翠剧集台(TVBDRAMA)
@@ -283,7 +283,7 @@ http://o11.163189.xyz/stream/live/tvbc/
 #EXTINF:-1 group-title="HK" tvg-name="八度空间" tvg-logo="https://epg.112114.xyz/logo/八度空间.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",八度空间
 http://cdn6.163189.xyz/163189/8tv
 #EXTINF:-1 group-title="HK" tvg-name="TVB星河" tvg-logo="https://epg.112114.xyz/logo/TVB星河.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB星河
-http://r.jdshipin.com/Voac4
+http://o11.163189.xyz/stream/live/tvbxh/
 #EXTINF:-1 group-title="HK" tvg-name="TVBPLUS" tvg-logo="https://epg.112114.xyz/logo/TVBPLUS.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVBPLUS
 http://o11.163189.xyz/stream/tvb/tvbp/
 #EXTINF:-1 group-title="HK" tvg-name="TVB功夫台" tvg-logo="https://epg.112114.xyz/logo/TVB功夫台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB功夫台
