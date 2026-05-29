@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-05-28 23:09:06
+# 更新时间 2026-05-29 12:17:12
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -37,7 +37,7 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000473?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000001000000060000000000000474?virtualDomain=010.live_hls.zte.com
 
 #EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV11.png" group-title="央视",CCTV11
-http://43.251.226.110:8880/play/619.m3u8
+https://cdn16.163189.xyz/163189/cctv11
 
 #EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV12.png" group-title="央视",CCTV12
 http://124.90.44.40:6060/010/2/00000001000000060000000000000476?virtualDomain=010.live_hls.zte.com
@@ -49,7 +49,7 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000793?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000001000000060000000000000477?virtualDomain=010.live_hls.zte.com
 
 #EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV15" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV15.png" group-title="央视",CCTV15
-http://43.251.226.110:8880/play/35.m3u8
+https://cdn16.163189.xyz/163189/cctv15
 
 #EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="央视",CCTV16
 http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=010.live_hls.zte.com
@@ -58,7 +58,7 @@ http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=01
 http://39.164.138.145:8899/hls/17/index.m3u8
 
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
-http://1.94.31.214/php/ysp.php?id=cctv4k
+http://220.176.218.252:9000/rtp/239.252.219.60:5140
 
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/BJ4K.png" group-title="4K",北京卫视
 http://124.90.44.40:6060/010/2/01000010000000060000000000002865?virtualDomain=010.live_hls.zte.com
@@ -256,7 +256,7 @@ https://epg.pw/stream/ac8062ec9484078061d3bef507c15a423ac57ae4144e3fcc4b0a198dd4
 #EXTINF:-1 tvg-id="风云音乐" tvg-name="风云音乐" tvg-logo="https://www.xn--rgv465a.top/tvlogo/风云音乐.png" group-title="数字",风云音乐
 http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="央视台球" tvg-name="央视台球" tvg-logo="https://www.xn--rgv465a.top/tvlogo/央视台球.png" group-title="数字",央视台球
-https://epg.pw/stream/ca9c1cd4b97fb824cedd7fedfd0c7a950afdd7f00751cfbb7c2d89831d7746a5.m3u8
+https://epg.pw/stream/25677ac2e8c1f7c3dd6359c43eb5f0f54efb3f5c11f9dda18d01b3e0308ed017.m3u8
 
 # CHC
 
