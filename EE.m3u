@@ -34,7 +34,7 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000473?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000001000000060000000000000474?virtualDomain=010.live_hls.zte.com
 
 #EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV11" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV11.png" group-title="央视",CCTV11
-http://43.251.226.110:8880/play/619.m3u8
+https://cdn16.163189.xyz/163189/cctv11
 
 #EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV12" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV12.png" group-title="央视",CCTV12
 http://124.90.44.40:6060/010/2/00000001000000060000000000000476?virtualDomain=010.live_hls.zte.com
@@ -46,7 +46,7 @@ http://124.90.44.40:6060/010/2/00000001000000060000000000000793?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000001000000060000000000000477?virtualDomain=010.live_hls.zte.com
 
 #EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV15" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV15.png" group-title="央视",CCTV15
-http://43.251.226.110:8880/play/35.m3u8
+https://cdn16.163189.xyz/163189/cctv15
 
 #EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="央视",CCTV16
 http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=010.live_hls.zte.com
@@ -55,7 +55,7 @@ http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=01
 http://39.164.138.145:8899/hls/17/index.m3u8
 
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
-http://1.94.31.214/php/ysp.php?id=cctv4k
+http://220.176.218.252:9000/rtp/239.252.219.60:5140
 
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/BJ4K.png" group-title="4K",北京卫视
 http://124.90.44.40:6060/010/2/01000010000000060000000000002865?virtualDomain=010.live_hls.zte.com
@@ -263,7 +263,7 @@ http://cdn6.163189.xyz/163189/fhhk
 #EXTINF:-1 group-title="HK" tvg-name="NOW新闻" tvg-logo="https://epg.112114.xyz/logo/NOW新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",NOW新闻
 http://cdn.163189.xyz/163189/now
 #EXTINF:-1 group-title="HK" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠台
-https://cdn6.163189.xyz/163189/fct4k
+http://cdn6.163189.xyz/163189/fct
 #EXTINF:-1 group-title="HK" tvg-name="翡翠一台(TVB1)" tvg-logo="https://epg.112114.xyz/logo/翡翠一台(TVB1).png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠一台(TVB1)
 http://cdn6.163189.xyz/163189/tvb1
 #EXTINF:-1 group-title="HK" tvg-name="TVB翡翠剧集台(TVBDRAMA)" tvg-logo="https://epg.112114.xyz/logo/TVB翡翠剧集台(TVBDRAMA).png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB翡翠剧集台(TVBDRAMA)
