@@ -37,7 +37,7 @@ http://39.164.138.145:8899/hls/17/index.m3u8
 
 
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
-http://1.94.31.214/php/ysp.php?id=cctv4k
+http://220.176.218.252:9000/rtp/239.252.219.60:5140
 #EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HN4K.png" group-title="4K",湖南卫视
 http://124.90.44.40:6060/010/2/00000009000000060000000000002069?virtualDomain=010.live_hls.zte.com
 #EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/DF4K.png" group-title="4K",东方卫视
