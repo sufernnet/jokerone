@@ -225,7 +225,8 @@ http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
 https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 
 
-
+#EXTINF:-1 tvg-id="TNT Sports Ultimate 4K UK" tvg-name="TNT Sports Ultimate 4K UK"  group-title="Sports",TNT Sports Ultimate 4K UK
+https://iptv.852851.xyz/ch/2c41872212c6280955072758c4ede093/master.m3u8
 #EXTINF:-1 tvg-id="nowSports1.hk" tvg-name="Now Sports 1" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch631_170_122" group-title="Sports",Now Sports 1
 https://iptv.852851.xyz/ch/cb54507de44f69262ecc8913ed958294/master.m3u8
 #EXTINF:-1 tvg-id="nowSports2.hk" tvg-name="Now Sports 2" tvg-logo="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch632_170_122" group-title="Sports",Now Sports 2
