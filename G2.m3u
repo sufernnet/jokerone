@@ -310,6 +310,9 @@ https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 #EXTINF:-1 tvg-id="fun探索娛樂台" tvg-name="fun探索娛樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live011_mobile.png" group-title="台湾",fun探索娛樂台
 http://192.168.100.1:10801/4gtv-live011/index.m3u8?token=joker
 
+
+#EXTINF:-1 tvg-id="TNT Sports Ultimate 4K UK" tvg-name="TNT Sports Ultimate 4K UK"  group-title="体育",TNT Sports Ultimate 4K UK
+https://iptv.852851.xyz/ch/2c41872212c6280955072758c4ede093/master.m3u8
 #EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ESPN.png" group-title="体育",ESPN
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
 #EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="体育",ESPN2
