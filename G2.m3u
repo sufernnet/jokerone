@@ -37,7 +37,7 @@ http://39.164.138.145:8899/hls/17/index.m3u8
 
 
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
-http://106.116.126.99:4022/rtp/239.254.201.67:6000
+http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv4k
 #EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HN4K.png" group-title="4K",湖南卫视
 http://124.90.44.40:6060/010/2/00000009000000060000000000002069?virtualDomain=010.live_hls.zte.com
 #EXTINF:-1 tvg-id="东方卫视" tvg-name="东方卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/DF4K.png" group-title="4K",东方卫视
@@ -311,8 +311,7 @@ https://cdn-1.ttvb.eu.org/api/BBC-Lifestyle/index.m3u8
 http://192.168.100.1:10801/4gtv-live011/index.m3u8?token=joker
 
 
-#EXTINF:-1 tvg-id="TNT Sports Ultimate 4K UK" tvg-name="TNT Sports Ultimate 4K UK"  group-title="体育",TNT Sports Ultimate 4K UK
-https://iptv.852851.xyz/ch/2c41872212c6280955072758c4ede093/master.m3u8
+
 #EXTINF:-1 tvg-id="ESPN" tvg-name="ESPN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/ESPN.png" group-title="体育",ESPN
 http://89.187.179.148:826/anto.j/c9yJDcXyPe/119665
 #EXTINF:-1 tvg-id="ESPN2" tvg-name="ESPN2" tvg-logo="https://epg.112114.xyz/logo/ESPN2.png" group-title="体育",ESPN2
