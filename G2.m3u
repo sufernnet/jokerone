@@ -123,7 +123,7 @@ http://cdn6.163189.xyz/163189/ch
 
 #EXTM3U
 #EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="台湾",中天新聞台
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv009&sd=1080&proxy=false&token=sufern
+http://192.168.100.1:10801/4gtv-4gtv009/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="民視新聞台" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="台湾",民視新聞台
 http://192.168.100.1:10801/litv-ftv13/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="台湾",寰宇新聞台
@@ -326,7 +326,7 @@ http://192.168.100.1:10801/fast-live220/index.m3u8?token=joker
 http://192.168.100.1:10801/litv-xinchuang08/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="民視生活通" tvg-name="民視生活通" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/消高FASTTV LOGO.png" group-title="台湾",民視生活通
 http://192.168.100.1:10801/fast-live217/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="靖天日本台" tvg-name="靖天日本台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv047_mobile.png" group-title="音樂綜藝",靖天日本台
+#EXTINF:-1 tvg-id="靖天日本台" tvg-name="靖天日本台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv047_mobile.png" group-title="台湾",靖天日本台
 http://192.168.100.1:10801/4gtv-4gtv047/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="韓流美食料理秀" tvg-name="韓流美食料理秀" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/fast-live240.png" group-title="台湾",韓流美食料理秀
 http://192.168.100.1:10801/fast-live240/index.m3u8?token=joker
@@ -346,7 +346,7 @@ http://192.168.100.1:10801/4gtv-live050/index.m3u8?token=joker
 http://192.168.100.1:10801/fast-live227/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="超人力霸王《劇場版》FastTV" tvg-name="超人力霸王《劇場版》FastTV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/台湾-主題(超人力霸王).png" group-title="台湾",超人力霸王《劇場版》FastTV
 http://192.168.100.1:10801/fast-live404/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="CLASSICA 古典樂" tvg-name="CLASSICA 古典樂" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv059_mobile.png" group-title="音樂綜藝",CLASSICA 古典樂
+#EXTINF:-1 tvg-id="CLASSICA 古典樂" tvg-name="CLASSICA 古典樂" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv059_mobile.png" group-title="台湾",CLASSICA 古典樂
 http://192.168.100.1:10801/4gtv-4gtv059/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="鬥魚" tvg-name="鬥魚" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/fast-live010.png" group-title="台湾",鬥魚
 http://192.168.100.1:10801/fast-live049/index.m3u8?token=joker
@@ -524,7 +524,7 @@ http://192.168.100.1:10801/fast-live235/index.m3u8?token=joker
 http://192.168.100.1:10801/fast-live408/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="華視好劇" tvg-name="華視好劇" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/fast-live005.png" group-title="台湾",華視好劇
 http://192.168.100.1:10801/fast-live005/index.m3u8?token=joker
-#EXTINF:-1 tvg-id="豬哥亮歌廳秀" tvg-name="豬哥亮歌廳秀" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv006_mobile.png" group-title="音樂綜藝",豬哥亮歌廳秀
+#EXTINF:-1 tvg-id="豬哥亮歌廳秀" tvg-name="豬哥亮歌廳秀" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv006_mobile.png" group-title="台湾",豬哥亮歌廳秀
 http://192.168.100.1:10801/4gtv-4gtv006/index.m3u8?token=joker
 #EXTINF:-1 tvg-id="超級冰冰Show" tvg-name="超級冰冰Show" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/fast-live213.png" group-title="台湾",超級冰冰Show
 http://192.168.100.1:10801/fast-live213/index.m3u8?token=joker
