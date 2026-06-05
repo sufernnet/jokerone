@@ -75,7 +75,7 @@ https://cdn6.163189.xyz/163189/hoy
 #EXTINF:-1 tvg-id="HOY78" tvg-name="HOY78" tvg-logo="https://static.wikia.nocookie.net/logos/images/7/72/HOY_78.png/revision/latest?cb=20240605025155&path-prefix=vi" group-title="香港",HOY78
 https://cdn.163189.xyz/163189/hoy78
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/viutv.png" group-title="香港",ViuTV
-http://192.168.100.1:19890/trams/1825/playlist.m3u8?token=w55SBUOjGL9wGK2onuDzoLm02lggdZsPBuNCBfnKS78=
+https://php.jdshipin.com:2096/TVOD/iptv.php?id=viutv
 #EXTINF:-1 tvg-id="ViuTV6" tvg-name="ViuTVsix" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/viutv6.png" group-title="香港",ViuTVsix
 http://192.168.100.1:19890/trams/2469/playlist.m3u8?token=w55SBUOjGL9wGK2onuDzoLm02lggdZsPBuNCBfnKS78=
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVB1.png" group-title="香港", 翡翠台 4K
