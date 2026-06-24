@@ -95,8 +95,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 http://116.241.240.176:5050/4gtv-live138/index.m3u8
 #EXTINF:-1 tvg-name="ROCK Entertainment" tvg-logo="https://live.fanmingming.com/tv/ROCK Entertainment.png" group-title="MV",ROCK Entertainment
 http://116.241.240.176:5050/4gtv-live080/index.m3u8
-#EXTINF:-1 tvg-name="HBO Comedy" tvg-logo="https://live.fanmingming.com/tv/HBO Comedy.png" group-title="MV",HBO Comedy
-http://23.237.104.106:8080/USA_HBO_COMEDY/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="HBO2" tvg-logo="https://live.fanmingming.com/tv/HBO2.png" group-title="MV",HBO2
+http://23.237.104.106:8080/USA_HBO2/tracks-v1a1/mono.m3u8
 #EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
 https://o11.163189.xyz/stream/live/typd/
 
