@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-06-29 22:48:52
+# 更新时间 2026-06-30 10:15:41
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -92,7 +92,7 @@ http://38.75.136.137:98/gslb/dsdqpub/sjdl.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="兵器科技" tvg-name="兵器科技" tvg-logo="https://www.xn--rgv465a.top/tvlogo/兵器科技.png" group-title="数字",兵器科技
 http://38.75.136.137:98/gslb/dsdqpub/gfjs.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="怀旧剧场" tvg-name="怀旧剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/怀旧剧场.png" group-title="数字",怀旧剧场
-http://113.92.196.140:9976/rtp/239.253.43.5:5146
+http://38.75.136.137:98/gslb/dsdqpub/hjjc.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="第一剧场" tvg-name="第一剧场" tvg-logo="https://www.xn--rgv465a.top/tvlogo/第一剧场.png" group-title="数字",第一剧场
 http://38.75.136.137:98/gslb/dsdqpub/dyjc.m3u8?auth=testpub
 #EXTINF:-1 tvg-id="女性时尚" tvg-name="女性时尚" tvg-logo="https://www.xn--rgv465a.top/tvlogo/女性时尚.png" group-title="数字",女性时尚
@@ -157,99 +157,79 @@ http://cdn6.163189.xyz/163189/ch8
 http://cdn6.163189.xyz/163189/ch
 
 # TW
-#EXTINF:-1 tvg-id="stream-d316be76-8afe-42d0-bc8c-16b69cd93474" tvg-name="愛爾達體育1台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/ELTA4.png" group-title="TW",愛爾達體育1台
-https://iptv.852851.xyz/l/WAB2dmlUbI0PEhd5-V2-KWG21JiJvQYgE4Ft6s18HKgDIh_Ver5nnWDzuYg1AVGX/index.m3u8
-#EXTINF:-1 tvg-id="stream-5e70f9d8-e375-4aa5-b9f0-54ea151c268f" tvg-name="愛爾達體育2台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/ELTA5.png" group-title="TW",愛爾達體育2台
-https://iptv.852851.xyz/l/aV3Ot69nR4hpXDYxj1Djh2WAV2NuVXuxZf9LCUktPOouQCjpIktGLI5c96xLlR9V/index.m3u8
-#EXTINF:-1 tvg-id="stream-973a506a-6df6-45a3-bf7e-8fef516e2a63" tvg-name="愛爾達體育3台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/ELTA6.png" group-title="TW",愛爾達體育3台
-https://iptv.852851.xyz/l/9FGmuovxYisJD5o9Y4f5zddh-lUfAoAVbAPI2f0f6GGRoSwPstSk5GT2hGeUZi4e/index.m3u8
-#EXTINF:-1 tvg-id="stream-577da2f5-368a-46b4-9a24-35c035d20850" tvg-name="中天新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTI2.png" group-title="TW",中天新聞台
-https://iptv.852851.xyz/l/IMQxwNjEIRqnm1pNLyMjmHnhxt0D7YiwYZ7kV9Wyu1rONOwv-ucFXR8fhTdCfYWw/index.m3u8
-#EXTINF:-1 tvg-id="stream-d5cd8dd1-b095-46af-be72-b06ff3eacbc6" tvg-name="寰宇新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Global2.png" group-title="TW",寰宇新聞台
-https://iptv.852851.xyz/l/LhNJru-Gqe97PEhchUVqPudpXHJk2QHpZsBbEtg7XWbNVlHJZTrm7EGIuAhF9L_u/index.m3u8
-#EXTINF:-1 tvg-id="stream-90294045-13b5-49b5-b40d-a89a6d6423d9" tvg-name="民視" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV.png" group-title="TW",民視
-https://iptv.852851.xyz/l/npuVP_SnsIONBoXmGioaIvAfa1Lcdo8h2B1yZ66P3BlQl7SW1JX5K1snRmE6szLX/index.m3u8
-#EXTINF:-1 tvg-id="stream-c4f5c511-130b-494e-b4f1-e5ecd0ea21b0" tvg-name="TVBS新聞" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVBS1.png" group-title="TW",TVBS新聞
-https://iptv.852851.xyz/l/zzIgFMz8uCeuoR2MPBAoahNXGFhVADEedS1mhS5uYvCWEG917j_-GIRubunjk3Sp/index.m3u8
-#EXTINF:-1 tvg-id="stream-4f25eace-356a-4379-9938-3804506d23b8" tvg-name="寰宇新聞台灣台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/Global3.png" group-title="TW",寰宇新聞台灣台
-https://iptv.852851.xyz/l/QJJRjqKPv7v_qCio0XvZh-XL-H6AyFgVPTa5aigkG9bnJoXKy20d_T_QglNy7CMJ/index.m3u8
-#EXTINF:-1 tvg-id="stream-010ce2c6-7801-488a-87f9-9c8113c4d45c" tvg-name="中視新聞" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTV1.png" group-title="TW",中視新聞
-https://iptv.852851.xyz/l/IimJ7bgzF84XwvG15Th-rWQL_bAZT5auJnIJD7f0nYRYsLj0shiS1uBJzpEH7Fbh/index.m3u8
-#EXTINF:-1 tvg-id="stream-4ab1a1e5-d8ba-4731-b043-e9fa99874cdd" tvg-name="民視新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV1.png" group-title="TW",民視新聞台
-https://iptv.852851.xyz/l/7folBkUDPeckp8SCJVWHnkyZv4nmrqCABSdxhVYyiUO9UDi7gfcRkbKecDGpZ9v1/index.m3u8
-#EXTINF:-1 tvg-id="stream-0af0548e-38a5-4a48-a863-03bcd2d16e81" tvg-name="華視新聞" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTS1.png" group-title="TW",華視新聞
-https://iptv.852851.xyz/l/rJnjXuhMkMBDo60UjhTD162j-kZtxaISDWvP0zcgr-kTdo4-RmlOMcDL6L-BljU6/index.m3u8
-#EXTINF:-1 tvg-id="stream-3a2fe257-2f30-4ad0-bc6e-46ce96318e52" tvg-name="華視" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTS.png" group-title="TW",華視
-https://iptv.852851.xyz/l/kXJCtheaLt21nQz6FkoMFazb2R5Ebu9vc9ppDg48uD31Qu0sTEHR0u4U5VHHWPGe/index.m3u8
-#EXTINF:-1 tvg-id="stream-669af04c-6c15-4944-884b-1ae519bd9f92" tvg-name="中視" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTV.png" group-title="TW",中視
-https://iptv.852851.xyz/l/w7a6BBdV4IliYVj2wolXszRT9Llo1ncrMRJxdSdYJxRlBdmnd6s2ee2ScqndU3ku/index.m3u8
-#EXTINF:-1 tvg-id="stream-18dd233d-55e7-44f4-b64d-8944ef91a2c0" tvg-name="民視台灣台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV3.png" group-title="TW",民視台灣台
-https://iptv.852851.xyz/l/_Xw-r_lOwmD7qGpzR0tIhA-HUNIJp3v7I3QyxIeLyxirq5l9I5Lxc1q3P7r-VW92/index.m3u8
-#EXTINF:-1 tvg-id="stream-bf3364d5-f80f-4ce9-a5f2-209b673caef4" tvg-name="民視第一台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV2.png" group-title="TW",民視第一台
-https://iptv.852851.xyz/l/2VCzCurwedJU-uMziR5kYYs2hKGktJIVPIL4XVnjNeJjx2QTjTrNHLqYS1lAAmA5/index.m3u8
-#EXTINF:-1 tvg-id="stream-d3ced746-b7fb-4325-bae1-e6a043e6133d" tvg-name="東森新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/EBC6.png" group-title="TW",東森新聞台
-https://iptv.852851.xyz/l/Hfnjc42q_R8tbem2TFmkXTrul1tN5ixQTnznvVvGdDGPSJcJ2L14234gbjktYyLk/index.m3u8
-#EXTINF:-1 tvg-id="stream-bf075c56-c6cc-4756-8a4a-187723a6ed66" tvg-name="靖洋戲劇台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/jy2.png" group-title="TW",靖洋戲劇台
-https://iptv.852851.xyz/l/f2SFgKIz_dbxAbamilqy-F7p75GBnK8RB24sha-BB1DWqzR_l5zAwIo_i9I9r-B-/index.m3u8
-#EXTINF:-1 tvg-id="stream-9b6a0d60-6b99-403e-87e7-0059c25de6e7" tvg-name="靖天戲劇台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/GoldenTV8.png" group-title="TW",靖天戲劇台
-https://iptv.852851.xyz/l/vnAlQdQupSGJEa8RmhyiV48YB2Q_mwkmvigtuJXbpnebr33wGxlsSjlgmcHXV3zJ/index.m3u8
-#EXTINF:-1 tvg-id="stream-91091726-d11f-475f-baa6-55b6dff74dd5" tvg-name="amc電影台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/AMC%E7%94%B5%E5%BD%B1.png" group-title="TW",amc電影台
-https://iptv.852851.xyz/l/dmqT7MlxVEbAezfgQtZMES9IVQR62xHP8XikoccCk9aTsIjim4Y95IvL95zlWn3t/index.m3u8
-#EXTINF:-1 tvg-id="stream-f51108e2-28b5-443e-a020-225223b0f352" tvg-name="靖天電影台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/GoldenTV9.png" group-title="TW",靖天電影台
-https://iptv.852851.xyz/l/v1ANhIF8-OPKJBkj_WxuAQUMeyIdda4VzJWEMkLKjOxI-Suxa2BIpVn5HkBckZ0e/index.m3u8
-#EXTINF:-1 tvg-id="stream-94b0d307-6a0a-41f2-8e64-98ab6a05e76c" tvg-name="靖天映畫" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/GoldenTV3.png" group-title="TW",靖天映畫
-https://iptv.852851.xyz/l/mBF9qrR41SjgO_aS00-HmM1x7yskK1Nd2srcpHXHl3onH-IG0daRNFLyL2TeCpoC/index.m3u8
-#EXTINF:-1 tvg-id="stream-c569144d-310a-4f37-b4d8-084edd79b1ca" tvg-name="采昌影劇台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/caichang.png" group-title="TW",采昌影劇台
-https://iptv.852851.xyz/l/DtOaTWTr_VHL-ndo6Gm2r9UN5p137xKPMsg-0JlqeReszSR6aJXV15cfB2GET9X8/index.m3u8
-#EXTINF:-1 tvg-id="stream-a88567e3-96ec-4599-90d1-178299b26f1f" tvg-name="ROCK Action" group-title="TW",ROCK Action
-https://iptv.852851.xyz/l/hZTvKr16f5fzOu7AnDI0T_VQlt7ry363xbN-aiNlTqfYbWEhiFBkU8vlPN5tOey2/index.m3u8
-#EXTINF:-1 tvg-id="stream-bfdbb682-b308-4492-9c1b-2b3554277ab3" tvg-name="金光布袋戲" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/jgbdx.png" group-title="TW",金光布袋戲
-https://iptv.852851.xyz/l/4uFSqXoWVA_jc0nZ_D4xTrVIv5gpflPNJQMffMDufJoc2rMk2cjFNjaUcdxHgmY4/index.m3u8
-#EXTINF:-1 tvg-id="stream-26102a12-5b4f-43b0-ac1f-afda2e5bdc70" tvg-name="八大精彩台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/GTV5.png" group-title="TW",八大精彩台
-https://iptv.852851.xyz/l/bJx8mGB4jH88Vae2-DGoGz8OTUahbBUc7qKEEc8Hd0nNma6vb7sj1e2YjaIDMWTM/index.m3u8
-#EXTINF:-1 tvg-id="stream-5ae3bebd-8503-4a16-af82-39370f66a939" tvg-name="HITS頻道" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/HITS.png" group-title="TW",HITS頻道
-https://iptv.852851.xyz/l/FSqQk4Hw7U9mAmRiEGt02zywHlU7TAP6Rv_TW7pwGqKeM_ZdMfMbpSMOUbYDwTe0/index.m3u8
-#EXTINF:-1 tvg-id="stream-b61d05e0-65a7-4aff-a816-d1131b28753d" tvg-name="亞洲旅遊台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/Asiatravel.png" group-title="TW",亞洲旅遊台
-https://iptv.852851.xyz/l/68EsjQxCAw-0S1fhfnjyWs5uNWXn-6irUPfLREfjU2A9FDV0BUf4ZtI-JdYqnm1z/index.m3u8
-#EXTINF:-1 tvg-id="stream-8ab3a36b-184a-4992-bc63-1fc39d07174f" tvg-name="東森財經新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/EBC7.png" group-title="TW",東森財經新聞台
-https://iptv.852851.xyz/l/EYfehlc09KGJnQZu56Albu7cei6RUHbbyfv0RPaKsKYIEhZRnpauGQavHOrM6NVN/index.m3u8
-#EXTINF:-1 tvg-id="stream-bc2c2824-282d-4d33-b7ca-9dbea93b8836" tvg-name="豬哥亮歌廳秀" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV7.png" group-title="TW",豬哥亮歌廳秀
-https://iptv.852851.xyz/l/wzsQeVZjBcETLgRY_1OrFnEJtsWXUyo7C3ymE7pSK3N2FwIQimCTAP-ceTSqsHlh/index.m3u8
-#EXTINF:-1 tvg-id="stream-5f225416-f378-4ddd-aa8d-5ca07ff4509c" tvg-name="民視綜藝台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV6.png" group-title="TW",民視綜藝台
-https://iptv.852851.xyz/l/8gUDLaVEkesSX0XhqSJxyvUbnmkbBBCw1HgjVPvh81N-DRramSbqt0b7sy8YROHw/index.m3u8
-#EXTINF:-1 tvg-id="stream-0a07ef24-81cb-43fd-9b11-a0c9079f72ea" tvg-name="三立新聞iNEWS" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/SET2.png" group-title="TW",三立新聞iNEWS
-https://iptv.852851.xyz/l/12RJEYLilF_4RK1QDKXEc7x0U1Bm7mSho4vep6oO2SfTCBIQW8co_SxotgZINjiX/index.m3u8
-#EXTINF:-1 tvg-id="stream-82e59add-5c26-4f2d-916f-f91a7c5cdca8" tvg-name="八大綜藝台" group-title="TW",八大綜藝台
-https://iptv.852851.xyz/l/aRF4YZXVHKQovBRkkSFdJiB4YNWDLiHmYnh7BAPhc1avLwGB-bVTpucAVW5JSvHh/index.m3u8
-#EXTINF:-1 tvg-id="stream-236ca7fe-54bd-4b6d-809f-5c8265c45d2e" tvg-name="愛爾達寵物運動台" group-title="TW",愛爾達寵物運動台
-https://iptv.852851.xyz/l/48Evh3WgygVI5fNm56k4GxrnULllNS-g9U55KqFOQct7SkVvaGk5ZxwoNbwu1I9N/index.m3u8
-#EXTINF:-1 tvg-id="stream-f008bee8-4fe6-414e-a357-48284ef93e56" tvg-name="公視戲劇" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/PTS3.png" group-title="TW",公視戲劇
-https://iptv.852851.xyz/l/tDkY1uY6FqH-ZhdkT1ONLrTHW1JhPUhw1L6IpjgodIroNrUZyhsw7pVBxtGY5a6F/index.m3u8
-#EXTINF:-1 tvg-id="stream-0c26cab2-0e9c-45a9-9634-2921e953fd42" tvg-name="民視影劇台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV4.png" group-title="TW",民視影劇台
-https://iptv.852851.xyz/l/MuWKxmwhf5jwJMEFAGgUoWuC2nQRdlDinIsL205dbAouiPTVNxiToF_D5QixtglS/index.m3u8
-#EXTINF:-1 tvg-id="stream-3140e807-aa48-4d61-bd5a-a1dcfce9dd73" tvg-name="民視旅遊台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/FTV5.png" group-title="TW",民視旅遊台
-https://iptv.852851.xyz/l/Ewc7XgMUf3sP-Vix5gFoMktkX3Qh8wyFMIvAqgYEgnLxqLA5Us7fzAGmYfMDXgO0/index.m3u8
-#EXTINF:-1 tvg-id="stream-69c1a728-bfa3-4e5e-aed2-2254b2edbce2" tvg-name="TVBS精采台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVBS3.png" group-title="TW",TVBS精采台
-https://iptv.852851.xyz/l/GxSsa4871t6htKuHa27SpgqupuCz_HKjqdAjCuunTefSURsBWd20MUHWca-6fEAw/index.m3u8
-#EXTINF:-1 tvg-id="stream-89b7b8f2-f227-4be4-9b1e-9cae36a5a9a8" tvg-name="TVBS歡樂台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVBS2.png" group-title="TW",TVBS歡樂台
-https://iptv.852851.xyz/l/BHQN4dylHPhG_43CXch22BevSnkEoWd_Fb8Yj7B7R9ulWgsLzzlvDVhgnbsi7l02/index.m3u8
-#EXTINF:-1 tvg-id="stream-99d235ad-af1e-435a-96da-5ead78875d3d" tvg-name="TVBS" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/TVBS.png" group-title="TW",TVBS
-https://iptv.852851.xyz/l/X_yylwn7QktAd9qqLkH2OmgIJbS5_IHhG6mZceSFsebH0m2ixD0MChf5P2b3lIDP/index.m3u8
-#EXTINF:-1 tvg-id="stream-2a55fcb0-0563-40a2-830b-adc5590b6fcf" tvg-name="智林體育台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/TSL.png" group-title="TW",智林體育台
-https://iptv.852851.xyz/l/HErpuPGBPLl-imHKntFkmndEgaccnYSCTcu9c6LLIuEgpUIk39Q9yQqK4mLThuxg/index.m3u8
-#EXTINF:-1 tvg-id="stream-c7795e25-5782-46be-a6f6-75734f9aa48b" tvg-name="博斯魅力台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast6.png" group-title="TW",博斯魅力台
-https://iptv.852851.xyz/l/RK8Wtg9uo1CctI7MgGHXtsxCdLqovv66E4OJZyV2YC8iBGQpylZBFZL_3nqr-6_9/index.m3u8
-#EXTINF:-1 tvg-id="stream-1bbc380d-4fc8-4705-92c4-dfa81f204236" tvg-name="博斯網球台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast5.png" group-title="TW",博斯網球台
-https://iptv.852851.xyz/l/IheqJxEeLQzHNJ_myBFJJUgNMJur55LV-fdeM4nqJIrpiRGVgLew5fKblyQqtng7/index.m3u8
-#EXTINF:-1 tvg-id="stream-2b568058-b4b0-4324-8524-b5ba76e9f4f4" tvg-name="博斯無限二台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast8.png" group-title="TW",博斯無限二台
-https://iptv.852851.xyz/l/_36m5VCBbSrG8tZr2b-Ph27Vgek583Ztyqrcepb-hMQdefltNr6S0Z6idCV6RXte/index.m3u8
-#EXTINF:-1 tvg-id="stream-cae82614-01e1-4c63-a0ee-56c82d5bbcd2" tvg-name="博斯無限台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast7.png" group-title="TW",博斯無限台
-https://iptv.852851.xyz/l/CoFjmFaU9vCjH_dXpq-DX5pUL0SBcPKoDg6CBJxSNyBKoVUX_qQ_yQOrxqis-WIk/index.m3u8
-#EXTINF:-1 tvg-id="stream-201ceb38-9644-452f-9478-6debb55a4269" tvg-name="博斯運動二台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast2.png" group-title="TW",博斯運動二台
-https://iptv.852851.xyz/l/MISp0xz6kYGWrhhJ6zO_deobErJo1zgnXEuq28tOI44IQTvN4oeNq-NupCt2kPMB/index.m3u8
-#EXTINF:-1 tvg-id="stream-b96bea4a-de90-4acf-971f-2f25bdb7fe36" tvg-name="博斯運動一台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast1.png" group-title="TW",博斯運動一台
-https://iptv.852851.xyz/l/a6xoYpvIyweLXOucEZB3FyINRigfT93hZfUWPbRoDWwG3VyJ2lk_TvxppeVaJX2Q/index.m3u8
-#EXTINF:-1 tvg-id="stream-00e198db-0669-4ba5-ad1e-23b81d566a13" tvg-name="博斯高球二台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast4.png" group-title="TW",博斯高球二台
-https://iptv.852851.xyz/l/noBC4gB9rGJWxVxMMfhhfkSCIKYnb5HyuilOwoxh-j2dF9AdMvnmaAbulqQrmgKu/index.m3u8
-#EXTINF:-1 tvg-id="stream-e50b4d67-33aa-4a7c-9c03-809f08b4e258" tvg-name="博斯高球台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVLogo/main/img/sportcast3.png" group-title="TW",博斯高球台
-https://iptv.852851.xyz/l/N8EYQCSEfLfxytIPtI8K4PoFpd1D8QyJ8cwhLMIIGzKKH6kg0zQ8jeSTtF5zuvZ6/index.m3u8
+#EXTINF:-1 tvg-id="260" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
+https://4g.158.qzz.io/163189/ztxwt
+#EXTINF:-1 tvg-id="262" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="TW",寰宇新聞台
+https://4g.158.qzz.io/163189/hyxwt
+#EXTINF:-1 tvg-id="280" tvg-name="寰宇新聞台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn15_mobile.png" group-title="TW",寰宇新聞台灣台
+https://4g.158.qzz.io/163189/hyxwtwt
+#EXTINF:-1 tvg-id="183" tvg-name="TVBS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv073_mobile.png" group-title="TW",TVBS
+https://4g.158.qzz.io/163189/tvbs
+#EXTINF:-1 tvg-id="6" tvg-name="華視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv041_mobile.png" group-title="TW",華視
+https://4g.158.qzz.io/163189/hs
+#EXTINF:-1 tvg-id="1" tvg-name="民視第一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png" group-title="TW",民視第一台
+https://4g.158.qzz.io/163189/msdyt
+#EXTINF:-1 tvg-id="255" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png" group-title="TW",民視台灣台
+https://4g.158.qzz.io/163189/mstwt
+#EXTINF:-1 tvg-id="3" tvg-name="民視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png" group-title="TW",民視
+https://4g.158.qzz.io/163189/ms
+#EXTINF:-1 tvg-id="4" tvg-name="中視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv040_mobile.png" group-title="TW",中視
+https://4g.158.qzz.io/163189/zs
+#EXTINF:-1 tvg-id="169" tvg-name="三立綜合台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live207_mobile.png" group-title="TW",三立綜合台
+https://4g.158.qzz.io/163189/slzht
+#EXTINF:-1 tvg-id="107" tvg-name="客家電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv043_mobile.png" group-title="TW",客家電視台
+https://4g.158.qzz.io/163189/hakkatv
+#EXTINF:-1 tvg-id="276" tvg-name="八大綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv410_mobile.png" group-title="TW",八大綜藝台
+https://4g.158.qzz.io/163189/bdzyt
+#EXTINF:-1 tvg-id="227" tvg-name="TVBS精采台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live086_mobile.png" group-title="TW",TVBS精采台
+https://4g.158.qzz.io/163189/tvbsjct
+#EXTINF:-1 tvg-id="21" tvg-name="靖天綜合台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv046_mobile.png" group-title="TW",靖天綜合台
+https://4g.158.qzz.io/163189/jtzht
+#EXTINF:-1 tvg-id="22" tvg-name="靖天日本台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv047_mobile.png" group-title="TW",靖天日本台
+https://4g.158.qzz.io/163189/jtrbt
+#EXTINF:-1 tvg-id="124" tvg-name="原住民族電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live014_mobile.webp" group-title="TW",原住民族電視台
+https://4g.158.qzz.io/163189/yzmzdst
+#EXTINF:-1 tvg-id="11" tvg-name="達文西頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv018_mobile.png" group-title="TW",達文西頻道
+https://4g.158.qzz.io/163189/dwxpd
+#EXTINF:-1 tvg-id="282" tvg-name="DreamWorks 夢工廠動畫" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live017_mobile.png" group-title="TW",DreamWorks 夢工廠動畫
+https://4g.158.qzz.io/163189/dreamworks
+#EXTINF:-1 tvg-id="268" tvg-name="鏡電視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv075_mobile.png" group-title="TW",鏡電視新聞台
+https://4g.158.qzz.io/163189/mirrormedia
+#EXTINF:-1 tvg-id="292" tvg-name="東森新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv14_mobile.png" group-title="TW",東森新聞台
+https://4g.158.qzz.io/163189/dsxwt
+#EXTINF:-1 tvg-id="256" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="TW",華視新聞
+https://4g.158.qzz.io/163189/hsxw
+#EXTINF:-1 tvg-id="257" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="TW",民視新聞台
+https://4g.158.qzz.io/163189/msxwt
+#EXTINF:-1 tvg-id="229" tvg-name="三立新聞iNEWS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live089_mobile.png" group-title="TW",三立新聞iNEWS
+https://4g.158.qzz.io/163189/slxw
+#EXTINF:-1 tvg-id="291" tvg-name="TVBS新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png" group-title="TW",TVBS新聞
+https://4g.158.qzz.io/163189/tvbsxw
+#EXTINF:-1 tvg-id="211" tvg-name="東森財經新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live019_mobile.png" group-title="TW",東森財經新聞台
+https://4g.158.qzz.io/163189/dscjxwt
+#EXTINF:-1 tvg-id="33" tvg-name="中視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv074_mobile.png" group-title="TW",中視新聞
+https://4g.158.qzz.io/163189/zsxw
+#EXTINF:-1 tvg-id="16" tvg-name="民視綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv004_mobile.png" group-title="TW",民視綜藝台
+https://4g.158.qzz.io/163189/mszyt
+#EXTINF:-1 tvg-id="84" tvg-name="KLT-靖天國際台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv063_mobile.png" group-title="TW",KLT-靖天國際台
+https://4g.158.qzz.io/163189/jtgjt
+#EXTINF:-1 tvg-id="119" tvg-name="Nice TV 靖天歡樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv054_mobile.png" group-title="TW",Nice TV 靖天歡樂台
+https://4g.158.qzz.io/163189/jthlt
+#EXTINF:-1 tvg-id="88" tvg-name="靖天資訊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv065_mobile.png" group-title="TW",靖天資訊台
+https://4g.158.qzz.io/163189/jtzxt
+#EXTINF:-1 tvg-id="184" tvg-name="TVBS歡樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv068_mobile.png" group-title="TW",TVBS歡樂台
+https://4g.158.qzz.io/163189/tvbshlt
+#EXTINF:-1 tvg-id="82" tvg-name="靖天電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv061_mobile.png" group-title="TW",靖天電影台
+https://4g.158.qzz.io/163189/jtdyt
+#EXTINF:-1 tvg-id="40" tvg-name="影迷數位電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv011_mobile-1.png" group-title="TW",影迷數位電影台
+https://4g.158.qzz.io/163189/ymswdyt
+#EXTINF:-1 tvg-id="39" tvg-name="amc電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv017new_mobile.png" group-title="TW",amc電影台
+https://4g.158.qzz.io/163189/amc
+#EXTINF:-1 tvg-id="225" tvg-name="CinemaWorld" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live069_mobile.png" group-title="TW",CinemaWorld
+https://4g.158.qzz.io/163189/cinemaworld
+#EXTINF:-1 tvg-id="476" tvg-name="TVBS綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live087_mobile.png" group-title="TW",TVBS綜藝台
+https://4g.158.qzz.io/163189/tvbszyt
+#EXTINF:-1 tvg-id="477" tvg-name="TVBS台劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live088_mobile.png" group-title="TW",TVBS台劇台
+https://4g.158.qzz.io/163189/tvbstjt
+#EXTINF:-1 tvg-id="201" tvg-name="經典電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live021_mobile.png" group-title="TW",經典電影台
+https://4g.158.qzz.io/163189/jddyt
