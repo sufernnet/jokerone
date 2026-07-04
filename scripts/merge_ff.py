@@ -60,6 +60,33 @@ FILTER_CHANNELS = [
     "SUPER Kids Channel"
 ]
 
+# 新增：需要过滤的内地/澳门频道（从主源中剔除）
+FILTER_MAINLAND_MACAU = [
+    "CCTV1港澳版",
+    "CCTV1",
+    "CCTV2",
+    "CCTV3",
+    "CCTV4",
+    "CCTV5",
+    "CCTV6",
+    "CCTV7",
+    "CCTV8",
+    "CCTV9",
+    "CCTV10",
+    "CCTV11",
+    "CCTV12",
+    "CCTV13",
+    "CCTV14",
+    "CCTV15",
+    "CCTV16",
+    "CCTV17",
+    "澳视澳门",
+    "澳视卫星",
+    "澳门体育",
+    "澳门综艺",
+    "澳门莲花"
+]
+
 # ===================== 下载 =====================
 
 def download(url, retry=2):
@@ -138,7 +165,7 @@ def get_phoenix_channels():
             phoenix_list.append((name, ext, url))
     return dedup(phoenix_list)
 
-# 过滤指定不需要的频道
+# 过滤指定不需要的频道（通用黑名单）
 def filter_unwanted_channels(channel_list):
     result = []
     for name, ext, url in channel_list:
@@ -146,6 +173,33 @@ def filter_unwanted_channels(channel_list):
         # 匹配黑名单频道，包含即丢弃
         for bad_name in FILTER_CHANNELS:
             if bad_name in name:
+                skip_flag = True
+                break
+        if not skip_flag:
+            result.append((name, ext, url))
+    return result
+
+# 新增：过滤内地/澳门频道（针对主源HK分组）
+def filter_mainland_macau(channel_list):
+    result = []
+    for name, ext, url in channel_list:
+        skip_flag = False
+        for bad_name in FILTER_MAINLAND_MACAU:
+            if bad_name in name:
+                skip_flag = True
+                break
+        if not skip_flag:
+            result.append((name, ext, url))
+    return result
+
+# 新增：从主源中剔除凤凰系列频道
+def filter_phoenix_from_main(channel_list):
+    result = []
+    phoenix_keywords = ["凤凰", "Phoenix", "鳳凰"]
+    for name, ext, url in channel_list:
+        skip_flag = False
+        for kw in phoenix_keywords:
+            if kw in name:
                 skip_flag = True
                 break
         if not skip_flag:
@@ -189,7 +243,13 @@ def main():
             hk_raw.append((n, e, u))
     hk_raw = dedup(hk_raw)
 
-    # 3. 合并凤凰 + 原有HK，然后过滤黑名单频道
+    # 3. 从主源的HK分组中剔除凤凰系列频道
+    hk_raw = filter_phoenix_from_main(hk_raw)
+
+    # 4. 从主源的HK分组中剔除内地/澳门频道
+    hk_raw = filter_mainland_macau(hk_raw)
+
+    # 5. 合并凤凰 + 原有HK，然后过滤黑名单频道
     all_hk_raw = phoenix_hk + hk_raw
     all_hk_clean = filter_unwanted_channels(all_hk_raw)
 
