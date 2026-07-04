@@ -11,7 +11,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE_URL = "https://yang.sufern001.workers.dev/"
 TW_M3U_URL = "https://raw.githubusercontent.com/sufernnet/joker/main/TW.m3u"
-HK_M3U_URL = "http://45.32.81.163:30000/mytv.m3u?token=juli"  # 新的HK订阅源
 
 EXTRA_URLS = [
     "https://tzdr.com/iptv.txt",
@@ -29,14 +28,10 @@ EXTRA_URLS = [
 OUTPUT_FILE = "Gather.m3u"
 BB_FILE = "BB.m3u"
 
-# HK分组只提取mytv
-HK_GROUP = "mytv"
+# 只提取这两个分组
+HK_GROUPS = ["•香港「Relay」", "•myTV「DASH」"]
 
 BAD_KEYWORDS = ["测试", "购物", "广告"]
-
-# 凤凰系列关键词（用于排序）
-PHOENIX_KEYWORDS = ["凤凰中文", "凤凰资讯", "凤凰香港"]
-PHOENIX_ORDER = {name: idx for idx, name in enumerate(PHOENIX_KEYWORDS)}
 
 # ===================== 下载 =====================
 
@@ -118,36 +113,6 @@ def set_group(extinf, group):
         return re.sub(r'group-title="[^"]*"', f'group-title="{group}"', extinf)
     return extinf.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{group}"')
 
-def is_cctv(name):
-    """判断是否为CCTV1~CCTV17"""
-    # 匹配 CCTV1 到 CCTV17（包括 CCTV-1 到 CCTV-17 格式）
-    pattern = r'^CCTV[-\s]?([1-9]|1[0-7])($|\s|:)'
-    return bool(re.search(pattern, name, re.IGNORECASE))
-
-def sort_hk_channels(channels):
-    """对HK频道排序：凤凰系列排最前面"""
-    phoenix = []
-    others = []
-    
-    for item in channels:
-        name = item[0]
-        # 检查是否为凤凰系列（精确匹配）
-        is_phoenix = False
-        for kw in PHOENIX_KEYWORDS:
-            if kw in name:
-                phoenix.append(item)
-                is_phoenix = True
-                break
-        if not is_phoenix:
-            others.append(item)
-    
-    # 对凤凰系列按指定顺序排序
-    phoenix.sort(key=lambda x: PHOENIX_ORDER.get(
-        next((kw for kw in PHOENIX_KEYWORDS if kw in x[0]), ""), 999
-    ))
-    
-    return phoenix + others
-
 # ===================== 主程序 =====================
 
 def main():
@@ -156,25 +121,18 @@ def main():
 
     print("TW...")
     tw_data = parse_m3u(download(TW_M3U_URL))
-    
-    print("HK (mytv)...")
-    hk_raw = parse_m3u(download(HK_M3U_URL))
 
-    # 从HK源中提取group-title="mytv"的分组
+    # 从主源中提取指定的HK分组
     hk = []
-    for n, e, u in hk_raw:
+    for n, e, u in main_data:
         group = parse_group(e)
-        if group == HK_GROUP:
-            # 过滤CCTV1~CCTV17
-            if not is_cctv(n):
-                hk.append((n, e, u))
+        if group in HK_GROUPS:
+            hk.append((n, e, u))
     
-    # 去重
     hk = dedup(hk)
+
+    # 去重TW
     tw = dedup(tw_data)
-    
-    # 对HK频道排序（凤凰系列排最前面）
-    hk = sort_hk_channels(hk)
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -193,7 +151,7 @@ def main():
     except:
         pass
 
-    # HK分组（凤凰系列已排最前面）
+    # HK分组
     out += "# HK\n"
     for n, e, u in hk:
         out += (set_group(e, "HK") or "") + "\n" + (u or "") + "\n"
@@ -206,7 +164,7 @@ def main():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(out)
 
-    print(f"✅ 完成！HK频道数: {len(hk)}, TW频道数: {len(tw)}")
+    print("✅ 完成")
 
 if __name__ == "__main__":
     main()
