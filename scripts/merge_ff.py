@@ -35,7 +35,7 @@ HK_GROUPS = ["•香港「Relay」", "•myTV「DASH」"]
 
 BAD_KEYWORDS = ["测试", "购物", "广告"]
 
-# 需要过滤删除的频道名称关键词/完整名称，全部使用英文引号
+# 需要过滤删除的频道名称关键词/完整名称
 FILTER_CHANNELS = [
     "雷霆881",
     "叱咤903",
@@ -58,7 +58,7 @@ FILTER_CHANNELS = [
     "互動窗 1",
     "互動窗 2",
     "SUPER Kids Channel",
-    # 新增过滤频道
+    # ===== 用户指定的删除频道 =====
     "CCTV1港澳版",
     "澳视澳门",
     "澳视卫星",
@@ -151,13 +151,14 @@ def filter_unwanted_channels(channel_list):
     for name, ext, url in channel_list:
         skip_flag = False
         
-        # 1. 匹配黑名单频道，包含即丢弃
+        # 1. 匹配黑名单关键词（包含澳门系列、CCTV1港澳版等）
         for bad_name in FILTER_CHANNELS:
             if bad_name in name:
                 skip_flag = True
                 break
                 
-        # 2. 正则精确匹配 CCTV1 ~ CCTV17 (防止误切如 CCTV5+ 等未指定频道)
+        # 2. 正则精确过滤 CCTV1 到 CCTV17
+        # 匹配：CCTV后紧跟或不跟分隔符，数字在1-17之间，且后面不能紧跟数字（防止误伤CCTV111等不存在的数字）
         if not skip_flag:
             if re.search(r'CCTV[-_\s]?(1[0-7]|[1-9])(?!\d)', name, re.IGNORECASE):
                 skip_flag = True
@@ -200,16 +201,18 @@ def main():
     for n, e, u in main_data:
         group = parse_group(e)
         if group in HK_GROUPS:
-            if "凤凰" in n:  # 剔除主源提取的凤凰系列频道
+            if "凤凰" in n:  # 剔除主源自带的凤凰系列频道
                 continue
             hk_raw.append((n, e, u))
     hk_raw = dedup(hk_raw)
 
-    # 3. 合并凤凰 + 原有HK，然后过滤黑名单频道 (包含CCTV1-17及澳门系列)
+    # 3. 合并凤凰直连 + 原有HK
     all_hk_raw = phoenix_hk + hk_raw
+    
+    # 4. 统一过滤黑名单频道 (包含CCTV1-17、CCTV1港澳版及澳门系列)
     all_hk_clean = filter_unwanted_channels(all_hk_raw)
 
-    # 去重TW并过滤不需要的频道
+    # 去重TW并同样过滤一遍不需要的频道
     tw = filter_unwanted_channels(dedup(tw_data))
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
