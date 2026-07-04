@@ -64,7 +64,6 @@ FILTER_CHANNELS = [
     "澳门体育",
     "澳门综艺",
     "澳门莲花",
-    # ===== 新增过滤：包含“回看”的频道 =====
     "回看"
 ]
 
@@ -209,6 +208,15 @@ def main():
     
     # 4. 统一过滤黑名单频道 (包含CCTV1-17、澳门系列以及所有带“回看”的频道)
     all_hk_clean = filter_unwanted_channels(all_hk_raw)
+
+    # 5. 截断优化：剔除 Action Hollywood Movies 频道后面的所有频道
+    truncated_hk = []
+    for n, e, u in all_hk_clean:
+        truncated_hk.append((n, e, u))
+        if "Action Hollywood Movies" in n:
+            print(f"📌 已捕获截断点频道: {n}，其后的所有频道已被剔除。")
+            break
+    all_hk_clean = truncated_hk
 
     # 去重TW并同样过滤一遍不需要的频道
     tw = filter_unwanted_channels(dedup(tw_data))
