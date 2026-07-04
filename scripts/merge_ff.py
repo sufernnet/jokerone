@@ -57,29 +57,9 @@ FILTER_CHANNELS = [
     "myTV SUPER 直播足球7台",
     "互動窗 1",
     "互動窗 2",
-    "SUPER Kids Channel"
-]
-
-# 新增：需要过滤的内地/澳门频道（从主源中剔除）
-FILTER_MAINLAND_MACAU = [
+    "SUPER Kids Channel",
+    # 新增过滤频道
     "CCTV1港澳版",
-    "CCTV1",
-    "CCTV2",
-    "CCTV3",
-    "CCTV4",
-    "CCTV5",
-    "CCTV6",
-    "CCTV7",
-    "CCTV8",
-    "CCTV9",
-    "CCTV10",
-    "CCTV11",
-    "CCTV12",
-    "CCTV13",
-    "CCTV14",
-    "CCTV15",
-    "CCTV16",
-    "CCTV17",
     "澳视澳门",
     "澳视卫星",
     "澳门体育",
@@ -165,43 +145,23 @@ def get_phoenix_channels():
             phoenix_list.append((name, ext, url))
     return dedup(phoenix_list)
 
-# 过滤指定不需要的频道（通用黑名单）
+# 过滤指定不需要的频道
 def filter_unwanted_channels(channel_list):
     result = []
     for name, ext, url in channel_list:
         skip_flag = False
-        # 匹配黑名单频道，包含即丢弃
+        
+        # 1. 匹配黑名单频道，包含即丢弃
         for bad_name in FILTER_CHANNELS:
             if bad_name in name:
                 skip_flag = True
                 break
+                
+        # 2. 正则精确匹配 CCTV1 ~ CCTV17 (防止误切如 CCTV5+ 等未指定频道)
         if not skip_flag:
-            result.append((name, ext, url))
-    return result
-
-# 新增：过滤内地/澳门频道（针对主源HK分组）
-def filter_mainland_macau(channel_list):
-    result = []
-    for name, ext, url in channel_list:
-        skip_flag = False
-        for bad_name in FILTER_MAINLAND_MACAU:
-            if bad_name in name:
+            if re.search(r'CCTV[-_\s]?(1[0-7]|[1-9])(?!\d)', name, re.IGNORECASE):
                 skip_flag = True
-                break
-        if not skip_flag:
-            result.append((name, ext, url))
-    return result
-
-# 新增：从主源中剔除凤凰系列频道
-def filter_phoenix_from_main(channel_list):
-    result = []
-    phoenix_keywords = ["凤凰", "Phoenix", "鳳凰"]
-    for name, ext, url in channel_list:
-        skip_flag = False
-        for kw in phoenix_keywords:
-            if kw in name:
-                skip_flag = True
-                break
+                
         if not skip_flag:
             result.append((name, ext, url))
     return result
@@ -235,26 +195,22 @@ def main():
     # 1. 获取凤凰直连频道（放HK最前面）
     phoenix_hk = get_phoenix_channels()
 
-    # 2. 从主源中提取指定的HK分组
+    # 2. 从主源中提取指定的HK分组（同时剔除主源自带的凤凰系列频道）
     hk_raw = []
     for n, e, u in main_data:
         group = parse_group(e)
         if group in HK_GROUPS:
+            if "凤凰" in n:  # 剔除主源提取的凤凰系列频道
+                continue
             hk_raw.append((n, e, u))
     hk_raw = dedup(hk_raw)
 
-    # 3. 从主源的HK分组中剔除凤凰系列频道
-    hk_raw = filter_phoenix_from_main(hk_raw)
-
-    # 4. 从主源的HK分组中剔除内地/澳门频道
-    hk_raw = filter_mainland_macau(hk_raw)
-
-    # 5. 合并凤凰 + 原有HK，然后过滤黑名单频道
+    # 3. 合并凤凰 + 原有HK，然后过滤黑名单频道 (包含CCTV1-17及澳门系列)
     all_hk_raw = phoenix_hk + hk_raw
     all_hk_clean = filter_unwanted_channels(all_hk_raw)
 
-    # 去重TW
-    tw = dedup(tw_data)
+    # 去重TW并过滤不需要的频道
+    tw = filter_unwanted_channels(dedup(tw_data))
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -275,7 +231,7 @@ def main():
     except Exception as e:
         print("读取BB.m3u出错:", str(e))
 
-    # HK分组（凤凰频道排在最前）
+    # HK分组（凤凰直连频道排在最前）
     out += "# HK\n"
     for n, e, u in all_hk_clean:
         new_ext = set_group(e, "HK")
