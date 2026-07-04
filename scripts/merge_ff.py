@@ -11,7 +11,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE_URL = "https://yang.sufern001.workers.dev/"
 TW_M3U_URL = "https://raw.githubusercontent.com/sufernnet/joker/main/TW.m3u"
-PHOENIX_URL = "http://45.32.81.163:30000/mytv.m3u?token=juli"
+# 凤凰直连源
+PHOENIX_SOURCE_URL = "http://45.32.81.163:30000/mytv.m3u?token=juli"
 
 EXTRA_URLS = [
     "https://tzdr.com/iptv.txt",
@@ -32,18 +33,31 @@ BB_FILE = "BB.m3u"
 # 只提取这两个分组
 HK_GROUPS = ["•香港「Relay」", "•myTV「DASH」"]
 
-# 凤凰频道名称
-PHOENIX_CHANNELS = ["凤凰中文", "凤凰资讯", "凤凰香港"]
-
 BAD_KEYWORDS = ["测试", "购物", "广告"]
 
-# 需要过滤的频道列表（包含这些关键词的频道及其后面的所有频道将被移除）
+# 需要过滤删除的频道名称关键词/完整名称
 FILTER_CHANNELS = [
-    "雷霆881", "叱咤903", "AM864", "無線衛星亞洲台", "創世電視", 
-    "無線衛星新聞台", "亞洲新聞台", "半島電視台英語頻道", "France 24", 
-    "DW", "NHK World-Japan", "NewsWorld", "myTV SUPER 直播足球2台", 
-    "直播足球3台", "直播足球4台", "直播足球5台", "直播足球6台", "直播足球7台",
-    "互動窗 1", "互動窗 2", "SUPER Kids Channel"
+    "雷霆881「电台」",
+    "叱咤903「电台"」,
+    "AM864「电台」",
+    "無線衛星亞洲台",
+    "創世電視",
+    "無線衛星新聞台",
+    "亞洲新聞台",
+    "半島電視台英語頻道",
+    "France 24",
+    "DW",
+    "NHK World-Japan",
+    "NewsWorld",
+    "myTV SUPER 直播足球2台",
+    "myTV SUPER 直播足球3台",
+    "myTV SUPER 直播足球4台",
+    "myTV SUPER 直播足球5台",
+    "myTV SUPER 直播足球6台",
+    "myTV SUPER 直播足球7台",
+    "互動窗 1",
+    "互動窗 2",
+    "SUPER Kids Channel"
 ]
 
 # ===================== 下载 =====================
@@ -55,8 +69,8 @@ def download(url, retry=2):
             r = requests.get(url, headers=headers, timeout=15)
             if r.status_code == 200:
                 return r.text
-        except:
-            print(f"重试 {i+1} 失败: {url}")
+        except Exception as e:
+            print(f"重试 {i+1} 失败: {url}, 错误: {str(e)[:50]}")
     print(f"跳过: {url}")
     return ""
 
@@ -88,9 +102,10 @@ def parse_txt(content):
     for l in content.splitlines():
         if "," in l and "http" in l:
             name, url = l.split(",", 1)
+            name = name.strip()
             if not any(x in name for x in BAD_KEYWORDS):
-                ext = f'#EXTINF:-1 group-title="未知",{name.strip()}'
-                data.append((name.strip(), ext, url.strip()))
+                ext = f'#EXTINF:-1 group-title="未知",{name}'
+                data.append((name, ext, url.strip()))
     return data
 
 def load_extra():
@@ -105,9 +120,37 @@ def load_extra():
                 all_data += parse_m3u(raw)
             else:
                 all_data += parse_txt(raw)
-        except:
-            print("解析失败:", url)
+        except Exception as e:
+            print("解析失败:", url, str(e)[:50])
     return all_data
+
+# 从凤凰源提取 group-title="直连测试" 内所有频道
+def get_phoenix_channels():
+    print("抓取凤凰直连源:", PHOENIX_SOURCE_URL)
+    raw = download(PHOENIX_SOURCE_URL)
+    if not raw:
+        return []
+    all_list = parse_m3u(raw)
+    phoenix_list = []
+    for name, ext, url in all_list:
+        g_title = parse_group(ext)
+        if g_title == "直连测试":
+            phoenix_list.append((name, ext, url))
+    return dedup(phoenix_list)
+
+# 过滤指定不需要的频道
+def filter_unwanted_channels(channel_list):
+    result = []
+    for name, ext, url in channel_list:
+        skip_flag = False
+        # 匹配黑名单频道，包含即丢弃
+        for bad_name in FILTER_CHANNELS:
+            if bad_name in name:
+                skip_flag = True
+                break
+        if not skip_flag:
+            result.append((name, ext, url))
+    return result
 
 # ===================== 工具 =====================
 
@@ -126,31 +169,6 @@ def set_group(extinf, group):
         return re.sub(r'group-title="[^"]*"', f'group-title="{group}"', extinf)
     return extinf.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{group}"')
 
-# ===================== 过滤函数 =====================
-
-def filter_channels(data):
-    """过滤指定频道及其后面的所有频道"""
-    filtered = []
-    stop = False
-    
-    for n, e, u in data:
-        if stop:
-            continue
-            
-        # 检查是否匹配过滤列表中的任意频道
-        should_filter = False
-        for filter_name in FILTER_CHANNELS:
-            if filter_name in n:
-                should_filter = True
-                print(f"过滤频道: {n} (匹配: {filter_name})")
-                stop = True  # 找到匹配项后停止后续所有频道
-                break
-        
-        if not should_filter:
-            filtered.append((n, e, u))
-    
-    return filtered
-
 # ===================== 主程序 =====================
 
 def main():
@@ -159,44 +177,24 @@ def main():
 
     print("TW...")
     tw_data = parse_m3u(download(TW_M3U_URL))
-    
-    print("凤凰源...")
-    phoenix_data = parse_m3u(download(PHOENIX_URL))
 
-    # 从主源中提取指定的HK分组
-    hk = []
+    # 1. 获取凤凰直连频道（放HK最前面）
+    phoenix_hk = get_phoenix_channels()
+
+    # 2. 从主源中提取指定的HK分组
+    hk_raw = []
     for n, e, u in main_data:
         group = parse_group(e)
         if group in HK_GROUPS:
-            hk.append((n, e, u))
-    
-    # 从凤凰源中提取"直连测试"分组中的凤凰频道
-    phoenix_channels = []
-    for n, e, u in phoenix_data:
-        group = parse_group(e)
-        if group == "直连测试":
-            for phoenix in PHOENIX_CHANNELS:
-                if phoenix in n:
-                    phoenix_channels.append((n, e, u))
-                    print(f"提取凤凰频道: {n}")
-                    break
-    
-    # 将凤凰频道排在HK分组最前面（去重）
-    phoenix_channels = dedup(phoenix_channels)
-    
-    # 从HK中移除可能重复的凤凰频道
-    phoenix_names = set([n for n, _, _ in phoenix_channels])
-    hk = [(n, e, u) for n, e, u in hk if n not in phoenix_names]
-    
-    # 合并：凤凰频道 + HK其他频道
-    hk = phoenix_channels + hk
-    hk = dedup(hk)
-    
+            hk_raw.append((n, e, u))
+    hk_raw = dedup(hk_raw)
+
+    # 3. 合并凤凰 + 原有HK，然后过滤黑名单频道
+    all_hk_raw = phoenix_hk + hk_raw
+    all_hk_clean = filter_unwanted_channels(all_hk_raw)
+
     # 去重TW
     tw = dedup(tw_data)
-    
-    # 应用过滤（移除指定频道及其后面的所有频道）
-    tw = filter_channels(tw)
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -207,30 +205,32 @@ def main():
     try:
         with open(BB_FILE, encoding="utf-8") as f:
             bb_lines = f.readlines()
-            for i, l in enumerate(bb_lines):
+            for l in bb_lines:
                 if not l.startswith("#EXTM3U"):
                     out += l
             out = out.rstrip('\n')
             out += '\n'
-    except:
-        pass
+    except FileNotFoundError:
+        print("未找到 BB.m3u，跳过加载")
+    except Exception as e:
+        print("读取BB.m3u出错:", str(e))
 
-    # HK分组（凤凰频道在最前面）
+    # HK分组（凤凰频道排在最前）
     out += "# HK\n"
-    for n, e, u in hk:
-        out += (set_group(e, "HK") or "") + "\n" + (u or "") + "\n"
+    for n, e, u in all_hk_clean:
+        new_ext = set_group(e, "HK")
+        out += new_ext + "\n" + u + "\n"
 
-    # TW分组（已过滤）
+    # TW分组
     out += "\n# TW\n"
     for n, e, u in tw:
-        out += (set_group(e, "TW") or "") + "\n" + (u or "") + "\n"
+        new_ext = set_group(e, "TW")
+        out += new_ext + "\n" + u + "\n"
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(out)
 
-    print("✅ 完成")
-    print(f"HK频道数量: {len(hk)}")
-    print(f"TW频道数量: {len(tw)}")
+    print("✅ 完成，已生成", OUTPUT_FILE)
 
 if __name__ == "__main__":
     main()
