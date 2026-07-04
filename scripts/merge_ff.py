@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE_URL = "https://yang.sufern001.workers.dev/"
 TW_M3U_URL = "https://raw.githubusercontent.com/sufernnet/joker/main/TW.m3u"
+PHOENIX_URL = "http://45.32.81.163:30000/mytv.m3u?token=juli"
 
 EXTRA_URLS = [
     "https://tzdr.com/iptv.txt",
@@ -31,7 +32,19 @@ BB_FILE = "BB.m3u"
 # 只提取这两个分组
 HK_GROUPS = ["•香港「Relay」", "•myTV「DASH」"]
 
+# 凤凰频道名称
+PHOENIX_CHANNELS = ["凤凰中文", "凤凰资讯", "凤凰香港"]
+
 BAD_KEYWORDS = ["测试", "购物", "广告"]
+
+# 需要过滤的频道列表（包含这些关键词的频道及其后面的所有频道将被移除）
+FILTER_CHANNELS = [
+    "雷霆881", "叱咤903", "AM864", "無線衛星亞洲台", "創世電視", 
+    "無線衛星新聞台", "亞洲新聞台", "半島電視台英語頻道", "France 24", 
+    "DW", "NHK World-Japan", "NewsWorld", "myTV SUPER 直播足球2台", 
+    "直播足球3台", "直播足球4台", "直播足球5台", "直播足球6台", "直播足球7台",
+    "互動窗 1", "互動窗 2", "SUPER Kids Channel"
+]
 
 # ===================== 下载 =====================
 
@@ -113,6 +126,31 @@ def set_group(extinf, group):
         return re.sub(r'group-title="[^"]*"', f'group-title="{group}"', extinf)
     return extinf.replace("#EXTINF:-1", f'#EXTINF:-1 group-title="{group}"')
 
+# ===================== 过滤函数 =====================
+
+def filter_channels(data):
+    """过滤指定频道及其后面的所有频道"""
+    filtered = []
+    stop = False
+    
+    for n, e, u in data:
+        if stop:
+            continue
+            
+        # 检查是否匹配过滤列表中的任意频道
+        should_filter = False
+        for filter_name in FILTER_CHANNELS:
+            if filter_name in n:
+                should_filter = True
+                print(f"过滤频道: {n} (匹配: {filter_name})")
+                stop = True  # 找到匹配项后停止后续所有频道
+                break
+        
+        if not should_filter:
+            filtered.append((n, e, u))
+    
+    return filtered
+
 # ===================== 主程序 =====================
 
 def main():
@@ -121,6 +159,9 @@ def main():
 
     print("TW...")
     tw_data = parse_m3u(download(TW_M3U_URL))
+    
+    print("凤凰源...")
+    phoenix_data = parse_m3u(download(PHOENIX_URL))
 
     # 从主源中提取指定的HK分组
     hk = []
@@ -129,10 +170,33 @@ def main():
         if group in HK_GROUPS:
             hk.append((n, e, u))
     
+    # 从凤凰源中提取"直连测试"分组中的凤凰频道
+    phoenix_channels = []
+    for n, e, u in phoenix_data:
+        group = parse_group(e)
+        if group == "直连测试":
+            for phoenix in PHOENIX_CHANNELS:
+                if phoenix in n:
+                    phoenix_channels.append((n, e, u))
+                    print(f"提取凤凰频道: {n}")
+                    break
+    
+    # 将凤凰频道排在HK分组最前面（去重）
+    phoenix_channels = dedup(phoenix_channels)
+    
+    # 从HK中移除可能重复的凤凰频道
+    phoenix_names = set([n for n, _, _ in phoenix_channels])
+    hk = [(n, e, u) for n, e, u in hk if n not in phoenix_names]
+    
+    # 合并：凤凰频道 + HK其他频道
+    hk = phoenix_channels + hk
     hk = dedup(hk)
-
+    
     # 去重TW
     tw = dedup(tw_data)
+    
+    # 应用过滤（移除指定频道及其后面的所有频道）
+    tw = filter_channels(tw)
 
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -151,12 +215,12 @@ def main():
     except:
         pass
 
-    # HK分组
+    # HK分组（凤凰频道在最前面）
     out += "# HK\n"
     for n, e, u in hk:
         out += (set_group(e, "HK") or "") + "\n" + (u or "") + "\n"
 
-    # TW分组
+    # TW分组（已过滤）
     out += "\n# TW\n"
     for n, e, u in tw:
         out += (set_group(e, "TW") or "") + "\n" + (u or "") + "\n"
@@ -165,6 +229,8 @@ def main():
         f.write(out)
 
     print("✅ 完成")
+    print(f"HK频道数量: {len(hk)}")
+    print(f"TW频道数量: {len(tw)}")
 
 if __name__ == "__main__":
     main()
