@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-07-04 07:14:46
+# 更新时间 2026-07-04 08:01:56
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -211,108 +211,6 @@ https://iptv.yang-1989.xyz/myTV/pcryza?token=42b66a0b712b2f64f7aed93f4e397132d27
 https://iptv.yang-1989.xyz/myTV/um4k5y?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
 #EXTINF:-1 tvg-id="Action Hollywood Movies" tvg-name="Action Hollywood Movies" tvg-logo="https://material.yang-1989.xyz/logo/ActionHollywoodMovies.png" group-title="HK",Action Hollywood Movies
 https://iptv.yang-1989.xyz/myTV/66tev3?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Rialto Classic Movies (RCM)" tvg-name="Rialto Classic Movies (RCM)" tvg-logo="https://material.yang-1989.xyz/logo/RCM.png" group-title="HK",Rialto Classic Movies (RCM)
-https://iptv.yang-1989.xyz/myTV/5s7jnf?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Love Nature HD" tvg-name="Love Nature HD" tvg-logo="https://material.yang-1989.xyz/logo/Love-Nature.png" group-title="HK",Love Nature
-https://iptv.yang-1989.xyz/myTV/q33qua?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Love Nature 4K" tvg-name="Love Nature 4K" tvg-logo="https://material.yang-1989.xyz/logo/LoveNature4K.png" group-title="HK",Love Nature 4K
-https://iptv.yang-1989.xyz/myTV/39rtys?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Global Trekker" tvg-name="Global Trekker" tvg-logo="https://material.yang-1989.xyz/logo/Global-Trekker.png" group-title="HK",Global Trekker
-https://iptv.yang-1989.xyz/myTV/9a23se?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="FashionBox" tvg-name="FashionBox" tvg-logo="https://material.yang-1989.xyz/logo/FashionBox.png" group-title="HK",FashionBox
-https://iptv.yang-1989.xyz/myTV/tfbu6a?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Arirang TV" tvg-name="Arirang TV" tvg-logo="https://material.yang-1989.xyz/logo/Arirang-TV.png" group-title="HK",Arirang TV
-https://iptv.yang-1989.xyz/myTV/yc3xqz?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="TRACE Sport Stars" tvg-name="TRACE Sport Stars" tvg-logo="https://material.yang-1989.xyz/logo/TRACE-Sport-Stars.png" group-title="HK",TRACE Sport Stars
-https://iptv.yang-1989.xyz/myTV/zuzsdv?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="TRACE Urban" tvg-name="TRACE Urban" tvg-logo="https://material.yang-1989.xyz/logo/TRACE-Urban.png" group-title="HK",TRACE Urban
-https://iptv.yang-1989.xyz/myTV/c2qy48?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Pet Club TV" tvg-name="Pet Club TV" tvg-logo="https://material.yang-1989.xyz/logo/PetClubTV.png" group-title="HK",Pet Club TV
-https://iptv.yang-1989.xyz/myTV/num9cw?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Globetrotter" tvg-name="Globetrotter" tvg-logo="https://material.yang-1989.xyz/logo/Globetrotter.png" group-title="HK",Globetrotter
-https://iptv.yang-1989.xyz/myTV/gywdga?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Docsville" tvg-name="Docsville" tvg-logo="https://material.yang-1989.xyz/logo/Docsville.png" group-title="HK",Docsville
-https://iptv.yang-1989.xyz/myTV/q44htd?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Pulse Documentaries" tvg-name="Pulse Documentaries" tvg-logo="https://material.yang-1989.xyz/logo/PulseDocumentaries.png" group-title="HK",Pulse Documentaries
-https://iptv.yang-1989.xyz/myTV/vsdb86?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="NOW 70s" tvg-name="NOW 70s" tvg-logo="https://material.yang-1989.xyz/logo/NOW70s.png" group-title="HK",NOW 70s
-https://iptv.yang-1989.xyz/myTV/xkfnkm?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="NOW 80s" tvg-name="NOW 80s" tvg-logo="https://material.yang-1989.xyz/logo/NOW80s.png" group-title="HK",NOW 80s
-https://iptv.yang-1989.xyz/myTV/mvnepb?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="NOW 90s00s" tvg-name="NOW 90s00s" tvg-logo="https://material.yang-1989.xyz/logo/NOW90s00s.png" group-title="HK",NOW 90s00s
-https://iptv.yang-1989.xyz/myTV/tvz26e?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="NOW ROCK" tvg-name="NOW ROCK" tvg-logo="https://material.yang-1989.xyz/logo/NOWROCK.png" group-title="HK",NOW ROCK
-https://iptv.yang-1989.xyz/myTV/hed9jr?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Concerto" tvg-name="Concerto" tvg-logo="https://material.yang-1989.xyz/logo/Concerto.png" group-title="HK",Concerto
-https://iptv.yang-1989.xyz/myTV/8djc83?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER Sports" tvg-name="SUPER Sports" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER Sports
-https://iptv.yang-1989.xyz/myTV/kmte67?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="myTV SUPER 18台" tvg-name="myTV SUPER 18台" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",myTV SUPER 18台
-https://iptv.yang-1989.xyz/myTV/z547n5?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="myTV SUPER直播足球4台" tvg-name="myTV SUPER直播足球4台" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",myTV SUPER直播足球4台
-https://iptv.yang-1989.xyz/myTV/emg4by?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="互動窗 1" tvg-name="互動窗 1" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",互動窗 1
-https://iptv.yang-1989.xyz/myTV/7hb3nd?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="互動窗 2" tvg-name="互動窗 2" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",互動窗 2
-https://iptv.yang-1989.xyz/myTV/d6hzez?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="ZooMoo" tvg-name="ZooMoo" tvg-logo="https://material.yang-1989.xyz/logo/ZooMoo.png" group-title="HK",ZooMoo
-https://iptv.yang-1989.xyz/myTV/hhhfbz?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Nickelodeon" tvg-name="Nickelodeon" tvg-logo="https://material.yang-1989.xyz/logo/Nickelodeon.png" group-title="HK",Nickelodeon
-https://iptv.yang-1989.xyz/myTV/dcqs5c?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="Nick Jr" tvg-name="Nick Jr" tvg-logo="https://material.yang-1989.xyz/logo/Nickjr.png" group-title="HK",Nick Jr.
-https://iptv.yang-1989.xyz/myTV/hak6m7?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER獎門人" tvg-name="SUPER獎門人" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 獎門人
-https://iptv.yang-1989.xyz/myTV/2vunda?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER EYT" tvg-name="SUPER EYT" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER EYT
-https://iptv.yang-1989.xyz/myTV/kskw3h?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER識食" tvg-name="SUPER識食" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 識食
-https://iptv.yang-1989.xyz/myTV/aurxrg?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER識嘆" tvg-name="SUPER識嘆" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 識嘆
-https://iptv.yang-1989.xyz/myTV/ffsy8t?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER Music" tvg-name="SUPER Music" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER Music
-https://iptv.yang-1989.xyz/myTV/uncs6c?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER金曲" tvg-name="SUPER金曲" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 金曲
-https://iptv.yang-1989.xyz/myTV/grs46e?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER煲劇" tvg-name="SUPER煲劇" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 煲劇
-https://iptv.yang-1989.xyz/myTV/fdmf5h?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="SUPER單元劇" tvg-name="SUPER單元劇" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",SUPER 單元劇
-https://iptv.yang-1989.xyz/myTV/6q7fj9?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="真情SUPER煲" tvg-name="真情SUPER煲" tvg-logo="https://material.yang-1989.xyz/logo/MytvSuper.png" group-title="HK",真情SUPER煲
-https://iptv.yang-1989.xyz/myTV/pn4buc?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="中央電視台綜合頻道 (港澳版)" tvg-name="中央電視台綜合頻道 (港澳版)" tvg-logo="https://material.yang-1989.xyz/logo/CCTV1.png" group-title="HK",中央電視台 綜合頻道
-https://iptv.yang-1989.xyz/myTV/fesqxr?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="中國中央電視台中文國際頻道" tvg-name="中國中央電視台中文國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/CCTV4.png" group-title="HK",中央電視台 中文國際頻道
-https://iptv.yang-1989.xyz/myTV/tjadtf?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="中國中央電視台娛樂頻道" tvg-name="中國中央電視台娛樂頻道" tvg-logo="https://material.yang-1989.xyz/logo/CCTV娱乐.png" group-title="HK",中央電視台 娛樂頻道
-https://iptv.yang-1989.xyz/myTV/ump37y?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="中國中央電視台戲曲頻道" tvg-name="中國中央電視台戲曲頻道" tvg-logo="https://material.yang-1989.xyz/logo/CCTV戏曲.png" group-title="HK",中央電視台 戲曲頻道
-https://iptv.yang-1989.xyz/myTV/7am23z?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="CGTN (中國環球電視網)記錄頻道" tvg-name="CGTN (中國環球電視網)記錄頻道" tvg-logo="https://material.yang-1989.xyz/logo/CGTN纪录.png" group-title="HK",CGTN 記錄頻道
-https://iptv.yang-1989.xyz/myTV/rzsym6?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="CGTN (中國環球電視網)英語頻道" tvg-name="CGTN (中國環球電視網)英語頻道" tvg-logo="https://material.yang-1989.xyz/logo/CGTN.png" group-title="HK",CGTN 英語頻道
-https://iptv.yang-1989.xyz/myTV/errd7j?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="雲南瀾湄國際衛視" tvg-name="雲南瀾湄國際衛視" tvg-logo="https://material.yang-1989.xyz/logo/澜湄国际.png" group-title="HK",雲南瀾湄國際衛視
-https://iptv.yang-1989.xyz/myTV/nwv5zq?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="東方衛視國際頻道" tvg-name="東方衛視國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/东方卫视.png" group-title="HK",東方衛視國際頻道
-https://iptv.yang-1989.xyz/myTV/semddd?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="安徽廣播電視台國際頻道" tvg-name="安徽廣播電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/安徽卫视.png" group-title="HK",安徽廣播電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/qh8n6c?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="北京電視台國際頻道" tvg-name="北京電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/北京卫视.png" group-title="HK",北京電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/9zxbpv?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="廣西電視台國際頻道" tvg-name="廣西電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/广西卫视.png" group-title="HK",廣西電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/nf6n4x?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="福建海峽衛視國際頻道" tvg-name="福建海峽衛視國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/海峡卫视.png" group-title="HK",福建海峽衛視國際頻道
-https://iptv.yang-1989.xyz/myTV/jvstab?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="湖南電視台國際頻道" tvg-name="湖南電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/湖南卫视.png" group-title="HK",湖南電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/j5nack?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="江蘇電視台國際頻道" tvg-name="江蘇電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/江苏卫视.png" group-title="HK",江蘇電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/2xbfqv?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="廣東廣播電視台大灣區衛視頻道" tvg-name="廣東廣播電視台大灣區衛視頻道" tvg-logo="https://material.yang-1989.xyz/logo/广东卫视.png" group-title="HK",廣東廣播電視台大灣區衛視頻道
-https://iptv.yang-1989.xyz/myTV/b9fa9c?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="浙江電視台國際頻道" tvg-name="浙江電視台國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/浙江卫视.png" group-title="HK",浙江電視台國際頻道
-https://iptv.yang-1989.xyz/myTV/p9jx6n?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
-#EXTINF:-1 tvg-id="深圳衛視國際頻道" tvg-name="深圳衛視國際頻道" tvg-logo="https://material.yang-1989.xyz/logo/深圳卫视.png" group-title="HK",深圳衛視國際頻道
-https://iptv.yang-1989.xyz/myTV/j5hf7c?token=42b66a0b712b2f64f7aed93f4e397132d273dd657c6796a2
 
 # TW
 #EXTINF:-1 tvg-id="stream-577da2f5-368a-46b4-9a24-35c035d20850" tvg-name="中天新聞台" tvg-logo="https://raw.githubusercontent.com/wanglindl/TVlogo/main/img/CTI2.png" group-title="TW",中天新聞台
