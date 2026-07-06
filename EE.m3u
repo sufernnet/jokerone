@@ -101,8 +101,8 @@ http://push.cdn1.hls123.de:8080/streams/a4y2t99pzyi/index.m3u8
 http://push.cdn1.hls123.de:8080/streams/0u0qd5ovqkg/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="凤凰香港" tvg-logo="https://epg.112114.xyz/logo/凤凰香港.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",凤凰香港
 http://push.cdn1.hls123.de:8080/streams/898y722sqjr/index.m3u8
-#EXTINF:-1 group-title="HK" tvg-name="华丽翡翠台" tvg-logo="https://epg.112114.xyz/logo/华丽翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",华丽翡翠台
-http://push.cdn1.hls123.de:8080/streams/n6dnsi33w2e/index.m3u8
+#EXTINF:-1 group-title="HK" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠台
+http://push.cdn1.hls123.de:8080/streams/ef5addc0849/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="无线新闻" tvg-logo="https://epg.112114.xyz/logo/无线新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",无线新闻
 http://push.cdn1.hls123.de:8080/streams/n66wwnx3l7i/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="TVB星河" tvg-logo="https://epg.112114.xyz/logo/TVB星河.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB星河
