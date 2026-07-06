@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-07-05 22:54:52
+# 更新时间 2026-07-06 12:46:46
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -87,6 +87,54 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002075?virtualDomain=01
 #EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/SD4K.png" group-title="4K",山东卫视
 http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=010.live_hls.zte.com
 # HK
+#EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
+http://c.123.rr.kg/163189/fhzw
+#EXTINF:-1 tvg-name="凤凰资讯" group-title="HK",凤凰资讯
+http://c.123.rr.kg/163189/fhzx
+#EXTINF:-1 tvg-name="凤凰香港" group-title="HK",凤凰香港
+http://c.123.rr.kg/163189/fhhk
+#EXTINF:-1 tvg-name="翡翠台" group-title="HK",翡翠台
+http://c.123.rr.kg/163189/fct
+#EXTINF:-1 tvg-name="TVB Jade HD" group-title="HK",华丽翡翠台(硬字幕)
+http://c.123.rr.kg/163189/jade
+#EXTINF:-1 tvg-name="无线新闻" group-title="HK",无线新闻台
+http://c.123.rr.kg/163189/wxxw
+#EXTINF:-1 tvg-name="HOY77" group-title="HK",HOY TV
+http://c.123.rr.kg/163189/hoy
+#EXTINF:-1 tvg-name="重温经典" group-title="HK",重温经典
+http://c.123.rr.kg/163189/cwjd
+#EXTINF:-1 tvg-name="TVB1" group-title="HK",TVB1
+http://c.123.rr.kg/163189/tvb1
+#EXTINF:-1 tvg-name="TVBJ1" group-title="HK",TVBJ1
+http://c.123.rr.kg/163189/j1
+#EXTINF:-1 tvg-name="翡翠剧集台" group-title="HK",翡翠剧集台
+http://c.123.rr.kg/163189/tvbd
+#EXTINF:-1 tvg-name="八度空间" group-title="HK",八度空间
+http://c.123.rr.kg/163189/8tv
+#EXTINF:-1 tvg-name="Channel 5" group-title="HK",CH5
+http://c.123.rr.kg/163189/ch5
+#EXTINF:-1 tvg-name="Channel 8" group-title="HK",CH8
+http://c.123.rr.kg/163189/ch8
+#EXTINF:-1 tvg-name="Channel U" group-title="HK",CHU
+http://c.123.rr.kg/163189/chu
+#EXTINF:-1 tvg-name="TVB Jade HD" group-title="HK",华丽翡翠台
+http://c.123.rr.kg/163189/hlfct
+#EXTINF:-1 tvg-name="TVB亚洲武侠" group-title="HK",TVB亚洲武侠
+http://c.123.rr.kg/163189/yzwx
+#EXTINF:-1 tvg-name="娛樂新聞台" group-title="HK",TVB娱乐新闻台
+http://c.123.rr.kg/163189/ylxw
+#EXTINF:-1 tvg-name="无线新闻" group-title="HK",无线新闻台
+http://c.123.rr.kg/163189/wxxwt
+#EXTINF:-1 tvg-name="TVB星河" group-title="HK",TVB星河
+http://c.123.rr.kg/163189/tvbxh
+#EXTINF:-1 tvg-name="重温经典" group-title="HK",重温经典
+http://f.123.rr.kg/163189/cwjd
+#EXTINF:-1 tvg-name="海峡卫视" group-title="HK",海峡卫视
+http://f.123.rr.kg/163189/hxws
+#EXTINF:-1 tvg-name="广州综合" group-title="HK",广州综合
+http://f.123.rr.kg/163189/gzzh
+#EXTINF:-1 tvg-name="广州新闻" group-title="HK",广州新闻
+http://f.123.rr.kg/163189/gzxw
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.yang-1989.xyz/logo/翡翠台.png" group-title="HK",翡翠台
 https://cdn.yang-1989.xyz/hk/f3bbw9?token=53ea30332bbfda0f2f065ea0ff9221226bfcf791b4bd3454
 #EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://material.yang-1989.xyz/logo/無綫新聞台.png" group-title="HK",無綫新聞台
