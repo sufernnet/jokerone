@@ -91,12 +91,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
-#EXTINF:-1 tvg-name="ROCK Action" tvg-logo="https://live.fanmingming.com/tv/ROCK Action.png" group-title="MV",ROCK Action
-http://116.241.240.176:5050/4gtv-live138/index.m3u8
-#EXTINF:-1 tvg-name="ROCK Entertainment" tvg-logo="https://live.fanmingming.com/tv/ROCK Entertainment.png" group-title="MV",ROCK Entertainment
-http://116.241.240.176:5050/4gtv-live080/index.m3u8
-#EXTINF:-1 tvg-name="HBO" tvg-logo="https://live.fanmingming.com/tv/HBO.png" group-title="MV",HBO
-http://23.237.104.106:8080/USA_HBO/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-name="天映频道" tvg-logo="https://live.fanmingming.com/tv/天映频道.png" group-title="MV",天映频道
+https://o11.163189.xyz/stream/live/typd/
 
 # HK
 #EXTINF:-1 group-title="HK" tvg-name="凤凰中文" tvg-logo="https://epg.112114.xyz/logo/凤凰中文.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",凤凰中文
@@ -105,8 +101,8 @@ http://push.cdn1.hls123.de:8080/streams/a4y2t99pzyi/index.m3u8
 http://push.cdn1.hls123.de:8080/streams/0u0qd5ovqkg/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="凤凰香港" tvg-logo="https://epg.112114.xyz/logo/凤凰香港.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",凤凰香港
 http://push.cdn1.hls123.de:8080/streams/898y722sqjr/index.m3u8
-#EXTINF:-1 group-title="HK" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠台
-http://push.cdn1.hls123.de:8080/streams/ef5addc0849/index.m3u8
+#EXTINF:-1 group-title="HK" tvg-name="华丽翡翠台" tvg-logo="https://epg.112114.xyz/logo/华丽翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",华丽翡翠台
+http://push.cdn1.hls123.de:8080/streams/n6dnsi33w2e/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="无线新闻" tvg-logo="https://epg.112114.xyz/logo/无线新闻.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",无线新闻
 http://push.cdn1.hls123.de:8080/streams/n66wwnx3l7i/index.m3u8
 #EXTINF:-1 group-title="HK" tvg-name="TVB星河" tvg-logo="https://epg.112114.xyz/logo/TVB星河.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",TVB星河
