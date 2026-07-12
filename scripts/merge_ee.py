@@ -46,65 +46,62 @@ HK_TARGET_ORDER = [
     "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U"
 ]
 
-# ===================== TW 新源 =====================
+# ===================== TW 分组（使用用户提供的频道） =====================
 
-TW_NEW_SOURCE = "https://github.com/sufernnet/jokerone/blob/main/OFIII.m3u"
-# 注意：如果上述源无法访问，代码会自动回退到原有的TW提取逻辑
+# 用户提供的 TW 频道 M3U 内容（完整复制）
+USER_TW_M3U = """
+#EXTINF:-1 tvg-id="4gtv-4gtv009" tvg-name="中天新聞台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv009&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv040" tvg-name="中視" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv040_mobile.png" group-title="TW",中視
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv040&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv041" tvg-name="華視" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv041_mobile.png" group-title="TW",華視
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv041&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv052" tvg-name="華視新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv052_mobile.png" group-title="TW",華視新聞
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv052&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv074" tvg-name="中視新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv074_mobile.png" group-title="TW",中視新聞
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv074&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv076" tvg-name="亞洲旅遊台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn17_mobile.png" group-title="TW",亞洲旅遊台
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv076&sd=1080&proxy=false&token=sufern
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv104&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv156" tvg-name="寰宇新聞台灣台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn15_mobile.png" group-title="TW",寰宇新聞台灣台
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv156&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="4gtv-4gtv158" tvg-name="寰宇財經台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn23_mobile.png" group-title="TW",寰宇財經台
+http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv158&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="daystar" tvg-name="DayStar" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/Daystar_214x120.png" group-title="TW",DayStar
+http://192.168.100.1:50002/index.m3u8?pid=daystar&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="iNEWS" tvg-name="三立新聞iNEWS" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_iNEWS_mobile.png" group-title="TW",三立新聞iNEWS
+http://192.168.100.1:50002/index.m3u8?pid=iNEWS&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-ftv16" tvg-name="好消息" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv16_mobile.png" group-title="TW",好消息
+http://192.168.100.1:50002/index.m3u8?pid=litv-ftv16&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-ftv17" tvg-name="好消息2台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv17_mobile.png" group-title="TW",好消息2台
+http://192.168.100.1:50002/index.m3u8?pid=litv-ftv17&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-longturn14" tvg-name="寰宇新聞台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_mobile.png" group-title="TW",寰宇新聞台
+http://192.168.100.1:50002/index.m3u8?pid=litv-longturn14&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang01" tvg-name="龍華卡通台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn01_mobile.png" group-title="TW",龍華卡通台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang01&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang02" tvg-name="龍華洋片台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_mobile.png" group-title="TW",龍華洋片台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang02&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang03" tvg-name="龍華電影台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_mobile.png" group-title="TW",龍華電影台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang03&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang11" tvg-name="龍華日韓台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn11_mobile.png" group-title="TW",龍華日韓台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang11&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang12" tvg-name="龍華偶像台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn12_mobile.png" group-title="TW",龍華偶像台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang12&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang18" tvg-name="龍華戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_mobile.png" group-title="TW",龍華戲劇台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang18&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang19" tvg-name="Smart知識台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn19_mobile.png" group-title="TW",Smart知識台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang19&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang20" tvg-name="ELTV生活英語台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn20_mobile.png" group-title="TW",ELTV生活英語台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang20&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang21" tvg-name="龍華經典台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn21_mobile.png" group-title="TW",龍華經典台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang21&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="litv-xinchuang22" tvg-name="台灣戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn22_mobile.png" group-title="TW",台灣戲劇台
+http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang22&sd=1080&proxy=false&token=sufern
+#EXTINF:-1 tvg-id="nnews-zh" tvg-name="倪珍播新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_mobile.png" group-title="TW",倪珍播新聞
+http://192.168.100.1:50002/index.m3u8?pid=nnews-zh&sd=1080&proxy=false&token=sufern
+"""
 
-# ===================== EXTRA =====================
-
-EXTRA_URLS = [
-    "https://tzdr.com/iptv.txt",
-    "https://live.kilvn.com/iptv.m3u",
-    "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
-    "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
-    "http://175.178.251.183:6689/live.m3u",
-    "https://m3u.ibert.me/ycl_iptv.m3u",
-    "https://codeberg.org/Jsnzkpg/Jsnzkpg/raw/Jsnzkpg/Jsnzkpg1.m3u",
-    "https://2026.xymm.ccwu.cc",
-    "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u",
-    "https://iptv.catvod.com/list.php?token=e222e4d00c9d1945c3387a6c63b434577afbefd92f01f3fa39da76f154997133"
-]
-
-CCTV_TARGET = [
-    "世界地理", "兵器科技", "怀旧剧场", "第一剧场",
-    "女性时尚", "风云足球", "风云音乐", "央视台球"
-]
-
-# 👉 MV（替代原CHC）
-# 使用更灵活的关键词匹配，方便匹配不同的变体
-MV_TARGET_ORDER = [
-    ("CHC动作电影", ["CHC动作电影", "CHC动作电影台", "CHC动作", "动作电影", "CHC动作电影HD"]),
-    ("CHC家庭影院", ["CHC家庭影院", "CHC家庭电影", "家庭影院", "CHC家庭影院HD"]),
-    ("CHC影迷电影", ["CHC影迷电影", "CHC影迷", "影迷电影", "CHC影迷电影HD"]),
-    ("ROCK Action", ["ROCK Action", "ROCK Action", "ROCK Action HD"]),
-    ("ROCK Xstream", ["ROCK Xstream", "ROCK Xstream", "ROCK Xstream HD"]),
-    ("ROCK Entertainment", ["ROCK Entertainment", "ROCK Entertainment", "ROCK Entertainment HD"]),
-    ("HBO王牌", ["HBO王牌", "HBO", "HBO HD"]),
-    ("Cinemax", ["Cinemax", "Cinemax HD"]),
-    ("Cinemax精选", ["Cinemax精选", "Cinemax精选HD"]),
-    ("龙华电影", ["龙华电影", "龙华电影HD"]),
-    ("龙华经典", ["龙华经典", "龙华经典HD"]),
-    ("龙华偶像", ["龙华偶像", "龙华偶像HD"]),
-    ("龙华日韩", ["龙华日韩", "龙华日韩HD"]),
-    ("北京IPTV淘电影", ["北京IPTV淘电影", "淘电影"]),
-    ("北京IPTV4K", ["北京IPTV4K", "北京IPTV 4K"]),
-    ("天映频道", ["天映频道", "天映"]),
-    ("天映新加坡", ["天映新加坡", "天映新加坡频道"]),
-    ("爱奇艺", ["爱奇艺", "iQIYI"]),
-    ("TVB星河", ["TVB星河", "星河频道"]),
-]
-
-LONGHUA_KEYWORDS = ["龙华电影", "龙华经典", "龙华偶像", "龙华日韩"]
-
-LOGO_MAP = {
-    "CHC影迷电影": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png",
-    "CHC家庭影院": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png",
-    "CHC动作电影": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png"
-}
-
-# ===================== TW 排序 =====================
-
+# TW 排序列表（与您原有的一致）
 TW_TARGET_ORDER = [
     "Love Nature",
     "History 歷史頻道",
@@ -174,6 +171,57 @@ TW_TARGET_ORDER = [
     "三立新聞iNEWS",
     "DayStar"
 ]
+
+# ===================== EXTRA =====================
+
+EXTRA_URLS = [
+    "https://tzdr.com/iptv.txt",
+    "https://live.kilvn.com/iptv.m3u",
+    "https://cdn.jsdelivr.net/gh/Guovin/iptv-api@gd/output/result.m3u",
+    "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
+    "http://175.178.251.183:6689/live.m3u",
+    "https://m3u.ibert.me/ycl_iptv.m3u",
+    "https://codeberg.org/Jsnzkpg/Jsnzkpg/raw/Jsnzkpg/Jsnzkpg1.m3u",
+    "https://2026.xymm.ccwu.cc",
+    "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u",
+    "https://iptv.catvod.com/list.php?token=e222e4d00c9d1945c3387a6c63b434577afbefd92f01f3fa39da76f154997133"
+]
+
+CCTV_TARGET = [
+    "世界地理", "兵器科技", "怀旧剧场", "第一剧场",
+    "女性时尚", "风云足球", "风云音乐", "央视台球"
+]
+
+# 👉 MV（替代原CHC）
+MV_TARGET_ORDER = [
+    ("CHC动作电影", ["CHC动作电影", "CHC动作电影台", "CHC动作", "动作电影", "CHC动作电影HD"]),
+    ("CHC家庭影院", ["CHC家庭影院", "CHC家庭电影", "家庭影院", "CHC家庭影院HD"]),
+    ("CHC影迷电影", ["CHC影迷电影", "CHC影迷", "影迷电影", "CHC影迷电影HD"]),
+    ("ROCK Action", ["ROCK Action", "ROCK Action", "ROCK Action HD"]),
+    ("ROCK Xstream", ["ROCK Xstream", "ROCK Xstream", "ROCK Xstream HD"]),
+    ("ROCK Entertainment", ["ROCK Entertainment", "ROCK Entertainment", "ROCK Entertainment HD"]),
+    ("HBO王牌", ["HBO王牌", "HBO", "HBO HD"]),
+    ("Cinemax", ["Cinemax", "Cinemax HD"]),
+    ("Cinemax精选", ["Cinemax精选", "Cinemax精选HD"]),
+    ("龙华电影", ["龙华电影", "龙华电影HD"]),
+    ("龙华经典", ["龙华经典", "龙华经典HD"]),
+    ("龙华偶像", ["龙华偶像", "龙华偶像HD"]),
+    ("龙华日韩", ["龙华日韩", "龙华日韩HD"]),
+    ("北京IPTV淘电影", ["北京IPTV淘电影", "淘电影"]),
+    ("北京IPTV4K", ["北京IPTV4K", "北京IPTV 4K"]),
+    ("天映频道", ["天映频道", "天映"]),
+    ("天映新加坡", ["天映新加坡", "天映新加坡频道"]),
+    ("爱奇艺", ["爱奇艺", "iQIYI"]),
+    ("TVB星河", ["TVB星河", "星河频道"]),
+]
+
+LONGHUA_KEYWORDS = ["龙华电影", "龙华经典", "龙华偶像", "龙华日韩"]
+
+LOGO_MAP = {
+    "CHC影迷电影": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png",
+    "CHC家庭影院": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png",
+    "CHC动作电影": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png"
+}
 
 # ===================== 下载 =====================
 
@@ -252,7 +300,6 @@ def load_hk():
     # 过滤掉指定的频道
     filtered = []
     for n, e, u in data:
-        # 检查是否在过滤列表中
         should_filter = False
         for filter_name in HK_FILTER_LIST:
             if filter_name in n:
@@ -267,7 +314,6 @@ def load_hk():
     result = []
     temp_dict = {}
     for n, e, u in filtered:
-        # 如果同一个频道有多个URL，保留第一个
         if n not in temp_dict:
             temp_dict[n] = (n, e, u)
     
@@ -282,7 +328,6 @@ def load_hk():
             result.append(temp_dict[matched])
             used_names.add(matched)
     
-    # 添加未在排序列表中的其他频道（去重）
     for n in temp_dict.keys():
         if n not in used_names:
             result.append(temp_dict[n])
@@ -290,20 +335,32 @@ def load_hk():
     
     return result
 
-# ===================== TW（新源合并） =====================
+# ===================== TW（使用用户提供的列表） =====================
 
-def load_tw_from_new_source():
-    """尝试从新源加载TW频道"""
-    raw = download(TW_NEW_SOURCE)
+def load_tw_from_user():
+    """解析用户提供的 TW M3U 内容，返回 (name, ext, url) 列表"""
+    raw = USER_TW_M3U.strip()
     if not raw:
-        print("⚠️ 无法下载TW新源，将使用原有逻辑")
-        return None
+        print("⚠️ 用户提供的TW内容为空")
+        return []
+    
+    # 使用 parse_m3u 解析
     data = parse_m3u(raw)
-    print(f"✓ 从TW新源获取到 {len(data)} 个频道")
-    # 按指定顺序排序
+    print(f"✓ 从用户提供的TW数据中解析到 {len(data)} 个频道")
+    
+    # 去重（按URL去重，保留第一个）
+    seen_urls = set()
+    unique_data = []
+    for n, e, u in data:
+        if u not in seen_urls:
+            seen_urls.add(u)
+            unique_data.append((n, e, u))
+    
+    # 按 TW_TARGET_ORDER 排序
     result = []
     temp_dict = {}
-    for n, e, u in data:
+    for n, e, u in unique_data:
+        # 如果同一个频道名有多个URL（理论上不会，因为去重了），保留第一个
         if n not in temp_dict:
             temp_dict[n] = (n, e, u)
     
@@ -311,66 +368,21 @@ def load_tw_from_new_source():
     for target in TW_TARGET_ORDER:
         matched = None
         for name in temp_dict.keys():
-            if target in name or name in target:
+            # 精确或包含匹配
+            if name == target or target in name or name in target:
                 matched = name
                 break
         if matched and matched not in used_names:
             result.append(temp_dict[matched])
             used_names.add(matched)
     
-    # 添加未在排序列表中的其他频道
+    # 添加未匹配到的频道（保持原顺序）
     for n in temp_dict.keys():
         if n not in used_names:
             result.append(temp_dict[n])
             used_names.add(n)
     
-    return result
-
-def fetch_tw(lines):
-    """原有TW提取逻辑（作为备选）"""
-    parsed = parse_m3u("\n".join(lines))
-    
-    # 收集所有TW分组的频道
-    temp_dict = {}  # key: 频道名, value: (name, ext, url)
-    for n, e, u in parsed:
-        if parse_group(e) == TW_SOURCE_GROUP:
-            # 去掉「」及其内部内容
-            cleaned_name = re.sub(r'「[^」]*」', '', n)
-            cleaned_name = cleaned_name.strip()
-            if not cleaned_name:
-                cleaned_name = n
-            
-            # 清理extinf行中的名称
-            ext_parts = e.split(",", 1)
-            if len(ext_parts) == 2:
-                cleaned_ext_name = re.sub(r'「[^」]*」', '', ext_parts[1])
-                cleaned_ext_name = cleaned_ext_name.strip()
-                if not cleaned_ext_name:
-                    cleaned_ext_name = ext_parts[1]
-                cleaned_ext = ext_parts[0] + "," + cleaned_ext_name
-            else:
-                cleaned_ext = e
-            
-            # 如果同一个频道有多个URL，保留第一个
-            if cleaned_name not in temp_dict:
-                temp_dict[cleaned_name] = (cleaned_name, cleaned_ext, u)
-    
-    # 按指定顺序排序
-    result = []
-    used_names = set()
-    
-    for target in TW_TARGET_ORDER:
-        # 精确匹配或包含匹配
-        matched = None
-        for name in temp_dict.keys():
-            if name == target or target in name or name in target:
-                matched = name
-                break
-        
-        if matched and matched not in used_names:
-            result.append(temp_dict[matched])
-            used_names.add(matched)
-    
+    print(f"✓ TW频道排序完成，共 {len(result)} 个")
     return result
 
 # ===================== MV =====================
@@ -378,14 +390,11 @@ def fetch_tw(lines):
 def load_mv():
     print("开始加载MV频道...")
     
-    # 主要源：用于提取原有MV频道以及新增的北京/港澳台频道
     main_source_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
     raw_main = download(main_source_url)
     if not raw_main:
         print("⚠️ 无法下载主要MV源，尝试其他备选源...")
         all_data = []
-        
-        # 尝试其他备选源
         backup_sources = [
             "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
             "https://live.kilvn.com/iptv.m3u",
@@ -404,32 +413,17 @@ def load_mv():
         print("❌ 所有源都无法获取数据")
         return []
     
-    # 统计各分组频道数量
-    group_stats = {}
-    for n, e, u in all_data:
-        group = parse_group(e)
-        group_stats[group] = group_stats.get(group, 0) + 1
-    
-    # 针对新增频道的精确提取：从"北京"分组提取北京IPTV淘电影、北京IPTV4K；从"港澳台"分组提取天映频道、天映新加坡、爱奇艺、TVB星河
-    # 同时保留原有MV频道的提取逻辑（放宽分组限制）
     temp = []
-    
     print("正在筛选符合条件的频道...")
-    
     for n, e, u in all_data:
         group = parse_group(e)
-        # 原有MV频道提取条件：分组包含综合/电影/影视/MV/娱乐，或频道名包含CHC/龙华/ROCK/HBO/Cinemax
         original_condition = (any(keyword in group for keyword in ["综合", "电影", "影视", "MV", "娱乐", "影視"]) or
                               any(keyword in n for keyword in ["CHC", "龙华", "ROCK", "HBO", "Cinemax", "动作电影", "家庭影院", "影迷电影"]))
-        
-        # 新增频道提取条件：精确匹配分组和频道名
         beijing_condition = (group == "北京" and 
                              any(target in n for target in ["北京IPTV淘电影", "北京IPTV4K", "淘电影", "4K"]))
         hk_tw_condition = (group == "港澳台" and 
                            any(target in n for target in ["天映频道", "天映新加坡", "爱奇艺", "TVB星河", "天映", "iQIYI", "星河"]))
-        
         if original_condition or beijing_condition or hk_tw_condition:
-            # 打印找到的候选频道（调试用）
             if "CHC" in n or "动作" in n:
                 print(f"  【候选】频道: {n}, 分组: {group}")
             temp.append((clean_name(n), e, u))
@@ -441,25 +435,19 @@ def load_mv():
     for target_name, keywords in MV_TARGET_ORDER:
         candidates = []
         for n, e, u in temp:
-            # 检查是否匹配任一关键词
             for kw in keywords:
                 if kw.lower() in n.lower():
                     candidates.append((n, e, u))
                     break
-        
         if candidates:
-            # 去重URL
             unique_candidates = []
             seen_urls = set()
             for n, e, u in candidates:
                 if u not in seen_urls:
                     seen_urls.add(u)
                     unique_candidates.append((n, e, u))
-            
             if len(unique_candidates) > 1:
                 print(f"  {target_name}: 找到 {len(unique_candidates)} 个候选URL，正在测速选择最优...")
-            
-            # 测速选最优
             urls = [u for _, _, u in unique_candidates]
             best_url = pick_best(urls)
             for n, e, u in unique_candidates:
@@ -473,11 +461,9 @@ def load_mv():
         else:
             print(f"✗ 未找到MV频道: {target_name}")
     
-    # 龙华频道排序
     non_lh = [x for x in result if not any(k in x[0] for k in LONGHUA_KEYWORDS)]
     lh = [x for x in result if any(k in x[0] for k in LONGHUA_KEYWORDS)]
-    
-    print(f"MV频道加载完成，共 {len(result)} 个频道")
+    print(f"MV频道加载完成，共 {len(result)} 个")
     return non_lh + lh
 
 # ===================== 测速 =====================
@@ -491,7 +477,6 @@ def check(url):
     except:
         pass
     return url, 999
-
 
 def pick_best(urls):
     if not urls:
@@ -523,14 +508,9 @@ def main():
     hk = load_hk()
     print(f"HK频道加载完成，共 {len(hk)} 个")
     
-    print("正在加载TW频道...")
-    # 优先尝试新源，失败则回退到原有逻辑
-    tw = load_tw_from_new_source()
-    if tw is None:
-        tw = fetch_tw(lines)
-        print(f"TW频道使用原有逻辑加载完成，共 {len(tw)} 个")
-    else:
-        print(f"TW频道从新源加载完成，共 {len(tw)} 个")
+    print("正在加载TW频道（使用您提供的列表）...")
+    tw = load_tw_from_user()
+    print(f"TW频道加载完成，共 {len(tw)} 个")
     
     print("正在加载MV频道...")
     mv = load_mv()
@@ -583,6 +563,7 @@ def main():
         else:
             out += "\n# TW\n"
         for n, e, u in tw:
+            # 确保 group-title 为 "TW"
             out += normalize_group(e, "TW") + "\n" + u + "\n"
         out = out.rstrip() + "\n"
 
