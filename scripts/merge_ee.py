@@ -21,16 +21,35 @@ TW_SOURCE_GROUP = "•台湾「限制」"
 
 # ===================== ⭐ 港澳台精选（替换 HK） =====================
 
-GAT_SOURCE = "https://codeberg.org/Jsnzkpg/Jsnzkpg/raw/branch/Jsnzkpg/Jsnzkpg1.m3u"
-GAT_GROUP_NAME = "🔮港澳台直播"
+# HK新源
+HK_NEW_SOURCE = "https://cdn.qd.je/live.m3u"
+HK_GROUP_NAME = "HK"
 
-GAT_TARGET_ORDER = [
+# HK需要过滤掉的频道列表
+HK_FILTER_LIST = [
+    "CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV5+", "CCTV6", "CCTV7", "CCTV8",
+    "CCTV9", "CCTV10", "CCTV11", "CCTV12", "CCTV13", "CCTV14", "CCTV15", "CCTV16", "CCTV17",
+    "CCTV1港澳版", "澳视澳门", "澳视卫星", "澳门体育", "澳门综艺", "澳门莲花",
+    "金光布袋戏", "民视影剧台", "公视戏剧", "采昌影剧台", "靖天映画", "靖天戏剧台",
+    "靖天电影台", "靖洋戏剧台", "影迷数位电影台", "amc电影台", "CinemaWorld",
+    "My Cinema Europe", "经典电影台", "CMusic", "DreamWorks梦工厂动画",
+    "精选动漫台", "纬来电影台", "纬来戏剧台", "纬来体育台",
+    "东森电影", "东森戏剧", "东森洋片", "咪咕4K(限移动网络)", "咪咕4K-2(限移动网络)"
+]
+
+# HK频道排序（按此顺序优先输出）
+HK_TARGET_ORDER = [
     "凤凰中文", "凤凰资讯", "凤凰香港", "NOW新闻", "翡翠台", "翡翠一台", "TVB翡翠", "TVB翡翠(马来)", "TVB翡翠剧集台",
     "TVBJADE", "娱乐新闻", "无线新闻", "天映频道", "千禧经典", "明珠台", "八度空间",
     "TVB星河", "TVBPLUS", "TVBJ1", "TVB娱乐新闻", "TVB黄金华剧", "TVB功夫台", "TVB1",
     "HOY资讯", "HOYTV", "HOY77", "RTHK31", "RTHK32", "ROCK_Action", "MYTV黄金翡翠",
     "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U"
 ]
+
+# ===================== TW 新源 =====================
+
+TW_NEW_SOURCE = "https://github.com/sufernnet/jokerone/blob/main/OFIII.m3u"
+# 注意：如果上述源无法访问，代码会自动回退到原有的TW提取逻辑
 
 # ===================== EXTRA =====================
 
@@ -218,29 +237,140 @@ def parse_m3u(content):
             ext = None
     return out
 
-# ===================== HK =====================
+# ===================== HK（新源） =====================
 
-def load_gat():
-    raw = download(GAT_SOURCE)
+def load_hk():
+    """从 https://cdn.qd.je/live.m3u 加载HK频道，并过滤掉指定列表"""
+    raw = download(HK_NEW_SOURCE)
     if not raw:
-        print("⚠️ 无法下载GAT源")
+        print("⚠️ 无法下载HK新源")
         return []
+    
     data = parse_m3u(raw)
-    temp = [(clean_name(n), e, u) for n, e, u in data if parse_group(e) == GAT_GROUP_NAME]
-    temp = dedup(temp)
-
+    print(f"✓ 从HK新源获取到 {len(data)} 个频道")
+    
+    # 过滤掉指定的频道
+    filtered = []
+    for n, e, u in data:
+        # 检查是否在过滤列表中
+        should_filter = False
+        for filter_name in HK_FILTER_LIST:
+            if filter_name in n:
+                should_filter = True
+                break
+        if not should_filter:
+            filtered.append((n, e, u))
+    
+    print(f"✓ 过滤后剩余 {len(filtered)} 个频道")
+    
+    # 按指定顺序排序
     result = []
-    for target in GAT_TARGET_ORDER:
-        candidates = [x for x in temp if target in x[0]]
-        if candidates:
-            best = pick_best([u for _, _, u in candidates])
-            for n, e, u in candidates:
-                if u == best:
-                    ext = e
-                    if n in LOGO_MAP:
-                        ext = re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{LOGO_MAP[n]}"', ext)
-                    result.append((n, ext, u))
-                    break
+    temp_dict = {}
+    for n, e, u in filtered:
+        # 如果同一个频道有多个URL，保留第一个
+        if n not in temp_dict:
+            temp_dict[n] = (n, e, u)
+    
+    used_names = set()
+    for target in HK_TARGET_ORDER:
+        matched = None
+        for name in temp_dict.keys():
+            if target in name or name in target:
+                matched = name
+                break
+        if matched and matched not in used_names:
+            result.append(temp_dict[matched])
+            used_names.add(matched)
+    
+    # 添加未在排序列表中的其他频道（去重）
+    for n in temp_dict.keys():
+        if n not in used_names:
+            result.append(temp_dict[n])
+            used_names.add(n)
+    
+    return result
+
+# ===================== TW（新源合并） =====================
+
+def load_tw_from_new_source():
+    """尝试从新源加载TW频道"""
+    raw = download(TW_NEW_SOURCE)
+    if not raw:
+        print("⚠️ 无法下载TW新源，将使用原有逻辑")
+        return None
+    data = parse_m3u(raw)
+    print(f"✓ 从TW新源获取到 {len(data)} 个频道")
+    # 按指定顺序排序
+    result = []
+    temp_dict = {}
+    for n, e, u in data:
+        if n not in temp_dict:
+            temp_dict[n] = (n, e, u)
+    
+    used_names = set()
+    for target in TW_TARGET_ORDER:
+        matched = None
+        for name in temp_dict.keys():
+            if target in name or name in target:
+                matched = name
+                break
+        if matched and matched not in used_names:
+            result.append(temp_dict[matched])
+            used_names.add(matched)
+    
+    # 添加未在排序列表中的其他频道
+    for n in temp_dict.keys():
+        if n not in used_names:
+            result.append(temp_dict[n])
+            used_names.add(n)
+    
+    return result
+
+def fetch_tw(lines):
+    """原有TW提取逻辑（作为备选）"""
+    parsed = parse_m3u("\n".join(lines))
+    
+    # 收集所有TW分组的频道
+    temp_dict = {}  # key: 频道名, value: (name, ext, url)
+    for n, e, u in parsed:
+        if parse_group(e) == TW_SOURCE_GROUP:
+            # 去掉「」及其内部内容
+            cleaned_name = re.sub(r'「[^」]*」', '', n)
+            cleaned_name = cleaned_name.strip()
+            if not cleaned_name:
+                cleaned_name = n
+            
+            # 清理extinf行中的名称
+            ext_parts = e.split(",", 1)
+            if len(ext_parts) == 2:
+                cleaned_ext_name = re.sub(r'「[^」]*」', '', ext_parts[1])
+                cleaned_ext_name = cleaned_ext_name.strip()
+                if not cleaned_ext_name:
+                    cleaned_ext_name = ext_parts[1]
+                cleaned_ext = ext_parts[0] + "," + cleaned_ext_name
+            else:
+                cleaned_ext = e
+            
+            # 如果同一个频道有多个URL，保留第一个
+            if cleaned_name not in temp_dict:
+                temp_dict[cleaned_name] = (cleaned_name, cleaned_ext, u)
+    
+    # 按指定顺序排序
+    result = []
+    used_names = set()
+    
+    for target in TW_TARGET_ORDER:
+        # 精确匹配或包含匹配
+        matched = None
+        for name in temp_dict.keys():
+            if name == target or target in name or name in target:
+                matched = name
+                break
+        
+        if matched and matched not in used_names:
+            result.append(temp_dict[matched])
+            used_names.add(matched)
+    
     return result
 
 # ===================== MV =====================
@@ -280,7 +410,7 @@ def load_mv():
         group = parse_group(e)
         group_stats[group] = group_stats.get(group, 0) + 1
     
-    # 针对新增频道的精确提取：从“北京”分组提取北京IPTV淘电影、北京IPTV4K；从“港澳台”分组提取天映频道、天映新加坡、爱奇艺、TVB星河
+    # 针对新增频道的精确提取：从"北京"分组提取北京IPTV淘电影、北京IPTV4K；从"港澳台"分组提取天映频道、天映新加坡、爱奇艺、TVB星河
     # 同时保留原有MV频道的提取逻辑（放宽分组限制）
     temp = []
     
@@ -350,54 +480,6 @@ def load_mv():
     print(f"MV频道加载完成，共 {len(result)} 个频道")
     return non_lh + lh
 
-# ===================== TW =====================
-
-def fetch_tw(lines):
-    parsed = parse_m3u("\n".join(lines))
-    
-    # 收集所有TW分组的频道
-    temp_dict = {}  # key: 频道名, value: (name, ext, url)
-    for n, e, u in parsed:
-        if parse_group(e) == TW_SOURCE_GROUP:
-            # 去掉「」及其内部内容
-            cleaned_name = re.sub(r'「[^」]*」', '', n)
-            cleaned_name = cleaned_name.strip()
-            if not cleaned_name:
-                cleaned_name = n
-            
-            # 清理extinf行中的名称
-            ext_parts = e.split(",", 1)
-            if len(ext_parts) == 2:
-                cleaned_ext_name = re.sub(r'「[^」]*」', '', ext_parts[1])
-                cleaned_ext_name = cleaned_ext_name.strip()
-                if not cleaned_ext_name:
-                    cleaned_ext_name = ext_parts[1]
-                cleaned_ext = ext_parts[0] + "," + cleaned_ext_name
-            else:
-                cleaned_ext = e
-            
-            # 如果同一个频道有多个URL，保留第一个
-            if cleaned_name not in temp_dict:
-                temp_dict[cleaned_name] = (cleaned_name, cleaned_ext, u)
-    
-    # 按指定顺序排序
-    result = []
-    used_names = set()
-    
-    for target in TW_TARGET_ORDER:
-        # 精确匹配或包含匹配
-        matched = None
-        for name in temp_dict.keys():
-            if name == target or target in name or name in target:
-                matched = name
-                break
-        
-        if matched and matched not in used_names:
-            result.append(temp_dict[matched])
-            used_names.add(matched)
-    
-    return result
-
 # ===================== 测速 =====================
 
 def check(url):
@@ -438,12 +520,17 @@ def main():
     lines = content.splitlines()
 
     print("正在加载HK频道...")
-    hk = load_gat()
+    hk = load_hk()
     print(f"HK频道加载完成，共 {len(hk)} 个")
     
     print("正在加载TW频道...")
-    tw = fetch_tw(lines)
-    print(f"TW频道加载完成，共 {len(tw)} 个")
+    # 优先尝试新源，失败则回退到原有逻辑
+    tw = load_tw_from_new_source()
+    if tw is None:
+        tw = fetch_tw(lines)
+        print(f"TW频道使用原有逻辑加载完成，共 {len(tw)} 个")
+    else:
+        print(f"TW频道从新源加载完成，共 {len(tw)} 个")
     
     print("正在加载MV频道...")
     mv = load_mv()
