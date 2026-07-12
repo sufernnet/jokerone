@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-07-11 22:38:54
+# 更新时间 2026-07-12 10:27:38
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -153,10 +153,10 @@ https://iptv.yang-1989.xyz/hk/wv6k52?token=63e50227ce38389acd6a1dadb3a465301cc4e
 https://iptv.yang-1989.xyz/hk/2kc3f3?token=63e50227ce38389acd6a1dadb3a465301cc4ecca3a89543f
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://material.yang-1989.xyz/logo/Now Sports 精選.png" group-title="HK",Now Sports 精選
 https://iptv.yang-1989.xyz/hk/2wvsyp?token=63e50227ce38389acd6a1dadb3a465301cc4ecca3a89543f
-#EXTINF:-1 tvg-id="Now Sports 4K 616" tvg-name="Now Sports 4K 616" tvg-logo="https://material.yang-1989.xyz/logo/Now-Sports-616.png" group-title="HK",Now Sports 616
-https://iptv.yang-1989.xyz/hkg/kk6k4k?token=63e50227ce38389acd6a1dadb3a465301cc4ecca3a89543f
 #EXTINF:-1 tvg-id="Now Sports 4K 617" tvg-name="Now Sports 4K 617" tvg-logo="https://material.yang-1989.xyz/logo/Now-Sports-617.png" group-title="HK",Now Sports 617
 https://iptv.yang-1989.xyz/hkg/unagfg?token=63e50227ce38389acd6a1dadb3a465301cc4ecca3a89543f
+#EXTINF:-1 tvg-id="Now Sports 618" tvg-name="Now Sports 618" tvg-logo="https://material.yang-1989.xyz/logo/Now-Sports-616.png" group-title="HK",Now Sports 618
+https://iptv.yang-1989.xyz/hkg/kk6k4k?token=63e50227ce38389acd6a1dadb3a465301cc4ecca3a89543f
 #EXTINF:-1 tvg-id="HOY 國際財經台" tvg-name="HOY 國際財經台" tvg-logo="https://material.yang-1989.xyz/logo/HOY76.png" group-title="HK",HOY 國際財經台
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://material.yang-1989.xyz/logo/HOY77.png" group-title="HK",HOY TV
