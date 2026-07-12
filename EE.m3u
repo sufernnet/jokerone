@@ -93,5 +93,113 @@ http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 
 # HK
-#EXTINF:-1 group-title="HK" tvg-name="翡翠台" tvg-logo="https://epg.112114.xyz/logo/翡翠台.png" epg-url="https://gitee.com/gsls200808/xmltvepg/raw/master/e9.xml.gz",翡翠台
-http://124.244.129.167:9004/0.ts
+#EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
+https://cdn.qd.je/163189/fhzw
+#EXTINF:-1 tvg-name="凤凰资讯" group-title="HK",凤凰资讯
+https://cdn.qd.je/163189/fhzx
+#EXTINF:-1 tvg-name="凤凰香港" group-title="HK",凤凰香港
+https://cdn.qd.je/163189/fhhk
+#EXTINF:-1 tvg-name="Now新聞台" group-title="HK",NOW新闻台
+https://cdn.qd.je/163189/now
+#EXTINF:-1 tvg-name="翡翠台" group-title="HK",翡翠台4K(字幕)
+https://cdn.qd.je/163189/fct4k
+#EXTINF:-1 tvg-name="翡翠剧集台" group-title="HK",翡翠剧集台
+https://cdn.qd.je/163189/tvbd
+#EXTINF:-1 tvg-name="娛樂新聞台" group-title="HK",TVB娱乐新闻台
+https://cdn.qd.je/163189/ylxw
+#EXTINF:-1 tvg-name="无线新闻" group-title="HK",无线新闻台
+https://cdn.qd.je/163189/wxxw
+#EXTINF:-1 tvg-name="天映马来西亚" group-title="HK",天映频道
+https://cdn.qd.je/163189/typd2
+#EXTINF:-1 tvg-name="千禧經典台" group-title="HK",千禧经典台
+https://cdn.qd.je/163189/tvbc
+#EXTINF:-1 tvg-name="明珠台" group-title="HK",明珠台(字幕)
+https://cdn.qd.je/163189/mzt
+#EXTINF:-1 tvg-name="八度空间" group-title="HK",八度空间
+https://cdn.qd.je/163189/8tv
+#EXTINF:-1 tvg-name="TVB星河" group-title="HK",TVB星河
+https://cdn.qd.je/163189/tvbxh
+#EXTINF:-1 tvg-name="TVBJ1" group-title="HK",TVBJ1
+https://cdn.qd.je/163189/j1
+#EXTINF:-1 tvg-name="TVB1" group-title="HK",TVB1
+https://cdn.qd.je/163189/tvb1
+#EXTINF:-1 tvg-name="HOY78" group-title="HK",HOY资讯台
+https://cdn.qd.je/163189/hoy78
+#EXTINF:-1 tvg-name="RTHK31" group-title="HK",RTHK31
+https://cdn.qd.je/163189/rthk31
+#EXTINF:-1 tvg-name="RTHK32" group-title="HK",RTHK32
+https://cdn.qd.je/163189/rthk32
+#EXTINF:-1 tvg-name="AEC" group-title="HK",Astro AEC
+https://cdn.qd.je/163189/aec
+#EXTINF:-1 tvg-name="AOD" group-title="HK",Astro AOD
+https://cdn.qd.je/163189/aod
+#EXTINF:-1 tvg-name="TVB Plus" group-title="HK",TVB Plus(字幕)
+https://cdn.qd.je/163189/tvbp
+#EXTINF:-1 tvg-name="HOY77" group-title="HK",HOY TV
+https://cdn.qd.je/163189/hoy
+#EXTINF:-1 tvg-name="HOY 國際財經台" group-title="HK",HOY国际财经台
+https://cdn.qd.je/163189/hoy76
+#EXTINF:-1 tvg-name="ViuTV" group-title="HK",ViuTV
+https://cdn.qd.je/163189/viu
+#EXTINF:-1 tvg-name="ViuTVsix" group-title="HK",ViuTVsix
+https://cdn.qd.je/163189/viu6
+#EXTINF:-1 tvg-name="重温经典" group-title="HK",重温经典
+https://cdn.qd.je/163189/cwjd
+#EXTINF:-1 tvg-name="翡翠台" group-title="HK",翡翠台
+https://cdn.qd.je/163189/fct
+#EXTINF:-1 tvg-name="广东珠江" group-title="HK",广东珠江
+https://cdn.qd.je/163189/gdzj
+#EXTINF:-1 tvg-name="广东体育" group-title="HK",广东体育
+https://cdn.qd.je/163189/gdty
+#EXTINF:-1 tvg-name="Channel 5" group-title="HK",CH5
+https://cdn.qd.je/163189/ch5
+#EXTINF:-1 tvg-name="Channel 8" group-title="HK",CH8
+https://cdn.qd.je/163189/ch8
+#EXTINF:-1 tvg-name="Channel U" group-title="HK",CHU
+https://cdn.qd.je/163189/chu
+#EXTINF:-1 tvg-name="龍華電影" group-title="HK",龙华电影
+https://cdn.qd.je/163189/lhdy
+#EXTINF:-1 tvg-name="龍華經典" group-title="HK",龙华经典
+https://cdn.qd.je/163189/lhjd
+#EXTINF:-1 tvg-name="龍華偶像" group-title="HK",龙华偶像
+https://cdn.qd.je/163189/lhox
+#EXTINF:-1 tvg-name="龍華日韓" group-title="HK",龙华日韩
+https://cdn.qd.je/163189/lhrh
+#EXTINF:-1 tvg-name="龍華戲劇" group-title="HK",龙华戏剧
+https://cdn.qd.je/163189/lhxj
+#EXTINF:-1 tvg-name="龍華洋片" group-title="HK",龙华洋片
+https://cdn.qd.je/163189/lhyp
+#EXTINF:-1 tvg-name="龍華卡通" group-title="HK",龙华卡通
+https://cdn.qd.je/163189/lhkt
+#EXTINF:-1 tvg-name="TVB Jade HD" group-title="HK",华丽翡翠台
+https://cdn.qd.je/163189/hlfct
+#EXTINF:-1 tvg-name="TVB亚洲武侠" group-title="HK",TVB亚洲武侠
+https://cdn.qd.je/163189/yzwx
+#EXTINF:-1 tvg-name="海峡卫视" group-title="HK",海峡卫视
+https://cdn.qd.je/163189/hxws
+#EXTINF:-1 tvg-name="天映新加坡" group-title="HK",天映新加坡
+https://cdn.qd.je/163189/typd
+#EXTINF:-1 tvg-name="天映经典" group-title="HK",天映经典
+https://cdn.qd.je/163189/ccm
+#EXTINF:-1 tvg-name="QJ" group-title="HK",Astro QJ
+https://cdn.qd.je/163189/qj
+#EXTINF:-1 tvg-name="HUA HEE DAI" group-title="HK",Astro欢喜台
+https://cdn.qd.je/163189/hxt
+#EXTINF:-1 tvg-name="iQIYI" group-title="HK",爱奇艺
+https://cdn.qd.je/163189/iqiyi
+#EXTINF:-1 tvg-name="黃金華劇台" group-title="HK",黄金华剧台(WebVTT字幕)
+https://cdn.qd.je/163189/hjhjt
+#EXTINF:-1 tvg-name="广州综合" group-title="HK",广州综合
+https://cdn.qd.je/163189/gzzh
+#EXTINF:-1 tvg-name="广州新闻" group-title="HK",广州新闻
+https://cdn.qd.je/163189/gzxw
+#EXTINF:-1 tvg-name="南国都市4K" group-title="HK",广州南国都市
+https://cdn.qd.je/163189/ngds
+#EXTINF:-1 tvg-name="五星体育" group-title="HK",五星体育
+https://cdn.qd.je/163189/wxty
+#EXTINF:-1 tvg-name="龙祥时代" group-title="HK",龙祥时代
+https://cdn.qd.je/163189/lxsd
+#EXTINF:-1 tvg-name="咪咕4K" group-title="HK",咪咕4K(限移动网络)
+http://r.jdshipin.com/ln4xk
+#EXTINF:-1 tvg-name="咪咕4K-2" group-title="HK",咪咕4K-2(限移动网络)
+http://r.jdshipin.com/Lqdwf
