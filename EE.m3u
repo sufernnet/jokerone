@@ -91,6 +91,12 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
+#EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映新加坡.png" group-title="MV",天映新加坡
+https://cdn.qd.je/163189/typd
+#EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/天映新加坡.png" group-title="MV",天映新加坡
+https://cdn.qd.je/163189/typd
+#EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://material.yang-1989.xyz/logo/愛奇藝.png" group-title="MV",爱奇艺
+https://cdn.qd.je/163189/iqiyi
 
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
