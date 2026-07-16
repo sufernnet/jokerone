@@ -1,0 +1,62 @@
+#EXTM3U url-tvg="https://epg.cdn.loc.cc/xml" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
+
+#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://material.yang-1989.xyz/logo/凤凰中文.png" group-title="HK",凤凰中文
+https://cdn.qd.je/163189/fhzw
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://material.yang-1989.xyz/logo/凤凰资讯.png" group-title="HK",凤凰资讯
+https://cdn.qd.je/163189/fhzx
+#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://material.yang-1989.xyz/logo/凤凰香港.png" group-title="HK",凤凰香港
+https://cdn.qd.je/163189/fhhk
+#EXTINF:-1 tvg-id="翡翠台4K" tvg-name="翡翠台4K" tvg-logo="https://material.yang-1989.xyz/logo/翡翠台4K.png" group-title="HK",翡翠台4K(字幕)
+https://cdn.qd.je/163189/fct4k
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.yang-1989.xyz/logo/翡翠台.png" group-title="HK",翡翠台
+https://cdn.qd.je/163189/fct
+https://cdn.qd.je/163189/fct2
+https://cdn.qd.je/163189/fctvtt
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://material.yang-1989.xyz/logo/TVB Plus.png" group-title="HK",TVB Plus(字幕)
+https://cdn.qd.je/163189/tvbp
+#EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://material.yang-1989.xyz/logo/HOY TV.png" group-title="HK",HOY TV
+https://cdn.qd.je/163189/hoy
+https://cdn.qd.je/163189/hoy2
+#EXTINF:-1 tvg-id="HOY资讯台" tvg-name="HOY资讯台" tvg-logo="https://material.yang-1989.xyz/logo/HOY资讯台.png" group-title="HK",HOY资讯台
+https://cdn.qd.je/163189/hoy78
+#EXTINF:-1 tvg-id="HOY国际财经台" tvg-name="HOY国际财经台" tvg-logo="https://material.yang-1989.xyz/logo/HOY国际财经台.png" group-title="HK",HOY国际财经台
+https://cdn.qd.je/163189/hoy76
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.yang-1989.xyz/logo/ViuTV.png" group-title="HK",ViuTV
+https://cdn.qd.je/163189/viu
+#EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://material.yang-1989.xyz/logo/ViuTVsix.png" group-title="HK",ViuTVsix
+https://cdn.qd.je/163189/viu6
+#EXTINF:-1 tvg-id="Now新闻台" tvg-name="Now新闻台" tvg-logo="https://material.yang-1989.xyz/logo/Now新闻台.png" group-title="HK",Now新闻台
+https://cdn.qd.je/163189/now
+#EXTINF:-1 tvg-id="RTHK31" tvg-name="RTHK31" tvg-logo="https://material.yang-1989.xyz/logo/RTHK31.png" group-title="HK",RTHK31
+https://cdn.qd.je/163189/rthk31
+#EXTINF:-1 tvg-id="RTHK32" tvg-name="RTHK32" tvg-logo="https://material.yang-1989.xyz/logo/RTHK32.png" group-title="HK",RTHK32
+https://cdn.qd.je/163189/rthk32
+#EXTINF:-1 tvg-id="TVB1" tvg-name="TVB1" tvg-logo="https://material.yang-1989.xyz/logo/TVB1.png" group-title="HK",TVB1
+https://cdn.qd.je/163189/tvb1
+#EXTINF:-1 tvg-id="TVBJ1" tvg-name="TVBJ1" tvg-logo="https://material.yang-1989.xyz/logo/TVBJ1.png" group-title="HK",TVBJ1
+https://cdn.qd.je/163189/j1
+#EXTINF:-1 tvg-id="翡翠剧集台" tvg-name="翡翠剧集台" tvg-logo="https://material.yang-1989.xyz/logo/翡翠剧集台.png" group-title="HK",翡翠剧集台
+https://cdn.qd.je/163189/tvbd
+
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://material.yang-1989.xyz/logo/明珠台.png" group-title="HK",明珠台(字幕)
+https://cdn.qd.je/163189/mzt
+https://cdn.qd.je/163189/mztvtt
+#EXTINF:-1 tvg-id="无线新闻台" tvg-name="无线新闻台" tvg-logo="https://material.yang-1989.xyz/logo/无线新闻台.png" group-title="HK",无线新闻台
+https://cdn.qd.je/163189/wxxw
+https://cdn.qd.je/163189/wxxwt
+#EXTINF:-1 tvg-id="华丽翡翠台" tvg-name="华丽翡翠台" tvg-logo="https://material.yang-1989.xyz/logo/华丽翡翠台.png" group-title="HK",华丽翡翠台
+https://cdn.qd.je/163189/hlfct
+https://cdn.qd.je/163189/hlt
+https://cdn.qd.je/163189/jade
+https://cdn.qd.je/163189/jade2
+#EXTINF:-1 tvg-id="TVB亚洲武侠" tvg-name="TVB亚洲武侠" tvg-logo="https://material.yang-1989.xyz/logo/TVB亚洲武侠.png" group-title="HK",TVB亚洲武侠
+https://cdn.qd.je/163189/yzwx
+#EXTINF:-1 tvg-id="TVB娱乐新闻台" tvg-name="TVB娱乐新闻台" tvg-logo="https://material.yang-1989.xyz/logo/TVB娱乐新闻台.png" group-title="HK",TVB娱乐新闻台
+https://cdn.qd.je/163189/ylxw
+#EXTINF:-1 tvg-id="TVB星河" tvg-name="TVB星河" tvg-logo="https://material.yang-1989.xyz/logo/TVB星河.png" group-title="HK",TVB星河
+https://cdn.qd.je/163189/tvbxh
+https://cdn.qd.je/163189/xinghe
+#EXTINF:-1 tvg-id="千禧经典台" tvg-name="千禧经典台" tvg-logo="https://material.yang-1989.xyz/logo/千禧经典台.png" group-title="HK",千禧经典台
+https://cdn.qd.je/163189/tvbc
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://material.yang-1989.xyz/logo/TVB Plus.png" group-title="HK",TVB Plus(WebVTT字幕)
+https://cdn.qd.je/163189/tvbpvtt
