@@ -93,9 +93,9 @@ http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 #EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映畫
 https://cdn.qd.je/163189/jtyh
-#EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://gh-proxy.com/raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/天映频道.png" group-title="MV",天映新加坡
+#EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
-#EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://gh-proxy.com/raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/TVB星河.png" group-title="MV",TVB星河
+#EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/TVB星河.png" group-title="MV",TVB星河
 https://cdn.qd.je/163189/tvbxh2
 
 # HK
