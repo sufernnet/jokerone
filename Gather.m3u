@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-07-24 13:49:55
+# 更新时间 2026-07-24 22:54:02
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -94,11 +94,11 @@ https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://material.1989.click/logo/凤凰香港.png" group-title="HK",凤凰香港
 https://cdn.qd.je/163189/fhhk
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.1989.click/logo/翡翠台.png" group-title="HK",翡翠台
-https://cdn.1989.click/hkK/76v5j2?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
+https://cdn.1989.click/hk/76v5j2?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
 #EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://material.1989.click/logo/無綫新聞台.png" group-title="HK",無綫新聞台
-https://cdn.1989.click/hkK/chy8by?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
+https://cdn.1989.click/hk/chy8by?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://material.1989.click/logo/TVBPlus.png" group-title="HK",TVB Plus
-https://cdn.1989.click/hkK/n8uqqa?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
+https://cdn.1989.click/hk/n8uqqa?token=1dff31d2b22b305b3ceaaebc396f41c308585eca99c7f0e9
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK",ViuTV
 https://iptv.1989.click/hk/zkxkt2?token=9d34083d49bf9ff2f596afc773e9a6694ce8c1970dffb185
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://material.1989.click/logo/ViuTVsix.png" group-title="HK",ViuTVsix
