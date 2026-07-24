@@ -11,8 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE_URL = "https://yang.sufern001.workers.dev/"
 TW_M3U_URL = "https://raw.githubusercontent.com/sufernnet/joker/main/TW.m3u"
-# 凤凰直连源
-PHOENIX_SOURCE_URL = "http://45.32.81.163:30000/mytv.m3u?token=juli"
+# 已移除凤凰直连源，凤凰频道改从 SOURCE_URL 提取
 
 EXTRA_URLS = [
     "https://tzdr.com/iptv.txt",
@@ -115,19 +114,7 @@ def parse_txt(content):
                 data.append((name, ext, url.strip()))
     return data
 
-# 从凤凰源提取 group-title="直连测试" 内所有频道
-def get_phoenix_channels():
-    print("抓取凤凰直连源:", PHOENIX_SOURCE_URL)
-    raw = download(PHOENIX_SOURCE_URL)
-    if not raw:
-        return []
-    all_list = parse_m3u(raw)
-    phoenix_list = []
-    for name, ext, url in all_list:
-        g_title = parse_group(ext)
-        if g_title == "直连测试":
-            phoenix_list.append((name, ext, url))
-    return dedup(phoenix_list)
+# 已移除 get_phoenix_channels 函数，凤凰频道改从主源提取
 
 # 过滤指定不需要的频道
 def filter_unwanted_channels(channel_list):
@@ -176,40 +163,43 @@ def main():
     print("TW...")
     tw_data = parse_m3u(download(TW_M3U_URL))
 
-    # 1. 获取凤凰直连频道并排序
-    phoenix_raw = get_phoenix_channels()
-    
+    # -------------------------------------------
+    # 修改：从主源提取凤凰频道，并分离出 HK 分组（不含凤凰）
+    # -------------------------------------------
+    phoenix_raw = []
+    hk_raw = []
+    for n, e, u in main_data:
+        if "凤凰" in n or "鳳凰" in n:
+            phoenix_raw.append((n, e, u))
+        else:
+            group = parse_group(e)
+            if group in HK_GROUPS:
+                hk_raw.append((n, e, u))
+
+    phoenix_raw = dedup(phoenix_raw)
+    hk_raw = dedup(hk_raw)
+
     # 将指定的三个核心凤凰频道挑出来放最前面
     phoenix_top = []
     phoenix_other = []
     top_keywords = ["凤凰中文", "凤凰资讯", "凤凰香港", "鳳凰中文", "鳳凰資訊", "鳳凰香港"]
-    
     for n, e, u in phoenix_raw:
         if any(tk in n for tk in top_keywords):
             phoenix_top.append((n, e, u))
         else:
             phoenix_other.append((n, e, u))
-            
+
     # 直连源重组：指定的核心凤凰排在最最前面
     phoenix_ordered = phoenix_top + phoenix_other
 
-    # 2. 从主源中提取指定的HK分组（同时剔除主源自带的包含"凤凰"或"鳳凰"的频道）
-    hk_raw = []
-    for n, e, u in main_data:
-        group = parse_group(e)
-        if group in HK_GROUPS:
-            if "凤凰" in n or "鳳凰" in n:  # 彻底剔除主源的凤凰频道
-                continue
-            hk_raw.append((n, e, u))
-    hk_raw = dedup(hk_raw)
-
-    # 3. 合并：核心凤凰置顶直连 -> 其他凤凰直连 -> 主源HK常规频道
+    # 合并：核心凤凰置顶 -> 其他凤凰 -> 主源HK常规频道
     all_hk_raw = phoenix_ordered + hk_raw
-    
-    # 4. 统一过滤黑名单频道 (包含CCTV1-17、澳门系列以及所有带“回看”的频道)
+    # -------------------------------------------
+
+    # 统一过滤黑名单频道 (包含CCTV1-17、澳门系列以及所有带“回看”的频道)
     all_hk_clean = filter_unwanted_channels(all_hk_raw)
 
-    # 5. 截断优化：剔除 Action Hollywood Movies 频道后面的所有频道
+    # 截断优化：剔除 Action Hollywood Movies 频道后面的所有频道
     truncated_hk = []
     for n, e, u in all_hk_clean:
         truncated_hk.append((n, e, u))
