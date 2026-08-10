@@ -85,10 +85,20 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002075?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=010.live_hls.zte.com
 
 # MV
-#EXTINF:-1 tvg-name="电影动作电影" tvg-id="1" tvg-logo="https://tb.zbds.top/logo/电影动作电影.png" group-title="MV", 电影动作电影
-http://live.metshop.top/huya/11602077?cdn=alicdn
-#EXTINF:-1 tvg-name="CHC家庭影院" tvg-id="1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV", CHC家庭影院
-http://61.162.52.6:8088/newlive/live/hls/60/live.m3u8
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png" group-title="MV",CHC动作电影
+http://pplee.vicp.net:4022/udp/233.18.204.174:5140
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
+http://pplee.vicp.net:4022/udp/233.18.204.173:5140
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
+http://pplee.vicp.net:4022/udp/233.18.204.175:5140
+#EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
+https://cdn.qd.je/163189/typd2
+#EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
+https://cdn.qd.je/163189/typd
+#EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
+https://cdn.qd.je/163189/iqiyi
+#EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
+https://cdn.qd.je/163189/tvbxh2
 
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
