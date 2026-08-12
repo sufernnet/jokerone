@@ -87,8 +87,6 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=01
 # MV
 #EXTINF:-1 tvg-name="电影动作电影" tvg-id="1" tvg-logo="https://tb.zbds.top/logo/电影动作电影.png" group-title="MV", 电影动作电影
 http://live.metshop.top/huya/11602077?cdn=alicdn
-#EXTINF:-1 tvg-name="CHC家庭影院" tvg-id="1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV", CHC家庭影院
-http://58.19.43.66:1111/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
 
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
