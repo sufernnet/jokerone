@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-08-13 22:31:54
+# 更新时间 2026-08-14 10:00:36
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -93,7 +93,7 @@ https://cdn.qd.je/163189/fhzw
 https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://material.1989.click/logo/凤凰香港.png" group-title="HK",凤凰香港
 https://cdn.qd.je/163189/fhhk
-#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK",ViuTV
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK" catchup="append" catchup-days="1" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",ViuTV
 https://iptv.1989.click/hk/p2jwva?token=03a196fd50c25e22afa7158e1c90b38416a6c66752340e4c
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://material.1989.click/logo/ViuTVsix.png" group-title="HK",ViuTVsix
 https://iptv.1989.click/hk/hmvap5?token=03a196fd50c25e22afa7158e1c90b38416a6c66752340e4c
