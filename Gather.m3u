@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-08-15 22:11:41
+# 更新时间 2026-08-16 09:26:21
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -93,7 +93,13 @@ https://cdn.qd.je/163189/fhzw
 https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://material.1989.click/logo/凤凰香港.png" group-title="HK",凤凰香港
 https://cdn.qd.je/163189/fhhk
-#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK" catchup="append" catchup-days="1" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",ViuTV
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.1989.click/logo/翡翠台.png" group-title="HK" catchup="append" catchup-days="1" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",翡翠台
+https://iptv.1989.click/hk/8j9626?token=a6d0a5b6bd8f4da11200820da92a5a0ad7a4fbe0a323f0fc
+#EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://material.1989.click/logo/無綫新聞台.png" group-title="HK",無綫新聞台
+https://iptv.1989.click/hk/yyufaq?token=a6d0a5b6bd8f4da11200820da92a5a0ad7a4fbe0a323f0fc
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://material.1989.click/logo/TVBPlus.png" group-title="HK",TVB Plus
+https://iptv.1989.click/hk/y6hfac?token=a6d0a5b6bd8f4da11200820da92a5a0ad7a4fbe0a323f0fc
+#EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK",ViuTV
 https://iptv.1989.click/hk/c3dnmb?token=a6d0a5b6bd8f4da11200820da92a5a0ad7a4fbe0a323f0fc
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://material.1989.click/logo/ViuTVsix.png" group-title="HK",ViuTVsix
 https://iptv.1989.click/hk/zbs3vx?token=a6d0a5b6bd8f4da11200820da92a5a0ad7a4fbe0a323f0fc
