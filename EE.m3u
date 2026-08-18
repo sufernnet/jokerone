@@ -84,6 +84,10 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002075?virtualDomain=01
 #EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/SD4K.png" group-title="4K",山东卫视
 http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=010.live_hls.zte.com
 
+# MV
+#EXTINF:-1 tvg-name="电影动作电影" tvg-id="1" tvg-logo="https://tb.zbds.top/logo/电影动作电影.png" group-title="MV", 电影动作电影
+http://live.metshop.top/huya/11602077?cdn=alicdn
+
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
 https://cdn.qd.je/163189/fhzw
