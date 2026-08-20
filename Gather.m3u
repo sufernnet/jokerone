@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-08-20 09:33:27
+# 更新时间 2026-08-20 22:17:35
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -94,39 +94,39 @@ https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://material.1989.click/logo/凤凰香港.png" group-title="HK",凤凰香港
 https://cdn.qd.je/163189/fhhk
 #EXTINF:-1 tvg-id="鳳凰衛視中文台" tvg-name="鳳凰衛視中文台" tvg-logo="https://material.1989.click/logo/凤凰中文.png" group-title="HK" catchup="append" catchup-days="3" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" http-user-agent="okhttp/3.14.9",鳳凰衛視·中文「72H Replay」
-https://iptv.1989.click/phoenix/2e3296?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/phoenix/5nw2y2?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="鳳凰衛視資訊台" tvg-name="鳳凰衛視資訊台" tvg-logo="https://material.1989.click/logo/凤凰资讯.png" group-title="HK" catchup="append" catchup-days="3" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" http-user-agent="okhttp/3.14.9",鳳凰衛視·資訊「72H Replay」
-https://iptv.1989.click/phoenix/y6ahxy?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/phoenix/s2yy88?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://material.1989.click/logo/凤凰香港.png" group-title="HK" catchup="append" catchup-days="3" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}" http-user-agent="okhttp/3.14.9",鳳凰衛視·香港「72H Replay」
-https://iptv.1989.click/phoenix/zshgec?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/phoenix/y7zp87?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.1989.click/logo/翡翠台.png" group-title="HK" catchup="append" catchup-days="1" catchup-source="&playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",翡翠台「24H Replay」
-https://iptv.1989.click/hk/6jjxjt?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/b6gf7t?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="無綫新聞台" tvg-name="無綫新聞台" tvg-logo="https://material.1989.click/logo/無綫新聞台.png" group-title="HK",無綫新聞台
-https://iptv.1989.click/hk/q25p9q?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/gsgncf?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://material.1989.click/logo/明珠台.png" group-title="HK",明珠台
-https://iptv.1989.click/hk/kybncy?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/x2rjqw?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://material.1989.click/logo/TVBPlus.png" group-title="HK",TVB Plus
-https://iptv.1989.click/hk/qgerdb?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/fz629n?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="美亞電影台" tvg-name="美亞電影台" tvg-logo="https://material.1989.click/logo/美亞電影台.png" group-title="HK",美亞電影台
-https://iptv.1989.click/hk/avbd65?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/hhetth?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://material.1989.click/logo/PopC.png" group-title="HK",PopC
-https://iptv.1989.click/hk/ywfht8?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/jt9rzr?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://material.1989.click/logo/ViuTV.png" group-title="HK",ViuTV
-https://iptv.1989.click/hk/8hqa3b?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/bewujv?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://material.1989.click/logo/ViuTVsix.png" group-title="HK",ViuTVsix
-https://iptv.1989.click/hk/9e2xwa?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/ny656v?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now直播台" tvg-name="Now直播台" tvg-logo="https://material.1989.click/logo/Now直播台.png" group-title="HK",Now直播台
-https://iptv.1989.click/hk/9dtvhk?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/wxdzys?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://material.1989.click/logo/Now新聞台.png" group-title="HK",Now新聞台
-https://iptv.1989.click/hk/yvkdzk?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/tkthmr?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now財經台" tvg-name="Now財經台" tvg-logo="https://material.1989.click/logo/Now財經台.png" group-title="HK",Now財經台
-https://iptv.1989.click/hk/wjhjrg?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/ft4bk4?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://material.1989.click/logo/Now Sports 精選.png" group-title="HK",Now Sports 精選
-https://iptv.1989.click/hk/82tvha?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hk/c7zbbw?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now Sports 4K 617" tvg-name="Now Sports 4K 617" tvg-logo="https://material.1989.click/logo/Now-Sports-617.png" group-title="HK",Now Sports 617
-https://iptv.1989.click/hkg/kb54uz?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hkg/puta5p?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="Now Sports 618" tvg-name="Now Sports 618" tvg-logo="https://material.1989.click/logo/Now-Sports-618.png" group-title="HK",Now Sports 618
-https://iptv.1989.click/hkg/cdqp7j?token=809757d162de6309a62f31059658f8321e83ec7a1097ecc1
+https://iptv.1989.click/hkg/vjjjxm?token=2ef422a71722dfa097b63476f96cdb44abf78103768296fa
 #EXTINF:-1 tvg-id="HOY 國際財經台" tvg-name="HOY 國際財經台" tvg-logo="https://material.1989.click/logo/HOY76.png" group-title="HK",HOY 國際財經台
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://material.1989.click/logo/HOY77.png" group-title="HK",HOY TV
