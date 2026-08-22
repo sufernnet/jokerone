@@ -46,60 +46,10 @@ HK_TARGET_ORDER = [
     "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U"
 ]
 
-# ===================== TW 分组（使用用户提供的频道） =====================
+# ===================== TW 分组（从远程 URL 加载） =====================
 
-# 用户提供的 TW 频道 M3U 内容（完整复制）
-USER_TW_M3U = """
-#EXTINF:-1 tvg-id="4gtv-4gtv009" tvg-name="中天新聞台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv009&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv040" tvg-name="中視" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv040_mobile.png" group-title="TW",中視
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv040&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv041" tvg-name="華視" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv041_mobile.png" group-title="TW",華視
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv041&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv052" tvg-name="華視新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv052_mobile.png" group-title="TW",華視新聞
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv052&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv074" tvg-name="中視新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv074_mobile.png" group-title="TW",中視新聞
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv074&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv076" tvg-name="亞洲旅遊台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn17_mobile.png" group-title="TW",亞洲旅遊台
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv076&sd=1080&proxy=false&token=sufern
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv104&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv156" tvg-name="寰宇新聞台灣台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn15_mobile.png" group-title="TW",寰宇新聞台灣台
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv156&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="4gtv-4gtv158" tvg-name="寰宇財經台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn23_mobile.png" group-title="TW",寰宇財經台
-http://192.168.100.1:50002/index.m3u8?pid=4gtv-4gtv158&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="daystar" tvg-name="DayStar" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/Daystar_214x120.png" group-title="TW",DayStar
-http://192.168.100.1:50002/index.m3u8?pid=daystar&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="iNEWS" tvg-name="三立新聞iNEWS" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_iNEWS_mobile.png" group-title="TW",三立新聞iNEWS
-http://192.168.100.1:50002/index.m3u8?pid=iNEWS&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-ftv16" tvg-name="好消息" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv16_mobile.png" group-title="TW",好消息
-http://192.168.100.1:50002/index.m3u8?pid=litv-ftv16&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-ftv17" tvg-name="好消息2台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv17_mobile.png" group-title="TW",好消息2台
-http://192.168.100.1:50002/index.m3u8?pid=litv-ftv17&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-longturn14" tvg-name="寰宇新聞台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_mobile.png" group-title="TW",寰宇新聞台
-http://192.168.100.1:50002/index.m3u8?pid=litv-longturn14&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang01" tvg-name="龍華卡通台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn01_mobile.png" group-title="TW",龍華卡通台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang01&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang02" tvg-name="龍華洋片台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_mobile.png" group-title="TW",龍華洋片台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang02&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang03" tvg-name="龍華電影台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_mobile.png" group-title="TW",龍華電影台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang03&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang11" tvg-name="龍華日韓台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn11_mobile.png" group-title="TW",龍華日韓台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang11&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang12" tvg-name="龍華偶像台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn12_mobile.png" group-title="TW",龍華偶像台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang12&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang18" tvg-name="龍華戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_mobile.png" group-title="TW",龍華戲劇台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang18&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang19" tvg-name="Smart知識台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn19_mobile.png" group-title="TW",Smart知識台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang19&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang20" tvg-name="ELTV生活英語台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn20_mobile.png" group-title="TW",ELTV生活英語台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang20&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang21" tvg-name="龍華經典台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn21_mobile.png" group-title="TW",龍華經典台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang21&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="litv-xinchuang22" tvg-name="台灣戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn22_mobile.png" group-title="TW",台灣戲劇台
-http://192.168.100.1:50002/index.m3u8?pid=litv-xinchuang22&sd=1080&proxy=false&token=sufern
-#EXTINF:-1 tvg-id="nnews-zh" tvg-name="倪珍播新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_mobile.png" group-title="TW",倪珍播新聞
-http://192.168.100.1:50002/index.m3u8?pid=nnews-zh&sd=1080&proxy=false&token=sufern
-"""
+# TW 数据源 URL
+TW_SOURCE_URL = "https://raw.githubusercontent.com/sufernnet/jokerone/refs/heads/main/TW.m3u"
 
 # TW 排序列表（与您原有的一致）
 TW_TARGET_ORDER = [
@@ -335,18 +285,17 @@ def load_hk():
     
     return result
 
-# ===================== TW（使用用户提供的列表） =====================
+# ===================== TW（从远程 URL 加载） =====================
 
-def load_tw_from_user():
-    """解析用户提供的 TW M3U 内容，返回 (name, ext, url) 列表"""
-    raw = USER_TW_M3U.strip()
+def load_tw_from_url():
+    """从 https://raw.githubusercontent.com/sufernnet/jokerone/refs/heads/main/TW.m3u 加载TW频道"""
+    raw = download(TW_SOURCE_URL)
     if not raw:
-        print("⚠️ 用户提供的TW内容为空")
+        print("⚠️ 无法下载TW数据源")
         return []
     
-    # 使用 parse_m3u 解析
     data = parse_m3u(raw)
-    print(f"✓ 从用户提供的TW数据中解析到 {len(data)} 个频道")
+    print(f"✓ 从TW数据源获取到 {len(data)} 个频道")
     
     # 去重（按URL去重，保留第一个）
     seen_urls = set()
@@ -360,7 +309,6 @@ def load_tw_from_user():
     result = []
     temp_dict = {}
     for n, e, u in unique_data:
-        # 如果同一个频道名有多个URL（理论上不会，因为去重了），保留第一个
         if n not in temp_dict:
             temp_dict[n] = (n, e, u)
     
@@ -368,7 +316,6 @@ def load_tw_from_user():
     for target in TW_TARGET_ORDER:
         matched = None
         for name in temp_dict.keys():
-            # 精确或包含匹配
             if name == target or target in name or name in target:
                 matched = name
                 break
@@ -508,8 +455,8 @@ def main():
     hk = load_hk()
     print(f"HK频道加载完成，共 {len(hk)} 个")
     
-    print("正在加载TW频道（使用您提供的列表）...")
-    tw = load_tw_from_user()
+    print("正在加载TW频道（从远程URL加载）...")
+    tw = load_tw_from_url()
     print(f"TW频道加载完成，共 {len(tw)} 个")
     
     print("正在加载MV频道...")
@@ -563,7 +510,6 @@ def main():
         else:
             out += "\n# TW\n"
         for n, e, u in tw:
-            # 确保 group-title 为 "TW"
             out += normalize_group(e, "TW") + "\n" + u + "\n"
         out = out.rstrip() + "\n"
 
