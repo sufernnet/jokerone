@@ -190,20 +190,26 @@ def download(url, retry=3):
 # ===================== 工具 =====================
 
 def clean_name(name):
+    """只去除圆括号、方括号、花括号等，保留中文书名号《》及「」"""
     name = re.sub(r'[\(\[\{（【].*?[\)\]\}）】]', '', name)
-    name = re.sub(r'「.*?」', '', name)   # 原有也会去除，但我们将用新函数专门处理后缀
+    # 不再移除「...」，避免误删非后缀内容
     return name.strip()
 
 def clean_suffix(name):
     """去除频道名称末尾的「...」形式后缀（如「Relay」、「4gTV」）"""
-    # 匹配末尾的「...」
-    name = re.sub(r'「[^」]*」$', '', name)
-    return name.strip()
+    return re.sub(r'「[^」]*」$', '', name).strip()
+
+def replace_name_in_extinf(extinf, new_name):
+    """将 #EXTINF 行中的频道名称替换为 new_name"""
+    # 格式: #EXTINF:... ,原名称
+    parts = extinf.rsplit(',', 1)
+    if len(parts) == 2:
+        return parts[0] + ',' + new_name
+    return extinf  # 保底
 
 def parse_name(extinf):
-    # 先提取原始名称，然后应用清理
     raw = extinf.split(",", 1)[-1]
-    # 去除括号等，再去除后缀
+    # 先去除括号，再去掉末尾后缀
     return clean_suffix(clean_name(raw))
 
 def parse_group(extinf):
@@ -247,97 +253,63 @@ def parse_m3u(content):
 # ===================== HK（新源） =====================
 
 def load_hk():
-    """从 https://cdn.qd.je/live.m3u 加载HK频道，并过滤掉指定列表"""
     raw = download(HK_NEW_SOURCE)
     if not raw:
         print("⚠️ 无法下载HK新源")
         return []
-    
     data = parse_m3u(raw)
     print(f"✓ 从HK新源获取到 {len(data)} 个频道")
-    
-    # 过滤掉指定的频道
     filtered = []
     for n, e, u in data:
-        should_filter = False
-        for filter_name in HK_FILTER_LIST:
-            if filter_name in n:
-                should_filter = True
-                break
-        if not should_filter:
+        if not any(f in n for f in HK_FILTER_LIST):
             filtered.append((n, e, u))
-    
     print(f"✓ 过滤后剩余 {len(filtered)} 个频道")
-    
-    # 按指定顺序排序
+    # 排序
+    temp_dict = {n: (n, e, u) for n, e, u in filtered}
     result = []
-    temp_dict = {}
-    for n, e, u in filtered:
-        if n not in temp_dict:
-            temp_dict[n] = (n, e, u)
-    
-    used_names = set()
+    used = set()
     for target in HK_TARGET_ORDER:
-        matched = None
         for name in temp_dict.keys():
             if target in name or name in target:
-                matched = name
+                if name not in used:
+                    result.append(temp_dict[name])
+                    used.add(name)
                 break
-        if matched and matched not in used_names:
-            result.append(temp_dict[matched])
-            used_names.add(matched)
-    
-    for n in temp_dict.keys():
-        if n not in used_names:
-            result.append(temp_dict[n])
-            used_names.add(n)
-    
+    for name in temp_dict.keys():
+        if name not in used:
+            result.append(temp_dict[name])
     return result
 
 # ===================== TW（从远程 URL 加载） =====================
 
 def load_tw_from_url():
-    """从 https://raw.githubusercontent.com/sufernnet/jokerone/refs/heads/main/TW.m3u 加载TW频道"""
     raw = download(TW_SOURCE_URL)
     if not raw:
         print("⚠️ 无法下载TW数据源")
         return []
-    
     data = parse_m3u(raw)
     print(f"✓ 从TW数据源获取到 {len(data)} 个频道")
-    
-    # 去重（按URL去重，保留第一个）
+    # 去重
     seen_urls = set()
     unique_data = []
     for n, e, u in data:
         if u not in seen_urls:
             seen_urls.add(u)
             unique_data.append((n, e, u))
-    
-    # 按 TW_TARGET_ORDER 排序
+    # 排序
+    temp_dict = {n: (n, e, u) for n, e, u in unique_data}
     result = []
-    temp_dict = {}
-    for n, e, u in unique_data:
-        if n not in temp_dict:
-            temp_dict[n] = (n, e, u)
-    
-    used_names = set()
+    used = set()
     for target in TW_TARGET_ORDER:
-        matched = None
         for name in temp_dict.keys():
             if name == target or target in name or name in target:
-                matched = name
+                if name not in used:
+                    result.append(temp_dict[name])
+                    used.add(name)
                 break
-        if matched and matched not in used_names:
-            result.append(temp_dict[matched])
-            used_names.add(matched)
-    
-    # 添加未匹配到的频道（保持原顺序）
-    for n in temp_dict.keys():
-        if n not in used_names:
-            result.append(temp_dict[n])
-            used_names.add(n)
-    
+    for name in temp_dict.keys():
+        if name not in used:
+            result.append(temp_dict[name])
     print(f"✓ TW频道排序完成，共 {len(result)} 个")
     return result
 
@@ -345,17 +317,16 @@ def load_tw_from_url():
 
 def load_mv():
     print("开始加载MV频道...")
-    
-    main_source_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
-    raw_main = download(main_source_url)
+    main_source = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
+    raw_main = download(main_source)
     if not raw_main:
         print("⚠️ 无法下载主要MV源，尝试其他备选源...")
         all_data = []
-        backup_sources = [
+        backup = [
             "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
             "https://live.kilvn.com/iptv.m3u",
         ]
-        for src in backup_sources:
+        for src in backup:
             raw = download(src)
             if raw:
                 all_data.extend(parse_m3u(raw))
@@ -364,36 +335,26 @@ def load_mv():
     else:
         all_data = parse_m3u(raw_main)
         print(f"✓ 从主源获取到 {len(all_data)} 个频道")
-    
     if not all_data:
         print("❌ 所有源都无法获取数据")
         return []
-    
     temp = []
-    print("正在筛选符合条件的频道...")
     for n, e, u in all_data:
         group = parse_group(e)
-        original_condition = (any(keyword in group for keyword in ["综合", "电影", "影视", "MV", "娱乐", "影視"]) or
-                              any(keyword in n for keyword in ["CHC", "龙华", "ROCK", "HBO", "Cinemax", "动作电影", "家庭影院", "影迷电影"]))
-        beijing_condition = (group == "北京" and 
-                             any(target in n for target in ["北京IPTV淘电影", "北京IPTV4K", "淘电影", "4K"]))
-        hk_tw_condition = (group == "港澳台" and 
-                           any(target in n for target in ["天映频道", "天映新加坡", "爱奇艺", "TVB星河", "天映", "iQIYI", "星河"]))
-        if original_condition or beijing_condition or hk_tw_condition:
-            if "CHC" in n or "动作" in n:
-                print(f"  【候选】频道: {n}, 分组: {group}")
-            temp.append((clean_suffix(clean_name(n)), e, u))   # 应用清理
+        cond1 = any(k in group for k in ["综合", "电影", "影视", "MV", "娱乐", "影視"]) or \
+                any(k in n for k in ["CHC", "龙华", "ROCK", "HBO", "Cinemax", "动作电影", "家庭影院", "影迷电影"])
+        cond2 = (group == "北京" and any(k in n for k in ["北京IPTV淘电影", "北京IPTV4K", "淘电影", "4K"]))
+        cond3 = (group == "港澳台" and any(k in n for k in ["天映频道", "天映新加坡", "爱奇艺", "TVB星河", "天映", "iQIYI", "星河"]))
+        if cond1 or cond2 or cond3:
+            cleaned = clean_suffix(clean_name(n))
+            temp.append((cleaned, e, u))  # 注意此处 e 未改，但MV输出时我们也不替换名称（可保持原样，或用户未提及）
     temp = dedup(temp)
-    print(f"筛选后剩余 {len(temp)} 个候选频道")
-    
     result = []
     for target_name, keywords in MV_TARGET_ORDER:
         candidates = []
         for n, e, u in temp:
-            for kw in keywords:
-                if kw.lower() in n.lower():
-                    candidates.append((n, e, u))
-                    break
+            if any(kw.lower() in n.lower() for kw in keywords):
+                candidates.append((n, e, u))
         if candidates:
             unique_candidates = []
             seen_urls = set()
@@ -401,8 +362,6 @@ def load_mv():
                 if u not in seen_urls:
                     seen_urls.add(u)
                     unique_candidates.append((n, e, u))
-            if len(unique_candidates) > 1:
-                print(f"  {target_name}: 找到 {len(unique_candidates)} 个候选URL，正在测速选择最优...")
             urls = [u for _, _, u in unique_candidates]
             best_url = pick_best(urls)
             for n, e, u in unique_candidates:
@@ -411,11 +370,9 @@ def load_mv():
                     if n in LOGO_MAP:
                         ext = re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{LOGO_MAP[n]}"', ext)
                     result.append((target_name, ext, u))
-                    print(f"✓ 找到MV频道: {target_name}")
                     break
         else:
             print(f"✗ 未找到MV频道: {target_name}")
-    
     non_lh = [x for x in result if not any(k in x[0] for k in LONGHUA_KEYWORDS)]
     lh = [x for x in result if any(k in x[0] for k in LONGHUA_KEYWORDS)]
     print(f"MV频道加载完成，共 {len(result)} 个")
@@ -448,52 +405,31 @@ def pick_best(urls):
 # ===================== 新增：从 SOURCE_URL 提取 Discovery 和 Sports =====================
 
 def load_discovery(data):
-    """
-    从 SOURCE_URL 解析出的 data 中提取 Discovery 分组频道。
-    要求：
-      - 从 •綜合「Relay」 提取 BBC Earth、Discovery、HBO
-      - 从 •台灣「Relay」 提取 Love Nature、History 歷史頻道、動物星球
-    同时去除名称末尾的「...」后缀，并过滤掉 HBO Hits、HBO Family、HBO Signature。
-    """
     discovery_channels = []
     groups_keywords = {
         "•綜合「Relay」": ["BBC Earth", "Discovery", "HBO"],
         "•台灣「Relay」": ["Love Nature", "History 歷史頻道", "動物星球"]
     }
-    
     for group_name, keywords in groups_keywords.items():
         for n, e, u in data:
             if parse_group(e) != group_name:
                 continue
             for kw in keywords:
                 if kw.lower() in n.lower():
-                    # 清理名称：先clean_name，再clean_suffix
                     cleaned = clean_suffix(clean_name(n))
-                    discovery_channels.append((cleaned, e, u))
+                    new_extinf = replace_name_in_extinf(e, cleaned)
+                    discovery_channels.append((cleaned, new_extinf, u))
                     break
-    
-    # 去重
     discovery_channels = dedup(discovery_channels)
-    
-    # 过滤掉指定的 HBO 频道
+    # 过滤三个指定 HBO
     filtered = []
     for n, e, u in discovery_channels:
         if not any(h in n for h in ["HBO Hits", "HBO Family", "HBO Signature"]):
             filtered.append((n, e, u))
-    
-    print(f"✓ Discovery 分组提取到 {len(filtered)} 个频道（已过滤三个HBO频道）")
+    print(f"✓ Discovery 分组提取到 {len(filtered)} 个频道（已过滤三个HBO频道并去除后缀）")
     return filtered
 
 def load_sports(data):
-    """
-    从 SOURCE_URL 解析出的 data 中提取 Sports 分组频道。
-    要求：
-      - 从 •香港「Relay」 提取 Now Sports 精選、Now Sports 英超 2台
-      - 从 •港澳台「Juli」 提取 五星体育
-      - 从 •台灣「Relay」 提取 緯來體育
-      - 从 •體育「Relay」 提取里面所有的频道
-    同样去除名称末尾的「...」后缀。
-    """
     sports_channels = []
     specific_rules = [
         ("•香港「Relay」", ["Now Sports 精選", "Now Sports 英超 2台"]),
@@ -507,17 +443,17 @@ def load_sports(data):
             for kw in keywords:
                 if kw.lower() in n.lower():
                     cleaned = clean_suffix(clean_name(n))
-                    sports_channels.append((cleaned, e, u))
+                    new_extinf = replace_name_in_extinf(e, cleaned)
+                    sports_channels.append((cleaned, new_extinf, u))
                     break
-    
-    # 提取 •體育「Relay」 下的所有频道
+    # 提取 •體育「Relay」 所有频道
     for n, e, u in data:
         if parse_group(e) == "•體育「Relay」":
             cleaned = clean_suffix(clean_name(n))
-            sports_channels.append((cleaned, e, u))
-    
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            sports_channels.append((cleaned, new_extinf, u))
     sports_channels = dedup(sports_channels)
-    print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道")
+    print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道（已去除后缀）")
     return sports_channels
 
 # ===================== 主程序 =====================
@@ -532,29 +468,23 @@ def main():
         print("❌ 无法下载源文件")
         return
 
-    lines = content.splitlines()
-    # 解析 source 内容，供后续 Discovery 和 Sports 使用
     all_data = parse_m3u(content)
     print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
     print("正在加载HK频道...")
     hk = load_hk()
     print(f"HK频道加载完成，共 {len(hk)} 个")
-    
     print("正在加载TW频道（从远程URL加载）...")
     tw = load_tw_from_url()
     print(f"TW频道加载完成，共 {len(tw)} 个")
-    
     print("正在加载MV频道...")
     mv = load_mv()
-
-    # 新增：加载 Discovery 和 Sports
     print("正在加载 Discovery 分组...")
     discovery = load_discovery(all_data)
     print("正在加载 Sports 分组...")
     sports = load_sports(all_data)
 
-    # 添加 EPG 信息头
+    # 开始构建输出
     out = '#EXTM3U x-tvg-url="https://epg.zsdc.eu.org/t.xml.gz"\n\n'
 
     try:
@@ -565,7 +495,7 @@ def main():
     except Exception as e:
         print(f"⚠️ 无法读取 BB.m3u: {e}")
 
-    # 去掉多余的空行
+    # 清理多余空行
     lines_out = out.splitlines()
     cleaned_lines = []
     prev_empty = False
@@ -577,55 +507,25 @@ def main():
         prev_empty = is_empty
     out = "\n".join(cleaned_lines)
 
-    # 添加MV分组
-    if mv:
-        if out.rstrip().endswith("\n"):
-            out += "# MV\n"
-        else:
-            out += "\n# MV\n"
-        for n, e, u in mv:
-            out += normalize_group(e, "MV") + "\n" + u + "\n"
-        out = out.rstrip() + "\n"
+    # 分组输出
+    def append_group(group_name, data):
+        nonlocal out
+        if data:
+            if out.rstrip().endswith("\n"):
+                out += f"# {group_name}\n"
+            else:
+                out += f"\n# {group_name}\n"
+            for n, e, u in data:
+                out += normalize_group(e, group_name) + "\n" + u + "\n"
+            out = out.rstrip() + "\n"
 
-    if hk:
-        if out.rstrip().endswith("\n"):
-            out += "# HK\n"
-        else:
-            out += "\n# HK\n"
-        for n, e, u in hk:
-            out += normalize_group(e, "HK") + "\n" + u + "\n"
-        out = out.rstrip() + "\n"
+    append_group("MV", mv)
+    append_group("HK", hk)
+    append_group("TW", tw)
+    append_group("Discovery", discovery)
+    append_group("Sports", sports)
 
-    if tw:
-        if out.rstrip().endswith("\n"):
-            out += "# TW\n"
-        else:
-            out += "\n# TW\n"
-        for n, e, u in tw:
-            out += normalize_group(e, "TW") + "\n" + u + "\n"
-        out = out.rstrip() + "\n"
-
-    # ---- 新增 Discovery 分组 ----
-    if discovery:
-        if out.rstrip().endswith("\n"):
-            out += "# Discovery\n"
-        else:
-            out += "\n# Discovery\n"
-        for n, e, u in discovery:
-            out += normalize_group(e, "Discovery") + "\n" + u + "\n"
-        out = out.rstrip() + "\n"
-
-    # ---- 新增 Sports 分组 ----
-    if sports:
-        if out.rstrip().endswith("\n"):
-            out += "# Sports\n"
-        else:
-            out += "\n# Sports\n"
-        for n, e, u in sports:
-            out += normalize_group(e, "Sports") + "\n" + u + "\n"
-        out = out.rstrip() + "\n"
-
-    # 最终清理多余空行
+    # 最终清理空行
     final_lines = out.splitlines()
     final_cleaned = []
     prev_empty = False
@@ -649,7 +549,6 @@ def main():
     print(f"Discovery频道数: {len(discovery)}")
     print(f"Sports频道数: {len(sports)}")
     print("=" * 50)
-
 
 if __name__ == "__main__":
     main()
