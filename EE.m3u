@@ -91,8 +91,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
-#EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映画台
-https://cdn.qd.je/163189/jtyh
+#EXTINF:-1 tvg-id="g-82b698" tvg-name="天映经典" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映經典.png" group-title="MV",天映經典
+https://cdn.qd.je/163189/ccm
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
@@ -116,17 +116,17 @@ https://cdn.qd.je/163189/tvbd
 #EXTINF:-1 tvg-name="娛樂新聞台" group-title="HK",TVB娱乐新闻台
 https://cdn.qd.je/163189/ylxw
 #EXTINF:-1 tvg-name="无线新闻" group-title="HK",无线新闻台
-https://cdn.qd.je/163189/wxxw
+https://cdn.qd.je/163189/wxxwt
 #EXTINF:-1 tvg-name="天映马来西亚" group-title="HK",天映频道
 https://cdn.qd.je/163189/typd2
 #EXTINF:-1 tvg-name="千禧經典台" group-title="HK",千禧经典台
 https://cdn.qd.je/163189/tvbc
-#EXTINF:-1 tvg-name="明珠台" group-title="HK",明珠台(字幕)
-https://cdn.qd.je/163189/mzt
+#EXTINF:-1 tvg-name="明珠台" group-title="HK",明珠台(WebVTT字幕)
+https://cdn.qd.je/163189/mztvtt
 #EXTINF:-1 tvg-name="八度空间" group-title="HK",八度空间
 https://cdn.qd.je/163189/8tv
 #EXTINF:-1 tvg-name="TVB星河" group-title="HK",TVB星河
-https://cdn.qd.je/163189/tvbxh
+https://cdn.qd.je/163189/tvbxh2
 #EXTINF:-1 tvg-name="TVBJ1" group-title="HK",TVBJ1
 https://cdn.qd.je/163189/j1
 #EXTINF:-1 tvg-name="TVB1" group-title="HK",TVB1
@@ -141,10 +141,10 @@ https://cdn.qd.je/163189/rthk32
 https://cdn.qd.je/163189/aec
 #EXTINF:-1 tvg-name="AOD" group-title="HK",Astro AOD
 https://cdn.qd.je/163189/aod
-#EXTINF:-1 tvg-name="TVB Plus" group-title="HK",TVB Plus(字幕)
-https://cdn.qd.je/163189/tvbp
+#EXTINF:-1 tvg-name="TVB Plus" group-title="HK",TVB Plus
+https://cdn.qd.je/163189/tvbp2
 #EXTINF:-1 tvg-name="HOY77" group-title="HK",HOY TV
-https://cdn.qd.je/163189/hoy
+https://cdn.qd.je/163189/hoy2
 #EXTINF:-1 tvg-name="HOY 國際財經台" group-title="HK",HOY国际财经台
 https://cdn.qd.je/163189/hoy76
 #EXTINF:-1 tvg-name="ViuTV" group-title="HK",ViuTV
@@ -152,9 +152,9 @@ https://cdn.qd.je/163189/viu
 #EXTINF:-1 tvg-name="ViuTVsix" group-title="HK",ViuTVsix
 https://cdn.qd.je/163189/viu6
 #EXTINF:-1 tvg-name="重温经典" group-title="HK",重温经典
-https://cdn.qd.je/163189/cwjd
-#EXTINF:-1 tvg-name="翡翠台" group-title="HK",翡翠台
-https://cdn.qd.je/163189/fct
+https://cdn.qd.je/163189/cwjd2
+#EXTINF:-1 tvg-name="翡翠台" group-title="HK",翡翠台(WebVTT字幕)
+https://cdn.qd.je/163189/fctvtt
 #EXTINF:-1 tvg-name="广东珠江" group-title="HK",广东珠江
 https://cdn.qd.je/163189/gdzj
 #EXTINF:-1 tvg-name="广东体育" group-title="HK",广东体育
@@ -179,16 +179,16 @@ https://cdn.qd.je/163189/lhxj
 https://cdn.qd.je/163189/lhyp
 #EXTINF:-1 tvg-name="龍華卡通" group-title="HK",龙华卡通
 https://cdn.qd.je/163189/lhkt
-#EXTINF:-1 tvg-name="TVB Jade HD" group-title="HK",华丽翡翠台
-https://cdn.qd.je/163189/hlfct
+#EXTINF:-1 tvg-name="TVB Jade HD" group-title="HK",华丽翡翠台(新加坡)
+https://cdn.qd.je/163189/jade2
 #EXTINF:-1 tvg-name="TVB亚洲武侠" group-title="HK",TVB亚洲武侠
 https://cdn.qd.je/163189/yzwx
 #EXTINF:-1 tvg-name="海峡卫视" group-title="HK",海峡卫视
-https://cdn.qd.je/163189/hxws
+https://cdn.qd.je/163189/hxws2
 #EXTINF:-1 tvg-name="天映新加坡" group-title="HK",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-name="天映经典" group-title="HK",天映经典
-https://cdn.qd.je/163189/ccm
+https://cdn.qd.je/163189/ccm2
 #EXTINF:-1 tvg-name="QJ" group-title="HK",Astro QJ
 https://cdn.qd.je/163189/qj
 #EXTINF:-1 tvg-name="HUA HEE DAI" group-title="HK",Astro欢喜台
@@ -217,14 +217,14 @@ http://r.jdshipin.com/Lqdwf
 https://4gtv.158.qzz.io/163189/0ca25d44-a9ea-4d65-b4fb-74fb1a66b5d4/
 #EXTINF:-1 tvg-id="stream-598ae4db-7b05-4f78-824c-59702a66a3d6" tvg-name="History 歷史頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live026_mobile.png" group-title="TW",History 歷史頻道
 https://4gtv.158.qzz.io/163189/598ae4db-7b05-4f78-824c-59702a66a3d6/
-#EXTINF:-1 tvg-id="stream-2e3ba7b4-9e33-4bda-acd2-b65b45f9cfc2" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="TW",亞洲旅遊台
-https://4gtv.158.qzz.io/163189/2e3ba7b4-9e33-4bda-acd2-b65b45f9cfc2/
+#EXTINF:-1 tvg-id="stream-9d3f4fa7-11b2-4d24-82d9-cfdc4f2eb787" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="TW",亞洲旅遊台
+https://4gtv.158.qzz.io/163189/9d3f4fa7-11b2-4d24-82d9-cfdc4f2eb787/
 #EXTINF:-1 tvg-id="stream-61385f10-c9c1-448d-94ef-91b18d1849cf" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
 https://4g.158.qzz.io/163189/60f5c767b807519a
-#EXTINF:-1 tvg-id="stream-57170774-ef9b-4091-94fb-55f6faf13691" tvg-name="民視第一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png" group-title="TW",民視第一台
-https://4gtv.158.qzz.io/163189/57170774-ef9b-4091-94fb-55f6faf13691/
-#EXTINF:-1 tvg-id="stream-aecbd4e5-757e-45e7-a3a7-33f83efc98a5" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_pc.webp" group-title="TW",民視台灣台
-https://4gtv.158.qzz.io/163189/aecbd4e5-757e-45e7-a3a7-33f83efc98a5/
+#EXTINF:-1 tvg-id="stream-371b5477-368d-43c5-ad69-f8b56c40c6ca" tvg-name="民視第一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_pc.webp" group-title="TW",民視第一台
+https://4gtv.158.qzz.io/163189/371b5477-368d-43c5-ad69-f8b56c40c6ca/
+#EXTINF:-1 tvg-id="stream-e75ce7b6-beac-42b9-bb54-798f21e20a00" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png" group-title="TW",民視台灣台
+https://4gtv.158.qzz.io/163189/e75ce7b6-beac-42b9-bb54-798f21e20a00/
 #EXTINF:-1 tvg-id="stream-b6656a22-9521-40ee-85d5-d4bee1560858" tvg-name="華視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv041_mobile.png" group-title="TW",華視
 https://4gtv.158.qzz.io/163189/b6656a22-9521-40ee-85d5-d4bee1560858/
 #EXTINF:-1 tvg-id="stream-36b214e7-fc2f-4402-b16f-bebe0ef9c1be" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="TW",寰宇新聞台
@@ -239,8 +239,8 @@ https://4gtv.158.qzz.io/163189/cd3d7097-895c-47c8-8b43-4d22e758cf55/
 https://4g.158.qzz.io/163189/d7e9f69dcbba2a23
 #EXTINF:-1 tvg-id="stream-83f24df6-a3d3-41c2-a66b-f5f0ef081cdc" tvg-name="民視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png" group-title="TW",民視
 https://4g.158.qzz.io/163189/0294790909bc9b0e
-#EXTINF:-1 tvg-id="stream-15801af6-42b5-47b0-9c68-908ce9d1ae29" tvg-name="東森財經新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv019_mobile.png" group-title="TW",東森財經新聞台
-https://4gtv.158.qzz.io/163189/15801af6-42b5-47b0-9c68-908ce9d1ae29/
+#EXTINF:-1 tvg-id="stream-87a8d376-80a1-4f5a-9c3f-b415e3feb689" tvg-name="東森財經新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live019_mobile.png" group-title="TW",東森財經新聞台
+https://4gtv.158.qzz.io/163189/87a8d376-80a1-4f5a-9c3f-b415e3feb689/
 #EXTINF:-1 tvg-id="stream-430fbb09-b79e-42ca-9cf4-b67f83b4eaf6" tvg-name="中視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv040_mobile.png" group-title="TW",中視
 https://4gtv.158.qzz.io/163189/430fbb09-b79e-42ca-9cf4-b67f83b4eaf6/
 #EXTINF:-1 tvg-id="stream-acd6cbf9-8405-49c0-bf37-f7c620ccc391" tvg-name="TVBS精采台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live086_mobile.png" group-title="TW",TVBS精采台
@@ -273,8 +273,8 @@ https://4gtv.158.qzz.io/163189/e03b2084-716c-4239-a6ae-c745a3a8aa41/
 https://4gtv.158.qzz.io/163189/f3a40fec-20a4-4217-bb52-a4dccb029c22/
 #EXTINF:-1 tvg-id="stream-4686f6c9-b849-408e-9936-5cab41fc07fa" tvg-name="智林體育台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv101_mobile.png" group-title="TW",智林體育台
 https://4gtv.158.qzz.io/163189/4686f6c9-b849-408e-9936-5cab41fc07fa/
-#EXTINF:-1 tvg-id="stream-cf7ef929-0f52-4a1d-96e9-a2640f8d8825" tvg-name="時尚運動X" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv014_mobile.png" group-title="TW",時尚運動X
-https://4gtv.158.qzz.io/163189/cf7ef929-0f52-4a1d-96e9-a2640f8d8825/
+#EXTINF:-1 tvg-id="stream-469d850c-12ba-4454-b2c6-0e7f7fc5f974" tvg-name="時尚運動X" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv411_mobile.png" group-title="TW",時尚運動X
+https://4gtv.158.qzz.io/163189/469d850c-12ba-4454-b2c6-0e7f7fc5f974/
 #EXTINF:-1 tvg-id="stream-b57bad74-0361-4522-8475-11ef84dffa99" tvg-name="GINX Esports TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv053_mobile.png" group-title="TW",GINX Esports TV
 https://4gtv.158.qzz.io/163189/b57bad74-0361-4522-8475-11ef84dffa99/
 #EXTINF:-1 tvg-id="stream-c8e17fe8-dcc5-426b-ae9a-a898fe305d30" tvg-name="TVBS新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png" group-title="TW",TVBS新聞
@@ -313,8 +313,8 @@ https://4gtv.158.qzz.io/163189/6fb8aec9-e4b2-4bed-8832-b5e9cce4a830/
 https://4gtv.158.qzz.io/163189/36587122-152c-451b-9d6b-83a856574489/
 #EXTINF:-1 tvg-id="stream-97058609-f76d-4885-877b-8e99dcc05e84" tvg-name="客家電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv043_mobile.png" group-title="TW",客家電視台
 https://4gtv.158.qzz.io/163189/97058609-f76d-4885-877b-8e99dcc05e84/
-#EXTINF:-1 tvg-id="stream-d8836828-137d-48d3-8c54-8291eedd9c9a" tvg-name="八大綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv039_mobile.png" group-title="TW",八大綜藝台
-https://4gtv.158.qzz.io/163189/d8836828-137d-48d3-8c54-8291eedd9c9a/
+#EXTINF:-1 tvg-id="stream-8e8c7f99-29ad-4985-aa5a-b46b77dfd004" tvg-name="八大綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv410_mobile.png" group-title="TW",八大綜藝台
+https://4gtv.158.qzz.io/163189/8e8c7f99-29ad-4985-aa5a-b46b77dfd004/
 #EXTINF:-1 tvg-id="stream-c21507f6-d50c-4dc2-9133-2bf9dd7ac0e2" tvg-name="愛爾達寵物運動台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/頻道LOGO去背.png" group-title="TW",愛爾達寵物運動台
 https://4gtv.158.qzz.io/163189/c21507f6-d50c-4dc2-9133-2bf9dd7ac0e2/
 #EXTINF:-1 tvg-id="stream-9f56958f-4a50-4fc6-9407-a7e8b23a34e0" tvg-name="靖天日本台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv047_mobile.png" group-title="TW",靖天日本台
@@ -347,12 +347,12 @@ https://4gtv.158.qzz.io/163189/0e3c076d-4821-4417-bb62-903988847011/
 https://4gtv.158.qzz.io/163189/4e7af03f-ef5e-4a0b-a2ef-0cb6a51351a9/
 #EXTINF:-1 tvg-id="stream-bf5d92e4-dd35-43b9-9e42-26bcd5684184" tvg-name="東森購物一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png" group-title="TW",東森購物一台
 https://4gtv.158.qzz.io/163189/bf5d92e4-dd35-43b9-9e42-26bcd5684184/
-#EXTINF:-1 tvg-id="stream-5570e8fd-69cc-43ad-8de6-e1ac63895bd4" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="TW",華視新聞
-https://4gtv.158.qzz.io/163189/5570e8fd-69cc-43ad-8de6-e1ac63895bd4/
-#EXTINF:-1 tvg-id="stream-ca241422-9067-424c-bbd7-9aab4a6a39b0" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="TW",民視新聞台
-https://4gtv.158.qzz.io/163189/ca241422-9067-424c-bbd7-9aab4a6a39b0/
-#EXTINF:-1 tvg-id="stream-1a62f7fd-8d11-4540-a6c7-ae34d9f059ee" tvg-name="中視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv074_mobile.png" group-title="TW",中視新聞
-https://4gtv.158.qzz.io/163189/1a62f7fd-8d11-4540-a6c7-ae34d9f059ee/
+#EXTINF:-1 tvg-id="stream-5e7d363e-59f1-4c46-84e4-7b4c4774d7ba" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="TW",華視新聞
+https://4gtv.158.qzz.io/163189/5e7d363e-59f1-4c46-84e4-7b4c4774d7ba/
+#EXTINF:-1 tvg-id="stream-4bf91164-f334-4d42-88b9-fc15662dd11d" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_pc.webp" group-title="TW",民視新聞台
+https://4gtv.158.qzz.io/163189/4bf91164-f334-4d42-88b9-fc15662dd11d/
+#EXTINF:-1 tvg-id="stream-7a579ec9-d021-47f3-8ae0-756db38c4d63" tvg-name="中視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv074_mobile.png" group-title="TW",中視新聞
+https://4gtv.158.qzz.io/163189/7a579ec9-d021-47f3-8ae0-756db38c4d63/
 #EXTINF:-1 tvg-id="stream-0757afc8-8e51-42fd-b9b8-18c01e0a270d" tvg-name="Bloomberg TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live0_mobile.png" group-title="TW",Bloomberg TV
 https://4gtv.158.qzz.io/163189/0757afc8-8e51-42fd-b9b8-18c01e0a270d/
 #EXTINF:-1 tvg-id="stream-ca41743f-7a1b-4040-872a-bc8c26229a4f" tvg-name="寰宇新聞台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn15_mobile.png" group-title="TW",寰宇新聞台灣台
@@ -371,16 +371,16 @@ https://4gtv.158.qzz.io/163189/1e0bdf17-436e-40d9-b442-ca3e2bf3d1db/
 https://4gtv.158.qzz.io/163189/0e1292cf-b6be-49e7-821b-8135daf6832f/
 #EXTINF:-1 tvg-id="stream-87fbff72-61a6-4576-a520-8ac51a8ccf00" tvg-name="東森購物三台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png" group-title="TW",東森購物三台
 https://4gtv.158.qzz.io/163189/87fbff72-61a6-4576-a520-8ac51a8ccf00/
-#EXTINF:-1 tvg-id="stream-abd439e4-dbf9-4294-a540-ce42b089b8b9" tvg-name="博斯高球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn05_mobile.png" group-title="TW",博斯高球台
-https://4gtv.158.qzz.io/163189/abd439e4-dbf9-4294-a540-ce42b089b8b9/
+#EXTINF:-1 tvg-id="stream-cdf9b2f5-4789-4931-9ef9-30236288ca67" tvg-name="博斯高球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn05_mobile.png" group-title="TW",博斯高球台
+https://4gtv.158.qzz.io/163189/cdf9b2f5-4789-4931-9ef9-30236288ca67/
 #EXTINF:-1 tvg-id="stream-ecb429b0-2fda-4201-9239-9ccd3e03ca42" tvg-name="博斯高球二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang06.png" group-title="TW",博斯高球二台
 https://4gtv.158.qzz.io/163189/ecb429b0-2fda-4201-9239-9ccd3e03ca42/
-#EXTINF:-1 tvg-id="stream-8fcf856e-8f25-4978-b533-43b9d1a391a9" tvg-name="博斯運動一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn07_mobile.png" group-title="TW",博斯運動一台
-https://4gtv.158.qzz.io/163189/8fcf856e-8f25-4978-b533-43b9d1a391a9/
-#EXTINF:-1 tvg-id="stream-a5c966b1-71c5-4cc1-9914-2d31bb8a8297" tvg-name="博斯無限台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn10_mobile.png" group-title="TW",博斯無限台
-https://4gtv.158.qzz.io/163189/a5c966b1-71c5-4cc1-9914-2d31bb8a8297/
-#EXTINF:-1 tvg-id="stream-a4c8fc3a-73a0-4fe6-a64f-f05ec19c7dad" tvg-name="博斯網球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn09_mobile.png" group-title="TW",博斯網球台
-https://4gtv.158.qzz.io/163189/a4c8fc3a-73a0-4fe6-a64f-f05ec19c7dad/
+#EXTINF:-1 tvg-id="stream-9699d3e0-6f00-408d-ab5c-51b740e5333e" tvg-name="博斯運動一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn07_mobile.png" group-title="TW",博斯運動一台
+https://4gtv.158.qzz.io/163189/9699d3e0-6f00-408d-ab5c-51b740e5333e/
+#EXTINF:-1 tvg-id="stream-a4af1efe-44d4-40b0-b2ac-2a3147f19be8" tvg-name="博斯無限台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn10_mobile.png" group-title="TW",博斯無限台
+https://4gtv.158.qzz.io/163189/a4af1efe-44d4-40b0-b2ac-2a3147f19be8/
+#EXTINF:-1 tvg-id="stream-0921b1fa-61de-40ec-96b4-f9d0b1b70883" tvg-name="博斯網球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn09_mobile.png" group-title="TW",博斯網球台
+https://4gtv.158.qzz.io/163189/0921b1fa-61de-40ec-96b4-f9d0b1b70883/
 #EXTINF:-1 tvg-id="stream-b95916c7-8bbb-49db-8b21-bef27dd6b994" tvg-name="博斯運動二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang08.png" group-title="TW",博斯運動二台
 https://4gtv.158.qzz.io/163189/b95916c7-8bbb-49db-8b21-bef27dd6b994/
 #EXTINF:-1 tvg-id="stream-51f4f51e-e740-4803-b751-6a30a46d42db" tvg-name="博斯魅力台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang04.png" group-title="TW",博斯魅力台
@@ -463,11 +463,11 @@ https://iptv.1989.click/comp/2fy4q4?token=902e36b470f5fb2c12816ef6388bad67a71db0
 https://iptv.1989.click/comp/c73g4p?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 #EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="https://material.1989.click/logo/HBO.png" group-title="Discovery",HBO
 https://iptv.1989.click/comp/ycvxe4?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://material.1989.click/logo/動物星球.png" group-title="Discovery",動物星球「Relay」
+#EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://material.1989.click/logo/動物星球.png" group-title="Discovery",動物星球
 https://iptv.1989.click/tw/enfn3t?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://material.1989.click/logo/Love-Nature.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",Love Nature「4gTV」
+#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://material.1989.click/logo/Love-Nature.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",Love Nature
 https://iptv.1989.click/4gtv/8zdvts?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://material.1989.click/logo/History-歷史頻道.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道「4gTV」
+#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://material.1989.click/logo/History-歷史頻道.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道
 https://iptv.1989.click/4gtv/xfh3ca?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 
 # Sports
@@ -477,7 +477,7 @@ https://iptv.1989.click/hk/qtpsfb?token=902e36b470f5fb2c12816ef6388bad67a71db0d5
 https://iptv.1989.click/hkg/kxwrsj?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 #EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" tvg-logo="" group-title="Sports",五星体育
 https://cdn.qd.je/163189/wxty
-#EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://material.1989.click/logo/緯來體育.png" group-title="Sports",緯來體育「Relay」
+#EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://material.1989.click/logo/緯來體育.png" group-title="Sports",緯來體育
 https://iptv.1989.click/tw/rp27ze?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 #EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://iptv.1989.click/logo/Eurosport%201.webp" group-title="Sports",Eurosport 1
 https://iptv.1989.click/sprt/dmu8yy?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
