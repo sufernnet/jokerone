@@ -191,11 +191,20 @@ def download(url, retry=3):
 
 def clean_name(name):
     name = re.sub(r'[\(\[\{（【].*?[\)\]\}）】]', '', name)
-    name = re.sub(r'「.*?」', '', name)
+    name = re.sub(r'「.*?」', '', name)   # 原有也会去除，但我们将用新函数专门处理后缀
+    return name.strip()
+
+def clean_suffix(name):
+    """去除频道名称末尾的「...」形式后缀（如「Relay」、「4gTV」）"""
+    # 匹配末尾的「...」
+    name = re.sub(r'「[^」]*」$', '', name)
     return name.strip()
 
 def parse_name(extinf):
-    return clean_name(extinf.split(",", 1)[-1])
+    # 先提取原始名称，然后应用清理
+    raw = extinf.split(",", 1)[-1]
+    # 去除括号等，再去除后缀
+    return clean_suffix(clean_name(raw))
 
 def parse_group(extinf):
     m = re.search(r'group-title="([^"]*)"', extinf)
@@ -373,8 +382,7 @@ def load_mv():
         if original_condition or beijing_condition or hk_tw_condition:
             if "CHC" in n or "动作" in n:
                 print(f"  【候选】频道: {n}, 分组: {group}")
-            temp.append((clean_name(n), e, u))
-    
+            temp.append((clean_suffix(clean_name(n)), e, u))   # 应用清理
     temp = dedup(temp)
     print(f"筛选后剩余 {len(temp)} 个候选频道")
     
@@ -445,29 +453,36 @@ def load_discovery(data):
     要求：
       - 从 •綜合「Relay」 提取 BBC Earth、Discovery、HBO
       - 从 •台灣「Relay」 提取 Love Nature、History 歷史頻道、動物星球
+    同时去除名称末尾的「...」后缀，并过滤掉 HBO Hits、HBO Family、HBO Signature。
     """
     discovery_channels = []
-    # 定义分组名和对应的频道关键词
     groups_keywords = {
         "•綜合「Relay」": ["BBC Earth", "Discovery", "HBO"],
         "•台灣「Relay」": ["Love Nature", "History 歷史頻道", "動物星球"]
     }
     
-    # 先按分组过滤，再按关键词匹配
     for group_name, keywords in groups_keywords.items():
         for n, e, u in data:
             if parse_group(e) != group_name:
                 continue
             for kw in keywords:
-                # 使用包含匹配，但为了精确，也可以用 in，这里用 in 且忽略大小写
                 if kw.lower() in n.lower():
-                    # 找到后加入，并跳出关键词循环（每个频道只加入一次）
-                    discovery_channels.append((clean_name(n), e, u))
+                    # 清理名称：先clean_name，再clean_suffix
+                    cleaned = clean_suffix(clean_name(n))
+                    discovery_channels.append((cleaned, e, u))
                     break
-    # 去重（按 URL）
+    
+    # 去重
     discovery_channels = dedup(discovery_channels)
-    print(f"✓ Discovery 分组提取到 {len(discovery_channels)} 个频道")
-    return discovery_channels
+    
+    # 过滤掉指定的 HBO 频道
+    filtered = []
+    for n, e, u in discovery_channels:
+        if not any(h in n for h in ["HBO Hits", "HBO Family", "HBO Signature"]):
+            filtered.append((n, e, u))
+    
+    print(f"✓ Discovery 分组提取到 {len(filtered)} 个频道（已过滤三个HBO频道）")
+    return filtered
 
 def load_sports(data):
     """
@@ -477,9 +492,9 @@ def load_sports(data):
       - 从 •港澳台「Juli」 提取 五星体育
       - 从 •台灣「Relay」 提取 緯來體育
       - 从 •體育「Relay」 提取里面所有的频道
+    同样去除名称末尾的「...」后缀。
     """
     sports_channels = []
-    # 先处理特定频道（分组 + 关键词）
     specific_rules = [
         ("•香港「Relay」", ["Now Sports 精選", "Now Sports 英超 2台"]),
         ("•港澳台「Juli」", ["五星体育"]),
@@ -491,15 +506,16 @@ def load_sports(data):
                 continue
             for kw in keywords:
                 if kw.lower() in n.lower():
-                    sports_channels.append((clean_name(n), e, u))
+                    cleaned = clean_suffix(clean_name(n))
+                    sports_channels.append((cleaned, e, u))
                     break
     
-    # 再提取 •體育「Relay」 下的所有频道
+    # 提取 •體育「Relay」 下的所有频道
     for n, e, u in data:
         if parse_group(e) == "•體育「Relay」":
-            sports_channels.append((clean_name(n), e, u))
+            cleaned = clean_suffix(clean_name(n))
+            sports_channels.append((cleaned, e, u))
     
-    # 去重
     sports_channels = dedup(sports_channels)
     print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道")
     return sports_channels
