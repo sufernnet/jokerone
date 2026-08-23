@@ -429,11 +429,35 @@ def load_discovery(data):
     print(f"✓ Discovery 分组提取到 {len(filtered)} 个频道（已过滤三个HBO频道并去除后缀）")
     return filtered
 
+# ===================== 修改后的 load_sports 函数 =====================
 def load_sports(data):
     sports_channels = []
+    # 先从指定URL提取五星体育和Apple TV 4K Dolby Vision F1
+    other_url = "http://82.156.243.185:54321/other.m3u"
+    raw_other = download(other_url)
+    if raw_other:
+        other_data = parse_m3u(raw_other)
+        print(f"✓ 从other.m3u获取到 {len(other_data)} 个频道")
+        # 提取五星体育
+        for n, e, u in other_data:
+            if "五星体育" in n:
+                cleaned = clean_suffix(clean_name(n))
+                new_extinf = replace_name_in_extinf(e, cleaned)
+                sports_channels.append((cleaned, new_extinf, u))
+                break
+        # 提取Apple TV 4K Dolby Vision F1（放在五星体育后面）
+        for n, e, u in other_data:
+            if "Apple TV 4K Dolby Vision F1" in n:
+                cleaned = clean_suffix(clean_name(n))
+                new_extinf = replace_name_in_extinf(e, cleaned)
+                sports_channels.append((cleaned, new_extinf, u))
+                break
+    else:
+        print("⚠️ 无法下载other.m3u，跳过提取五星体育和F1")
+
+    # 原有的特定规则（已移除“五星体育”）
     specific_rules = [
         ("•香港「Relay」", ["Now Sports 精選", "Now Sports 英超 2台"]),
-        ("•港澳台「Juli」", ["五星体育"]),
         ("•台灣「Relay」", ["緯來體育"])
     ]
     for group_name, keywords in specific_rules:
