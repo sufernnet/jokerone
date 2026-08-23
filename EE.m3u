@@ -85,6 +85,12 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002075?virtualDomain=01
 http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=010.live_hls.zte.com
 
 # MV
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png" group-title="MV",CHC动作电影
+http://pplee.vicp.net:4022/udp/233.18.204.174:5140
+#EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
+http://pplee.vicp.net:4022/udp/233.18.204.173:5140
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
+http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 #EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映画台
 https://cdn.qd.je/163189/jtyh
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
@@ -405,93 +411,91 @@ http://192.168.100.1:10801/litv-xinchuang04/index.m3u8?token=r4gemnSAeGX9swMzA7c
 http://192.168.100.1:10801/4gtv-live201/index.m3u8?token=r4gemnSAeGX9swMzA7cBTz7RvpFAFrD%2BG3qGWWGUiak5GzLdQneuM5NrdmfBMwZf
 
 # Discovery
-#EXTINF:-1 tvg-id="BBC Earth" tvg-name="BBC Earth" tvg-logo="https://material.1989.click/logo/BBC-Earth.png" group-title="Discovery",BBC Earth
-https://iptv.1989.click/comp/2fy4q4?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="Discovery" tvg-name="Discovery" tvg-logo="https://material.1989.click/logo/Discovery-Channel.png" group-title="Discovery",Discovery
-https://iptv.1989.click/comp/c73g4p?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="https://material.1989.click/logo/HBO.png" group-title="Discovery",HBO
-https://iptv.1989.click/comp/ycvxe4?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://material.1989.click/logo/動物星球.png" group-title="Discovery",動物星球
-https://iptv.1989.click/tw/enfn3t?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://material.1989.click/logo/Love-Nature.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",Love Nature
-https://iptv.1989.click/4gtv/8zdvts?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://material.1989.click/logo/History-歷史頻道.png" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道
-https://iptv.1989.click/4gtv/xfh3ca?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+#EXTINF:-1 tvg-id="BBC Earth" tvg-name="BBC Earth" tvg-logo="https://iptv.1989.click/logo/BBC%20Earth.webp" group-title="Discovery",BBC Earth
+https://iptv.1989.click/comp/2hrubp?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="Discovery" tvg-name="Discovery" tvg-logo="https://iptv.1989.click/logo/Discovery.webp" group-title="Discovery",Discovery
+https://iptv.1989.click/comp/4fgj8m?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="https://iptv.1989.click/logo/HBO.webp" group-title="Discovery",HBO
+https://iptv.1989.click/comp/s3bnxp?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://iptv.1989.click/logo/動物星球.webp" group-title="Discovery",動物星球
+https://iptv.1989.click/tw/95cf6e?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://iptv.1989.click/logo/Love%20Nature.webp" group-title="Discovery" http-user-agent="okhttp/3.14.9",Love Nature
+https://iptv.1989.click/4gtv/wtb3ak?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://iptv.1989.click/logo/History%20歷史頻道.webp" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道
+https://iptv.1989.click/4gtv/chyh79?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 
 # Sports
 #EXTINF:-1 tvg-name="五星体育" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png" group-title="Sports",五星体育
 http://82.156.243.185:54321/wxty.php
 #EXTINF:-1 tvg-name="Apple TV 4K Dolby Vision F1" tvg-logo="https://cdn.jsdelivr.net/gh/jkwu5472/first/f1.png" group-title="Sports",Apple TV 4K Dolby Vision F1
 http://82.156.243.185:55221/appletvf1.m3u8
-#EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://material.1989.click/logo/Now Sports 精選.png" group-title="Sports",Now Sports 精選
-https://iptv.1989.click/hk/qtpsfb?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="Now Sports 英超2台" tvg-name="Now Sports 英超2台" tvg-logo="https://material.1989.click/logo/Now-Sports-617.png" group-title="Sports",Now Sports 英超 2台
-https://iptv.1989.click/hkg/kxwrsj?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://material.1989.click/logo/緯來體育.png" group-title="Sports",緯來體育
-https://iptv.1989.click/tw/rp27ze?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+#EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.1989.click/logo/Now%20Sports%20精選.webp" group-title="Sports",Now Sports 精選
+https://iptv.1989.click/hk/7cqpgd?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://iptv.1989.click/logo/緯來體育台.webp" group-title="Sports",緯來體育
+https://iptv.1989.click/tw/ttb48q?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://iptv.1989.click/logo/Eurosport%201.webp" group-title="Sports",Eurosport 1
-https://iptv.1989.click/sprt/dmu8yy?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/t3nvea?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="https://iptv.1989.click/logo/Eurosport%202.webp" group-title="Sports",Eurosport 2
-https://iptv.1989.click/sprt/5r8xtw?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/244hv2?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TNT Sports 1" tvg-name="TNT Sports 1" tvg-logo="https://iptv.1989.click/logo/TNT%20Sports%201.webp" group-title="Sports",TNT Sport 1
-https://iptv.1989.click/sprt/mvq2q2?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/a2ujf5?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TNT Sports 2" tvg-name="TNT Sports 2" tvg-logo="https://iptv.1989.click/logo/TNT%20Sports%202.webp" group-title="Sports",TNT Sport 2
-https://iptv.1989.click/sprt/5atfwv?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/fc974h?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TNT Sports 3" tvg-name="TNT Sports 3" tvg-logo="https://iptv.1989.click/logo/TNT%20Sports%203.webp" group-title="Sports",TNT Sport 3
-https://iptv.1989.click/sprt/749wn6?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/4jmztz?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TNT Sports 4" tvg-name="TNT Sports 4" tvg-logo="https://iptv.1989.click/logo/TNT%20Sports%204.webp" group-title="Sports",TNT Sport 4
-https://iptv.1989.click/sprt/g2842a?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/3c7a9a?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="beIN Sports 1" tvg-name="beIN Sports 1" tvg-logo="https://iptv.1989.click/logo/beIN%20Sports%201.webp" group-title="Sports",beIN Sports 1
-https://iptv.1989.click/sprt/s7mrqw?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/dvz4fj?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="beIN Sports 2" tvg-name="beIN Sports 2" tvg-logo="https://iptv.1989.click/logo/beIN%20Sports%202.webp" group-title="Sports",beIN Sports 2
-https://iptv.1989.click/sprt/7kdnqr?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/2jps9w?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="beIN Sports 3" tvg-name="beIN Sports 3" tvg-logo="https://iptv.1989.click/logo/beIN%20Sports%203.webp" group-title="Sports",beIN Sports 3
-https://iptv.1989.click/sprt/5bdrtf?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/9r4vgj?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="beIN Sports 4" tvg-name="beIN Sports 4" tvg-logo="https://iptv.1989.click/logo/beIN%20Sports%204.webp" group-title="Sports",beIN Sports 4
-https://iptv.1989.click/sprt/fpke68?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/7cj872?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="beIN Sports 5" tvg-name="beIN Sports 5" tvg-logo="https://iptv.1989.click/logo/beIN%20Sports%205.webp" group-title="Sports",beIN Sports 5
-https://iptv.1989.click/sprt/yzv49v?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/c2vbdq?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 1" tvg-name="Hub Premier 1" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%201.webp" group-title="Sports",Hub Premier 1
-https://iptv.1989.click/sprt/93r3cf?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/kyj5av?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 2" tvg-name="Hub Premier 2" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%202.webp" group-title="Sports",Hub Premier 2
-https://iptv.1989.click/sprt/g47mp7?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/tywp8e?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 3" tvg-name="Hub Premier 3" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%203.webp" group-title="Sports",Hub Premier 3
-https://iptv.1989.click/sprt/vqv6mc?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/8rv8ry?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 4" tvg-name="Hub Premier 4" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%204.webp" group-title="Sports",Hub Premier 4
-https://iptv.1989.click/sprt/vf5nt6?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/jjr9e2?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 5" tvg-name="Hub Premier 5" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%205.webp" group-title="Sports",Hub Premier 5
-https://iptv.1989.click/sprt/86w2bt?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/uzpe74?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Premier 6" tvg-name="Hub Premier 6" tvg-logo="https://iptv.1989.click/logo/Hub%20Premier%206.webp" group-title="Sports",Hub Premier 6
-https://iptv.1989.click/sprt/theg33?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/jxw477?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 1" tvg-name="Hub Sports 1" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%201.webp" group-title="Sports",Hub Sports 1
-https://iptv.1989.click/sprt/zu4p8j?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/sedydh?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 2" tvg-name="Hub Sports 2" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%202.webp" group-title="Sports",Hub Sports 2
-https://iptv.1989.click/sprt/cxenah?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/e5827b?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 3" tvg-name="Hub Sports 3" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%203.webp" group-title="Sports",Hub Sports 3
-https://iptv.1989.click/sprt/dxkfbz?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/hvzmmk?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 4" tvg-name="Hub Sports 4" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%204.webp" group-title="Sports",Hub Sports 4
-https://iptv.1989.click/sprt/af3z7z?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/t2b7rf?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 5" tvg-name="Hub Sports 5" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%205.webp" group-title="Sports",Hub Sports 5
-https://iptv.1989.click/sprt/9p5vhp?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/yxrpuj?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 6" tvg-name="Hub Sports 6" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%206.webp" group-title="Sports",Hub Sports 6
-https://iptv.1989.click/sprt/w6y8ty?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/2uzmgw?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 7" tvg-name="Hub Sports 7" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%207.webp" group-title="Sports",Hub Sports 7
-https://iptv.1989.click/sprt/kvjn6u?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/st3ptp?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Hub Sports 8" tvg-name="Hub Sports 8" tvg-logo="https://iptv.1989.click/logo/Hub%20Sports%208.webp" group-title="Sports",Hub Sports 8
-https://iptv.1989.click/sprt/8pfva2?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/7x7xwf?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TSN 1" tvg-name="TSN 1" tvg-logo="https://iptv.1989.click/logo/TSN%201.webp" group-title="Sports",TSN 1
-https://iptv.1989.click/sprt/pz3ahy?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/3h88ad?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TSN 2" tvg-name="TSN 2" tvg-logo="https://iptv.1989.click/logo/TSN%202.webp" group-title="Sports",TSN 2
-https://iptv.1989.click/sprt/2waycd?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/823drw?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TSN 3" tvg-name="TSN 3" tvg-logo="https://iptv.1989.click/logo/TSN%203.webp" group-title="Sports",TSN 3
-https://iptv.1989.click/sprt/c8ukn2?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/m8mx84?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TSN 4" tvg-name="TSN 4" tvg-logo="https://iptv.1989.click/logo/TSN%204.webp" group-title="Sports",TSN 4
-https://iptv.1989.click/sprt/a6hkqp?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/8gcqen?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="TSN 5" tvg-name="TSN 5" tvg-logo="https://iptv.1989.click/logo/TSN%205.webp" group-title="Sports",TSN 5
-https://iptv.1989.click/sprt/rauyk9?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/yp58uq?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Spotv 1" tvg-name="Spotv 1" tvg-logo="https://iptv.1989.click/logo/Spotv%201.webp" group-title="Sports",Spotv 1
-https://iptv.1989.click/sprt/n9k6xv?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/e9k26j?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="Spotv 2" tvg-name="Spotv 2" tvg-logo="https://iptv.1989.click/logo/Spotv%202.webp" group-title="Sports",Spotv 2
-https://iptv.1989.click/sprt/yh73es?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/c6zq49?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="FIGHT SPORTS" tvg-name="FIGHT SPORTS" tvg-logo="https://iptv.1989.click/logo/FIGHT%20SPORTS.webp" group-title="Sports",FIGHT SPORTS
-https://iptv.1989.click/sprt/je2hhw?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
+https://iptv.1989.click/sprt/y7tx7q?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
