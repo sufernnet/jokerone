@@ -437,6 +437,73 @@ def pick_best(urls):
                 best, best_t = u, t
     return best
 
+# ===================== 新增：从 SOURCE_URL 提取 Discovery 和 Sports =====================
+
+def load_discovery(data):
+    """
+    从 SOURCE_URL 解析出的 data 中提取 Discovery 分组频道。
+    要求：
+      - 从 •綜合「Relay」 提取 BBC Earth、Discovery、HBO
+      - 从 •台灣「Relay」 提取 Love Nature、History 歷史頻道、動物星球
+    """
+    discovery_channels = []
+    # 定义分组名和对应的频道关键词
+    groups_keywords = {
+        "•綜合「Relay」": ["BBC Earth", "Discovery", "HBO"],
+        "•台灣「Relay」": ["Love Nature", "History 歷史頻道", "動物星球"]
+    }
+    
+    # 先按分组过滤，再按关键词匹配
+    for group_name, keywords in groups_keywords.items():
+        for n, e, u in data:
+            if parse_group(e) != group_name:
+                continue
+            for kw in keywords:
+                # 使用包含匹配，但为了精确，也可以用 in，这里用 in 且忽略大小写
+                if kw.lower() in n.lower():
+                    # 找到后加入，并跳出关键词循环（每个频道只加入一次）
+                    discovery_channels.append((clean_name(n), e, u))
+                    break
+    # 去重（按 URL）
+    discovery_channels = dedup(discovery_channels)
+    print(f"✓ Discovery 分组提取到 {len(discovery_channels)} 个频道")
+    return discovery_channels
+
+def load_sports(data):
+    """
+    从 SOURCE_URL 解析出的 data 中提取 Sports 分组频道。
+    要求：
+      - 从 •香港「Relay」 提取 Now Sports 精選、Now Sports 英超 2台
+      - 从 •港澳台「Juli」 提取 五星体育
+      - 从 •台灣「Relay」 提取 緯來體育
+      - 从 •體育「Relay」 提取里面所有的频道
+    """
+    sports_channels = []
+    # 先处理特定频道（分组 + 关键词）
+    specific_rules = [
+        ("•香港「Relay」", ["Now Sports 精選", "Now Sports 英超 2台"]),
+        ("•港澳台「Juli」", ["五星体育"]),
+        ("•台灣「Relay」", ["緯來體育"])
+    ]
+    for group_name, keywords in specific_rules:
+        for n, e, u in data:
+            if parse_group(e) != group_name:
+                continue
+            for kw in keywords:
+                if kw.lower() in n.lower():
+                    sports_channels.append((clean_name(n), e, u))
+                    break
+    
+    # 再提取 •體育「Relay」 下的所有频道
+    for n, e, u in data:
+        if parse_group(e) == "•體育「Relay」":
+            sports_channels.append((clean_name(n), e, u))
+    
+    # 去重
+    sports_channels = dedup(sports_channels)
+    print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道")
+    return sports_channels
+
 # ===================== 主程序 =====================
 
 def main():
@@ -450,6 +517,9 @@ def main():
         return
 
     lines = content.splitlines()
+    # 解析 source 内容，供后续 Discovery 和 Sports 使用
+    all_data = parse_m3u(content)
+    print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
     print("正在加载HK频道...")
     hk = load_hk()
@@ -461,6 +531,12 @@ def main():
     
     print("正在加载MV频道...")
     mv = load_mv()
+
+    # 新增：加载 Discovery 和 Sports
+    print("正在加载 Discovery 分组...")
+    discovery = load_discovery(all_data)
+    print("正在加载 Sports 分组...")
+    sports = load_sports(all_data)
 
     # 添加 EPG 信息头
     out = '#EXTM3U x-tvg-url="https://epg.zsdc.eu.org/t.xml.gz"\n\n'
@@ -513,6 +589,26 @@ def main():
             out += normalize_group(e, "TW") + "\n" + u + "\n"
         out = out.rstrip() + "\n"
 
+    # ---- 新增 Discovery 分组 ----
+    if discovery:
+        if out.rstrip().endswith("\n"):
+            out += "# Discovery\n"
+        else:
+            out += "\n# Discovery\n"
+        for n, e, u in discovery:
+            out += normalize_group(e, "Discovery") + "\n" + u + "\n"
+        out = out.rstrip() + "\n"
+
+    # ---- 新增 Sports 分组 ----
+    if sports:
+        if out.rstrip().endswith("\n"):
+            out += "# Sports\n"
+        else:
+            out += "\n# Sports\n"
+        for n, e, u in sports:
+            out += normalize_group(e, "Sports") + "\n" + u + "\n"
+        out = out.rstrip() + "\n"
+
     # 最终清理多余空行
     final_lines = out.splitlines()
     final_cleaned = []
@@ -534,6 +630,8 @@ def main():
     print(f"HK频道数: {len(hk)}")
     print(f"TW频道数: {len(tw)}")
     print(f"MV频道数: {len(mv)}")
+    print(f"Discovery频道数: {len(discovery)}")
+    print(f"Sports频道数: {len(sports)}")
     print("=" * 50)
 
 
