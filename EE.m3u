@@ -471,12 +471,14 @@ https://iptv.1989.click/4gtv/8zdvts?token=902e36b470f5fb2c12816ef6388bad67a71db0
 https://iptv.1989.click/4gtv/xfh3ca?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 
 # Sports
+#EXTINF:-1 tvg-name="五星体育" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png" group-title="Sports",五星体育
+http://82.156.243.185:54321/wxty.php
+#EXTINF:-1 tvg-name="Apple TV 4K Dolby Vision F1" tvg-logo="https://cdn.jsdelivr.net/gh/jkwu5472/first/f1.png" group-title="Sports",Apple TV 4K Dolby Vision F1
+http://82.156.243.185:55221/appletvf1.m3u8
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://material.1989.click/logo/Now Sports 精選.png" group-title="Sports",Now Sports 精選
 https://iptv.1989.click/hk/qtpsfb?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 #EXTINF:-1 tvg-id="Now Sports 英超2台" tvg-name="Now Sports 英超2台" tvg-logo="https://material.1989.click/logo/Now-Sports-617.png" group-title="Sports",Now Sports 英超 2台
 https://iptv.1989.click/hkg/kxwrsj?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
-#EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" tvg-logo="" group-title="Sports",五星体育
-https://cdn.qd.je/163189/wxty
 #EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://material.1989.click/logo/緯來體育.png" group-title="Sports",緯來體育
 https://iptv.1989.click/tw/rp27ze?token=902e36b470f5fb2c12816ef6388bad67a71db0d5aa6b958d
 #EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://iptv.1989.click/logo/Eurosport%201.webp" group-title="Sports",Eurosport 1
