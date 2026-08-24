@@ -91,14 +91,16 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
-#EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
-https://cdn.qd.je/163189/typd2
+#EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映画台
+https://cdn.qd.je/163189/jtyh
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
 https://cdn.qd.je/163189/iqiyi
 #EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
 https://cdn.qd.je/163189/tvbxh2
+#EXTINF:-1 tvg-id="BesTV4K电影" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="MV",BesTV4K电影
+http://58.38.63.180:4022/rtp/233.18.204.169:5140
 
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" group-title="HK",凤凰中文
@@ -423,10 +425,16 @@ https://iptv.1989.click/tw/95cf6e?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc
 https://iptv.1989.click/4gtv/wtb3ak?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://iptv.1989.click/logo/History%20歷史頻道.webp" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道
 https://iptv.1989.click/4gtv/chyh79?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+#EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
+http://58.38.63.180:4022/rtp/233.18.204.170:5140
+#EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
+http://58.63.66.95:8888/rtp/239.77.0.21:5146
 
 # Sports
 #EXTINF:-1 tvg-name="五星体育" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png" group-title="Sports",五星体育
 http://82.156.243.185:54321/wxty.php
+#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="Sports",广东体育
+http://58.63.66.95:8888/rtp/239.77.0.112:5146
 #EXTINF:-1 tvg-name="Apple TV 4K Dolby Vision F1" tvg-logo="https://cdn.jsdelivr.net/gh/jkwu5472/first/f1.png" group-title="Sports",Apple TV 4K Dolby Vision F1
 http://82.156.243.185:55221/appletvf1.m3u8
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.1989.click/logo/Now%20Sports%20精選.webp" group-title="Sports",Now Sports 精選
@@ -499,3 +507,13 @@ https://iptv.1989.click/sprt/e9k26j?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46
 https://iptv.1989.click/sprt/c6zq49?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
 #EXTINF:-1 tvg-id="FIGHT SPORTS" tvg-name="FIGHT SPORTS" tvg-logo="https://iptv.1989.click/logo/FIGHT%20SPORTS.webp" group-title="Sports",FIGHT SPORTS
 https://iptv.1989.click/sprt/y7tx7q?token=c26aa9abd789d6a3ff873a4e08439ce2dbcd46cc97a80bb4
+
+# 4K
+#EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="4K",北京IPTV4K
+http://1.203.174.137:8180/rtp/225.1.8.211:8002
+#EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="4K",爱上4K
+http://1.203.174.137:8180/rtp/225.1.8.80:2000
+#EXTINF:-1 tvg-id="广东4K超高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东4K超高清.png" group-title="4K",广东4K超高清
+http://58.63.66.95:8888/rtp/239.77.0.245:5146
+#EXTINF:-1 tvg-id="南国都市4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/南国都市.png" group-title="4K",南国都市4K
+http://58.63.66.95:8888/rtp/239.253.43.99:5146
