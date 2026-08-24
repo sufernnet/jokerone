@@ -508,6 +508,84 @@ def main():
     print("正在加载 Sports 分组...")
     sports = load_sports(all_data)
 
+    # ========== 新增：从 MV 主源提取额外频道 ==========
+    mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
+    mv_raw = download(mv_url)
+    mv_parsed = parse_m3u(mv_raw) if mv_raw else []
+
+    # 辅助提取函数（按分组和名称关键字）
+    def extract_by_group_and_name(m3u_data, group_name, name_keywords):
+        results = []
+        for n, e, u in m3u_data:
+            if parse_group(e) == group_name:
+                for kw in name_keywords:
+                    if kw.lower() in n.lower():
+                        cleaned = clean_suffix(clean_name(n))
+                        new_extinf = replace_name_in_extinf(e, cleaned)
+                        results.append((cleaned, new_extinf, u))
+                        break
+        return results
+
+    # 1. 提取广东体育（从「廣東台」分组）
+    guangdong_sports = extract_by_group_and_name(mv_parsed, "廣東台", ["广东体育"])
+    guangdong_channel = guangdong_sports[0] if guangdong_sports else None
+
+    # 2. 提取 4K 分组中的四个指定频道
+    fourk_names = ["北京IPTV4K", "爱上4K", "广东4K超高清", "南国都市4K"]
+    fourk_channels = []
+    for name in fourk_names:
+        chs = extract_by_group_and_name(mv_parsed, "4K台", [name])
+        if chs:
+            fourk_channels.append(chs[0])
+
+    # 3. 提取 BesTV4K 电影（放入 MV）
+    bestv_movie = extract_by_group_and_name(mv_parsed, "4K台", ["BesTV4K电影"])
+    # 4. 提取 BesTV4K 记录（放入 Discovery）
+    bestv_doc = extract_by_group_and_name(mv_parsed, "4K台", ["BesTV4K记录"])
+    # 5. 提取求索记录（从「數字台」分组）
+    qiusuo_doc = extract_by_group_and_name(mv_parsed, "數字台", ["求索记录"])
+
+    # 6. 获取 CCTV4K（从 all_data 中提取）
+    cctv4k = None
+    for n, e, u in all_data:
+        if "CCTV4K" in n:
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            cctv4k = (cleaned, new_extinf, u)
+            break
+
+    # 构建 4K 分组列表（顺序：CCTV4K + 四个指定频道）
+    fourk_list = []
+    if cctv4k:
+        fourk_list.append(cctv4k)
+    fourk_list.extend(fourk_channels)
+
+    # 将 BesTV4K 电影追加到 MV 分组末尾
+    if bestv_movie:
+        mv.append(bestv_movie[0])
+
+    # 将 BesTV4K 记录和求索记录追加到 Discovery 分组末尾
+    if bestv_doc:
+        discovery.append(bestv_doc[0])
+    if qiusuo_doc:
+        discovery.append(qiusuo_doc[0])
+
+    # 将广东体育插入 Sports 分组中“五星体育”之后
+    if guangdong_channel:
+        # 查找五星体育的索引
+        index = -1
+        for i, (n, e, u) in enumerate(sports):
+            if "五星体育" in n:
+                index = i
+                break
+        if index != -1:
+            sports.insert(index + 1, guangdong_channel)
+        else:
+            # 若未找到，则追加到末尾
+            sports.append(guangdong_channel)
+
+    # ========== 继续原有输出构建 ==========
+
     # 开始构建输出
     out = '#EXTM3U x-tvg-url="https://epg.zsdc.eu.org/t.xml.gz"\n\n'
 
@@ -548,6 +626,8 @@ def main():
     append_group("TW", tw)
     append_group("Discovery", discovery)
     append_group("Sports", sports)
+    # 新增 4K 分组
+    append_group("4K", fourk_list)
 
     # 最终清理空行
     final_lines = out.splitlines()
@@ -572,6 +652,7 @@ def main():
     print(f"MV频道数: {len(mv)}")
     print(f"Discovery频道数: {len(discovery)}")
     print(f"Sports频道数: {len(sports)}")
+    print(f"4K频道数: {len(fourk_list)}")
     print("=" * 50)
 
 if __name__ == "__main__":
