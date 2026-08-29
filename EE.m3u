@@ -131,7 +131,7 @@ https://cdn.qd.je/163189/fhhk
 https://cdn.qd.je/163189/now
 #EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/翡翠.png" group-title="HK",翡翠台4K
 https://cdn.qd.je/163189/fct4k
-#EXTINF:-1 tvg-name="翡翠剧集台" group-title="HK",翡翠剧集台
+#EXTINF:-1 tvg-name="翡翠剧集台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVB翡翠剧集台(TVBDRAMA).png" group-title="HK",翡翠剧集台
 https://cdn.qd.je/163189/tvbd
 #EXTINF:-1 tvg-name="娛樂新聞台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/娱乐新闻.png" group-title="HK",TVB娱乐新闻台
 https://cdn.qd.je/163189/ylxw
@@ -167,9 +167,9 @@ https://cdn.qd.je/163189/hoy76
 https://iptv.yang-1989.xyz/hk/qygwzt?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
 #EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/翡翠.png" group-title="HK",翡翠台
 https://cdn.qd.je/163189/fctvtt
-#EXTINF:-1 tvg-name="Channel 5" group-title="HK",CH5
+#EXTINF:-1 tvg-name="Channel 5" tvg-logo="https://iptv.yang-1989.xyz/logo/Channel%205.webp" group-title="HK",CH5
 https://cdn.qd.je/163189/ch5
-#EXTINF:-1 tvg-name="Channel 8" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CH8.png" group-title="HK",CH8
+#EXTINF:-1 tvg-name="Channel 8" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png" group-title="HK",CH8
 https://cdn.qd.je/163189/ch8
 #EXTINF:-1 tvg-name="Channel U" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel U.png" group-title="HK",CHU
 https://cdn.qd.je/163189/chu
@@ -177,22 +177,14 @@ https://cdn.qd.je/163189/chu
 https://cdn.qd.je/163189/jade2
 #EXTINF:-1 tvg-name="TVB亚洲武侠" group-title="HK",TVB亚洲武侠
 https://cdn.qd.je/163189/yzwx
-#EXTINF:-1 tvg-name="海峡卫视" group-title="HK",海峡卫视
-https://cdn.qd.je/163189/hxws2
-#EXTINF:-1 tvg-name="天映新加坡" group-title="HK",天映新加坡
+#EXTINF:-1 tvg-name="天映新加坡" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/天映.png" group-title="HK",天映新加坡
 https://cdn.qd.je/163189/typd
-#EXTINF:-1 tvg-name="天映经典" group-title="HK",天映经典
-https://cdn.qd.je/163189/ccm2
 #EXTINF:-1 tvg-name="QJ" group-title="HK",Astro QJ
 https://cdn.qd.je/163189/qj
 #EXTINF:-1 tvg-name="HUA HEE DAI" group-title="HK",Astro欢喜台
 https://cdn.qd.je/163189/hxt
 #EXTINF:-1 tvg-name="iQIYI" group-title="HK",爱奇艺
 https://cdn.qd.je/163189/iqiyi
-#EXTINF:-1 tvg-name="黃金華劇台" group-title="HK",黄金华剧台
-https://cdn.qd.je/163189/hjhjt
-#EXTINF:-1 tvg-name="五星体育" group-title="HK",五星体育
-https://cdn.qd.je/163189/wxty
 #EXTINF:-1 tvg-name="龙祥时代" group-title="HK",龙祥时代
 https://cdn.qd.je/163189/lxsd
 
