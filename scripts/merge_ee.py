@@ -230,6 +230,12 @@ HK_LOGO_OVERRIDE = {
     "CH5": "https://iptv.yang-1989.xyz/logo/Channel%205.webp",
     "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png",
     "天映新加坡": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/天映.png",
+    # 新增的5个频道 logo
+    "爱奇艺": "https://iptv.yang-1989.xyz/logo/iQIYI.webp",
+    "TVB亚洲武侠": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVB功夫.png",
+    "龙祥时代": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/龙祥时代.png",
+    "Astro QJ": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/QJ.webp",
+    "Astro欢喜台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HUA.webp",
 }
 
 # ===================== 下载 =====================
