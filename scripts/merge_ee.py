@@ -406,8 +406,9 @@ def pick_best(urls):
 
 def load_discovery(data):
     discovery_channels = []
+    # 修改：移除了 "HBO"，只保留 BBC Earth 和 Discovery
     groups_keywords = {
-        "•綜合「Relay」": ["BBC Earth", "Discovery", "HBO"],
+        "•綜合「Relay」": ["BBC Earth", "Discovery"],
         "•台灣「Relay」": ["Love Nature", "History 歷史頻道", "動物星球"]
     }
     for group_name, keywords in groups_keywords.items():
@@ -421,31 +422,20 @@ def load_discovery(data):
                     discovery_channels.append((cleaned, new_extinf, u))
                     break
     discovery_channels = dedup(discovery_channels)
-    # 过滤三个指定 HBO
-    filtered = []
-    for n, e, u in discovery_channels:
-        if not any(h in n for h in ["HBO Hits", "HBO Family", "HBO Signature"]):
-            filtered.append((n, e, u))
-    print(f"✓ Discovery 分组提取到 {len(filtered)} 个频道（已过滤三个HBO频道并去除后缀）")
-    return filtered
+    # 删除过滤三个HBO的代码（因为不再包含HBO）
+    print(f"✓ Discovery 分组提取到 {len(discovery_channels)} 个频道（已去除后缀）")
+    return discovery_channels
 
 # ===================== 修改后的 load_sports 函数 =====================
 def load_sports(data):
     sports_channels = []
-    # 先从指定URL提取五星体育和Apple TV 4K Dolby Vision F1
+    # 不再从 other.m3u 提取五星体育，只保留提取 Apple TV 4K Dolby Vision F1
     other_url = "http://82.156.243.185:54321/other.m3u"
     raw_other = download(other_url)
     if raw_other:
         other_data = parse_m3u(raw_other)
         print(f"✓ 从other.m3u获取到 {len(other_data)} 个频道")
-        # 提取五星体育
-        for n, e, u in other_data:
-            if "五星体育" in n:
-                cleaned = clean_suffix(clean_name(n))
-                new_extinf = replace_name_in_extinf(e, cleaned)
-                sports_channels.append((cleaned, new_extinf, u))
-                break
-        # 提取Apple TV 4K Dolby Vision F1（放在五星体育后面）
+        # 提取 Apple TV 4K Dolby Vision F1（放在五星体育后面，但此处只提取）
         for n, e, u in other_data:
             if "Apple TV 4K Dolby Vision F1" in n:
                 cleaned = clean_suffix(clean_name(n))
@@ -453,7 +443,7 @@ def load_sports(data):
                 sports_channels.append((cleaned, new_extinf, u))
                 break
     else:
-        print("⚠️ 无法下载other.m3u，跳过提取五星体育和F1")
+        print("⚠️ 无法下载other.m3u，跳过提取F1")
 
     # 原有的特定规则（已移除“五星体育”）
     specific_rules = [
@@ -477,7 +467,7 @@ def load_sports(data):
             new_extinf = replace_name_in_extinf(e, cleaned)
             sports_channels.append((cleaned, new_extinf, u))
     sports_channels = dedup(sports_channels)
-    print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道（已去除后缀）")
+    print(f"✓ Sports 分组提取到 {len(sports_channels)} 个频道（已去除后缀，不含五星体育）")
     return sports_channels
 
 # ===================== 主程序 =====================
@@ -507,6 +497,41 @@ def main():
     discovery = load_discovery(all_data)
     print("正在加载 Sports 分组...")
     sports = load_sports(all_data)
+
+    # ========== 新增：从 all_data 提取 HBO 频道并放入 MV ==========
+    print("正在提取 HBO 频道（从 Relay 分组）并加入 MV...")
+    hbo_list = []
+    hbo_groups = ["•綜合「Relay」", "•台灣「Relay」"]
+    # 过滤掉这三个 HBO 频道（与原来一致）
+    hbo_filter = ["HBO Hits", "HBO Family", "HBO Signature"]
+    for n, e, u in all_data:
+        group = parse_group(e)
+        if group not in hbo_groups:
+            continue
+        if "hbo" in n.lower():
+            # 检查是否在过滤列表中
+            if any(f.lower() in n.lower() for f in hbo_filter):
+                continue
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            hbo_list.append((cleaned, new_extinf, u))
+    hbo_list = dedup(hbo_list)
+    if hbo_list:
+        print(f"✓ 提取到 {len(hbo_list)} 个 HBO 频道，追加到 MV 分组")
+        mv.extend(hbo_list)
+        # 对 mv 去重（按 URL）
+        mv = dedup(mv)
+    else:
+        print("⚠️ 未提取到 HBO 频道")
+
+    # ========== 新增：硬编码五星体育（替换原有提取） ==========
+    # 构造硬编码五星体育条目
+    wxty_extinf = '#EXTINF:-1 group-title="Sports" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png",五星体育'
+    wxty_url = "https://cdn.qd.je/163189/wxty"
+    wxty_entry = ("五星体育", wxty_extinf, wxty_url)
+    # 插入到 sports 列表开头
+    sports.insert(0, wxty_entry)
+    print("✓ 已添加硬编码五星体育到 Sports 分组")
 
     # ========== 新增：从 MV 主源提取额外频道 ==========
     mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
@@ -572,7 +597,7 @@ def main():
 
     # 将广东体育插入 Sports 分组中“五星体育”之后
     if guangdong_channel:
-        # 查找五星体育的索引
+        # 查找五星体育的索引（现在硬编码在开头）
         index = -1
         for i, (n, e, u) in enumerate(sports):
             if "五星体育" in n:
