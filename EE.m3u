@@ -99,6 +99,8 @@ https://cdn.qd.je/163189/typd
 https://cdn.qd.je/163189/iqiyi
 #EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
 https://cdn.qd.je/163189/tvbxh2
+#EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="MV",PopC
+https://iptv.yang-1989.xyz/hk/rv55y5?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
 #EXTINF:-1 tvg-name="龍華偶像" group-title="MV",龙华偶像
 https://cdn.qd.je/163189/lhox
 #EXTINF:-1 tvg-name="龍華卡通" group-title="MV",龙华卡通
@@ -153,14 +155,16 @@ https://cdn.qd.je/163189/rthk32
 https://cdn.qd.je/163189/aec
 #EXTINF:-1 tvg-name="AOD" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/Astro_AOD.png" group-title="HK",Astro AOD
 https://cdn.qd.je/163189/aod
+#EXTINF:-1 tvg-name="ViuTV" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/VIUTV.png" group-title="HK",ViuTV
+https://cdn.qd.je/163189/viu
 #EXTINF:-1 tvg-name="TVB Plus" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVBPLUS.png" group-title="HK",TVB Plus
 https://cdn.qd.je/163189/tvbp2
 #EXTINF:-1 tvg-name="HOY77" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY77.png" group-title="HK",HOY TV
 https://cdn.qd.je/163189/hoy2
 #EXTINF:-1 tvg-name="HOY 國際財經台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY76.png" group-title="HK",HOY国际财经台
 https://cdn.qd.je/163189/hoy76
-#EXTINF:-1 tvg-name="ViuTV" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/VIUTV.png" group-title="HK",ViuTV
-https://cdn.qd.je/163189/viu
+#EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTVsix.webp" group-title="HK",ViuTVsix
+https://iptv.yang-1989.xyz/hk/qygwzt?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
 #EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/翡翠.png" group-title="HK",翡翠台
 https://cdn.qd.je/163189/fctvtt
 #EXTINF:-1 tvg-name="Channel 5" group-title="HK",CH5
@@ -489,6 +493,16 @@ https://iptv.yang-1989.xyz/sprts/kaz3mk?token=918734a95e77ec093cbaa4c0bf6fd1c602
 https://iptv.yang-1989.xyz/sprts/w4ue4h?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
 #EXTINF:-1 tvg-id="Sky Sports Racing" tvg-name="Sky Sports Racing" tvg-logo="https://iptv.yang-1989.xyz/logo/Sky%20Sports%20Racing.webp" group-title="Sports",Sky Sports Racing
 https://iptv.yang-1989.xyz/sprts/hhrfee?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
+#EXTINF:-1 tvg-id="Now Sports 英超2台" tvg-name="Now Sports 英超2台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20英超2台.webp" group-title="Sports",Now Sports 英超
+https://iptv.yang-1989.xyz/hkg/r4rn5x?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
+#EXTINF:-1 tvg-id="愛爾達體育1台" tvg-name="愛爾達體育1台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育1台.webp" group-title="Sports",愛爾達體育 一
+https://iptv.yang-1989.xyz/tw/u5d3c6?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
+#EXTINF:-1 tvg-id="愛爾達體育2台" tvg-name="愛爾達體育2台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育2台.webp" group-title="Sports",愛爾達體育 二
+https://iptv.yang-1989.xyz/tw/4dc2m4?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
+#EXTINF:-1 tvg-id="愛爾達體育3台" tvg-name="愛爾達體育3台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育3台.webp" group-title="Sports",愛爾達體育 三
+https://iptv.yang-1989.xyz/tw/rz3gfh?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
+#EXTINF:-1 tvg-id="愛爾達體育4台" tvg-name="愛爾達體育4台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育4台.webp" group-title="Sports",愛爾達體育 四
+https://iptv.yang-1989.xyz/tw/wb6j4j?token=918734a95e77ec093cbaa4c0bf6fd1c602f3ef005d6c40da
 
 # 4K
 #EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="4K",北京IPTV4K
