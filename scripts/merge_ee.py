@@ -35,9 +35,10 @@ HK_FILTER_LIST = [
     "My Cinema Europe", "经典电影台", "CMusic", "DreamWorks梦工厂动画",
     "精选动漫台", "纬来电影台", "纬来戏剧台", "纬来体育台",
     "东森电影", "东森戏剧", "东森洋片", "咪咕4K(限移动网络)", "咪咕4K-2(限移动网络)",
-    # 新增移除频道
     "广州综合", "广州新闻", "广州南国都市", "广东体育", "TVBJ1", "TVB1",
-    "TVB星河", "广东珠江", "重温经典", "咪咕"
+    "TVB星河", "广东珠江", "重温经典", "咪咕",
+    # 新增移除项
+    "海峡卫视", "五星体育", "iQIYI", "天映经典", "黄金华剧台"
 ]
 
 # HK频道排序（按此顺序优先输出）
@@ -47,7 +48,7 @@ HK_TARGET_ORDER = [
     "TVB星河", "TVBPLUS", "TVBJ1", "TVB娱乐新闻", "TVB黄金华剧", "TVB功夫台", "TVB1",
     "HOY资讯", "HOYTV", "HOY77", "RTHK31", "RTHK32", "ROCK_Action", "MYTV黄金翡翠",
     "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U",
-    "ViuTVsix"  # 新增
+    "ViuTVsix"
 ]
 
 # ===================== TW 分组（从远程 URL 加载） =====================
@@ -216,6 +217,7 @@ HK_LOGO_MAP = {
     "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CH8.png",
     "CHU": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel U.png",
     "ViuTVsix": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/ViuTVsix.png",
+    "翡翠剧集台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVB翡翠剧集台(TVBDRAMA).png",
 }
 
 # 用户提供的新 HK logo 覆盖（优先使用）
@@ -224,7 +226,10 @@ HK_LOGO_OVERRIDE = {
     "RTHK32": "https://iptv.yang-1989.xyz/logo/RTHK32.webp",
     "RTHK33": "https://iptv.yang-1989.xyz/logo/RTHK33.webp",
     "Channel 5": "https://iptv.yang-1989.xyz/logo/Channel%205.webp",
-    "Channel 8": "https://iptv.yang-1989.xyz/logo/Channel%208.webp",
+    "Channel 8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png",
+    "CH5": "https://iptv.yang-1989.xyz/logo/Channel%205.webp",
+    "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png",
+    "天映新加坡": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/天映.png",
 }
 
 # ===================== 下载 =====================
@@ -686,18 +691,19 @@ def main():
                 hk_sorted.append(temp_dict[name])
         hk = hk_sorted
 
-    # 为 HK 应用新的覆盖 logo（RTHK31, RTHK32, RTHK33, Channel 5, Channel 8）
+    # 为 HK 应用新的覆盖 logo（优先使用 HK_LOGO_OVERRIDE）
     for i, (name, extinf, url) in enumerate(hk):
+        logo_url = None
         if name in HK_LOGO_OVERRIDE:
-            extinf = set_tvg_logo(extinf, HK_LOGO_OVERRIDE[name])
-            hk[i] = (name, extinf, url)
+            logo_url = HK_LOGO_OVERRIDE[name]
         else:
-            # 也可能名称不完全匹配，如 "Channel 5" 可能显示为 "CH5"，尝试包含匹配
             for key in HK_LOGO_OVERRIDE:
                 if key in name or name in key:
-                    extinf = set_tvg_logo(extinf, HK_LOGO_OVERRIDE[key])
-                    hk[i] = (name, extinf, url)
+                    logo_url = HK_LOGO_OVERRIDE[key]
                     break
+        if logo_url:
+            extinf = set_tvg_logo(extinf, logo_url)
+            hk[i] = (name, extinf, url)
 
     print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
@@ -871,7 +877,6 @@ def main():
     # ========== 对 Sports 分组进行自定义排序 ==========
     def sports_sort_key(item):
         name = item[0]
-        # 定义优先级顺序
         order = [
             "五星体育", "广东体育", "Apple TV", "Now Sports", "愛爾達體育",
             "緯來體育", "Eurosport"
@@ -879,7 +884,7 @@ def main():
         for idx, keyword in enumerate(order):
             if keyword.lower() in name.lower():
                 return idx
-        return len(order)  # 其他
+        return len(order)
 
     sports.sort(key=sports_sort_key)
     print("✓ Sports 分组已按指定顺序排序")
