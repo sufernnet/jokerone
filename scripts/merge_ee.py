@@ -37,7 +37,7 @@ HK_FILTER_LIST = [
     "东森电影", "东森戏剧", "东森洋片", "咪咕4K(限移动网络)", "咪咕4K-2(限移动网络)",
     # 新增移除频道
     "广州综合", "广州新闻", "广州南国都市", "广东体育", "TVBJ1", "TVB1",
-    "TVB星河", "广东珠江", "重温经典", "ViuTVsix"
+    "TVB星河", "广东珠江", "重温经典", "咪咕"
 ]
 
 # HK频道排序（按此顺序优先输出）
@@ -46,7 +46,8 @@ HK_TARGET_ORDER = [
     "TVBJADE", "娱乐新闻", "无线新闻", "天映频道", "千禧经典", "明珠台", "八度空间",
     "TVB星河", "TVBPLUS", "TVBJ1", "TVB娱乐新闻", "TVB黄金华剧", "TVB功夫台", "TVB1",
     "HOY资讯", "HOYTV", "HOY77", "RTHK31", "RTHK32", "ROCK_Action", "MYTV黄金翡翠",
-    "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U"
+    "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U",
+    "ViuTVsix"  # 新增
 ]
 
 # ===================== TW 分组（从远程 URL 加载） =====================
@@ -168,6 +169,9 @@ MV_TARGET_ORDER = [
     ("TVB星河", ["TVB星河", "星河频道"]),
 ]
 
+# 用于MV分组中CHC/HBO顺序控制的分类
+CHC_KEYWORDS = ["CHC动作电影", "CHC家庭影院", "CHC影迷电影"]
+HBO_KEYWORDS = ["HBO王牌", "Cinemax", "Cinemax精选"]
 LONGHUA_KEYWORDS = ["龙华电影", "龙华经典", "龙华偶像", "龙华日韩"]
 
 LOGO_MAP = {
@@ -200,6 +204,7 @@ HK_LOGO_MAP = {
     "ViuTV": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/VIUTV.png",
     "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CH8.png",
     "CHU": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel U.png",
+    "ViuTVsix": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/ViuTVsix.png",  # 新增
 }
 
 # ===================== 下载 =====================
@@ -221,7 +226,6 @@ def download(url, retry=3):
 def clean_name(name):
     """只去除圆括号、方括号、花括号等，保留中文书名号《》及「」"""
     name = re.sub(r'[\(\[\{（【].*?[\)\]\}）】]', '', name)
-    # 不再移除「...」，避免误删非后缀内容
     return name.strip()
 
 def clean_suffix(name):
@@ -241,6 +245,11 @@ def parse_name(extinf):
 
 def parse_group(extinf):
     m = re.search(r'group-title="([^"]*)"', extinf)
+    return m.group(1) if m else ""
+
+def parse_tvg_logo(extinf):
+    """从 #EXTINF 行中提取 tvg-logo"""
+    m = re.search(r'tvg-logo="([^"]*)"', extinf)
     return m.group(1) if m else ""
 
 def normalize_group(extinf, group):
@@ -292,61 +301,49 @@ def load_hk():
     data = parse_m3u(raw)
     print(f"✓ 从HK新源获取到 {len(data)} 个频道")
 
-    # 定义龙华关键字（完整列表）
     longhua_keywords = ["龙华电影", "龙华经典", "龙华偶像", "龙华日韩", "龙华戏剧", "龙华洋片", "龙华卡通"]
-    # 移除列表（已包含在FILTER中，但为了明确，再定义一次）
     remove_keywords = ["广州综合", "广州新闻", "广州南国都市", "广东体育", "TVBJ1", "TVB1",
-                       "TVB星河", "广东珠江", "重温经典", "ViuTVsix", "咪咕"]
+                       "TVB星河", "广东珠江", "重温经典", "咪咕"]
 
     filtered = []
     longhua = []
     for n, e, u in data:
-        # 检查是否在移除列表中
         if any(k in n for k in remove_keywords):
             continue
-        # 检查是否为龙华系列
         if any(k in n for k in longhua_keywords):
-            # 清理名称并保留原始extinf（后续可添加logo）
             cleaned = clean_suffix(clean_name(n))
             new_extinf = replace_name_in_extinf(e, cleaned)
             longhua.append((cleaned, new_extinf, u))
             continue
-        # 其他过滤（原有过滤）
         if any(f in n for f in HK_FILTER_LIST):
             continue
-        # 保留
         cleaned = clean_suffix(clean_name(n))
         new_extinf = replace_name_in_extinf(e, cleaned)
         filtered.append((cleaned, new_extinf, u))
 
     print(f"✓ 过滤后剩余 {len(filtered)} 个频道，龙华提取 {len(longhua)} 个")
 
-    # 为HK频道添加tvg-logo（如果映射存在）
+    # 为HK频道添加tvg-logo
     for i, (name, extinf, url) in enumerate(filtered):
-        # 尝试匹配映射中的键（精确或包含）
         logo_url = None
-        # 先尝试精确匹配
         if name in HK_LOGO_MAP:
             logo_url = HK_LOGO_MAP[name]
         else:
-            # 尝试包含匹配
             for key in HK_LOGO_MAP:
                 if key in name or name in key:
                     logo_url = HK_LOGO_MAP[key]
                     break
         if logo_url:
-            # 如果已有tvg-logo则替换，否则添加
             if 'tvg-logo="' in extinf:
                 extinf = re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{logo_url}"', extinf)
             else:
-                # 在group-title前或后插入
                 if 'group-title="' in extinf:
                     extinf = extinf.replace('group-title="', f'tvg-logo="{logo_url}" group-title="', 1)
                 else:
                     extinf = extinf.replace("#EXTINF:-1", f'#EXTINF:-1 tvg-logo="{logo_url}"')
             filtered[i] = (name, extinf, url)
 
-    # 排序（按HK_TARGET_ORDER）
+    # 排序
     temp_dict = {n: (n, e, u) for n, e, u in filtered}
     result = []
     used = set()
@@ -361,9 +358,7 @@ def load_hk():
         if name not in used:
             result.append(temp_dict[name])
 
-    # 对longhua也做简单排序（可按名称）
     longhua.sort(key=lambda x: x[0])
-
     return result, longhua
 
 # ===================== TW（从远程 URL 加载） =====================
@@ -457,10 +452,16 @@ def load_mv():
                     break
         else:
             print(f"✗ 未找到MV频道: {target_name}")
-    non_lh = [x for x in result if not any(k in x[0] for k in LONGHUA_KEYWORDS)]
-    lh = [x for x in result if any(k in x[0] for k in LONGHUA_KEYWORDS)]
+
+    # 按 CHC -> HBO/其他 -> 龙华 的顺序重新排列
+    chc_list = [x for x in result if any(k in x[0] for k in CHC_KEYWORDS)]
+    hbo_list = [x for x in result if any(k in x[0] for k in HBO_KEYWORDS)]
+    other_list = [x for x in result if not any(k in x[0] for k in CHC_KEYWORDS + HBO_KEYWORDS + LONGHUA_KEYWORDS)]
+    longhua_list = [x for x in result if any(k in x[0] for k in LONGHUA_KEYWORDS)]
+
+    result = chc_list + hbo_list + other_list + longhua_list
     print(f"MV频道加载完成，共 {len(result)} 个")
-    return non_lh + lh
+    return result
 
 # ===================== 测速 =====================
 
@@ -565,8 +566,99 @@ def main():
     all_data = parse_m3u(content)
     print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
+    # ========== 新增：从 all_data 提取特定频道 ==========
+    print("正在从 SOURCE_URL 提取特定频道...")
+
+    # 构建名称到 (extinf, url, logo) 的映射，用于后续查找 logo
+    name_to_info = {}
+    for n, e, u in all_data:
+        cleaned = clean_suffix(clean_name(n))
+        logo = parse_tvg_logo(e)
+        if cleaned not in name_to_info:
+            name_to_info[cleaned] = (e, u, logo)
+
+    # 提取 PopC → MV
+    popc_channel = None
+    for n, e, u in all_data:
+        if parse_group(e) == "•香港「Relay」" and "PopC" in n:
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            # 尝试从 name_to_info 获取 logo
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = new_extinf.replace('group-title="', f'tvg-logo="{logo}" group-title="', 1)
+            popc_channel = (cleaned, new_extinf, u)
+            break
+
+    # 提取 ViuTVsix → HK（同时从过滤列表中移除）
+    viutvsix_channel = None
+    for n, e, u in all_data:
+        if parse_group(e) == "•香港「Relay」" and "ViuTVsix" in n:
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = new_extinf.replace('group-title="', f'tvg-logo="{logo}" group-title="', 1)
+            viutvsix_channel = (cleaned, new_extinf, u)
+            break
+
+    # 提取 Now Sports 英超 → Sports
+    now_sports_channel = None
+    for n, e, u in all_data:
+        if parse_group(e) == "•香港「Relay」" and "Now Sports 英超" in n:
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = new_extinf.replace('group-title="', f'tvg-logo="{logo}" group-title="', 1)
+            now_sports_channel = (cleaned, new_extinf, u)
+            break
+
+    # 提取 愛爾達體育 一、二、三、四 → Sports
+    elta_channels = []
+    elta_names = ["愛爾達體育 一", "愛爾達體育 二", "愛爾達體育 三", "愛爾達體育 四"]
+    for target in elta_names:
+        for n, e, u in all_data:
+            if parse_group(e) == "•台灣「Relay」" and target in n:
+                cleaned = clean_suffix(clean_name(n))
+                new_extinf = replace_name_in_extinf(e, cleaned)
+                if cleaned in name_to_info and name_to_info[cleaned][2]:
+                    logo = name_to_info[cleaned][2]
+                    if 'tvg-logo="' not in new_extinf:
+                        new_extinf = new_extinf.replace('group-title="', f'tvg-logo="{logo}" group-title="', 1)
+                elta_channels.append((cleaned, new_extinf, u))
+                break
+
+    print(f"✓ 提取到 PopC: {popc_channel is not None}")
+    print(f"✓ 提取到 ViuTVsix: {viutvsix_channel is not None}")
+    print(f"✓ 提取到 Now Sports 英超: {now_sports_channel is not None}")
+    print(f"✓ 提取到 愛爾達體育 共 {len(elta_channels)} 个")
+
+    # ========== 继续加载其他分组 ==========
     print("正在加载HK频道...")
     hk, longhua = load_hk()
+    # 将 ViuTVsix 加入 HK（如果已提取到）
+    if viutvsix_channel:
+        hk.append(viutvsix_channel)
+        hk = dedup(hk)
+        # 重新排序：确保 ViuTVsix 出现在正确位置
+        temp_dict = {n: (n, e, u) for n, e, u in hk}
+        hk_sorted = []
+        used = set()
+        for target in HK_TARGET_ORDER:
+            for name in temp_dict.keys():
+                if target in name or name in target:
+                    if name not in used:
+                        hk_sorted.append(temp_dict[name])
+                        used.add(name)
+                    break
+        for name in temp_dict.keys():
+            if name not in used:
+                hk_sorted.append(temp_dict[name])
+        hk = hk_sorted
     print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
     print("正在加载TW频道（从远程URL加载）...")
@@ -575,17 +667,32 @@ def main():
 
     print("正在加载MV频道...")
     mv = load_mv()
-    # 将龙华系列追加到MV（去重）
+    # 将 PopC 加入 MV
+    if popc_channel:
+        mv.append(popc_channel)
+        mv = dedup(mv)
+        print(f"✓ PopC 已加入 MV 分组")
+    # 将龙华系列追加到MV
     mv.extend(longhua)
     mv = dedup(mv)
-    print(f"MV频道合并龙华后共 {len(mv)} 个")
+    print(f"MV频道合并后共 {len(mv)} 个")
 
     print("正在加载 Discovery 分组...")
     discovery = load_discovery(all_data)
     print("正在加载 Sports 分组...")
     sports = load_sports(all_data)
 
-    # 硬编码五星体育（覆盖提取）
+    # 将 Now Sports 英超 和 愛爾達體育 加入 Sports
+    if now_sports_channel:
+        sports.append(now_sports_channel)
+        print(f"✓ Now Sports 英超 已加入 Sports 分组")
+    for ch in elta_channels:
+        sports.append(ch)
+    sports = dedup(sports)
+    print(f"✓ 愛爾達體育 共 {len(elta_channels)} 个已加入 Sports 分组")
+    print(f"Sports 分组当前共 {len(sports)} 个频道")
+
+    # 硬编码五星体育
     wxty_extinf = '#EXTINF:-1 group-title="Sports" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png",五星体育'
     wxty_url = "https://cdn.qd.je/163189/wxty"
     wxty_entry = ("五星体育", wxty_extinf, wxty_url)
@@ -621,7 +728,7 @@ def main():
         if chs:
             fourk_channels.append(chs[0])
 
-    # BesTV4K
+    # BesTV4K 电影 → 后续会插入 MV 的 HBO 区域
     bestv_movie = extract_by_group_and_name(mv_parsed, "4K台", ["BesTV4K电影"])
     bestv_doc = extract_by_group_and_name(mv_parsed, "4K台", ["BesTV4K记录"])
     qiusuo_doc = extract_by_group_and_name(mv_parsed, "數字台", ["求索记录"])
@@ -640,15 +747,24 @@ def main():
         fourk_list.append(cctv4k)
     fourk_list.extend(fourk_channels)
 
+    # BesTV4K 电影 → 插入 MV 的 HBO 区域（HBO 后面）
     if bestv_movie:
-        mv.append(bestv_movie[0])
+        # 找到 HBO 区域的末尾，插入 BesTV4K电影
+        hbo_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in HBO_KEYWORDS)]
+        if hbo_indices:
+            insert_pos = max(hbo_indices) + 1
+            mv.insert(insert_pos, bestv_movie[0])
+        else:
+            mv.append(bestv_movie[0])
+        mv = dedup(mv)
+        print(f"✓ BesTV4K电影 已插入 MV 分组的 HBO 区域后面")
+
     if bestv_doc:
         discovery.append(bestv_doc[0])
     if qiusuo_doc:
         discovery.append(qiusuo_doc[0])
 
     if guangdong_channel:
-        # 插入五星体育之后
         index = -1
         for i, (n, e, u) in enumerate(sports):
             if "五星体育" in n:
@@ -659,7 +775,7 @@ def main():
         else:
             sports.append(guangdong_channel)
 
-    # ========== 提取HBO并加入MV ==========
+    # ========== 提取HBO并加入MV（但已在 load_mv 中处理，此处补充从 all_data 提取的HBO） ==========
     print("正在提取 HBO 频道（从 Relay 分组）并加入 MV...")
     hbo_list = []
     hbo_groups = ["•綜合「Relay」", "•台灣「Relay」"]
@@ -673,11 +789,23 @@ def main():
                 continue
             cleaned = clean_suffix(clean_name(n))
             new_extinf = replace_name_in_extinf(e, cleaned)
+            # 尝试从 name_to_info 获取 logo
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = new_extinf.replace('group-title="', f'tvg-logo="{logo}" group-title="', 1)
             hbo_list.append((cleaned, new_extinf, u))
     hbo_list = dedup(hbo_list)
     if hbo_list:
         print(f"✓ 提取到 {len(hbo_list)} 个 HBO 频道，追加到 MV 分组")
-        mv.extend(hbo_list)
+        # 插入到 HBO 区域
+        hbo_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in HBO_KEYWORDS)]
+        if hbo_indices:
+            insert_pos = max(hbo_indices) + 1
+            for ch in reversed(hbo_list):
+                mv.insert(insert_pos, ch)
+        else:
+            mv.extend(hbo_list)
         mv = dedup(mv)
     else:
         print("⚠️ 未提取到 HBO 频道")
