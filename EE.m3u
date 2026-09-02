@@ -393,9 +393,9 @@ https://iptv.yang-1989.xyz/comp/nrrqfv?token=f31bf9d72f84fdf95381fe970a7a8876698
 https://iptv.yang-1989.xyz/comp/5tekc8?token=f31bf9d72f84fdf95381fe970a7a88766989c7e3742e13aa
 #EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://iptv.yang-1989.xyz/logo/動物星球.webp" group-title="Discovery",動物星球
 https://iptv.yang-1989.xyz/tw/w24754?token=f31bf9d72f84fdf95381fe970a7a88766989c7e3742e13aa
-#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://iptv.yang-1989.xyz/logo/Love%20Nature.webp" group-title="Discovery" http-user-agent="okhttp/3.14.9",Love Nature
+#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://iptv.yang-1989.xyz/logo/Love%20Nature.webp" group-title="Discovery",Love Nature
 https://iptv.yang-1989.xyz/4gtv/chxzp5?token=f31bf9d72f84fdf95381fe970a7a88766989c7e3742e13aa
-#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://iptv.yang-1989.xyz/logo/History%20歷史頻道.webp" group-title="Discovery" http-user-agent="okhttp/3.14.9",History 歷史頻道
+#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://iptv.yang-1989.xyz/logo/History%20歷史頻道.webp" group-title="Discovery",History 歷史頻道
 https://iptv.yang-1989.xyz/4gtv/a5aubf?token=f31bf9d72f84fdf95381fe970a7a88766989c7e3742e13aa
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
 http://180.165.29.171:4022/rtp/233.18.204.170:5140
