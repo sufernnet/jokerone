@@ -91,8 +91,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
-#EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映画台
-https://cdn.qd.je/163189/jtyh
+#EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
+https://cdn3.indevs.in/stream/live/typd/
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
@@ -393,10 +393,6 @@ https://iptv.yang-1989.xyz/comp/hp2899?token=eb01cd762ec914a6a7c3e0d463b2e6c3726
 https://iptv.yang-1989.xyz/comp/hq8tny?token=eb01cd762ec914a6a7c3e0d463b2e6c37260cbc47817a2a2
 #EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://iptv.yang-1989.xyz/logo/動物星球.webp" group-title="Discovery",動物星球
 https://iptv.yang-1989.xyz/tw/e6xz7k?token=eb01cd762ec914a6a7c3e0d463b2e6c37260cbc47817a2a2
-#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://iptv.yang-1989.xyz/logo/Love%20Nature.webp" group-title="Discovery" http-user-agent="okhttp/3.8",Love Nature
-https://iptv.yang-1989.xyz/4gtv/jypg7w?token=eb01cd762ec914a6a7c3e0d463b2e6c37260cbc47817a2a2
-#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://iptv.yang-1989.xyz/logo/History%20歷史頻道.webp" group-title="Discovery" http-user-agent="okhttp/3.8",History 歷史頻道
-https://iptv.yang-1989.xyz/4gtv/gy53rc?token=eb01cd762ec914a6a7c3e0d463b2e6c37260cbc47817a2a2
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
 http://180.165.29.171:4022/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
@@ -407,8 +403,6 @@ http://113.95.138.98:8188/rtp/239.77.0.21:5146
 https://cdn.qd.je/163189/wxty
 #EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="Sports",广东体育
 http://113.95.138.98:8188/rtp/239.77.0.112:5146
-#EXTINF:-1 tvg-name="Apple TV 4K Dolby Vision F1" tvg-logo="https://cdn.jsdelivr.net/gh/jkwu5472/first/f1.png" group-title="Sports",Apple TV 4K Dolby Vision F1
-http://82.156.243.185:55221/appletvf1.m3u8
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20精選.webp" group-title="Sports",Now Sports 精選
 https://iptv.yang-1989.xyz/hk/ytczrg?token=eb01cd762ec914a6a7c3e0d463b2e6c37260cbc47817a2a2
 #EXTINF:-1 tvg-id="Now Sports 英超2台" tvg-name="Now Sports 英超2台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20英超2台.webp" group-title="Sports",Now Sports 英超
