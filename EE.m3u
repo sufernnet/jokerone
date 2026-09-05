@@ -95,6 +95,8 @@ http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 http://4px369674fn3.vicp.fun:7088/udp/225.1.8.211:8002
 #EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="MV",爱上4K
 http://1.203.174.137:8180/rtp/225.1.8.80:2000
+#EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
+https://cdn3.indevs.in/stream/live/typd/
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
@@ -193,8 +195,6 @@ http://192.168.100.1:50007/4gtv-live208/index.m3u8?token=4hJOEcVCv7GCKHNkKsUCOX0
 http://192.168.100.1:50007/4gtv-live026/index.m3u8?token=4hJOEcVCv7GCKHNkKsUCOX0QoKgC5KS1xPN1rpsroTp5qh7yfmPWIeNPho3Lnmx4
 #EXTINF:-1 tvg-id="亞洲旅遊台" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="TW",亞洲旅遊台
 http://192.168.100.1:50007/4gtv-live417/index.m3u8?token=4hJOEcVCv7GCKHNkKsUCOX0QoKgC5KS1xPN1rpsroTp5qh7yfmPWIeNPho3Lnmx4
-#EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
-http://192.168.100.1:50007/of-4gtv-4gtv009/index.m3u8?token=4hJOEcVCv7GCKHNkKsUCOX0QoKgC5KS1xPN1rpsroTp5qh7yfmPWIeNPho3Lnmx4
 #EXTINF:-1 tvg-id="民視" tvg-name="民視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png" group-title="TW",民視
 http://192.168.100.1:50007/4gtv-live215/index.m3u8?token=4hJOEcVCv7GCKHNkKsUCOX0QoKgC5KS1xPN1rpsroTp5qh7yfmPWIeNPho3Lnmx4
 #EXTINF:-1 tvg-id="民視新聞台" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="TW",民視新聞台
