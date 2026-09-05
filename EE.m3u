@@ -91,8 +91,10 @@ http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
 http://pplee.vicp.net:4022/udp/233.18.204.175:5140
-#EXTINF:-1 tvg-id="g-82b698" tvg-name="天映经典" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映經典.png" group-title="MV",天映經典
-https://cdn3.indevs.in/stream/live/ccm/
+#EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="MV",北京IPTV4K
+http://4px369674fn3.vicp.fun:7088/udp/225.1.8.211:8002
+#EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="MV",爱上4K
+http://1.203.174.137:8180/rtp/225.1.8.80:2000
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
@@ -179,14 +181,10 @@ https://cdn.qd.je/163189/jade2
 https://cdn.qd.je/163189/yzwx
 #EXTINF:-1 tvg-name="天映新加坡" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/天映.png" group-title="HK",天映新加坡
 https://cdn.qd.je/163189/typd
-#EXTINF:-1 tvg-name="QJ" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/QJ.webp" group-title="HK",Astro QJ
-https://cdn.qd.je/163189/qj
 #EXTINF:-1 tvg-name="HUA HEE DAI" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HUA.webp" group-title="HK",Astro欢喜台
 https://cdn.qd.je/163189/hxt
 #EXTINF:-1 tvg-name="iQIYI" tvg-logo="https://iptv.yang-1989.xyz/logo/iQIYI.webp" group-title="HK",爱奇艺
 https://cdn.qd.je/163189/iqiyi
-#EXTINF:-1 tvg-name="龙祥时代" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/龙祥时代.png" group-title="HK",龙祥时代
-https://cdn.qd.je/163189/lxsd
 
 # TW
 #EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png" group-title="TW",Love Nature
@@ -469,10 +467,6 @@ https://migu.yang-1989.xyz/sprts/7ushdj?token=7dbefe97f4bc2350fb4bfa064b960aba41
 https://migu.yang-1989.xyz/sprts/jx2hdd?token=7dbefe97f4bc2350fb4bfa064b960aba41caf1ac7856c999
 
 # 4K
-#EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="4K",北京IPTV4K
-http://4px369674fn3.vicp.fun:7088/udp/225.1.8.211:8002
-#EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="4K",爱上4K
-http://1.203.174.137:8180/rtp/225.1.8.80:2000
 #EXTINF:-1 tvg-id="广东4K超高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东4K超高清.png" group-title="4K",广东4K超高清
 http://113.95.141.117:8188/rtp/239.77.0.245:5146
 #EXTINF:-1 tvg-id="南国都市4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/南国都市.png" group-title="4K",南国都市4K
