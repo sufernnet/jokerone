@@ -815,7 +815,26 @@ def main():
         fourk_list.append(cctv4k)
     fourk_list.extend(fourk_channels)
 
-    # BesTV4K 电影 → 插入 MV 的 HBO 区域后面
+    # ===== 新增修改：将北京IPTV4K和爱上4K从4K分组移到MV分组，排在CHC系列后面 =====
+    move_to_mv = []
+    for item in fourk_list[:]:
+        if "北京IPTV4K" in item[0] or "爱上4K" in item[0]:
+            move_to_mv.append(item)
+            fourk_list.remove(item)
+    if move_to_mv:
+        # 找到MV中CHC系列的最后一个索引
+        chc_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in CHC_KEYWORDS)]
+        if chc_indices:
+            insert_pos = max(chc_indices) + 1
+            for ch in reversed(move_to_mv):
+                mv.insert(insert_pos, ch)
+        else:
+            mv.extend(move_to_mv)
+        mv = dedup(mv)
+        print(f"✓ 已将北京IPTV4K和爱上4K移动到MV分组，排在CHC系列后面")
+    # ================================================================
+
+    # BesTV4K 电影 → 插入 MV 的 HBO 区域
     if bestv_movie:
         hbo_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in HBO_KEYWORDS)]
         if hbo_indices:
@@ -917,6 +936,10 @@ def main():
         cleaned_lines.append(line)
         prev_empty = is_empty
     out = "\n".join(cleaned_lines)
+
+    # ===== 新增过滤：从HK分组中移除龙祥时代和Astro QJ =====
+    hk = [item for item in hk if not any(k in item[0] for k in ["龙祥时代", "Astro QJ"])]
+    print(f"✓ 已从HK分组中移除龙祥时代和Astro QJ")
 
     def append_group(group_name, data):
         nonlocal out
