@@ -528,9 +528,10 @@ def pick_best(urls):
 
 def load_discovery(data):
     discovery_channels = []
+    # 【修改1】去掉 History 歷史頻道、Love Nature（这两个将改从 TW 分组迁移过来）
     groups_keywords = {
         "•綜合「Relay」": ["BBC Earth", "Discovery"],
-        "•台灣「Relay」": ["Love Nature", "History 歷史頻道", "動物星球"]
+        "•台灣「Relay」": ["動物星球"]
     }
     for group_name, keywords in groups_keywords.items():
         for n, e, u in data:
@@ -711,6 +712,19 @@ def main():
             extinf = set_tvg_logo(extinf, logo_url)
             hk[i] = (name, extinf, url)
 
+    # 【修改3】HK 分组：去掉爱奇艺；TVB亚洲武侠 的 tvg-name 改为 "TVB 功夫台"
+    hk = [item for item in hk if "爱奇艺" not in item[0] and "iQIYI" not in item[0]]
+    hk_new = []
+    for name, extinf, url in hk:
+        if "TVB亚洲武侠" in name or "TVB亚洲武俠" in name:
+            if 'tvg-name="' in extinf:
+                extinf = re.sub(r'tvg-name="[^"]*"', 'tvg-name="TVB 功夫台"', extinf)
+            else:
+                extinf = extinf.replace("#EXTINF:-1", '#EXTINF:-1 tvg-name="TVB 功夫台"', 1)
+        hk_new.append((name, extinf, url))
+    hk = hk_new
+    print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台")
+
     print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
     print("正在加载TW频道（从远程URL加载）...")
@@ -747,6 +761,21 @@ def main():
 
     print("正在加载 Discovery 分组...")
     discovery = load_discovery(all_data)
+
+    # 【修改2】将 TW 中的 Love Nature、History 歷史頻道、亞洲旅遊台 移到 Discovery
+    tw_move_keywords = ["Love Nature", "History 歷史頻道", "亞洲旅遊"]
+    tw_moved = []
+    tw_remain = []
+    for item in tw:
+        if any(kw.lower() in item[0].lower() for kw in tw_move_keywords):
+            tw_moved.append(item)
+        else:
+            tw_remain.append(item)
+    tw = tw_remain
+    discovery.extend(tw_moved)
+    discovery = dedup(discovery)
+    print(f"✓ 已将 TW 中的 {len(tw_moved)} 个频道移到 Discovery 分组")
+
     print("正在加载 Sports 分组...")
     sports = load_sports(all_data)
 
