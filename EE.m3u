@@ -89,6 +89,8 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=01
 http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
 http://pplee.vicp.net:4022/udp/233.18.204.173:5140
+#EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
+http://pplee.vicp.net:4022/udp/233.18.204.175:5140
 #EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="MV",北京IPTV4K
 http://4px369674fn3.vicp.fun:7088/udp/225.1.8.211:8002
 #EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="MV",爱上4K
