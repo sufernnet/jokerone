@@ -102,9 +102,9 @@ https://cdn.qd.je/163189/iqiyi
 #EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
 https://cdn.qd.je/163189/tvbxh2
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="MV",PopC
-https://iptv.yang-1989.xyz/hk/x3td83.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/hk/wvdnxc.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="BesTV4K电影" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="MV",BesTV4K电影
-http://180.165.27.180:4022/rtp/233.18.204.169:5140
+http://180.165.14.238:4022/rtp/233.18.204.169:5140
 #EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="https://iptv.yang-1989.xyz/logo/HBO%20HD.webp" group-title="MV",HBO
 https://migu.yang-1989.xyz/comp/esyefa.m3u8?token=82899cf7525c39e19e571cc9ba756886e2d2f1a26886b364
 #EXTINF:-1 tvg-name="龍華偶像" tvg-logo="https://iptv.yang-1989.xyz/logo/龍華偶像台.webp" group-title="MV",龙华偶像
@@ -166,7 +166,7 @@ https://cdn.qd.je/163189/hoy2
 #EXTINF:-1 tvg-name="HOY 國際財經台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY76.png" group-title="HK",HOY国际财经台
 https://cdn.qd.je/163189/hoy76
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTVsix.webp" group-title="HK",ViuTVsix
-https://iptv.yang-1989.xyz/hk/vavk5u.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/hk/n5rbfx.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-name="翡翠台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/翡翠.png" group-title="HK",翡翠台
 https://cdn.qd.je/163189/fctvtt
 #EXTINF:-1 tvg-name="Channel 5" tvg-logo="https://iptv.yang-1989.xyz/logo/Channel%205.webp" group-title="HK",CH5
@@ -358,7 +358,7 @@ https://migu.yang-1989.xyz/comp/pvhayq.m3u8?token=82899cf7525c39e19e571cc9ba7568
 #EXTINF:-1 tvg-id="Discovery" tvg-name="Discovery" tvg-logo="https://iptv.yang-1989.xyz/logo/Discovery.webp" group-title="Discovery",Discovery
 https://migu.yang-1989.xyz/comp/jfdcw6.m3u8?token=82899cf7525c39e19e571cc9ba756886e2d2f1a26886b364
 #EXTINF:-1 tvg-id="動物星球" tvg-name="動物星球" tvg-logo="https://iptv.yang-1989.xyz/logo/動物星球.webp" group-title="Discovery",動物星球
-https://iptv.yang-1989.xyz/tw/mtpzfx.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/h6v4tq.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png" group-title="Discovery",Love Nature
 http://192.168.100.1:10801/4gtv-live208/index.m3u8?token=l7CRAYeedRxgdv791ZULgEZx9KwjnEd5Ho4VdPiSXUCY5QGjvMZitv7TmIHdUBEB
 #EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live026_mobile.png" group-title="Discovery",History 歷史頻道
@@ -366,7 +366,7 @@ http://192.168.100.1:10801/4gtv-live026/index.m3u8?token=l7CRAYeedRxgdv791ZULgEZ
 #EXTINF:-1 tvg-id="亞洲旅遊台" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="Discovery",亞洲旅遊台
 http://192.168.100.1:10801/of-4gtv-4gtv076/index.m3u8?token=l7CRAYeedRxgdv791ZULgEZx9KwjnEd5Ho4VdPiSXUCY5QGjvMZitv7TmIHdUBEB
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
-http://180.165.27.180:4022/rtp/233.18.204.170:5140
+http://180.165.14.238:4022/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
 http://14.21.224.29:8188/rtp/239.77.0.21:5146
 
@@ -376,19 +376,19 @@ https://cdn.qd.je/163189/wxty
 #EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="Sports",广东体育
 http://14.21.224.29:8188/rtp/239.77.0.112:5146
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20精選.webp" group-title="Sports",Now Sports 精選
-https://iptv.yang-1989.xyz/hk/sc53cz.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/hk/y4ybp9.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="Now Sports 英超2台" tvg-name="Now Sports 英超2台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20英超2台.webp" group-title="Sports",Now Sports 英超
-https://iptv.yang-1989.xyz/hkg/gkpn76.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/hkg/a4hg5e.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="愛爾達體育1台" tvg-name="愛爾達體育1台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育1台.webp" group-title="Sports",愛爾達體育 一
-https://iptv.yang-1989.xyz/tw/skv9sn.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/stjevg.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="愛爾達體育2台" tvg-name="愛爾達體育2台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育2台.webp" group-title="Sports",愛爾達體育 二
-https://iptv.yang-1989.xyz/tw/kvm8a8.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/xjku7k.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="愛爾達體育3台" tvg-name="愛爾達體育3台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育3台.webp" group-title="Sports",愛爾達體育 三
-https://iptv.yang-1989.xyz/tw/4qpsbj.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/vvsqgj.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="愛爾達體育4台" tvg-name="愛爾達體育4台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育4台.webp" group-title="Sports",愛爾達體育 四
-https://iptv.yang-1989.xyz/tw/qx3rse.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/sraspb.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="緯來體育台" tvg-name="緯來體育台" tvg-logo="https://iptv.yang-1989.xyz/logo/緯來體育台.webp" group-title="Sports",緯來體育
-https://iptv.yang-1989.xyz/tw/g3e9ge.m3u8?token=634c7646154b1ff59a04e582f9b89f489d7fd903ac14ee32
+https://iptv.yang-1989.xyz/tw/3fm4qy.m3u8?token=beb8271d104daf977087a07fe23b106533fd98f2bb4a029f
 #EXTINF:-1 tvg-id="Eurosport 1" tvg-name="Eurosport 1" tvg-logo="https://iptv.yang-1989.xyz/logo/Eurosport%201.webp" group-title="Sports",Eurosport 1
 https://migu.yang-1989.xyz/sprt/u9n26t.m3u8?token=82899cf7525c39e19e571cc9ba756886e2d2f1a26886b364
 #EXTINF:-1 tvg-id="Eurosport 2" tvg-name="Eurosport 2" tvg-logo="https://iptv.yang-1989.xyz/logo/Eurosport%202.webp" group-title="Sports",Eurosport 2
