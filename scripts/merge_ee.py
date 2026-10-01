@@ -789,13 +789,6 @@ def main():
     print(f"✓ 愛爾達體育 共 {len(elta_channels)} 个已加入 Sports 分组")
     print(f"Sports 分组当前共 {len(sports)} 个频道")
 
-    # 硬编码五星体育（放在最前）
-    wxty_extinf = '#EXTINF:-1 group-title="Sports" tvg-logo="https://cdn.jsdelivr.net/gh/sparkssssssssss/epg/logo/wxty.png",五星体育'
-    wxty_url = "https://cdn.qd.je/163189/wxty"
-    wxty_entry = ("五星体育", wxty_extinf, wxty_url)
-    sports.insert(0, wxty_entry)
-    print("✓ 已添加硬编码五星体育到 Sports 分组")
-
     # ========== 从 MV 主源提取额外频道 ==========
     mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
     mv_raw = download(mv_url)
@@ -932,7 +925,7 @@ def main():
     def sports_sort_key(item):
         name = item[0]
         order = [
-            "五星体育", "广东体育", "Apple TV", "Now Sports", "愛爾達體育",
+            "五星体育", "劲爆体育", "广东体育", "Apple TV", "Now Sports", "愛爾達體育",
             "緯來體育", "Eurosport"
         ]
         for idx, keyword in enumerate(order):
