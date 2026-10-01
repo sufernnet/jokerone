@@ -148,6 +148,7 @@ CCTV_TARGET = [
 ]
 
 # 👉 MV（替代原CHC）
+# 修改点1：移除“北京IPTV淘电影”，因为将从“北上台”单独提取
 MV_TARGET_ORDER = [
     ("CHC动作电影", ["CHC动作电影", "CHC动作电影台", "CHC动作", "动作电影", "CHC动作电影HD"]),
     ("CHC家庭影院", ["CHC家庭影院", "CHC家庭电影", "家庭影院", "CHC家庭影院HD"]),
@@ -162,7 +163,7 @@ MV_TARGET_ORDER = [
     ("龙华经典", ["龙华经典", "龙华经典HD"]),
     ("龙华偶像", ["龙华偶像", "龙华偶像HD"]),
     ("龙华日韩", ["龙华日韩", "龙华日韩HD"]),
-    ("北京IPTV淘电影", ["北京IPTV淘电影", "淘电影"]),
+    # ("北京IPTV淘电影", ["北京IPTV淘电影", "淘电影"]),   # 修改点1：删除此行
     ("北京IPTV4K", ["北京IPTV4K", "北京IPTV 4K"]),
     ("天映频道", ["天映频道", "天映"]),
     ("天映新加坡", ["天映新加坡", "天映新加坡频道"]),
@@ -459,7 +460,8 @@ def load_mv():
         group = parse_group(e)
         cond1 = any(k in group for k in ["综合", "电影", "影视", "MV", "娱乐", "影視"]) or \
                 any(k in n for k in ["CHC", "龙华", "ROCK", "HBO", "Cinemax", "动作电影", "家庭影院", "影迷电影"])
-        cond2 = (group == "北京" and any(k in n for k in ["北京IPTV淘电影", "北京IPTV4K", "淘电影", "4K"]))
+        # 修改点1：cond2 不再包含“北京IPTV淘电影”和“淘电影”，只保留“北京IPTV4K”和“4K”
+        cond2 = (group == "北京" and any(k in n for k in ["北京IPTV4K", "4K"]))
         cond3 = (group == "港澳台" and any(k in n for k in ["天映频道", "天映新加坡", "爱奇艺", "TVB星河", "天映", "iQIYI", "星河"]))
         if cond1 or cond2 or cond3:
             cleaned = clean_suffix(clean_name(n))
@@ -856,6 +858,23 @@ def main():
         print(f"✓ 已将北京IPTV4K和爱上4K移动到MV分组，排在CHC系列后面")
     # ================================================================
 
+    # ★★★ 修改点1：从“北上台”分组提取北京IPTV淘电影，放到 MV 分组中北京IPTV4K后面 ★★★
+    tao_movie = extract_by_group_and_name(mv_parsed, "北上台", ["北京IPTV淘电影"])
+    if tao_movie:
+        bj_4k_index = -1
+        for i, (n, e, u) in enumerate(mv):
+            if "北京IPTV4K" in n:
+                bj_4k_index = i
+                break
+        if bj_4k_index != -1:
+            mv.insert(bj_4k_index + 1, tao_movie[0])
+        else:
+            mv.append(tao_movie[0])
+        mv = dedup(mv)
+        print(f"✓ 北京IPTV淘电影 已从北上台提取并插入到 MV 分组北京IPTV4K后面")
+    else:
+        print("⚠️ 未从北上台提取到北京IPTV淘电影")
+
     # BesTV4K 电影 → 插入 MV 的 HBO 区域
     if bestv_movie:
         hbo_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in HBO_KEYWORDS)]
@@ -872,6 +891,23 @@ def main():
     if qiusuo_doc:
         discovery.append(qiusuo_doc[0])
 
+    # ★★★ 修改点2：从“數字台”分组提取五星体育，并添加劲爆体育 ★★★
+    # 从“數字台”分组提取五星体育
+    wxty = extract_by_group_and_name(mv_parsed, "數字台", ["五星体育"])
+    if wxty:
+        sports.append(wxty[0])
+        print(f"✓ 五星体育 已从數字台提取并加入 Sports 分组")
+    else:
+        print("⚠️ 未从數字台提取到五星体育")
+
+    # 硬编码劲爆体育，放到五星体育后面
+    jbty_extinf = '#EXTINF:-1 tvg-id="劲爆体育" tvg-name="劲爆体育" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/劲爆体育.png" group-title="Sports",劲爆体育'
+    jbty_url = "http://221.7.49.226:50085/tsfile/live/0017_3.m3u8?key=txiptv&playlive=1&authid=0"
+    jbty_entry = ("劲爆体育", jbty_extinf, jbty_url)
+    sports.append(jbty_entry)
+    print("✓ 已添加硬编码劲爆体育到 Sports 分组")
+
+    # 广东体育插入逻辑（保留原逻辑，但此时五星体育已在 sports 中）
     if guangdong_channel:
         index = -1
         for i, (n, e, u) in enumerate(sports):
@@ -924,6 +960,7 @@ def main():
     # ========== 对 Sports 分组进行自定义排序 ==========
     def sports_sort_key(item):
         name = item[0]
+        # 修改点2：order 列表中加入“劲爆体育”，排在“五星体育”之后
         order = [
             "五星体育", "劲爆体育", "广东体育", "Apple TV", "Now Sports", "愛爾達體育",
             "緯來體育", "Eurosport"
