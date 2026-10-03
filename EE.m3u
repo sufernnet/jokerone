@@ -101,7 +101,7 @@ http://106.120.39.161:4022/rtp/225.1.8.38:8002
 #EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="MV",爱上4K
 http://106.120.39.161:4022/rtp/225.1.8.80:2000
 #EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
-https://cdn.qd.je/163189/typd2
+https://cdn3.indevs.in/stream/live/typd/
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 https://cdn.qd.je/163189/typd
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
@@ -373,7 +373,7 @@ http://192.168.100.1:10801/of-4gtv-4gtv076/index.m3u8?token=PlKNJAB1AJsfyfhFFKLi
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
 http://180.165.60.180:4022/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
-http://113.89.247.198:4200/rtp/239.77.0.21:5146
+http://113.83.144.127:8188/rtp/239.77.0.21:5146
 
 # Sports
 #EXTINF:-1 tvg-id="五星体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/五星体育.png" group-title="Sports",五星体育
@@ -381,7 +381,7 @@ http://pplee.vicp.net:4022/udp/233.18.204.58:5140
 #EXTINF:-1 tvg-id="劲爆体育" tvg-name="劲爆体育" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/劲爆体育.png" group-title="Sports",劲爆体育
 http://221.7.49.226:50085/tsfile/live/0017_3.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="Sports",广东体育
-http://113.89.247.198:4200/rtp/239.77.0.112:5146
+http://113.83.144.127:8188/rtp/239.77.0.112:5146
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20精選.webp" group-title="Sports",Now Sports 精選
 https://iptv.yang-1989.xyz/hk/8acgg6.m3u8?token=cf30c79282dbc7b3d60ae7f68a5c2d40241b4b17578c4f49
 #EXTINF:-1 tvg-id="愛爾達體育1台" tvg-name="愛爾達體育1台" tvg-logo="https://iptv.yang-1989.xyz/logo/愛爾達體育1台.webp" group-title="Sports",愛爾達體育 一
@@ -479,6 +479,6 @@ https://migu.yang-1989.xyz/sprts/dbwf7b.m3u8?token=95e3c703369af25c3625cb11dad7d
 
 # 4K
 #EXTINF:-1 tvg-id="广东4K超高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东4K超高清.png" group-title="4K",广东4K超高清
-http://113.89.247.198:4200/rtp/239.77.0.244:5146
+http://113.83.144.127:8188/rtp/239.77.0.244:5146
 #EXTINF:-1 tvg-id="南国都市4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/南国都市.png" group-title="4K",南国都市4K
-http://113.89.247.198:4200/rtp/239.253.43.99:5146
+http://113.83.144.127:8188/rtp/239.253.43.99:5146
