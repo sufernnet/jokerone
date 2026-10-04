@@ -959,7 +959,7 @@ def main():
 
     # ========== 添加 CCTV16 到 Sports 分组 ==========
     cctv16_extinf = '#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="Sports",CCTV16'
-    cctv16_url = "http://192.168.100.1:8767/cctv16.m3u8"
+    cctv16_url = "http://192.168.100.1:8767/cctv164k.m3u8"
     cctv16_entry = ("CCTV16", cctv16_extinf, cctv16_url)
     sports.append(cctv16_entry)
     sports = dedup(sports)
