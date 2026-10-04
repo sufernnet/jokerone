@@ -1,4 +1,3 @@
-```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -908,13 +907,6 @@ def main():
     sports.append(jbty_entry)
     print("✓ 已添加硬编码劲爆体育到 Sports 分组")
 
-    # CCTV16
-    cctv16_extinf = '#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="Sports",CCTV16'
-    cctv16_url = "http://192.168.100.1:8767/cctv16.m3u8"
-    cctv16_entry = ("CCTV16", cctv16_extinf, cctv16_url)
-    sports.append(cctv16_entry)
-    print("✓ 已添加 CCTV16 到 Sports 分组")
-
     # 广东体育插入逻辑（保留原逻辑，但此时五星体育已在 sports 中）
     if guangdong_channel:
         index = -1
@@ -965,10 +957,18 @@ def main():
     longhua_only = [x for x in mv if any(k in x[0] for k in LONGHUA_KEYWORDS)]
     mv = non_longhua + longhua_only
 
+    # ========== 添加 CCTV16 到 Sports 分组 ==========
+    cctv16_extinf = '#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="Sports",CCTV16'
+    cctv16_url = "http://192.168.100.1:8767/cctv16.m3u8"
+    cctv16_entry = ("CCTV16", cctv16_extinf, cctv16_url)
+    sports.append(cctv16_entry)
+    sports = dedup(sports)
+
     # ========== 对 Sports 分组进行自定义排序 ==========
     def sports_sort_key(item):
         name = item[0]
         # 修改点2：order 列表中加入“劲爆体育”，排在“五星体育”之后
+        # 修改点3：order 列表中加入“CCTV16”，排在“广东体育”之后
         order = [
             "五星体育", "劲爆体育", "广东体育", "CCTV16", "Apple TV", "Now Sports", "愛爾達體育",
             "緯來體育", "Eurosport"
@@ -1054,4 +1054,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
