@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-10-04 00:15:24
+# 更新时间 2026-10-04 14:38:26
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -58,10 +58,10 @@ http://124.90.44.40:6060/010/2/01000010000000060000000000002805?virtualDomain=01
 http://192.168.100.1:28787/live/cctv17.m3u8
 
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV4K.png" group-title="4K",CCTV4K
-http://192.168.100.1:38766/cctv4k.m3u8
+http://192.168.100.1:8767/cctv4k.m3u8
 
 #EXTINF:-1 tvg-id="CCTV8K" tvg-name="CCTV8K" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV8K.png" group-title="4K",CCTV8K
-http://192.168.100.1:38766/cctv8k.m3u8
+http://192.168.100.1:8767/cctv8k.m3u8
 
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/BJ4K.png" group-title="4K",北京卫视
 http://124.90.44.40:6060/010/2/01000010000000060000000000002865?virtualDomain=010.live_hls.zte.com
