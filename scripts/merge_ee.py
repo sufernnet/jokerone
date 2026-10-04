@@ -554,7 +554,7 @@ def load_discovery(data):
 def load_sports(data):
     sports_channels = []
     # 只提取 Apple TV 4K Dolby Vision F1（不再提取五星体育）
-    other_url = "http://82.156.243.185:54321/other.m3u"
+    other_url = "https://kan.waiguotai.top/other.m3u"
     raw_other = download(other_url)
     if raw_other:
         other_data = parse_m3u(raw_other)
