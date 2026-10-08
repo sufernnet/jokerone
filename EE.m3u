@@ -100,18 +100,18 @@ http://106.120.39.161:4022/rtp/225.1.8.211:8002
 http://106.120.39.161:4022/rtp/225.1.8.38:8002
 #EXTINF:-1 tvg-id="爱上4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/爱上4K.png" group-title="MV",爱上4K
 http://106.120.39.161:4022/rtp/225.1.8.80:2000
-#EXTINF:-1 tvg-id="g-cb4cfc" tvg-name="天映马来西亚" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映頻道
-https://cdn3.indevs.in/stream/live/typd/
+#EXTINF:-1 tvg-id="g-82b698" tvg-name="天映经典" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映經典.png" group-title="MV",天映經典
+https://cdn.qd.je/163189/ccm2
 #EXTINF:-1 tvg-id="g-32bd52" tvg-name="天映新加坡" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/天映频道.png" group-title="MV",天映新加坡
 http://cdn10.123.rr.kg/163189/typd/
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
-http://cdn3.123.rr.kg/stream/live/iqiyi/
+https://cdn.qd.je/163189/iqiyi
 #EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
 https://cdn3.indevs.in/stream/live/tvbxh/
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="MV",PopC
 https://iptv.yang-1989.xyz/hk/hdzamq.m3u8?token=ce86dd1caefb436618ea7302a6e0a347a3cd04433c7cfb65
 #EXTINF:-1 tvg-id="BesTV4K电影" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="MV",BesTV4K电影
-http://180.165.60.180:4022/rtp/233.18.204.169:5140
+http://218.203.69.15:4022/rtp/233.18.204.169:5140
 #EXTINF:-1 tvg-id="HBO" tvg-name="HBO" tvg-logo="https://iptv.yang-1989.xyz/logo/HBO%20HD.webp" group-title="MV",HBO
 https://migu.yang-1989.xyz/comp/rpv2qu.m3u8?token=88940df34a26cebcf42ffd53541fa16407bcf09bb49e645d
 #EXTINF:-1 tvg-name="龍華偶像" tvg-logo="https://iptv.yang-1989.xyz/logo/龍華偶像台.webp" group-title="MV",龙华偶像
@@ -371,7 +371,7 @@ http://192.168.100.1:10801/4gtv-live026/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDve
 #EXTINF:-1 tvg-id="亞洲旅遊台" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="Discovery",亞洲旅遊台
 http://192.168.100.1:10801/of-4gtv-4gtv076/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
-http://180.165.60.180:4022/rtp/233.18.204.170:5140
+http://218.203.69.15:4022/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
 http://113.95.138.27:8188/rtp/239.77.0.21:5146
 
