@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-10-11 15:21:11
+# 更新时间 2026-10-12 00:51:51
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -97,27 +97,27 @@ https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://iptv.yang-1989.xyz/logo/凤凰香港台.webp" group-title="HK",凤凰香港台
 https://cdn.qd.je/163189/fhhk
 #EXTINF:-1 tvg-id="Love Nature 4K" tvg-name="Love Nature 4K" tvg-logo="https://iptv.yang-1989.xyz/logo/Love%20Nature%204K.webp" group-title="HK",Love Nature 4K「Relay」
-https://iptv.yang-1989.xyz/hk/4wmtft.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/3had24.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://iptv.yang-1989.xyz/logo/明珠台.webp" group-title="HK",明珠台「Relay」
-https://iptv.yang-1989.xyz/hk/wxe794.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/hgbxp4.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://iptv.yang-1989.xyz/logo/TVB%20Plus.webp" group-title="HK",TVB Plus「Relay」
-https://iptv.yang-1989.xyz/hk/adsz8a.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/7fmj3d.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="美亞電影台" tvg-name="美亞電影台" tvg-logo="https://iptv.yang-1989.xyz/logo/美亞電影台.webp" group-title="HK",美亞電影台「Relay」
-https://iptv.yang-1989.xyz/hk/zzzuuf.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/gv99hp.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="HK",PopC「Relay」
-https://iptv.yang-1989.xyz/hk/s8xzmg.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/j2tjhm.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTV.webp" group-title="HK",ViuTV「Relay」
-https://iptv.yang-1989.xyz/hk/2x4kes.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/wbecvw.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTVsix.webp" group-title="HK",ViuTVsix「Relay」
-https://iptv.yang-1989.xyz/hk/q3zznt.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/v34pvq.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="Now直播台" tvg-name="Now直播台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now直播台.webp" group-title="HK",Now直播台「Relay」
-https://iptv.yang-1989.xyz/hk/xcp7cw.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/du4frr.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now新聞台.webp" group-title="HK",Now新聞台「Relay」
-https://iptv.yang-1989.xyz/hk/y9cwxa.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/qad4fp.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="Now財經台" tvg-name="Now財經台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now財經台.webp" group-title="HK",Now財經台「Relay」
-https://iptv.yang-1989.xyz/hk/sfyrc7.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/krmc2k.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20精選.webp" group-title="HK",Now Sports 精選「Relay」
-https://iptv.yang-1989.xyz/hk/de5tpa.m3u8?token=5aa19b320c684ede41720dbca7b8d6f3db4ac4a9bccba0cd
+https://iptv.yang-1989.xyz/hk/wtwrpj.m3u8?token=917d6781908d063c66a37b7b157e6dce6c0ff6499f3da9ee
 #EXTINF:-1 tvg-id="HOY 國際財經台" tvg-name="HOY 國際財經台" tvg-logo="https://iptv.yang-1989.xyz/logo/HOY%20國際財經台.webp" group-title="HK",HOY 國際財經台「官方」
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://iptv.yang-1989.xyz/logo/HOY%20TV.webp" group-title="HK",HOY TV「官方」
