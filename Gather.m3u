@@ -1,6 +1,6 @@
 #EXTM3U
 
-# 更新时间 2026-10-19 16:13:36
+# 更新时间 2026-10-20 00:49:56
 
 
 #EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV1" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV1.png" group-title="央视",CCTV1
@@ -97,51 +97,51 @@ https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港台" tvg-name="凤凰香港台" tvg-logo="https://iptv.yang-1989.xyz/logo/凤凰香港台.webp" group-title="HK",凤凰香港台
 https://cdn.qd.je/163189/fhhk
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://iptv.yang-1989.xyz/logo/明珠台.webp" group-title="HK",明珠台「Relay」
-https://iptv.yang-1989.xyz/hk/4t7nja.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/5sbd3v.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://iptv.yang-1989.xyz/logo/TVB%20Plus.webp" group-title="HK",TVB Plus「Relay」
-https://iptv.yang-1989.xyz/hk/mt3c6x.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/6k2t6h.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="Love Nature 4K" tvg-name="Love Nature 4K" tvg-logo="https://iptv.yang-1989.xyz/logo/Love%20Nature%204K.webp" group-title="HK",Love Nature 4K「Relay」
-https://iptv.yang-1989.xyz/hk/mv5bhp.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/rhvby5.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="美亞電影台" tvg-name="美亞電影台" tvg-logo="https://iptv.yang-1989.xyz/logo/美亞電影台.webp" group-title="HK",美亞電影台「Relay」
-https://iptv.yang-1989.xyz/hk/4fs6h8.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/pt4haz.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="HK",PopC「Relay」
-https://iptv.yang-1989.xyz/hk/edscme.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/sr9xmv.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="ViuTV" tvg-name="ViuTV" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTV.webp" group-title="HK",ViuTV「Relay」
-https://iptv.yang-1989.xyz/hk/4s82r7.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/aufjze.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="ViuTVsix" tvg-name="ViuTVsix" tvg-logo="https://iptv.yang-1989.xyz/logo/ViuTVsix.webp" group-title="HK",ViuTVsix「Relay」
-https://iptv.yang-1989.xyz/hk/6pyky4.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/v2t8rs.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="Now直播台" tvg-name="Now直播台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now直播台.webp" group-title="HK",Now直播台「Relay」
-https://iptv.yang-1989.xyz/hk/mzmq47.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/8mb7x5.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="Now新聞台" tvg-name="Now新聞台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now新聞台.webp" group-title="HK",Now新聞台「Relay」
-https://iptv.yang-1989.xyz/hk/hn5rj4.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/euj7h4.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="Now財經台" tvg-name="Now財經台" tvg-logo="https://iptv.yang-1989.xyz/logo/Now財經台.webp" group-title="HK",Now財經台「Relay」
-https://iptv.yang-1989.xyz/hk/6w9528.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/v25pek.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="Now Sports 精選" tvg-name="Now Sports 精選" tvg-logo="https://iptv.yang-1989.xyz/logo/Now%20Sports%20精選.webp" group-title="HK",Now Sports 精選「Relay」
-https://iptv.yang-1989.xyz/hk/p5bdsf.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hk/8jxds9.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="HOY 國際財經台" tvg-name="HOY 國際財經台" tvg-logo="https://iptv.yang-1989.xyz/logo/HOY%20國際財經台.webp" group-title="HK",HOY 國際財經台「Relay」
-https://iptv.yang-1989.xyz/hkgf/6czsnt.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/nknejn.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="HOY TV" tvg-name="HOY TV" tvg-logo="https://iptv.yang-1989.xyz/logo/HOY%20TV.webp" group-title="HK",HOY TV「Relay」
-https://iptv.yang-1989.xyz/hkgf/ymfq68.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/upbvfd.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="HOY 資訊台" tvg-name="HOY 資訊台" tvg-logo="https://iptv.yang-1989.xyz/logo/HOY%20資訊台.webp" group-title="HK",HOY 資訊台「Relay」
-https://iptv.yang-1989.xyz/hkgf/35pzke.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/6e8jku.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="RTHK31" tvg-name="RTHK31" tvg-logo="https://iptv.yang-1989.xyz/logo/RTHK31.webp" group-title="HK",RTHK 31「Relay」
-https://iptv.yang-1989.xyz/hkgf/fhx5uk.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/xmumgd.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="RTHK32" tvg-name="RTHK32" tvg-logo="https://iptv.yang-1989.xyz/logo/RTHK32.webp" group-title="HK",RTHK 32「Relay」
-https://iptv.yang-1989.xyz/hkgf/z6fyjw.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/k5h9bn.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="RTHK33" tvg-name="RTHK33" tvg-logo="https://iptv.yang-1989.xyz/logo/RTHK33.webp" group-title="HK",RTHK 33「Relay」
-https://iptv.yang-1989.xyz/hkgf/ytvdzv.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/j7d6eg.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳門衛星" tvg-name="澳門衛星" tvg-logo="https://iptv.yang-1989.xyz/logo/澳門衛星.webp" group-title="HK",澳門衛星「Relay」
-https://iptv.yang-1989.xyz/hkgf/jsmwsu.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/hwqtqm.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳門葡萄牙" tvg-name="澳門葡萄牙" tvg-logo="https://iptv.yang-1989.xyz/logo/澳門葡萄牙.webp" group-title="HK",澳門葡文「Relay」
-https://iptv.yang-1989.xyz/hkgf/ssmyn3.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/r3yhcq.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳視澳門" tvg-name="澳視澳門" tvg-logo="https://iptv.yang-1989.xyz/logo/澳視澳門.webp" group-title="HK",澳視澳門「Relay」
-https://iptv.yang-1989.xyz/hkgf/fz833y.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/p969qf.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳門資訊" tvg-name="澳門資訊" tvg-logo="https://iptv.yang-1989.xyz/logo/澳門資訊.webp" group-title="HK",澳門資訊「Relay」
-https://iptv.yang-1989.xyz/hkgf/uk8pgx.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/a4d7b6.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳門體育" tvg-name="澳門體育" tvg-logo="https://iptv.yang-1989.xyz/logo/澳門體育.webp" group-title="HK",澳門體育「Relay」
-https://iptv.yang-1989.xyz/hkgf/uuqdvf.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/rzxnmq.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 #EXTINF:-1 tvg-id="澳門綜藝" tvg-name="澳門綜藝" tvg-logo="https://iptv.yang-1989.xyz/logo/澳門綜藝.webp" group-title="HK",澳門綜藝「Relay」
-https://iptv.yang-1989.xyz/hkgf/bys679.m3u8?token=a08f7b04470cd2cc3f17d0baaac9b65dcff0cb697252db9b
+https://iptv.yang-1989.xyz/hkgf/64scug.m3u8?token=82238cd0b2c2c5d072781d35156f4340fc30534bd102652f
 
 # TW
 #EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
