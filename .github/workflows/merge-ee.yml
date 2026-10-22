@@ -12,7 +12,7 @@ on:
 
 jobs:
   generate-ee:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - name: 📥 检出代码
       uses: actions/checkout@v3
