@@ -373,7 +373,7 @@ http://192.168.100.1:10801/of-4gtv-4gtv076/index.m3u8?token=PlKNJAB1AJsfyfhFFKLi
 #EXTINF:-1 tvg-id="BesTV4K记录" tvg-logo="https://git.yylx.win/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/BesTV4K.png" group-title="Discovery",BesTV4K记录
 http://180.165.51.133:4022/rtp/233.18.204.170:5140
 #EXTINF:-1 tvg-id="求索记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/求索记录.png" group-title="Discovery",求索记录
-http://183.30.201.17:10002/rtp/239.77.0.21:5146
+http://183.30.201.124:10002/rtp/239.77.0.21:5146
 
 # Sports
 #EXTINF:-1 tvg-id="五星体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/五星体育.png" group-title="Sports",五星体育
@@ -381,7 +381,7 @@ http://pplee.vicp.net:4022/udp/233.18.204.58:5140
 #EXTINF:-1 tvg-id="劲爆体育" tvg-name="劲爆体育" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/劲爆体育.png" group-title="Sports",劲爆体育
 http://221.7.49.226:50085/tsfile/live/0017_3.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东体育.png" group-title="Sports",广东体育
-http://183.30.201.17:10002/rtp/239.77.0.112:5146
+http://183.30.201.124:10002/rtp/239.77.0.112:5146
 #EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="Sports",CCTV16
 http://192.168.100.1:8767/cctv164k.m3u8
 #EXTINF:-1 tvg-name="Apple TV 4K Dolby Vision F1" tvg-logo="https://cdn.jsdelivr.net/gh/jkwu5472/first/f1.png" group-title="Sports",Apple TV 4K Dolby Vision F1
@@ -467,6 +467,6 @@ https://migu.yang-1989.xyz/sprt/6gb3cd.m3u8
 
 # 4K
 #EXTINF:-1 tvg-id="广东4K超高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/广东4K超高清.png" group-title="4K",广东4K超高清
-http://183.30.201.17:10002/rtp/239.77.0.244:5146
+http://183.30.201.124:10002/rtp/239.77.0.244:5146
 #EXTINF:-1 tvg-id="南国都市4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/南国都市.png" group-title="4K",南国都市4K
-http://183.30.201.17:10002/rtp/239.253.43.99:5146
+http://183.30.201.124:10002/rtp/239.253.43.99:5146
