@@ -1129,7 +1129,27 @@ def main():
             else:
                 out += f"\n# {group_name}\n"
             for n, e, u in data:
-                out += normalize_group(e, group_name) + "\n" + u + "\n"
+                out += normalize_group(e, group_name) + "\n"
+
+                # 凤凰三台使用香港 Relay 源要求的 User-Agent。
+                # 仅对 HK 分组中的凤凰中文、凤凰资讯、凤凰香港添加，其他频道不受影响。
+                phoenix_key = None
+                if group_name == "HK":
+                    tvg_name_match = re.search(r'\btvg-name="([^"]*)"', e)
+                    tvg_id_match = re.search(r'\btvg-id="([^"]*)"', e)
+                    for candidate in (
+                        n,
+                        tvg_name_match.group(1) if tvg_name_match else "",
+                        tvg_id_match.group(1) if tvg_id_match else "",
+                    ):
+                        phoenix_key = phoenix_channel_key(candidate)
+                        if phoenix_key:
+                            break
+
+                if phoenix_key:
+                    out += "#EXTVLCOPT:http-user-agent=okhttp/3.8\n"
+
+                out += u + "\n"
             out = out.rstrip() + "\n"
 
     append_group("MV", mv)
