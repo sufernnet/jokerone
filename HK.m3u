@@ -1,11 +1,14 @@
 #EXTM3U url-tvg="https://epg.cdn.loc.cc/xml" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://material.yang-1989.xyz/logo/凤凰中文.png" group-title="HK",凤凰中文
-https://cdn.qd.je/163189/fhzw
+#https://cdn.qd.je/163189/fhzw
+http://zmgd.zyrnet.com:8888/hls/110/index.m3u8
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://material.yang-1989.xyz/logo/凤凰资讯.png" group-title="HK",凤凰资讯
-https://cdn.qd.je/163189/fhzx
+http://zmgd.zyrnet.com:8888/hls/109/index.m3u8
+#https://cdn.qd.je/163189/fhzx
 #EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://material.yang-1989.xyz/logo/凤凰香港.png" group-title="HK",凤凰香港
-https://cdn.qd.je/163189/fhhk
+http://173.208.234.146/live/fhxg.m3u8
+#https://cdn.qd.je/163189/fhhk
 #EXTINF:-1 tvg-id="翡翠台4K" tvg-name="翡翠台4K" tvg-logo="https://material.yang-1989.xyz/logo/翡翠台4K.png" group-title="HK",翡翠台4K(字幕)
 https://cdn.qd.je/163189/fct4k
 #EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://material.yang-1989.xyz/logo/翡翠台.png" group-title="HK",翡翠台
