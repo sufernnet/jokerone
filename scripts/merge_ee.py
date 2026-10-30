@@ -681,23 +681,44 @@ def main():
     print("正在加载HK频道...")
     hk, longhua = load_hk()
 
-    # 仅替换 HK 分组中凤凰中文、凤凰资讯、凤凰香港的播放链接：
-    # 播放地址从 SOURCE_URL 的“•香港「Relay」”分组提取，其余频道信息保持原样。
+    # ========== 新增：凤凰中文、凤凰资讯、凤凰香港从香港 Relay 分组替换播放链接 ==========
     phoenix_targets = ["凤凰中文", "凤凰资讯", "凤凰香港"]
     phoenix_urls = {}
+
     for n, e, u in all_data:
         if parse_group(e) != "•香港「Relay」":
             continue
-        source_name = clean_suffix(clean_name(n))
+
         for target in phoenix_targets:
-            if target in source_name and target not in phoenix_urls:
-                phoenix_urls[target] = u
-    for i, (name, extinf, url) in enumerate(hk):
+            if target in n:
+                if target not in phoenix_urls:
+                    phoenix_urls[target] = u
+                    print(f"✓ 从香港 Relay 分组提取到 {target} 播放链接")
+                break
+
+    # 只替换 HK 中三个凤凰频道的播放 URL，保留原有 EXTINF、频道名称及 Logo
+    hk_updated = []
+
+    for name, extinf, url in hk:
+        matched = False
+
         for target in phoenix_targets:
             if target in name and target in phoenix_urls:
-                hk[i] = (name, extinf, phoenix_urls[target])
-                print(f"✓ {target} 播放链接已切换至 •香港「Relay」分组")
+                hk_updated.append((name, extinf, phoenix_urls[target]))
+                print(f"✓ HK 分组 {target} 已替换为香港 Relay 播放链接")
+                matched = True
                 break
+
+        if not matched:
+            hk_updated.append((name, extinf, url))
+
+    hk = hk_updated
+
+    for target in phoenix_targets:
+        if target not in phoenix_urls:
+            print(f"⚠️ 香港 Relay 分组未找到 {target}，保留原播放链接")
+
+    # ==============================================================================
 
     # 将 ViuTVsix 加入 HK
     if viutvsix_channel:
