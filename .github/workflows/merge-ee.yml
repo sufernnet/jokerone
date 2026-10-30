@@ -3,107 +3,223 @@ name: 自动生成EE.m3u（港台频道版）
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: '30 21 * * *'   # UTC 21:30 → 北京时间次日 05:30
     - cron: '30 8 * * *'    # UTC 08:30 → 北京时间当日 16:30
+
   push:
     paths:
       - 'scripts/merge_ee.py'
       - '.github/workflows/merge-ee.yml'
 
+# 防止多个任务同时修改 EE.m3u
+concurrency:
+  group: generate-ee-m3u
+  cancel-in-progress: false
+
+# 允许 Actions 提交文件到仓库
+permissions:
+  contents: write
+
 jobs:
   generate-ee:
     runs-on: ubuntu-22.04
+
     steps:
-    - name: 📥 检出代码
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        fetch-depth: 0
+      # ==============================
+      # 1. 检出仓库
+      # ==============================
+      - name: 📥 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          ref: main
 
-    - name: 🐍 设置Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      # ==============================
+      # 2. 设置 Python
+      # ==============================
+      - name: 🐍 设置Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
 
-    - name: 📦 安装依赖
-      run: pip install requests
+      # ==============================
+      # 3. 安装依赖
+      # ==============================
+      - name: 📦 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-    - name: 🚀 运行EE生成脚本
-      run: |
-        echo "开始生成EE.m3u..."
-        python scripts/merge_ee.py
+      # ==============================
+      # 4. 检查 Python 脚本
+      # ==============================
+      - name: 🔍 检查merge_ee.py语法
+        run: |
+          echo "========== Python脚本信息 =========="
 
-        echo -e "\n=== 检查生成的文件 ==="
-        if [ -f "EE.m3u" ]; then
-          echo "✅ EE.m3u 已生成"
-          echo "文件大小: $(wc -c < EE.m3u) 字节"
-          echo "行数: $(wc -l < EE.m3u)"
+          if [ ! -f "scripts/merge_ee.py" ]; then
+            echo "❌ 找不到 scripts/merge_ee.py"
+            exit 1
+          fi
 
-          echo -e "\n=== 文件内容预览 ==="
-          echo "前5行:"
-          head -5 EE.m3u
-          echo "..."
-        else
-          echo "❌ EE.m3u 未生成"
-          echo "当前目录:"
+          echo "文件路径:"
           pwd
-          ls -la
-          exit 1
-        fi
 
-    # 新增：上传EE.m3u到Actions运行产物
-    - name: 📥 上传EE.m3u下载文件
-      uses: actions/upload-artifact@v4
-      with:
-        name: EE.m3u
-        path: EE.m3u
-        if-no-files-found: error
-        retention-days: 30
+          echo "文件大小:"
+          wc -c scripts/merge_ee.py
 
-    - name: 🔄 同步远程更改
-      run: |
-        echo "同步远程仓库..."
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git config user.name "github-actions[bot]"
-        git pull origin main --rebase --autostash || echo "拉取失败，继续"
-        echo "✅ 同步完成"
+          echo "文件行数:"
+          wc -l scripts/merge_ee.py
 
-    - name: 📤 提交更新
-      run: |
-        echo "准备提交EE.m3u..."
-        if [ ! -f "EE.m3u" ]; then
-          echo "❌ EE.m3u不存在"
-          exit 1
-        fi
+          echo ""
+          echo "========== Python语法检查 =========="
 
-        git add EE.m3u
+          if python -m py_compile scripts/merge_ee.py; then
+            echo "✅ Python语法检查通过"
+          else
+            echo ""
+            echo "❌ Python语法检查失败"
+            echo "========== 实际运行文件第1-120行 =========="
+            nl -ba scripts/merge_ee.py | sed -n '1,120p'
+            echo "========== 文件末尾30行 =========="
+            tail -30 scripts/merge_ee.py
+            exit 1
+          fi
 
-        if git diff --cached --quiet; then
-          echo "📭 文件无变化，无需提交"
-        else
-          git commit -m "🤖 自动更新 EE.m3u [$(date +'%Y-%m-%d %H:%M')]"
-          echo "提交信息: $(git log -1 --oneline)"
-          echo "推送更改..."
+      # ==============================
+      # 5. 运行生成脚本
+      # ==============================
+      - name: 🚀 运行EE生成脚本
+        run: |
+          set -e
 
-          max_retries=3
-          for i in $(seq 1 $max_retries); do
-            echo "尝试推送 (第 $i 次)..."
-            if git push origin main; then
-              echo "✅ 推送成功"
-              break
-            else
-              echo "推送失败，等待重试..."
-              sleep 5
-              git pull origin main --rebase
+          echo "开始生成EE.m3u..."
+          python -u scripts/merge_ee.py
+
+          echo ""
+          echo "========== 检查生成的文件 =========="
+
+          if [ -f "EE.m3u" ]; then
+            echo "✅ EE.m3u 已生成"
+            echo "文件大小: $(wc -c < EE.m3u) 字节"
+            echo "行数: $(wc -l < EE.m3u)"
+
+            echo ""
+            echo "========== 文件内容预览 =========="
+            echo "前5行:"
+            head -5 EE.m3u
+
+            echo ""
+            echo "末尾5行:"
+            tail -5 EE.m3u
+
+            echo ""
+            echo "========== 文件检查完成 =========="
+          else
+            echo "❌ EE.m3u 未生成"
+            echo "当前目录:"
+            pwd
+            ls -la
+            exit 1
+          fi
+
+      # ==============================
+      # 6. 上传生成文件
+      # ==============================
+      - name: 📥 上传EE.m3u下载文件
+        uses: actions/upload-artifact@v4
+        with:
+          name: EE.m3u
+          path: EE.m3u
+          if-no-files-found: error
+          retention-days: 30
+
+      # ==============================
+      # 7. 同步远程仓库
+      # ==============================
+      - name: 🔄 同步远程更改
+        run: |
+          set -e
+
+          echo "同步远程仓库..."
+
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+          git pull origin main --rebase --autostash
+
+          echo "✅ 同步完成"
+
+      # ==============================
+      # 8. 提交并推送
+      # ==============================
+      - name: 📤 提交更新
+        run: |
+          set -e
+
+          echo "准备提交EE.m3u..."
+
+          if [ ! -f "EE.m3u" ]; then
+            echo "❌ EE.m3u不存在"
+            exit 1
+          fi
+
+          git add EE.m3u
+
+          if git diff --cached --quiet; then
+            echo "📭 文件无变化，无需提交"
+          else
+            git commit -m "🤖 自动更新 EE.m3u [$(date -u +'%Y-%m-%d %H:%M UTC')]"
+
+            echo "提交信息:"
+            git log -1 --oneline
+
+            echo ""
+            echo "开始推送..."
+
+            max_retries=3
+            pushed=false
+
+            for i in $(seq 1 $max_retries); do
+              echo "尝试推送 (第 $i 次)..."
+
+              if git push origin HEAD:main; then
+                echo "✅ 推送成功"
+                pushed=true
+                break
+              else
+                echo "⚠️ 推送失败"
+
+                if [ "$i" -lt "$max_retries" ]; then
+                  echo "同步远程仓库后重试..."
+                  sleep 5
+                  git pull origin main --rebase
+                fi
+              fi
+            done
+
+            if [ "$pushed" != "true" ]; then
+              echo "❌ 已重试3次，推送仍然失败"
+              exit 1
             fi
-          done
-        fi
+          fi
 
-    - name: 📊 输出结果
-      run: |
-        echo "=== 运行完成 ==="
-        echo "时间: $(date)"
-        echo "文件: EE.m3u"
-        echo "仓库链接: https://raw.githubusercontent.com/${{ github.repository }}/main/EE.m3u"
-        echo "下次运行: 北京时间 05:30 和 16:30"
+      # ==============================
+      # 9. 输出运行结果
+      # ==============================
+      - name: 📊 输出结果
+        run: |
+          echo "========== 运行完成 =========="
+          echo "时间: $(date)"
+          echo "文件: EE.m3u"
+          echo "文件大小: $(wc -c < EE.m3u) 字节"
+          echo "文件行数: $(wc -l < EE.m3u)"
+          echo ""
+          echo "仓库链接:"
+          echo "https://raw.githubusercontent.com/${{ github.repository }}/main/EE.m3u"
+          echo ""
+          echo "下次运行时间:"
+          echo "北京时间 05:30 和 16:30"
