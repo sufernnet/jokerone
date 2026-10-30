@@ -38,9 +38,7 @@ HK_FILTER_LIST = [
     "广州综合", "广州新闻", "广州南国都市", "广东体育", "TVBJ1", "TVB1",
     "TVB星河", "广东珠江", "重温经典", "咪咕",
     # 新增移除项
-    "海峡卫视", "五星体育", "iQIYI", "天映经典", "黄金华剧台",
-    # 【重点】凤凰中文、凤凰资讯、凤凰香港，从独立Relay分组获取，本源过滤掉这三个
-    "凤凰中文", "凤凰资讯", "凤凰香港"
+    "海峡卫视", "五星体育", "iQIYI", "天映经典", "黄金华剧台"
 ]
 
 # HK频道排序（按此顺序优先输出）
@@ -217,7 +215,7 @@ HK_LOGO_MAP = {
     "HOY TV": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY77.png",
     "HOY国际财经台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY76.png",
     "ViuTV": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/VIUTV.png",
-    "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png",
+    "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CH8.png",
     "CHU": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel U.png",
     "ViuTVsix": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/ViuTVsix.png",
     "翡翠剧集台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVB翡翠剧集台(TVBDRAMA).png",
@@ -339,7 +337,6 @@ def load_hk():
     加载HK频道，返回 (hk_channels, longhua_channels)
     hk_channels: 过滤并排序后的HK频道（不含龙华及移除项）
     longhua_channels: 从HK源中提取的龙华系列频道
-    【修改】凤凰中文、凤凰资讯、凤凰香港从SOURCE_URL的•香港「Relay」单独拿链接，本源过滤掉这三个
     """
     raw = download(HK_NEW_SOURCE)
     if not raw:
@@ -609,7 +606,7 @@ def main():
     all_data = parse_m3u(content)
     print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
-    # ========== 新增：从 SOURCE_URL 提取特定频道 ==========
+    # ========== 新增：从 all_data 提取特定频道 ==========
     print("正在从 SOURCE_URL 提取特定频道...")
 
     # 构建名称到 (extinf, url, logo) 的映射，用于后续查找 logo
@@ -619,16 +616,6 @@ def main():
         logo = parse_tvg_logo(e)
         if cleaned not in name_to_info:
             name_to_info[cleaned] = (e, u, logo)
-
-    # ========== 【重点修改：从 •香港「Relay」 抓取凤凰三条，**只拿播放链接**，extinf沿用脚本自身原有模板（tvg-id、logo不动） ==========
-    phoenix_map = {}
-    phoenix_names_need = ["凤凰中文", "凤凰资讯", "凤凰香港"]
-    for n, e, u in all_data:
-        if parse_group(e) == "•香港「Relay」":
-            c_n = clean_suffix(clean_name(n))
-            if c_n in phoenix_names_need:
-                phoenix_map[c_n] = u
-    print(f"✓ 从•香港「Relay」抓取凤凰源链接：{list(phoenix_map.keys())}")
 
     # 提取 PopC → MV
     popc_channel = None
@@ -693,45 +680,25 @@ def main():
     # ========== 继续加载其他分组 ==========
     print("正在加载HK频道...")
     hk, longhua = load_hk()
-
-    # ========== 组装凤凰三条：使用脚本原有extinf模板（logo、tvg-id不变，仅url替换为Relay里抓来的链接） ==========
-    phoenix_add = []
-    for p_name in phoenix_names_need:
-        if p_name in phoenix_map:
-            # 构造标准extinf，沿用脚本logo映射，group-title后续统一normalize
-            base_ext = f'#EXTINF:-1 tvg-id="{p_name}" tvg-name="{p_name}"'
-            if p_name in HK_LOGO_MAP:
-                base_ext += f' tvg-logo="{HK_LOGO_MAP[p_name]}"'
-            base_ext += f',{p_name}'
-            phoenix_add.append((p_name, base_ext, phoenix_map[p_name]))
-    print(f"🔥 凤凰频道抓取结果：{[x[0] for x in phoenix_add]}")
-
-    # ========= 重点修复：凤凰单独拎出来，HK本体只排序普通频道，凤凰永远置顶，不参与排序！ =========
-    # hk本体（普通HK频道，不含凤凰）
-    hk_normal = hk
-
-    # 将 ViuTVsix 加入 hk_normal
+    # 将 ViuTVsix 加入 HK
     if viutvsix_channel:
-        hk_normal.append(viutvsix_channel)
-        hk_normal = dedup(hk_normal)
-        # 只对普通hk频道排序，凤凰不动！
-        temp_dict = {n: (n, e, u) for n, e, u in hk_normal}
-        hk_sorted_normal = []
+        hk.append(viutvsix_channel)
+        hk = dedup(hk)
+        # 重新排序
+        temp_dict = {n: (n, e, u) for n, e, u in hk}
+        hk_sorted = []
         used = set()
         for target in HK_TARGET_ORDER:
             for name in temp_dict.keys():
                 if target in name or name in target:
                     if name not in used:
-                        hk_sorted_normal.append(temp_dict[name])
+                        hk_sorted.append(temp_dict[name])
                         used.add(name)
                     break
         for name in temp_dict.keys():
             if name not in used:
-                hk_sorted_normal.append(temp_dict[name])
-        hk_normal = hk_sorted_normal
-
-    # 【合并】凤凰置顶 + 排序后的普通HK频道
-    hk = phoenix_add + hk_normal
+                hk_sorted.append(temp_dict[name])
+        hk = hk_sorted
 
     # 为 HK 应用新的覆盖 logo（优先使用 HK_LOGO_OVERRIDE）
     for i, (name, extinf, url) in enumerate(hk):
@@ -748,10 +715,9 @@ def main():
             hk[i] = (name, extinf, url)
 
     # 【修改3】HK 分组：去掉爱奇艺；TVB亚洲武侠 的 tvg-name 改为 "TVB 功夫台"
+    hk = [item for item in hk if "爱奇艺" not in item[0] and "iQIYI" not in item[0]]
     hk_new = []
     for name, extinf, url in hk:
-        if "爱奇艺" in name or "iQIYI" in name:
-            continue
         if "TVB亚洲武侠" in name or "TVB亚洲武俠" in name:
             if 'tvg-name="' in extinf:
                 extinf = re.sub(r'tvg-name="[^"]*"', 'tvg-name="TVB 功夫台"', extinf)
@@ -759,8 +725,9 @@ def main():
                 extinf = extinf.replace("#EXTINF:-1", '#EXTINF:-1 tvg-name="TVB 功夫台"', 1)
         hk_new.append((name, extinf, url))
     hk = hk_new
-    print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台，当前HK总数：{len(hk)}")
-    print(f"👉 HK头部频道：{ [x[0] for x in hk[:5]] }")
+    print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台")
+
+    print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
     print("正在加载TW频道（从远程URL加载）...")
     tw = load_tw_from_url()
@@ -962,91 +929,128 @@ def main():
         if group not in hbo_groups:
             continue
         if "hbo" in n.lower():
-            skip = False
-            for f in hbo_filter:
-                if f.lower() in n.lower():
-                    skip = True
-                    break
-            if skip:
+            if any(f.lower() in n.lower() for f in hbo_filter):
                 continue
             cleaned = clean_suffix(clean_name(n))
             new_extinf = replace_name_in_extinf(e, cleaned)
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = set_tvg_logo(new_extinf, logo)
             hbo_list.append((cleaned, new_extinf, u))
     hbo_list = dedup(hbo_list)
+    if hbo_list:
+        print(f"✓ 提取到 {len(hbo_list)} 个 HBO 频道，追加到 MV 分组")
+        hbo_indices = [i for i, (n, e, u) in enumerate(mv) if any(k in n for k in HBO_KEYWORDS)]
+        if hbo_indices:
+            insert_pos = max(hbo_indices) + 1
+            for ch in reversed(hbo_list):
+                mv.insert(insert_pos, ch)
+        else:
+            mv.extend(hbo_list)
+        mv = dedup(mv)
+    else:
+        print("⚠️ 未提取到 HBO 频道")
 
-    # 把补充抓取的HBO追加进MV，去重
-    for item in hbo_list:
-        if item not in mv:
-            mv.append(item)
-    mv = dedup(mv)
-    print(f"✓ 补充HBO入库完成，当前MV总数：{len(mv)}")
+    # 再次确保龙华在 MV 末尾（因为插入可能打乱）
+    non_longhua = [x for x in mv if not any(k in x[0] for k in LONGHUA_KEYWORDS)]
+    longhua_only = [x for x in mv if any(k in x[0] for k in LONGHUA_KEYWORDS)]
+    mv = non_longhua + longhua_only
 
-    # ===================== CCTV风云系列 =====================
-    print("正在提取CCTV风云系列频道...")
-    cctv_fengyun = []
-    for n, e, u in all_data:
-        cleaned_n = clean_suffix(clean_name(n))
-        if cleaned_n in CCTV_TARGET:
-            new_extinf = replace_name_in_extinf(e, cleaned_n)
-            cctv_fengyun.append((cleaned_n, new_extinf, u))
-    cctv_fengyun = dedup(cctv_fengyun)
-    print(f"✓ CCTV风云系列提取完成，共 {len(cctv_fengyun)} 个")
+    # ========== 添加 CCTV16 到 Sports 分组 ==========
+    cctv16_extinf = '#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CCTV16.png" group-title="Sports",CCTV16'
+    cctv16_url = "http://192.168.100.1:8767/cctv164k.m3u8"
+    cctv16_entry = ("CCTV16", cctv16_extinf, cctv16_url)
+    sports.append(cctv16_entry)
+    sports = dedup(sports)
 
-    # ===================== 4K分组整理 =====================
-    print("4K频道整理，当前列表：", len(fourk_list))
-    fourk_list = dedup(fourk_list)
+    # ========== 对 Sports 分组进行自定义排序 ==========
+    def sports_sort_key(item):
+        name = item[0]
+        # 修改点2：order 列表中加入“劲爆体育”，排在“五星体育”之后
+        # 修改点3：order 列表中加入“CCTV16”，排在“广东体育”之后
+        order = [
+            "五星体育", "劲爆体育", "广东体育", "CCTV16", "Apple TV", "Now Sports", "愛爾達體育",
+            "緯來體育", "Eurosport"
+        ]
+        for idx, keyword in enumerate(order):
+            if keyword.lower() in name.lower():
+                return idx
+        return len(order)
 
-    # ===================== 组装全部分组，统一设置group-title =====================
-    def apply_group(ch_list, group_name):
-        out = []
-        for name, ext, url in ch_list:
-            new_ext = normalize_group(ext, group_name)
-            out.append( (name, new_ext, url) )
-        return out
+    sports.sort(key=sports_sort_key)
+    print("✓ Sports 分组已按指定顺序排序")
 
-    final_hk     = apply_group(hk,     "HK")
-    final_tw     = apply_group(tw,     "TW")
-    final_mv     = apply_group(mv,     "MV")
-    final_disc   = apply_group(discovery, "Discovery")
-    final_sports = apply_group(sports, "Sports")
-    final_cctvfy = apply_group(cctv_fengyun, "CCTV风云")
-    final_4k     = apply_group(fourk_list, "4K")
+    # ========== 构建输出 ==========
+    out = '#EXTM3U x-tvg-url="https://epg.zsdc.eu.org/t.xml.gz"\n\n'
 
-    # 输出顺序：HK → TW → MV → Discovery → Sports → CCTV风云 → 4K
-    all_final = []
-    all_final.extend(final_hk)
-    all_final.extend(final_tw)
-    all_final.extend(final_mv)
-    all_final.extend(final_disc)
-    all_final.extend(final_sports)
-    all_final.extend(final_cctvfy)
-    all_final.extend(final_4k)
+    try:
+        with open(BB_FILE, encoding="utf-8") as f:
+            for l in f:
+                if not l.startswith("#EXTM3U"):
+                    out += l
+    except Exception as e:
+        print(f"⚠️ 无法读取 BB.m3u: {e}")
 
-    print(f"\n✅ 全部频道汇总完成，总条目：{len(all_final)}")
+    # 清理多余空行
+    lines_out = out.splitlines()
+    cleaned_lines = []
+    prev_empty = False
+    for line in lines_out:
+        is_empty = line.strip() == ""
+        if is_empty and prev_empty:
+            continue
+        cleaned_lines.append(line)
+        prev_empty = is_empty
+    out = "\n".join(cleaned_lines)
 
-    # ===================== 写入 EE.m3u =====================
+    # ===== 新增过滤：从HK分组中移除龙祥时代和Astro QJ =====
+    hk = [item for item in hk if not any(k in item[0] for k in ["龙祥时代", "Astro QJ"])]
+    print(f"✓ 已从HK分组中移除龙祥时代和Astro QJ")
+
+    def append_group(group_name, data):
+        nonlocal out
+        if data:
+            if out.rstrip().endswith("\n"):
+                out += f"# {group_name}\n"
+            else:
+                out += f"\n# {group_name}\n"
+            for n, e, u in data:
+                out += normalize_group(e, group_name) + "\n" + u + "\n"
+            out = out.rstrip() + "\n"
+
+    append_group("MV", mv)
+    append_group("HK", hk)
+    append_group("TW", tw)
+    append_group("Discovery", discovery)
+    append_group("Sports", sports)
+    append_group("4K", fourk_list)
+
+    # 最终清理空行
+    final_lines = out.splitlines()
+    final_cleaned = []
+    prev_empty = False
+    for line in final_lines:
+        is_empty = line.strip() == ""
+        if is_empty and prev_empty:
+            continue
+        final_cleaned.append(line)
+        prev_empty = is_empty
+    out = "\n".join(final_cleaned)
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
-        for name, extinf, url in all_final:
-            f.write(extinf + "\n")
-            f.write(url + "\n")
-    print(f"✅ EE.m3u 已生成：{OUTPUT_FILE}")
+        f.write(out)
 
-    # ===================== 生成 BB.m3u（仅HK+TW，供备用） =====================
-    bb_final = []
-    bb_final.extend(final_hk)
-    bb_final.extend(final_tw)
-    with open(BB_FILE, "w", encoding="utf-8") as f:
-        f.write("#EXTM3U\n")
-        for name, extinf, url in bb_final:
-            f.write(extinf + "\n")
-            f.write(url + "\n")
-    print(f"✅ BB.m3u（HK+TW精简版）已生成：{BB_FILE}")
-
-    print("\n" + "="*50)
-    print("脚本执行完毕！")
-    print("="*50)
-
+    print("=" * 50)
+    print("✅ 完成！")
+    print(f"输出文件: {OUTPUT_FILE}")
+    print(f"HK频道数: {len(hk)}")
+    print(f"TW频道数: {len(tw)}")
+    print(f"MV频道数: {len(mv)}")
+    print(f"Discovery频道数: {len(discovery)}")
+    print(f"Sports频道数: {len(sports)}")
+    print(f"4K频道数: {len(fourk_list)}")
+    print("=" * 50)
 
 if __name__ == "__main__":
     main()
