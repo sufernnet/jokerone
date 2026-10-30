@@ -51,10 +51,6 @@ HK_TARGET_ORDER = [
     "ViuTVsix"
 ]
 
-# ===================== 凤凰频道 URL 替换（从 SOURCE_URL 的「•香港「Relay」」分组提取） =====================
-PHOENIX_CHANNEL_NAMES = ["凤凰中文", "凤凰资讯", "凤凰香港"]
-PHOENIX_SOURCE_GROUP = "•香港「Relay」"
-
 # ===================== TW 分组（从远程 URL 加载） =====================
 
 # TW 数据源 URL
@@ -261,7 +257,7 @@ def download(url, retry=3):
 
 def clean_name(name):
     """只去除圆括号、方括号、花括号等，保留中文书名号《》及「」"""
-    name = re.sub(r'[$$$\{（【].*?[$$$\}）】]', '', name)
+    name = re.sub(r'[\(\[\{（【].*?[\)\]\}）】]', '', name)
     return name.strip()
 
 def clean_suffix(name):
@@ -718,6 +714,60 @@ def main():
             extinf = set_tvg_logo(extinf, logo_url)
             hk[i] = (name, extinf, url)
 
+    # ========== 新增：将凤凰中文/凤凰资讯/凤凰香港的播放链接替换为 SOURCE_URL 中 •香港「Relay」 分组的相同频道 ==========
+    # 使用关键词组合匹配，兼容“凤凰卫视中文台”等命名差异
+    PHOENIX_DEFS = [
+        ("凤凰中文", ["凤凰", "中文"]),
+        ("凤凰资讯", ["凤凰", "资讯"]),
+        ("凤凰香港", ["凤凰", "香港"]),
+    ]
+
+    def _name_matches(name, kws):
+        return all(kw in name for kw in kws)
+
+    phoenix_replaced = 0
+    for i, (name, extinf, url) in enumerate(hk):
+        matched_def = None
+        for tname, kws in PHOENIX_DEFS:
+            if _name_matches(name, kws):
+                matched_def = (tname, kws)
+                break
+        if matched_def is None:
+            continue
+        tname, kws = matched_def
+
+        # 在 Relay 分组中查找所有匹配频道
+        relay_candidates = []
+        for n, e, u in all_data:
+            if parse_group(e) != "•香港「Relay」":
+                continue
+            cleaned = clean_suffix(clean_name(n))
+            if _name_matches(cleaned, kws):
+                relay_candidates.append((cleaned, u))
+
+        if not relay_candidates:
+            print(f"⚠️ Relay 分组未找到 {tname}（关键词 {kws}），HK「{name}」保持原链接")
+            continue
+
+        # 优先精确名称匹配，否则取第一个
+        best_url = None
+        best_src_name = None
+        for cleaned, u in relay_candidates:
+            if cleaned == tname:
+                best_url, best_src_name = u, cleaned
+                break
+        if best_url is None:
+            best_src_name, best_url = relay_candidates[0][0], relay_candidates[0][1]
+
+        if best_url != url:
+            hk[i] = (name, extinf, best_url)
+            phoenix_replaced += 1
+            print(f"✓ HK「{name}」链接已替换为 Relay「{best_src_name}」")
+        else:
+            print(f"ℹ️ HK「{name}」链接与 Relay「{best_src_name}」相同，无需替换")
+    print(f"✓ 凤凰系列链接替换完成，共替换 {phoenix_replaced} 条")
+    # =============================================================================================
+
     # 【修改3】HK 分组：去掉爱奇艺；TVB亚洲武侠 的 tvg-name 改为 "TVB 功夫台"
     hk = [item for item in hk if "爱奇艺" not in item[0] and "iQIYI" not in item[0]]
     hk_new = []
@@ -730,36 +780,6 @@ def main():
         hk_new.append((name, extinf, url))
     hk = hk_new
     print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台")
-
-    # ★★★ 本次修改：凤凰中文/凤凰资讯/凤凰香港 的播放链接，
-    #     改为从 SOURCE_URL 的「•香港「Relay」」分组中同名频道的播放链接
-    phoenix_url_map = {}
-    for n, e, u in all_data:
-        if parse_group(e) != PHOENIX_SOURCE_GROUP:
-            continue
-        cleaned = clean_suffix(clean_name(n))
-        for phoenix_name in PHOENIX_CHANNEL_NAMES:
-            if cleaned == phoenix_name and phoenix_name not in phoenix_url_map:
-                phoenix_url_map[phoenix_name] = u
-
-    hk_patched = []
-    for name, extinf, url in hk:
-        matched = None
-        for phoenix_name in PHOENIX_CHANNEL_NAMES:
-            if name == phoenix_name:
-                matched = phoenix_name
-                break
-        if matched:
-            new_url = phoenix_url_map.get(matched)
-            if new_url:
-                hk_patched.append((name, extinf, new_url))
-                print(f"✓ 凤凰频道 {name} 播放链接已替换为 SOURCE_URL「{PHOENIX_SOURCE_GROUP}」中的链接")
-            else:
-                hk_patched.append((name, extinf, url))
-                print(f"⚠️ SOURCE_URL「{PHOENIX_SOURCE_GROUP}」中未找到 {name}，保留原链接")
-        else:
-            hk_patched.append((name, extinf, url))
-    hk = hk_patched
 
     print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
@@ -1086,5 +1106,5 @@ def main():
     print(f"4K频道数: {len(fourk_list)}")
     print("=" * 50)
 
-if __name__ == "__&#8203;main__":
+if __name__ == "__main__":
     main()
