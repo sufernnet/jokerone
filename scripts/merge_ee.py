@@ -714,6 +714,30 @@ def main():
             extinf = set_tvg_logo(extinf, logo_url)
             hk[i] = (name, extinf, url)
 
+    # ========== 新增：将凤凰中文/凤凰资讯/凤凰香港的播放链接替换为 SOURCE_URL 中 •香港「Relay」 分组的相同频道 ==========
+    phoenix_targets = ["凤凰中文", "凤凰资讯", "凤凰香港"]
+    for i, (name, extinf, url) in enumerate(hk):
+        matched_phoenix = None
+        for pt in phoenix_targets:
+            if pt in name or name in pt:
+                matched_phoenix = pt
+                break
+        if matched_phoenix is None:
+            continue
+        new_url = None
+        for n, e, u in all_data:
+            if parse_group(e) == "•香港「Relay」":
+                cleaned = clean_suffix(clean_name(n))
+                if matched_phoenix in cleaned or cleaned in matched_phoenix:
+                    new_url = u
+                    break
+        if new_url and new_url != url:
+            hk[i] = (name, extinf, new_url)
+            print(f"✓ HK 频道 {name} 的播放链接已替换为 Relay 源")
+        elif new_url is None:
+            print(f"⚠️ 未在 Relay 分组找到 {name}，保持原链接")
+    # =============================================================================================
+
     # 【修改3】HK 分组：去掉爱奇艺；TVB亚洲武侠 的 tvg-name 改为 "TVB 功夫台"
     hk = [item for item in hk if "爱奇艺" not in item[0] and "iQIYI" not in item[0]]
     hk_new = []
