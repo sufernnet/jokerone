@@ -330,76 +330,6 @@ def parse_m3u(content):
             ext = None
     return out
 
-
-def phoenix_channel_key(value):
-    """根据凤凰频道的 tvg-name、tvg-id 或显示名称识别标准频道名。"""
-    value = str(value or "").strip()
-    value = value.replace("鳳凰", "凤凰").replace("資訊", "资讯")
-    if "凤凰" not in value:
-        return None
-    if "中文" in value:
-        return "凤凰中文"
-    if "资讯" in value:
-        return "凤凰资讯"
-    if "香港" in value:
-        return "凤凰香港"
-    return None
-
-
-def extract_phoenix_relay_urls(content):
-    """从 SOURCE_URL 的香港 Relay 分组提取凤凰三台真实播放地址。
-
-    兼容 #EXTINF 后存在 #EXTVLCOPT 等参数行，以及反斜杠转义的 HTTP URL。
-    频道优先按 tvg-name/tvg-id 识别，不依赖中文显示名称。
-    """
-    result = {}
-    lines = content.splitlines()
-    current_extinf = None
-
-    for raw_line in lines:
-        line = raw_line.strip()
-        if not line:
-            continue
-
-        if line.startswith("#EXTINF"):
-            current_extinf = line
-            continue
-
-        if current_extinf is None:
-            continue
-
-        # 参数行（例如 #EXTVLCOPT）不是播放地址，继续向下寻找 URL。
-        if line.startswith("#"):
-            continue
-
-        # 兼容源文件中可能出现的 https\://、http\:// 写法。
-        url = line.replace("\\:", ":").strip()
-        if not url.lower().startswith(("http://", "https://")):
-            continue
-
-        if parse_group(current_extinf) == "•香港「Relay」":
-            tvg_name = re.search(r'\btvg-name="([^"]*)"', current_extinf)
-            tvg_id = re.search(r'\btvg-id="([^"]*)"', current_extinf)
-            display_name = current_extinf.rsplit(",", 1)[-1]
-
-            key = None
-            for candidate in (
-                tvg_name.group(1) if tvg_name else "",
-                tvg_id.group(1) if tvg_id else "",
-                display_name,
-            ):
-                key = phoenix_channel_key(candidate)
-                if key:
-                    break
-
-            if key and key not in result:
-                result[key] = url
-
-        # 当前 EXTINF 对应的第一条有效 URL 已找到。
-        current_extinf = None
-
-    return result
-
 # ===================== HK（新源） =====================
 
 def load_hk():
@@ -750,49 +680,6 @@ def main():
     # ========== 继续加载其他分组 ==========
     print("正在加载HK频道...")
     hk, longhua = load_hk()
-
-    # ========== 从 SOURCE_URL 的香港 Relay 分组提取凤凰三台并替换 HK 播放链接 ==========
-    phoenix_urls = extract_phoenix_relay_urls(content)
-
-    for target in ["凤凰中文", "凤凰资讯", "凤凰香港"]:
-        if target in phoenix_urls:
-            print(f"✓ 香港 Relay 提取到 {target}: {phoenix_urls[target]}")
-        else:
-            print(f"⚠️ 香港 Relay 分组未提取到 {target}，将保留 HK 原播放链接")
-
-    hk_updated = []
-    replaced_phoenix = set()
-
-    for name, extinf, url in hk:
-        # HK 新源的频道显示名可能带“台”，同时兼容从 tvg-name/tvg-id 识别。
-        tvg_name_match = re.search(r'\btvg-name="([^"]*)"', extinf)
-        tvg_id_match = re.search(r'\btvg-id="([^"]*)"', extinf)
-        candidates = [
-            name,
-            tvg_name_match.group(1) if tvg_name_match else "",
-            tvg_id_match.group(1) if tvg_id_match else "",
-        ]
-        phoenix_key = None
-        for candidate in candidates:
-            phoenix_key = phoenix_channel_key(candidate)
-            if phoenix_key:
-                break
-
-        if phoenix_key and phoenix_key in phoenix_urls:
-            hk_updated.append((name, extinf, phoenix_urls[phoenix_key]))
-            replaced_phoenix.add(phoenix_key)
-            print(f"✓ HK 分组 {phoenix_key} 已替换为香港 Relay 播放链接")
-        else:
-            hk_updated.append((name, extinf, url))
-
-    hk = hk_updated
-
-    for target in ["凤凰中文", "凤凰资讯", "凤凰香港"]:
-        if target in phoenix_urls and target not in replaced_phoenix:
-            print(f"⚠️ 已提取 {target}，但 HK 新源中没有匹配频道，未能替换")
-
-    # ==============================================================================
-
     # 将 ViuTVsix 加入 HK
     if viutvsix_channel:
         hk.append(viutvsix_channel)
@@ -1129,27 +1016,7 @@ def main():
             else:
                 out += f"\n# {group_name}\n"
             for n, e, u in data:
-                out += normalize_group(e, group_name) + "\n"
-
-                # 凤凰三台使用香港 Relay 源要求的 User-Agent。
-                # 仅对 HK 分组中的凤凰中文、凤凰资讯、凤凰香港添加，其他频道不受影响。
-                phoenix_key = None
-                if group_name == "HK":
-                    tvg_name_match = re.search(r'\btvg-name="([^"]*)"', e)
-                    tvg_id_match = re.search(r'\btvg-id="([^"]*)"', e)
-                    for candidate in (
-                        n,
-                        tvg_name_match.group(1) if tvg_name_match else "",
-                        tvg_id_match.group(1) if tvg_id_match else "",
-                    ):
-                        phoenix_key = phoenix_channel_key(candidate)
-                        if phoenix_key:
-                            break
-
-                if phoenix_key:
-                    out += "#EXTVLCOPT:http-user-agent=okhttp/3.8\n"
-
-                out += u + "\n"
+                out += normalize_group(e, group_name) + "\n" + u + "\n"
             out = out.rstrip() + "\n"
 
     append_group("MV", mv)
