@@ -217,7 +217,7 @@ HK_LOGO_MAP = {
     "HOY TV": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY77.png",
     "HOY国际财经台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY76.png",
     "ViuTV": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/VIUTV.png",
-    "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/CH8.png",
+    "CH8": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel 8.png",
     "CHU": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/Channel U.png",
     "ViuTVsix": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/ViuTVsix.png",
     "翡翠剧集台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/TVB翡翠剧集台(TVBDRAMA).png",
@@ -694,7 +694,7 @@ def main():
     print("正在加载HK频道...")
     hk, longhua = load_hk()
 
-        # ========== 组装凤凰三条：使用脚本原有extinf模板（logo、tvg-id不变，仅url替换为Relay里抓来的链接） ==========
+    # ========== 组装凤凰三条：使用脚本原有extinf模板（logo、tvg-id不变，仅url替换为Relay里抓来的链接） ==========
     phoenix_add = []
     for p_name in phoenix_names_need:
         if p_name in phoenix_map:
@@ -761,7 +761,6 @@ def main():
     hk = hk_new
     print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台，当前HK总数：{len(hk)}")
     print(f"👉 HK头部频道：{ [x[0] for x in hk[:5]] }")
-
 
     print("正在加载TW频道（从远程URL加载）...")
     tw = load_tw_from_url()
@@ -974,6 +973,7 @@ def main():
             new_extinf = replace_name_in_extinf(e, cleaned)
             hbo_list.append((cleaned, new_extinf, u))
     hbo_list = dedup(hbo_list)
+
     # 把补充抓取的HBO追加进MV，去重
     for item in hbo_list:
         if item not in mv:
