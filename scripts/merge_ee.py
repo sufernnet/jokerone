@@ -694,7 +694,7 @@ def main():
     print("正在加载HK频道...")
     hk, longhua = load_hk()
 
-    # ========== 组装凤凰三条：使用脚本原有extinf模板（logo、tvg-id不变，仅url替换为Relay里抓来的链接） ==========
+        # ========== 组装凤凰三条：使用脚本原有extinf模板（logo、tvg-id不变，仅url替换为Relay里抓来的链接） ==========
     phoenix_add = []
     for p_name in phoenix_names_need:
         if p_name in phoenix_map:
@@ -704,28 +704,34 @@ def main():
                 base_ext += f' tvg-logo="{HK_LOGO_MAP[p_name]}"'
             base_ext += f',{p_name}'
             phoenix_add.append((p_name, base_ext, phoenix_map[p_name]))
-    # 凤凰条目放在hk最前面，保证排序优先
-    hk = phoenix_add + hk
+    print(f"🔥 凤凰频道抓取结果：{[x[0] for x in phoenix_add]}")
 
-    # 将 ViuTVsix 加入 HK
+    # ========= 重点修复：凤凰单独拎出来，HK本体只排序普通频道，凤凰永远置顶，不参与排序！ =========
+    # hk本体（普通HK频道，不含凤凰）
+    hk_normal = hk
+
+    # 将 ViuTVsix 加入 hk_normal
     if viutvsix_channel:
-        hk.append(viutvsix_channel)
-        hk = dedup(hk)
-        # 重新排序
-        temp_dict = {n: (n, e, u) for n, e, u in hk}
-        hk_sorted = []
+        hk_normal.append(viutvsix_channel)
+        hk_normal = dedup(hk_normal)
+        # 只对普通hk频道排序，凤凰不动！
+        temp_dict = {n: (n, e, u) for n, e, u in hk_normal}
+        hk_sorted_normal = []
         used = set()
         for target in HK_TARGET_ORDER:
             for name in temp_dict.keys():
                 if target in name or name in target:
                     if name not in used:
-                        hk_sorted.append(temp_dict[name])
+                        hk_sorted_normal.append(temp_dict[name])
                         used.add(name)
                     break
         for name in temp_dict.keys():
             if name not in used:
-                hk_sorted.append(temp_dict[name])
-        hk = hk_sorted
+                hk_sorted_normal.append(temp_dict[name])
+        hk_normal = hk_sorted_normal
+
+    # 【合并】凤凰置顶 + 排序后的普通HK频道
+    hk = phoenix_add + hk_normal
 
     # 为 HK 应用新的覆盖 logo（优先使用 HK_LOGO_OVERRIDE）
     for i, (name, extinf, url) in enumerate(hk):
@@ -742,9 +748,10 @@ def main():
             hk[i] = (name, extinf, url)
 
     # 【修改3】HK 分组：去掉爱奇艺；TVB亚洲武侠 的 tvg-name 改为 "TVB 功夫台"
-    hk = [item for item in hk if "爱奇艺" not in item[0] and "iQIYI" not in item[0]]
     hk_new = []
     for name, extinf, url in hk:
+        if "爱奇艺" in name or "iQIYI" in name:
+            continue
         if "TVB亚洲武侠" in name or "TVB亚洲武俠" in name:
             if 'tvg-name="' in extinf:
                 extinf = re.sub(r'tvg-name="[^"]*"', 'tvg-name="TVB 功夫台"', extinf)
@@ -752,9 +759,9 @@ def main():
                 extinf = extinf.replace("#EXTINF:-1", '#EXTINF:-1 tvg-name="TVB 功夫台"', 1)
         hk_new.append((name, extinf, url))
     hk = hk_new
-    print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台")
+    print(f"✓ HK 分组已去掉爱奇艺，TVB亚洲武侠 tvg-name 已改为 TVB 功夫台，当前HK总数：{len(hk)}")
+    print(f"👉 HK头部频道：{ [x[0] for x in hk[:5]] }")
 
-    print(f"HK频道加载完成，共 {len(hk)} 个，龙华系列 {len(longhua)} 个")
 
     print("正在加载TW频道（从远程URL加载）...")
     tw = load_tw_from_url()
