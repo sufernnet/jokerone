@@ -1013,13 +1013,13 @@ def main():
         "凤凰中文": (
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
-            "https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyak50R1ZXcTR2WnlCNmVmR3ppZk9WQ3NJVkNlbDZpSU1kTjBofGNkPTY2ZDJjMjEyJmNuPTFlMGQ1ODRjJmNwPTkwY2NhY2IzJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=33b9ae1cac1eca92b087dda8e5d9d87b"
+            "http://zmgd.zyrnet.com:8888/hls/110/index.m3u8"
         ),
         "凤凰资讯": (
             "凤凰资讯",
             '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
             # ★ 修正：改为 live.catvod.com 的源（之前误用 cdn.qd.je）
-            "https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyak50R1ZXcTR2WnlnVlJ6dVpXeTlqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTY2ZDJjMjEyJmNuPTFlMGQ1ODRjJmNwPWE2MmIyNWM2JmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=33b9ae1cac1eca92b087dda8e5d9d87b"
+            "http://jyb7928.host:8066/udp/239.1.1.127:8127"
         ),
         "凤凰香港": (
             "凤凰香港",
