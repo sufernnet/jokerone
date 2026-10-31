@@ -93,7 +93,7 @@ http://218.80.109.128:4022/rtp/233.18.204.174:5140
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
 http://218.80.109.128:4022/rtp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
-http://pplee.vicp.net:4022/udp/233.18.204.175:5140
+http://218.80.109.128:4022/rtp/233.18.204.175:5140
 #EXTINF:-1 tvg-id="北京IPTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京4K超清.png" group-title="MV",北京IPTV4K
 http://1.203.174.137:8180/rtp/225.1.8.211:8002
 #EXTINF:-1 tvg-id="北京IPTV淘电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/北京淘电影.png" group-title="MV",北京IPTV淘电影
@@ -127,9 +127,9 @@ https://cdn.qd.je/163189/lhjd
 
 # HK
 #EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文
-https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyak50R1ZXcTR2WnlCNmVmR3ppZk9WQ3NJVkNlbDZpSU1kTjBofGNkPTY2ZDJjMjEyJmNuPTFlMGQ1ODRjJmNwPTkwY2NhY2IzJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=33b9ae1cac1eca92b087dda8e5d9d87b
+http://zmgd.zyrnet.com:8888/hls/110/index.m3u8
 #EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯
-https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyak50R1ZXcTR2WnlnVlJ6dVpXeTlqTnQ4UVplOHZabkJqUkJsNlBGfGNkPTY2ZDJjMjEyJmNuPTFlMGQ1ODRjJmNwPWE2MmIyNWM2JmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=33b9ae1cac1eca92b087dda8e5d9d87b
+http://jyb7928.host:8066/udp/239.1.1.127:8127
 #EXTINF:-1 tvg-name="凤凰香港" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png" group-title="HK",凤凰香港
 https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyald5a3BDeXV6VUlneHNmQjZXaHVwQzJ5eFUyZ3BOXzRWUG5hQW18Y2Q9NjZkMmMyMTImY249MWUwZDU4NGMmY3A9MmE5NGJmZDMmY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=33b9ae1cac1eca92b087dda8e5d9d87b
 #EXTINF:-1 tvg-name="Now新聞台" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/NOW新闻.png" group-title="HK",NOW新闻台
