@@ -1008,6 +1008,31 @@ def main():
     hk = [item for item in hk if not any(k in item[0] for k in ["龙祥时代", "Astro QJ"])]
     print(f"✓ 已从HK分组中移除龙祥时代和Astro QJ")
 
+    # ===== 替换凤凰中文、凤凰资讯、凤凰香港为指定源 =====
+    phoenix_overrides = {
+        "凤凰中文": (
+            "凤凰中文",
+            '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
+            "https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyak50R1ZXcTR2WnlCNmVmR3ppZk9WQ3NJVkNlbDZpSU1kTjBofGNkPTY2ZDJjMjEyJmNuPTFlMGQ1ODRjJmNwPTkwY2NhY2IzJmN1PTk3MGYwNjlmJnJwPWRQX0JqTGRCakwxbG5paDJuRUY&tk=33b9ae1cac1eca92b087dda8e5d9d87b"
+        ),
+        "凤凰资讯": (
+            "凤凰资讯",
+            '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
+            "https://cdn.qd.je/163189/fhzx"
+        ),
+        "凤凰香港": (
+            "凤凰香港",
+            '#EXTINF:-1 tvg-name="凤凰香港" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png" group-title="HK",凤凰香港',
+            "https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyald5a3BDeXV6VUlneHNmQjZXaHVwQzJ5eFUyZ3BOXzRWUG5hQW18Y2Q9NjZkMmMyMTImY249MWUwZDU4NGMmY3A9MmE5NGJmZDMmY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=33b9ae1cac1eca92b087dda8e5d9d87b"
+        )
+    }
+
+    # 移除原有的凤凰频道（按名称包含匹配）
+    hk = [item for item in hk if not any(k in item[0] for k in phoenix_overrides)]
+    # 按顺序插入到最前面（凤凰中文、凤凰资讯、凤凰香港）
+    hk = [phoenix_overrides[k] for k in ["凤凰中文", "凤凰资讯", "凤凰香港"]] + hk
+    print("✓ 已将凤凰中文、凤凰资讯、凤凰香港替换为指定源")
+
     def append_group(group_name, data):
         nonlocal out
         if data:
