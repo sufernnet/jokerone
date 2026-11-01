@@ -1013,7 +1013,7 @@ def main():
         "凤凰中文": (
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
-            "http://31.43.191.125:8080/restream/restream/34629"
+            "http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.m3u8"
         ),
         "凤凰资讯": (
             "凤凰资讯",
