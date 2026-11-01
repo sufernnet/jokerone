@@ -1013,13 +1013,13 @@ def main():
         "凤凰中文": (
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
-            "http://zmgd.zyrnet.com:8888/hls/110/index.m3u8"
+            "http://31.43.191.125:8080/restream/restream/34629"
         ),
         "凤凰资讯": (
             "凤凰资讯",
             '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
             # ★ 修正：改为 live.catvod.com 的源（之前误用 cdn.qd.je）
-            "http://zmgd.zyrnet.com:8888/hls/109/index.m3u8"
+            "http://31.43.191.125:8080/restream/restream/34641"
         ),
         "凤凰香港": (
             "凤凰香港",
