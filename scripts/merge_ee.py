@@ -1019,7 +1019,7 @@ def main():
             "凤凰资讯",
             '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
             # ★ 修正：改为 live.catvod.com 的源（之前误用 cdn.qd.je）
-            "http://www.tk1986.top:8889/udp/239.76.253.134:9000"
+            "http://jyb7928.host:8066/udp/239.1.1.127:8127"
         ),
         "凤凰香港": (
             "凤凰香港",
