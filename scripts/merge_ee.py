@@ -1025,7 +1025,7 @@ def main():
         "凤凰香港": (
             "凤凰香港",
             '#EXTINF:-1 tvg-name="凤凰香港" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png" group-title="HK",凤凰香港',
-            "https://live.catvod.com/playlist.m3u?id=L2xyL2RMUTJkRWQyald5a3BDeXV6VUlneHNmQjZXaHVwQzJ5eFUyZ3BOXzRWUG5hQW18Y2Q9NjZkMmMyMTImY249MWUwZDU4NGMmY3A9MmE5NGJmZDMmY3U9OTcwZjA2OWYmcnA9ZFBfQmpMZEJqTDFsbmloMm5FRg&tk=33b9ae1cac1eca92b087dda8e5d9d87b"
+            "http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.flv"
         )
     }
 
