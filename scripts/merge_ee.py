@@ -1025,7 +1025,6 @@ def main():
         "凤凰香港": (
             "凤凰香港",
             '#EXTINF:-1 tvg-name="凤凰香港" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png" group-title="HK",凤凰香港',
-            #"http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.flv"
             "http://38.134.40.167:9100/l/ErdHia3ovoLZ6043DFG5D7QszdJmrm_Cgw2Av_8JaXBybgu3LT8t6fcaJ7cvL86m/index.m3u8“
         )
     }
