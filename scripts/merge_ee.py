@@ -1014,7 +1014,7 @@ def main():
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
             #"http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
-            "http://zmgd.zyrnet.com:8888/hls/110/index.m3u8"
+            "https://cdn.qd.je/163189/fhzw"
         ),
         "凤凰资讯": (
             "凤凰资讯",
