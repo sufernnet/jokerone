@@ -1013,7 +1013,8 @@ def main():
         "凤凰中文": (
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
-            "http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
+            #"http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
+            "http://zmgd.zyrnet.com:8888/hls/110/index.m3u8"
         ),
         "凤凰资讯": (
             "凤凰资讯",
@@ -1025,7 +1026,7 @@ def main():
         "凤凰香港": (
             "凤凰香港",
             '#EXTINF:-1 tvg-name="凤凰香港" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png" group-title="HK",凤凰香港',
-            "http://38.134.40.167:9100/l/ErdHia3ovoLZ6043DFG5D7QszdJmrm_Cgw2Av_8JaXBybgu3LT8t6fcaJ7cvL86m/index.m3u8"
+            "http://173.208.234.146/live/fhxg.m3u8"
         )
     }
 
