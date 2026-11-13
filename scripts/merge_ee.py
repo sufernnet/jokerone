@@ -1013,15 +1013,15 @@ def main():
         "凤凰中文": (
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
-            #"http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
-            "https://cdn.qd.je/163189/fhzw"
+            "http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
+            
         ),
         "凤凰资讯": (
             "凤凰资讯",
             '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
             # ★ 修正：改为 live.catvod.com 的源（之前误用 cdn.qd.je）
            # "http://mtayeh.ottb.xyz/live/774710333494/659822672281/58601.m3u8"
-            "http://jellyfin.eversouthhangzhou.com.cn:8188/rtp/233.50.202.36:5140"
+            "https://cdn.qd.je/163189/fhzx"
         ),
         "凤凰香港": (
             "凤凰香港",
