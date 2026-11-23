@@ -241,12 +241,17 @@ HK_LOGO_OVERRIDE = {
 
 # ===================== 下载 =====================
 
+_download_cache = {}
+
 def download(url, retry=3):
+    if url in _download_cache:
+        return _download_cache[url]
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     for i in range(retry):
         try:
             r = requests.get(url, headers=headers, timeout=15)
             if r.status_code == 200:
+                _download_cache[url] = r.text
                 return r.text
         except Exception as e:
             if i < retry - 1:
@@ -432,26 +437,33 @@ def load_tw_from_url():
 
 # ===================== MV =====================
 
-def load_mv():
+def load_mv(mv_parsed=None):
     print("开始加载MV频道...")
     main_source = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
-    raw_main = download(main_source)
-    if not raw_main:
-        print("⚠️ 无法下载主要MV源，尝试其他备选源...")
-        all_data = []
-        backup = [
-            "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
-            "https://live.kilvn.com/iptv.m3u",
-        ]
-        for src in backup:
-            raw = download(src)
-            if raw:
-                all_data.extend(parse_m3u(raw))
-                print(f"✓ 从备选源获取到数据: {src}")
-                break
+
+    # 优先使用外部传入的已解析数据，避免重复下载
+    if mv_parsed is not None:
+        all_data = mv_parsed
+        print(f"✓ 复用已下载的MV源数据，共 {len(all_data)} 个频道")
     else:
-        all_data = parse_m3u(raw_main)
-        print(f"✓ 从主源获取到 {len(all_data)} 个频道")
+        raw_main = download(main_source)
+        if not raw_main:
+            print("⚠️ 无法下载主要MV源，尝试其他备选源...")
+            all_data = []
+            backup = [
+                "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
+                "https://live.kilvn.com/iptv.m3u",
+            ]
+            for src in backup:
+                raw = download(src)
+                if raw:
+                    all_data.extend(parse_m3u(raw))
+                    print(f"✓ 从备选源获取到数据: {src}")
+                    break
+        else:
+            all_data = parse_m3u(raw_main)
+            print(f"✓ 从主源获取到 {len(all_data)} 个频道")
+
     if not all_data:
         print("❌ 所有源都无法获取数据")
         return []
@@ -606,6 +618,17 @@ def main():
     all_data = parse_m3u(content)
     print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
+    # ========== 统一下载 MV 主源（只下载一次） ==========
+    mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
+    print("正在下载 MV 主源（统一一次下载）...")
+    mv_raw = download(mv_url)
+    mv_parsed = parse_m3u(mv_raw) if mv_raw else []
+    if mv_parsed:
+        print(f"✓ MV 主源解析到 {len(mv_parsed)} 个频道")
+    else:
+        print("⚠️ MV 主源下载失败，load_mv() 将尝试备选源")
+    # ====================================================
+
     # ========== 新增：从 all_data 提取特定频道 ==========
     print("正在从 SOURCE_URL 提取特定频道...")
 
@@ -734,7 +757,7 @@ def main():
     print(f"TW频道加载完成，共 {len(tw)} 个")
 
     print("正在加载MV频道...")
-    mv = load_mv()
+    mv = load_mv(mv_parsed)   # ← 传入已解析数据，避免重复下载
     # 将 PopC 加入 MV
     if popc_channel:
         mv.append(popc_channel)
@@ -791,10 +814,8 @@ def main():
     print(f"✓ 愛爾達體育 共 {len(elta_channels)} 个已加入 Sports 分组")
     print(f"Sports 分组当前共 {len(sports)} 个频道")
 
-    # ========== 从 MV 主源提取额外频道 ==========
-    mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
-    mv_raw = download(mv_url)
-    mv_parsed = parse_m3u(mv_raw) if mv_raw else []
+    # ========== 从已解析的 MV 主源提取额外频道 ==========
+    # 注：mv_parsed 已在 main() 开头统一下载解析，此处直接复用
 
     def extract_by_group_and_name(m3u_data, group_name, name_keywords):
         results = []
@@ -1014,14 +1035,11 @@ def main():
             "凤凰中文",
             '#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png" group-title="HK",凤凰中文',
             "http://z2m.eversouthhangzhou.com.cn:8188/rtp/233.50.202.35:5140"
-            
         ),
         "凤凰资讯": (
             "凤凰资讯",
             '#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png" group-title="HK",凤凰资讯',
-            # ★ 修正：改为 live.catvod.com 的源（之前误用 cdn.qd.je）
-           "http://z2m.eversouthhangzhou.com.cn:8188/rtp/233.50.202.36:5140"
-            
+            "http://z2m.eversouthhangzhou.com.cn:8188/rtp/233.50.202.36:5140"
         ),
         "凤凰香港": (
             "凤凰香港",
