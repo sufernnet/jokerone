@@ -251,8 +251,13 @@ def download(url, retry=3):
         try:
             r = requests.get(url, headers=headers, timeout=15)
             if r.status_code == 200:
-                _download_cache[url] = r.text
-                return r.text
+                text = r.text
+                # 基础校验：必须看起来像 M3U 或包含有效链接
+                if text.strip().startswith("#EXTM3U") or "http" in text[:500]:
+                    _download_cache[url] = text
+                    return text
+                else:
+                    print(f"⚠️ 下载内容异常（非M3U格式）: {url}")
         except Exception as e:
             if i < retry - 1:
                 time.sleep(2)
@@ -439,7 +444,8 @@ def load_tw_from_url():
 
 def load_mv(mv_parsed=None):
     print("开始加载MV频道...")
-    main_source = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
+    # 替换为原始 GitHub 地址
+    main_source = "https://raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
 
     # 优先使用外部传入的已解析数据，避免重复下载
     if mv_parsed is not None:
@@ -451,6 +457,7 @@ def load_mv(mv_parsed=None):
             print("⚠️ 无法下载主要MV源，尝试其他备选源...")
             all_data = []
             backup = [
+                "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u",
                 "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
                 "https://live.kilvn.com/iptv.m3u",
             ]
@@ -467,12 +474,12 @@ def load_mv(mv_parsed=None):
     if not all_data:
         print("❌ 所有源都无法获取数据")
         return []
+    
     temp = []
     for n, e, u in all_data:
         group = parse_group(e)
         cond1 = any(k in group for k in ["综合", "电影", "影视", "MV", "娱乐", "影視"]) or \
                 any(k in n for k in ["CHC", "龙华", "ROCK", "HBO", "Cinemax", "动作电影", "家庭影院", "影迷电影"])
-        # 修改点1：cond2 不再包含“北京IPTV淘电影”和“淘电影”，只保留“北京IPTV4K”和“4K”
         cond2 = (group == "北京" and any(k in n for k in ["北京IPTV4K", "4K"]))
         cond3 = (group == "港澳台" and any(k in n for k in ["天映频道", "天映新加坡", "爱奇艺", "TVB星河", "天映", "iQIYI", "星河"]))
         if cond1 or cond2 or cond3:
@@ -618,16 +625,22 @@ def main():
     all_data = parse_m3u(content)
     print(f"✓ 从源文件解析到 {len(all_data)} 个频道条目")
 
-    # ========== 统一下载 MV 主源（只下载一次） ==========
-    mv_url = "https://github.chenc.dev/raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
-    print("正在下载 MV 主源（统一一次下载）...")
+    # ========== 统一下载 MV 主源（只下载一次，使用原始 GitHub 地址） ==========
+    mv_url = "https://raw.githubusercontent.com/CKL1211/eric/refs/heads/master/MyIPTV.m3u"
+    print("正在下载 MV 主源（统一一次下载，原始GitHub地址）...")
     mv_raw = download(mv_url)
+    
+    # 加日志，排查是否成功下载
+    print(f"MV raw 长度: {len(mv_raw)}")
+    if len(mv_raw) > 0:
+        print(f"MV raw 前100字符: {mv_raw[:100]}")
+    
     mv_parsed = parse_m3u(mv_raw) if mv_raw else []
     if mv_parsed:
         print(f"✓ MV 主源解析到 {len(mv_parsed)} 个频道")
     else:
-        print("⚠️ MV 主源下载失败，load_mv() 将尝试备选源")
-    # ====================================================
+        print("⚠️ MV 主源下载失败或解析为空，load_mv() 将尝试备选源")
+    # ==================================================================
 
     # ========== 新增：从 all_data 提取特定频道 ==========
     print("正在从 SOURCE_URL 提取特定频道...")
