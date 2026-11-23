@@ -25,7 +25,7 @@ TW_SOURCE_GROUP = "•台湾「限制」"
 HK_NEW_SOURCE = "https://cdn.qd.je/live.m3u"
 HK_GROUP_NAME = "HK"
 
-# HK需要过滤掉的频道列表（新增：移除NOW新闻、翡翠台，防止与新源重复）
+# HK需要过滤掉的频道列表（新增：移除Now新聞台、翡翠台，防止与新源重复）
 HK_FILTER_LIST = [
     "CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV5+", "CCTV6", "CCTV7", "CCTV8",
     "CCTV9", "CCTV10", "CCTV11", "CCTV12", "CCTV13", "CCTV14", "CCTV15", "CCTV16", "CCTV17",
@@ -39,12 +39,12 @@ HK_FILTER_LIST = [
     "TVB星河", "广东珠江", "重温经典", "咪咕",
     # 新增移除项
     "海峡卫视", "五星体育", "iQIYI", "天映经典", "黄金华剧台",
-    "NOW新闻", "翡翠台" # 新增：从HK新源中过滤掉
+    "Now新聞台", "翡翠台" # 新增：从HK新源中过滤掉
 ]
 
 # HK频道排序（按此顺序优先输出）
 HK_TARGET_ORDER = [
-    "凤凰中文", "凤凰资讯", "凤凰香港", "NOW新闻", "翡翠台", "翡翠一台", "TVB翡翠", "TVB翡翠(马来)", "TVB翡翠剧集台",
+    "凤凰中文", "凤凰资讯", "凤凰香港", "Now新聞台", "翡翠台", "翡翠一台", "TVB翡翠", "TVB翡翠(马来)", "TVB翡翠剧集台",
     "TVBJADE", "娱乐新闻", "无线新闻", "天映频道", "千禧经典", "明珠台", "八度空间",
     "TVB星河", "TVBPLUS", "TVBJ1", "TVB娱乐新闻", "TVB黄金华剧", "TVB功夫台", "TVB1",
     "HOY资讯", "HOYTV", "HOY77", "RTHK31", "RTHK32", "ROCK_Action", "MYTV黄金翡翠",
@@ -199,7 +199,7 @@ HK_LOGO_MAP = {
     "凤凰中文": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰中文.png",
     "凤凰资讯": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰资讯.png",
     "凤凰香港": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/凤凰香港.png",
-    "NOW新闻": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/NOW新闻.png",
+    "Now新聞台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/NOW新闻.png",
     "翡翠台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/翡翠.png",
     "娱乐新闻": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/娱乐新闻.png",
     "无线新闻": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/无线新闻.png",
@@ -655,10 +655,10 @@ def main():
             name_to_info[cleaned] = (e, u, logo)
 
     # =========================================================
-    # 新增：从主源的 "•香港「Relay」" 分组提取 NOW新闻 和 翡翠台
+    # 新增：从主源的 "•香港「Relay」" 分组提取 Now新聞台 和 翡翠台
     # =========================================================
     hk_relay_channels = []
-    hk_relay_targets = ["NOW新闻", "翡翠台"]
+    hk_relay_targets = ["Now新聞台", "翡翠台"]
     for target in hk_relay_targets:
         for n, e, u in all_data:
             if parse_group(e) == "•香港「Relay」" and target in n:
@@ -743,12 +743,12 @@ def main():
         hk.append(viutvsix_channel)
         hk = dedup(hk)
         
-    # 将提取的 NOW新闻 和 翡翠台 加入 HK
+    # 将提取的 Now新聞台 和 翡翠台 加入 HK
     if hk_relay_channels:
         hk.extend(hk_relay_channels)
         hk = dedup(hk)
         
-    # 重新排序 HK（确保 NOW新闻 和 翡翠台 在正确位置）
+    # 重新排序 HK（确保 Now新聞台 和 翡翠台 在正确位置）
     temp_dict = {n: (n, e, u) for n, e, u in hk}
     hk_sorted = []
     used = set()
