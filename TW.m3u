@@ -20,7 +20,7 @@ http://192.168.100.1:10801/4gtv-4gtv075/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDve
 #EXTINF:-1 tvg-id="華視" tvg-name="華視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv041_mobile.png" group-title="TW",華視
 http://192.168.100.1:10801/4gtv-4gtv041/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png" group-title="TW",Love Nature
-http://192.168.100.1:10801/4gtv-live208/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
+#http://192.168.100.1:10801/4gtv-live208/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="TVBS歡樂台" tvg-name="TVBS歡樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv068_mobile.png" group-title="TW",TVBS歡樂台
 http://192.168.100.1:10801/4gtv-4gtv068/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="TVBS精采台" tvg-name="TVBS精采台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live086_mobile.png" group-title="TW",TVBS精采台
