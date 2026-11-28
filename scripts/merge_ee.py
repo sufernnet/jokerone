@@ -38,13 +38,13 @@ HK_FILTER_LIST = [
     "广州综合", "广州新闻", "广州南国都市", "广东体育", "TVBJ1", "TVB1",
     "TVB星河", "广东珠江", "重温经典", "咪咕",
     "海峡卫视", "五星体育", "iQIYI", "天映经典", "黄金华剧台",
-    "Now新聞台", "翡翠台"
+    "Now新聞台", "翡翠台", "八度空间"
 ]
 
 # HK频道排序（按此顺序优先输出）
 HK_TARGET_ORDER = [
     "凤凰中文", "凤凰资讯", "凤凰香港", "Now新聞台", "翡翠台", "翡翠一台", "TVB翡翠", "TVB翡翠(马来)", "TVB翡翠剧集台",
-    "TVBJADE", "娱乐新闻", "无线新闻", "天映频道", "千禧经典", "明珠台", "八度空间",
+    "TVBJADE", "娱乐新闻", "无线新闻", "天映频道", "千禧经典", "明珠台",
     "TVB星河", "TVBPLUS", "TVBJ1", "TVB娱乐新闻", "TVB黄金华剧", "TVB功夫台", "TVB1",
     "HOY资讯", "HOYTV", "HOY77", "RTHK31", "RTHK32", "ROCK_Action", "MYTV黄金翡翠",
     "iQIYI", "Astro AEC", "Astro AOD", "Channel 5", "Channel 8", "Channel U",
@@ -143,7 +143,6 @@ HK_LOGO_MAP = {
     "天映频道": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/天映.png",
     "千禧经典": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/千禧经典.png",
     "明珠台": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/明珠.png",
-    "八度空间": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/八度空间.png",
     "HOY资讯": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/HOY78.png",
     "RTHK31": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/RTH31.png",
     "RTHK32": "https://raw.githubusercontent.com/xiasufern/AA/main/icon/RTH32.png",
@@ -619,6 +618,22 @@ def main():
             now_sports_channel = (cleaned, new_extinf, u)
             break
 
+    # 1、Love Nature 改为从 SOURCE_URL 的 •香港「Relay」 分组提取
+    love_nature_channel = None
+    for n, e, u in all_data:
+        if parse_group(e) == "•香港「Relay」" and "Love Nature" in n:
+            cleaned = clean_suffix(clean_name(n))
+            new_extinf = replace_name_in_extinf(e, cleaned)
+            if cleaned in name_to_info and name_to_info[cleaned][2]:
+                logo = name_to_info[cleaned][2]
+                if 'tvg-logo="' not in new_extinf:
+                    new_extinf = set_tvg_logo(new_extinf, logo)
+            love_nature_channel = (cleaned, new_extinf, u)
+            print(f"✓ 成功从香港Relay提取: {cleaned}")
+            break
+    if not love_nature_channel:
+        print("⚠️ 未从香港Relay找到: Love Nature")
+
     elta_channels = []
     elta_names = ["愛爾達體育 一", "愛爾達體育 二", "愛爾達體育 三", "愛爾達體育 四"]
     for target in elta_names:
@@ -710,7 +725,10 @@ def main():
 
     print("正在加载 Discovery 分组...")
     discovery = load_discovery(all_data)
-    tw_move_keywords = ["Love Nature", "History 歷史頻道", "亞洲旅遊"]
+    # 1、Love Nature 从 •香港「Relay」 提取后加入 Discovery 分组
+    if love_nature_channel:
+        discovery.append(love_nature_channel)
+    tw_move_keywords = ["History 歷史頻道", "亞洲旅遊"]
     tw_moved = []
     tw_remain = []
     for item in tw:
@@ -814,6 +832,19 @@ def main():
     wxty = extract_by_group_and_name(mv_parsed, "數字台", ["五星体育"])
     if wxty:
         sports.append(wxty[0])
+
+    # 2、五星体育频道播放链接直接用 https://cdn.qd.je/163189/wxty
+    wxty_url = "https://cdn.qd.je/163189/wxty"
+    wxty_extinf = (
+        '#EXTINF:-1 tvg-id="五星体育" tvg-name="五星体育" '
+        'tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/五星体育.png" '
+        'group-title="Sports",五星体育'
+    )
+    wxty_entry = ("五星体育", wxty_extinf, wxty_url)
+
+    # 用新链接替换掉从 mv_parsed 提取的五星体育
+    sports = [item for item in sports if "五星体育" not in item[0]]
+    sports.append(wxty_entry)
 
     jbty_extinf = '#EXTINF:-1 tvg-id="劲爆体育" tvg-name="劲爆体育" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/劲爆体育.png" group-title="Sports",劲爆体育'
     jbty_url = "http://221.7.49.226:50085/tsfile/live/0017_3.m3u8?key=txiptv&playlive=1&authid=0"
