@@ -89,7 +89,7 @@ http://124.90.44.40:6060/010/2/00000009000000060000000000002073?virtualDomain=01
 
 # MV
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC动作电影.png" group-title="MV",CHC动作电影
-http://180.165.58.191:4022/rtp/233.18.204.174:5140
+http://pplee.vicp.net:4022/udp/233.18.204.174:5140
 #EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC家庭影院.png" group-title="MV",CHC家庭影院
 http://180.165.58.191:4022/rtp/233.18.204.173:5140
 #EXTINF:-1 tvg-id="CHC影迷电影" tvg-logo="https://raw.githubusercontent.com/xiasufern/AA/main/icon/CHC影迷电影.png" group-title="MV",CHC影迷电影
@@ -97,7 +97,7 @@ http://180.165.58.191:4022/rtp/233.18.204.175:5140
 #EXTINF:-1 tvg-id="g-29c405" tvg-name="靖天映畫" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/靖天映画.png" group-title="MV",靖天映画台
 https://cdn.qd.je/163189/jtyh
 #EXTINF:-1 tvg-id="g-67a67f" tvg-name="iQIYI" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/Astro_iQIYI.png" group-title="MV",爱奇艺
-http://cdn3.123.rr.kg/stream/live/iqiyi/
+https://cdn.qd.je/163189/iqiyi
 #EXTINF:-1 tvg-id="TVB-5" tvg-name="TVB星河" tvg-logo="https://gh-proxy.com/github.com/CKL1211/eric/blob/master/logo/%E6%B8%AF%E6%BE%B3%E5%8F%B0/无线星河.png" group-title="MV",TVB星河
 https://cdn.qd.je/163189/tvbxh2
 #EXTINF:-1 tvg-id="PopC" tvg-name="PopC" tvg-logo="https://iptv.yang-1989.xyz/logo/PopC.webp" group-title="MV",PopC
@@ -176,8 +176,6 @@ https://cdn.qd.je/163189/typd
 https://cdn.qd.je/163189/hxt
 
 # TW
-#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png" group-title="TW",Love Nature
-http://192.168.100.1:10801/4gtv-live208/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="TW",中天新聞台
 http://192.168.100.1:10801/of-4gtv-4gtv009/index.m3u8?token=PlKNJAB1AJsfyfhFFKLiDveZQ3j1reWP8prUnE0vS5ZRWa8uhKjGJfTazqNraW0O
 #EXTINF:-1 tvg-id="民視" tvg-name="民視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png" group-title="TW",民視
