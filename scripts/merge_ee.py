@@ -58,7 +58,7 @@ TW_SOURCE_URL = "https://raw.githubusercontent.com/sufernnet/jokerone/refs/heads
 
 # TW 排序列表
 TW_TARGET_ORDER = [
-    "Love Nature", "History 歷史頻道", "亞洲旅遊", "中天新聞台", "民視第一台", "民視台灣台", "民視",
+    "History 歷史頻道", "亞洲旅遊", "中天新聞台", "民視第一台", "民視台灣台", "民視",
     "華視", "寰宇新聞", "寰宇新聞台灣台", "寰宇財經", "三立綜合台", "ELTA娛樂", "靖天綜合",
     "鏡電視新聞台", "東森新聞", "華視新聞", "民視新聞", "三立iNEWS", "東森財經新聞", "中視新聞",
     "TVBS", "民視綜藝", "靖天育樂", "靖天國際台", "靖天歡樂台", "靖天資訊", "TVBS歡樂台", "韓國娛樂台",
@@ -699,6 +699,8 @@ def main():
 
     print("正在加载TW频道...")
     tw = load_tw_from_url()
+    # 去掉 TW 分组里面的 Love Nature 频道
+    tw = [item for item in tw if "Love Nature" not in item[0]]
     print(f"TW频道加载完成，共 {len(tw)} 个")
 
     print("正在加载MV频道...")
